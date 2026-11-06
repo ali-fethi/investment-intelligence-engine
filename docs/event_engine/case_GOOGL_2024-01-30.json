@@ -1,0 +1,608 @@
+{
+ "attribution_uncertainty": {
+  "level": "high",
+  "reasons": [
+   "tier-1 macro release inside the d0 reaction period (fomc_statement)"
+  ]
+ },
+ "benchmark_notes": {
+  "^GSPC/^IXIC": "price indices (no dividends); used for close-to-close windows only",
+  "contamination": "GOOGL (both classes) and META are large XLC constituents (weights not tracked); sector-adjusted returns are damped. XLC starts 2018-06-19",
+  "sector": "Communication Services",
+  "sector_etf": "XLC"
+ },
+ "code_version": "0.2.0",
+ "content_sha256": "66504ef7d73d83da434cedfb040f232a2c0175bd4b69de9cd9eb746af5b62b6e",
+ "data_through": "2024-02-28",
+ "event": {
+  "accession_no": "0001652044-24-000014",
+  "availability_basis": "sec_acceptance_datetime",
+  "event_date": "2024-01-30",
+  "event_id": 119,
+  "evidence": {
+   "id": 119,
+   "table": "event"
+  },
+  "public_at_et": "2024-01-30T16:01:26-05:00",
+  "public_at_utc": "2024-01-30T21:01:26Z",
+  "recorded_event_date": "2024-01-30",
+  "ticker": "GOOGL",
+  "type": "earnings_release"
+ },
+ "evidence_bars": {
+  "subject": [
+   2032,
+   2033,
+   2034,
+   2035,
+   2036,
+   2037
+  ]
+ },
+ "expectations": {
+  "documented_reactions": [
+   {
+    "evidence": {
+     "id": 50,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "after_hours_move",
+    "notes": "page first published before the event but last modified 2024-01-30T22:49:50Z, after it: content treated as post-event",
+    "point": -6.0,
+    "quote": "Alphabet shares slid more than 6% in extended trading on Tuesday",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 51,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "next_session_move",
+    "notes": null,
+    "point": -7.0,
+    "quote": "Alphabet dropped more than 7% for its worst day since Oct. 25",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-31T21:24:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/stock-market-today-live-updates.html",
+    "unit": "percent"
+   }
+  ],
+  "event_key": "GOOGL:FY2023Q4",
+  "guidance_issued_with_event": [],
+  "note": null,
+  "point_in_time": [
+   {
+    "basis": "sec_acceptance_datetime",
+    "evidence": {
+     "id": 11,
+     "table": "expectation"
+    },
+    "grade": "A",
+    "high": null,
+    "low": null,
+    "metric": "revenue",
+    "point": null,
+    "provider": "Alphabet",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-24T20:01:23Z",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000088/googexhibit991q32023.htm",
+    "type": "no_guidance_policy",
+    "unit": null
+   },
+   {
+    "actual": 1.64,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 13,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.6,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-25T15:51:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-post-q4-earnings-155100440.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.02499999999999991,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 60,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "google_cloud_revenue",
+    "point": 9040000000.0,
+    "provider": "Zacks",
+    "quote_verified": "raw_source_only",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-25T15:51:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-post-q4-earnings-155100440.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 12,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "revenue_ex_tac",
+    "point": 70710000000.0,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-25T15:51:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-post-q4-earnings-155100440.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "post_event_documented": [
+   {
+    "actual": 1.64,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 16,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.59,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.03144654088050314,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 18,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "google_ad_revenue",
+    "point": 65940000000.0,
+    "provider": "StreetAccount",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 17,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "google_cloud_revenue",
+    "point": 8940000000.0,
+    "provider": "StreetAccount",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "actual": 86310000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 15,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "revenue",
+    "point": 85330000000.0,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/alphabet-googl-q4-earnings-report-2023.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.011484823625922846,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "rejected": [],
+  "reported_kpis": []
+ },
+ "extended_hours": {
+  "reason": "no licensed intraday/extended-hours history in this system; the overnight gap is the measured upper level of detail",
+  "status": "not_measured"
+ },
+ "knowledge_time": "2026-11-06T15:46:20Z",
+ "market_model": {
+  "alpha": 0.0008391963352520602,
+  "benchmark": "SPY",
+  "beta": 1.3997559393442567,
+  "first": "2023-01-18",
+  "last": "2024-01-16",
+  "n_obs": 250,
+  "sigma_eps": 0.01529252228163716
+ },
+ "observations_vs_hypotheses": {
+  "hypotheses_and_caveats": [
+   "Attribution uncertainty high: tier-1 macro release inside the d0 reaction period (fomc_statement). The abnormal return cannot be attributed to the earnings release alone without intraday data.",
+   "Any statement that the move was caused by a specific item (guidance, segment growth, capex) is a hypothesis unless it is documented by a dated source; see expectations and documented_explanations."
+  ],
+  "observable": [
+   "GOOGL -7.50% on 2024-01-31 (close-to-close); SPY -1.63%, QQQ -1.96%.",
+   "Market-model abnormal return -5.30% (standardised -3.5 sigma of pre-event idiosyncratic noise).",
+   "Overnight gap -5.18%, then regular session -2.45% (continuation intraday)."
+  ]
+ },
+ "overlapping_events": [
+  {
+   "available_at": "2024-01-30T21:03:17Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 311,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-01-31",
+   "ticker": "MSFT",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-30T21:16:19Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 1194,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,7.01,9.01",
+   "reaction_day": "2024-01-31",
+   "ticker": "AMD",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-31T02:43:43Z",
+   "event_type": "periodic_report",
+   "evidence": {
+    "id": 9,
+    "table": "event"
+   },
+   "kind": "same_company_companion_filing",
+   "label": null,
+   "reaction_day": "2024-01-31",
+   "ticker": "GOOGL",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-31T19:00:00Z",
+   "event_type": "fomc_statement",
+   "evidence": {
+    "id": 2758,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "FOMC policy_decision: maintain 5-1/4 to 5-1/2%",
+   "reaction_day": "2024-01-31",
+   "ticker": null,
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-31T21:01:55Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2051,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-01",
+   "ticker": "QCOM",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:06:02Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 847,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AMZN",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:10:29Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 510,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,8.01,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "META",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:30:30Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 681,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AAPL",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-02T13:30:00Z",
+   "event_type": "employment_situation_release",
+   "evidence": {
+    "id": 3016,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BLS Employment Situation (nonfarm payrolls)",
+   "reaction_day": "2024-02-02",
+   "ticker": null,
+   "within": "d1_to_d4"
+  }
+ ],
+ "previous_close_day": "2024-01-30",
+ "reaction_day": "2024-01-31",
+ "status": "ok",
+ "timing": "after_close",
+ "timing_note": "after the close: after-hours, pre-market and next session react",
+ "windows": {
+  "d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.055417158451838255,
+     "return": -0.019586143454865534
+    },
+    "SPY": {
+     "excess": -0.058685981271527354,
+     "return": -0.016317320635176435
+    },
+    "XLC": {
+     "excess": -0.05032456510687966,
+     "return": -0.02467873679982413
+    },
+    "^GSPC": {
+     "excess": -0.05889755729510582,
+     "return": -0.016105744611597972
+    },
+    "^IXIC": {
+     "excess": -0.05270202231827559,
+     "return": -0.022301279588428202
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.05300223176868304,
+    "n_days": 1,
+    "scar": -3.465892074084251
+   },
+   "return": -0.07500330190670379,
+   "to": "close 2024-01-31"
+  },
+  "d0_d1": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.0599634282635384,
+     "return": -0.00804134260126299
+    },
+    "SPY": {
+     "excess": -0.064562039517706,
+     "return": -0.0034427313470953846
+    },
+    "XLC": {
+     "excess": -0.05335182298650831,
+     "return": -0.014652947878293077
+    },
+    "^GSPC": {
+     "excess": -0.06419149431322013,
+     "return": -0.0038132765515812572
+    },
+    "^IXIC": {
+     "excess": -0.0584456674241941,
+     "return": -0.009559103440607286
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.06459564131325929,
+    "n_days": 2,
+    "scar": -2.9868203012230397
+   },
+   "return": -0.06800477086480139,
+   "to": "close 2024-02-01"
+  },
+  "d0_d4": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.05397814474108531,
+     "return": 0.005384454762873414
+    },
+    "SPY": {
+     "excess": -0.054888371568146854,
+     "return": 0.006294681589934958
+    },
+    "XLC": {
+     "excess": -0.056048628010467394,
+     "return": 0.007454938032255498
+    },
+    "^GSPC": {
+     "excess": -0.054534795070951714,
+     "return": 0.005941105092739818
+    },
+    "^IXIC": {
+     "excess": -0.05498313200421612,
+     "return": 0.006389442026004222
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.06011979546977242,
+    "n_days": 5,
+    "scar": -1.7581396579061026
+   },
+   "return": -0.048593689978211896,
+   "to": "close 2024-02-06"
+  },
+  "overnight_gap": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.04129975625339766,
+     "return": -0.01046315969239886
+    },
+    "SPY": {
+     "excess": -0.04713862239019073,
+     "return": -0.004624293555605785
+    },
+    "XLC": {
+     "excess": -0.03299676354737191,
+     "return": -0.018766152398424607
+    }
+   },
+   "from": "close 2024-01-30",
+   "interpretation": "after-hours (16:00-20:00 ET on the announcement day) + pre-market (04:00-09:30 ET on d0); not separable without intraday data",
+   "market_model": {
+    "ar_beta_adjusted": -0.04529003357606595,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.05176291594579652,
+   "to": "open 2024-01-31"
+  },
+  "post_d1_d19": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.07044049017899845,
+     "return": 0.043888020095917524
+    },
+    "SPY": {
+     "excess": -0.07497030608042465,
+     "return": 0.04841783599734373
+    },
+    "XLC": {
+     "excess": -0.06318935080682297,
+     "return": 0.03663688072374205
+    },
+    "^GSPC": {
+     "excess": -0.07280217193893501,
+     "return": 0.046249701855854086
+    },
+    "^IXIC": {
+     "excess": -0.0782360604304454,
+     "return": 0.05168359034736447
+    }
+   },
+   "from": "close 2024-01-31",
+   "market_model": {
+    "car": -0.10760596455702481,
+    "n_days": 19,
+    "scar": -1.614285784454431
+   },
+   "return": -0.026552470083080926,
+   "to": "close 2024-02-28"
+  },
+  "pre_event_5d": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.025762271609995002,
+     "return": 0.004297668743328931
+    },
+    "SPY": {
+     "excess": 0.01762329992298861,
+     "return": 0.012436640430335322
+    },
+    "XLC": {
+     "excess": 0.0025902916802862386,
+     "return": 0.027469648673037694
+    },
+    "^GSPC": {
+     "excess": 0.017649851964643082,
+     "return": 0.012410088388680851
+    },
+    "^IXIC": {
+     "excess": 0.024617162888948663,
+     "return": 0.00544277746437527
+    }
+   },
+   "from": "close 2024-01-23",
+   "market_model": {
+    "car": 0.008470319439355096,
+    "n_days": 5,
+    "scar": 0.24770550872799824
+   },
+   "return": 0.030059940353323933,
+   "to": "close 2024-01-30"
+  },
+  "session_d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.015289597307210578,
+     "return": -0.00921944832254118
+    },
+    "SPY": {
+     "excess": -0.012761695354005509,
+     "return": -0.011747350275746249
+    },
+    "XLC": {
+     "excess": -0.018483382719884145,
+     "return": -0.006025662909867613
+    }
+   },
+   "from": "open 2024-01-31",
+   "market_model": {
+    "ar_beta_adjusted": -0.008065622309718554,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.024509045629751758,
+   "to": "close 2024-01-31"
+  }
+ }
+}

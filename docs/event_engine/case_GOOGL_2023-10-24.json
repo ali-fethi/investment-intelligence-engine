@@ -1,0 +1,588 @@
+{
+ "attribution_uncertainty": {
+  "level": "medium",
+  "reasons": [
+   "other large-cap earnings react on the same day (benchmarks move with them)"
+  ]
+ },
+ "benchmark_notes": {
+  "^GSPC/^IXIC": "price indices (no dividends); used for close-to-close windows only",
+  "contamination": "GOOGL (both classes) and META are large XLC constituents (weights not tracked); sector-adjusted returns are damped. XLC starts 2018-06-19",
+  "sector": "Communication Services",
+  "sector_etf": "XLC"
+ },
+ "code_version": "0.2.0",
+ "content_sha256": "406aa05d791f7ff27510092321bb4dc768f162ea8abccb60fcec77c4bb3bfb4f",
+ "data_through": "2023-11-21",
+ "event": {
+  "accession_no": "0001652044-23-000088",
+  "availability_basis": "sec_acceptance_datetime",
+  "event_date": "2023-10-24",
+  "event_id": 118,
+  "evidence": {
+   "id": 118,
+   "table": "event"
+  },
+  "public_at_et": "2023-10-24T16:01:23-04:00",
+  "public_at_utc": "2023-10-24T20:01:23Z",
+  "recorded_event_date": "2023-10-18",
+  "ticker": "GOOGL",
+  "type": "earnings_release"
+ },
+ "evidence_bars": {
+  "subject": [
+   1966,
+   1967,
+   1968,
+   1969,
+   1970,
+   1971
+  ]
+ },
+ "expectations": {
+  "documented_reactions": [
+   {
+    "evidence": {
+     "id": 56,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "after_hours_move",
+    "notes": "page first published before the event but last modified 2023-10-25T18:54:46Z, after it: content treated as post-event",
+    "point": -7.0,
+    "quote": "The shares dropped almost 7% in extended trading as the cloud business missed analysts' estimates.",
+    "reported_by": "CNBC",
+    "source_published_at": "2023-10-24T13:00:00Z",
+    "source_url": "https://www.cnbc.com/2023/10/24/alphabet-googl-earnings-q3-2023.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 57,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "next_session_move",
+    "notes": null,
+    "point": -9.5,
+    "quote": "The stock closed down 9.5% to end at $125.61.",
+    "reported_by": "CNBC",
+    "source_published_at": "2023-10-25T14:00:00Z",
+    "source_url": "https://www.cnbc.com/2023/10/25/alphabet-stock-down-8percent-on-cloud-miss-as-investors-praise-microsoft.html",
+    "unit": "percent"
+   }
+  ],
+  "event_key": "GOOGL:FY2023Q3",
+  "guidance_issued_with_event": [],
+  "note": null,
+  "point_in_time": [
+   {
+    "basis": "sec_acceptance_datetime",
+    "evidence": {
+     "id": 29,
+     "table": "expectation"
+    },
+    "grade": "A",
+    "high": null,
+    "low": null,
+    "metric": "revenue",
+    "point": null,
+    "provider": "Alphabet",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-07-25T20:01:21Z",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204423000067/googexhibit991q22023.htm",
+    "type": "no_guidance_policy",
+    "unit": null
+   },
+   {
+    "actual": 1.55,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 31,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.45,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2023-10-20T16:23:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-report-q3-earnings-162300549.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.06896551724137945,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 61,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "google_cloud_revenue",
+    "point": 8540000000.0,
+    "provider": "Zacks",
+    "quote_verified": "raw_source_only",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2023-10-20T16:23:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-report-q3-earnings-162300549.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 30,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "revenue_ex_tac",
+    "point": 63130000000.0,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2023-10-20T16:23:00Z",
+    "source_url": "https://finance.yahoo.com/news/alphabet-googl-report-q3-earnings-162300549.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "post_event_documented": [
+   {
+    "actual": 1.55,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 34,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.45,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2023-10-24T13:00:00Z",
+    "source_url": "https://www.cnbc.com/2023/10/24/alphabet-googl-earnings-q3-2023.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.06896551724137945,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 35,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "google_cloud_revenue",
+    "point": 8640000000.0,
+    "provider": "StreetAccount",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2023-10-24T13:00:00Z",
+    "source_url": "https://www.cnbc.com/2023/10/24/alphabet-googl-earnings-q3-2023.html",
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "actual": 76693000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 33,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "revenue",
+    "point": 75970000000.0,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2023-10-24T13:00:00Z",
+    "source_url": "https://www.cnbc.com/2023/10/24/alphabet-googl-earnings-q3-2023.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.009516914571541468,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "rejected": [],
+  "reported_kpis": []
+ },
+ "extended_hours": {
+  "reason": "no licensed intraday/extended-hours history in this system; the overnight gap is the measured upper level of detail",
+  "status": "not_measured"
+ },
+ "knowledge_time": "2026-11-06T15:46:20Z",
+ "market_model": {
+  "alpha": 0.000374926897746827,
+  "benchmark": "SPY",
+  "beta": 1.404610911771027,
+  "first": "2022-10-12",
+  "last": "2023-10-10",
+  "n_obs": 250,
+  "sigma_eps": 0.015612690831073138
+ },
+ "observations_vs_hypotheses": {
+  "hypotheses_and_caveats": [
+   "Attribution uncertainty medium: other large-cap earnings react on the same day (benchmarks move with them). The abnormal return cannot be attributed to the earnings release alone without intraday data.",
+   "Any statement that the move was caused by a specific item (guidance, segment growth, capex) is a hypothesis unless it is documented by a dated source; see expectations and documented_explanations."
+  ],
+  "observable": [
+   "GOOGL -9.51% on 2023-10-25 (close-to-close); SPY -1.44%, QQQ -2.45%.",
+   "Market-model abnormal return -7.53% (standardised -4.8 sigma of pre-event idiosyncratic noise).",
+   "Overnight gap -7.67%, then regular session -1.99% (continuation intraday)."
+  ]
+ },
+ "overlapping_events": [
+  {
+   "available_at": "2023-10-24T20:03:29Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 306,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2023-10-25",
+   "ticker": "MSFT",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2023-10-24T20:13:56Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2542,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,5.02,8.01,9.01",
+   "reaction_day": "2023-10-25",
+   "ticker": "SNAP",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2023-10-24T22:39:13Z",
+   "event_type": "periodic_report",
+   "evidence": {
+    "id": 37,
+    "table": "event"
+   },
+   "kind": "same_company_companion_filing",
+   "label": null,
+   "reaction_day": "2023-10-25",
+   "ticker": "GOOGL",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2023-10-25T20:20:51Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 508,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2023-10-26",
+   "ticker": "META",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2023-10-26T12:30:00Z",
+   "event_type": "gdp_release",
+   "evidence": {
+    "id": 3140,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BEA Gross Domestic Product",
+   "reaction_day": "2023-10-26",
+   "ticker": null,
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2023-10-26T20:09:55Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 1831,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,7.01,9.01",
+   "reaction_day": "2023-10-27",
+   "ticker": "INTC",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2023-10-26T20:14:51Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 845,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2023-10-27",
+   "ticker": "AMZN",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2023-10-27T12:30:00Z",
+   "event_type": "pce_release",
+   "evidence": {
+    "id": 3268,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BEA Personal Income and Outlays (PCE price index)",
+   "reaction_day": "2023-10-27",
+   "ticker": null,
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2023-10-30T20:08:24Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2650,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2023-10-31",
+   "ticker": "PINS",
+   "within": "d1_to_d4"
+  }
+ ],
+ "previous_close_day": "2023-10-24",
+ "reaction_day": "2023-10-25",
+ "status": "ok",
+ "timing": "after_close",
+ "timing_note": "after the close: after-hours, pre-market and next session react",
+ "windows": {
+  "d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.07061815306969688,
+     "return": -0.024475840017294415
+    },
+    "SPY": {
+     "excess": -0.08074180599031566,
+     "return": -0.014352187096675628
+    },
+    "XLC": {
+     "excess": -0.05178923183087236,
+     "return": -0.04330476125611893
+    },
+    "^GSPC": {
+     "excess": -0.08075436445927875,
+     "return": -0.014339628627712542
+    },
+    "^IXIC": {
+     "excess": -0.07084334313511753,
+     "return": -0.02425064995187376
+    }
+   },
+   "from": "close 2023-10-24",
+   "market_model": {
+    "car": -0.0753096813809682,
+    "n_days": 1,
+    "scar": -4.8236195922795835
+   },
+   "return": -0.09509399308699129,
+   "to": "close 2023-10-25"
+  },
+  "d0_d1": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.07600730665730504,
+     "return": -0.04307632615033419
+    },
+    "SPY": {
+     "excess": -0.09292869344514343,
+     "return": -0.0261549393624958
+    },
+    "XLC": {
+     "excess": -0.054939326978764136,
+     "return": -0.06414430582887509
+    },
+    "^GSPC": {
+     "excess": -0.09308115834116526,
+     "return": -0.026002474466473968
+    },
+    "^IXIC": {
+     "excess": -0.07766314989791201,
+     "return": -0.04142048290972722
+    }
+   },
+   "from": "close 2023-10-24",
+   "market_model": {
+    "car": -0.08537557713618235,
+    "n_days": 2,
+    "scar": -3.8667037087904848
+   },
+   "return": -0.11908363280763923,
+   "to": "close 2023-10-26"
+  },
+  "d0_d4": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.08311619040603291,
+     "return": -0.023000054724807373
+    },
+    "SPY": {
+     "excess": -0.0932984734593475,
+     "return": -0.012817771671492784
+    },
+    "XLC": {
+     "excess": -0.06266365449711109,
+     "return": -0.04345259063372919
+    },
+    "^GSPC": {
+     "excess": -0.09343158694942733,
+     "return": -0.012684658181412956
+    },
+    "^IXIC": {
+     "excess": -0.08415028350120757,
+     "return": -0.021965961629632713
+    }
+   },
+   "from": "close 2023-10-24",
+   "market_model": {
+    "car": -0.09095650707942399,
+    "n_days": 5,
+    "scar": -2.605379623872988
+   },
+   "return": -0.10611624513084028,
+   "to": "close 2023-10-31"
+  },
+  "overnight_gap": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.06995720484096235,
+     "return": -0.006766331531040337
+    },
+    "SPY": {
+     "excess": -0.07261620163574778,
+     "return": -0.004107334736254908
+    },
+    "XLC": {
+     "excess": -0.054406036305473804,
+     "return": -0.022317500066528884
+    }
+   },
+   "from": "close 2023-10-24",
+   "interpretation": "after-hours (16:00-20:00 ET on the announcement day) + pre-market (04:00-09:30 ET on d0); not separable without intraday data",
+   "market_model": {
+    "ar_beta_adjusted": -0.07095432918316287,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.07672353637200269,
+   "to": "open 2023-10-25"
+  },
+  "post_d1_d19": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.01839848095845853,
+     "return": 0.10883714472051742
+    },
+    "SPY": {
+     "excess": 0.004892017216798106,
+     "return": 0.08554664654526078
+    },
+    "XLC": {
+     "excess": -0.0005546791112578386,
+     "return": 0.09099334287331673
+    },
+    "^GSPC": {
+     "excess": 0.006502856388922229,
+     "return": 0.08393580737313666
+    },
+    "^IXIC": {
+     "excess": -0.017098744658689213,
+     "return": 0.1075374084207481
+    }
+   },
+   "from": "close 2023-10-25",
+   "market_model": {
+    "car": -0.03551156923334034,
+    "n_days": 19,
+    "scar": -0.5218134916466579
+   },
+   "return": 0.09043866376205889,
+   "to": "close 2023-11-21"
+  },
+  "pre_event_5d": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.018120318309169825,
+     "return": -0.024633370514715813
+    },
+    "SPY": {
+     "excess": 0.021903039815572067,
+     "return": -0.028416092021118056
+    },
+    "XLC": {
+     "excess": 0.004160960574889461,
+     "return": -0.010674012780435449
+    },
+    "^GSPC": {
+     "excess": 0.02218904555476031,
+     "return": -0.0287020977603063
+    },
+    "^IXIC": {
+     "excess": 0.02259047658821023,
+     "return": -0.029103528793756217
+    }
+   },
+   "from": "close 2023-10-17",
+   "market_model": {
+    "car": 0.03212130631468384,
+    "n_days": 5,
+    "scar": 0.9200902678835586
+   },
+   "return": -0.006513052205545988,
+   "to": "close 2023-10-24"
+  },
+  "session_d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.0020668737747130406,
+     "return": -0.01783015321415027
+    },
+    "SPY": {
+     "excess": -0.00960992204497102,
+     "return": -0.010287104943892289
+    },
+    "XLC": {
+     "excess": 0.0015693091591379993,
+     "return": -0.021466336148001308
+    }
+   },
+   "from": "open 2023-10-25",
+   "market_model": {
+    "ar_beta_adjusted": -0.005447647134138521,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.01989702698886331,
+   "to": "close 2023-10-25"
+  }
+ }
+}

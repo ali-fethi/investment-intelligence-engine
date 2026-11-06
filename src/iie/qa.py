@@ -313,7 +313,142 @@ def run_all(conn, store: EvidenceStore, run_id) -> dict:
                lambda: check_definitions(conn, qa), lambda: check_balance_sheet(conn, qa),
                lambda: check_quarter_additivity(conn, qa), lambda: check_releases_vs_xbrl(conn, qa),
                lambda: check_prices(conn, qa), lambda: check_fred_lag(conn, qa, store),
-               lambda: check_snapshots(conn, qa)):
+               lambda: check_snapshots(conn, qa), lambda: run_v2(conn, qa)):
         fn()
         conn.commit()
     return {k: dict(v) for k, v in qa.summary.items()}
+
+
+# ----------------------------------------------------------------------------------- v2: cross-source & events
+def record_correction(conn, table, row_filter, field, wrong, correct, reason, evidence):
+    from . import __version__
+    conn.execute("""INSERT OR IGNORE INTO data_correction(table_name, row_filter, field, wrong_value, correct_value,
+                    reason, evidence, recorded_at, code_version) VALUES (?,?,?,?,?,?,?,?,?)""",
+                 (table, row_filter, field, wrong, correct, reason, evidence, utcnow(), __version__))
+
+
+KNOWN_CORRECTIONS = [
+    ("event", "event_type IN ('earnings_release','material_event_8k') AND accession_no IS NOT NULL",
+     "event_date", "8-K report_date (date of earliest event reported)", "acceptance date in America/New_York",
+     "8-Ks combining Item 2.02 with e.g. Item 5.02 carry a report_date days before publication; readers now use "
+     "the acceptance date. Timing/reaction calculations always used acceptance and are unaffected.",
+     "QA event_date_vs_acceptance: 46 of 701 earnings events differ, e.g. GOOGL 0001652044-23-000088 report_date "
+     "2023-10-18 vs accepted 2023-10-24T20:01:23Z"),
+    ("price_bar", "provider='nasdaq_api' AND adjustment_basis LIKE 'nasdaq.com historical quotes: as-traded%'",
+     "adjustment_basis", "nasdaq.com historical quotes: as-traded (not split-adjusted), not dividend-adjusted",
+     "nasdaq.com historical quotes: split-adjusted as of retrieval, not dividend-adjusted",
+     "Label assumed as-traded at ingestion; Nasdaq returns split-adjusted history.",
+     "QA price_cross_source: GOOGL 2016-11-07 Nasdaq close 40.10 vs as-traded ~802 (20:1 split); XLK 2:1 likewise"),
+]
+
+
+def _bars(conn, cid, provider):
+    return {r["trade_date"]: r["close"] for r in conn.execute(
+        """SELECT trade_date, close FROM price_bar b WHERE company_id=? AND provider=? AND retrieved_at>=available_at
+           AND bar_id=(SELECT max(bar_id) FROM price_bar b2 WHERE b2.company_id=b.company_id AND b2.provider=b.provider
+           AND b2.trade_date=b.trade_date AND b2.retrieved_at>=b2.available_at)""", (cid, provider))}
+
+
+def check_price_cross_source(conn, qa: QA):
+    """Yahoo vs Nasdaq.com closes (both split-adjusted as of retrieval). Mismatches are classified: a source
+    that repeats its previous close while the other source and the market moved is called stale."""
+    for c in list(companies(conn)) + [b for b in companies(conn, role="benchmark") if b["kind"] == "etf"]:
+        y, n = _bars(conn, c["company_id"], "yahoo_chart"), _bars(conn, c["company_id"], "nasdaq_api")
+        common = sorted(set(y) & set(n))
+        if not common:
+            continue
+        bad = []
+        for i, d in enumerate(common):
+            rel = y[d] / n[d] - 1
+            if abs(rel) > 0.0005:
+                prev = common[i - 1] if i else None
+                kind = "unexplained"
+                if prev and abs(n[d] - n[prev]) < 1e-9 and abs(y[d] - y[prev]) > 1e-6:
+                    kind = "nasdaq_stale_repeat_of_previous_close"
+                elif prev and abs(y[d] - y[prev]) < 1e-9 and abs(n[d] - n[prev]) > 1e-6:
+                    kind = "yahoo_stale_repeat_of_previous_close"
+                bad.append({"date": d, "yahoo": y[d], "nasdaq": n[d], "rel_diff": rel, "classification": kind})
+        unexplained = [b for b in bad if b["classification"] == "unexplained"]
+        sev = "pass" if not bad else ("fail" if unexplained else "warn")
+        qa.add("price_cross_source", sev, {"dates_compared": len(common), "mismatches_over_5bp": len(bad),
+                                           "details": bad[:10],
+                                           "yahoo_only": len(set(y) - set(n)), "nasdaq_only": len(set(n) - set(y))},
+               c["company_id"], c["ticker"])
+    for row_filter_args in KNOWN_CORRECTIONS:
+        record_correction(conn, *row_filter_args)
+
+
+def check_index_vs_fred(conn, qa: QA):
+    for tk, sid in (("^GSPC", "FRED:SP500"), ("^IXIC", "FRED:NASDAQCOM")):
+        c = conn.execute("SELECT company_id FROM company WHERE ticker=?", (tk,)).fetchone()
+        if c is None:
+            continue
+        y = _bars(conn, c["company_id"], "yahoo_chart")
+        f = {r["obs_date"]: r["value"] for r in conn.execute(
+            "SELECT obs_date, value FROM macro_observation WHERE series_id=? AND value IS NOT NULL", (sid,))}
+        common = sorted(set(y) & set(f))
+        bad = [{"date": d, "yahoo": y[d], "fred": f[d], "rel_diff": y[d] / f[d] - 1}
+               for d in common if abs(y[d] / f[d] - 1) > 0.0001]
+        qa.add("index_vs_fred", "pass" if not bad else "warn", {"dates_compared": len(common),
+                                                                 "mismatches_over_1bp": len(bad),
+                                                                 "details": bad[:10]}, None, tk)
+
+
+def check_incomplete_bars(conn, qa: QA):
+    rows = conn.execute("""SELECT c.ticker, b.provider, b.trade_date, b.retrieved_at FROM price_bar b
+                           JOIN company c USING(company_id) WHERE b.retrieved_at < b.available_at""").fetchall()
+    qa.add("incomplete_bars_excluded", "info" if rows else "pass",
+           {"rows": len(rows), "examples": [dict(r) for r in rows[:6]],
+            "note": "bars retrieved before their session closed are stored as evidence but excluded by every reader"})
+
+
+def check_macro_event_times(conn, qa: QA):
+    rows = conn.execute("SELECT event_date, available_at, availability_basis, details_json FROM event "
+                        "WHERE event_type='fomc_statement'").fetchall()
+    no_time = [r["event_date"] for r in rows if "date_only" in r["availability_basis"]]
+    times = defaultdict(int)
+    for r in rows:
+        dt = parse_utc_et(r["available_at"])
+        times[dt] += 1
+    qa.add("fomc_release_times", "pass" if not no_time else "warn",
+           {"statements": len(rows), "without_stated_time": no_time, "time_distribution_et": dict(times)})
+
+
+def parse_utc_et(s):
+    from .timeutil import ET, parse_utc
+    return parse_utc(s).astimezone(ET).strftime("%H:%M")
+
+
+def check_expectations(conn, qa: QA):
+    rows = conn.execute("""SELECT * FROM expectation e WHERE expectation_id=(SELECT max(expectation_id) FROM expectation
+                           e2 WHERE e2.natural_key=e.natural_key)""").fetchall()
+    if not rows:
+        qa.add("expectation_provenance", "info", {"expectations": 0})
+        return
+    by_grade = defaultdict(int)
+    for r in rows:
+        by_grade[r["provenance_grade"]] += 1
+    unverified = [dict(event_key=r["event_key"], metric=r["metric"], url=r["source_url"], notes=r["notes"])
+                  for r in rows if not r["quote_verified"]]
+    leak = [r["expectation_id"] for r in rows if r["provenance_grade"] in ("C", "D") and r["available_at"]]
+    qa.add("expectation_provenance", "fail" if leak else ("warn" if unverified else "pass"),
+           {"expectations": len(rows), "by_grade": dict(by_grade), "quote_unverified": unverified[:20],
+            "graded_C_or_D_but_marked_available": leak})
+
+
+def check_event_dates(conn, qa: QA):
+    rows = conn.execute("""SELECT e.event_id, c.ticker, e.event_type, e.event_date, e.available_at FROM event e
+                           JOIN company c USING(company_id) WHERE e.accession_no IS NOT NULL
+                           AND e.event_type IN ('earnings_release','material_event_8k')""").fetchall()
+    from .timeutil import ET, parse_utc
+    bad = [dict(r) for r in rows if r["event_date"] != parse_utc(r["available_at"]).astimezone(ET).date().isoformat()]
+    qa.add("event_date_vs_acceptance", "info" if bad else "pass",
+           {"events": len(rows), "recorded_date_differs_from_public_date": len(bad), "examples": bad[:8],
+            "handling": "readers use the acceptance date; correction recorded in data_correction"})
+
+
+def run_v2(conn, qa: QA):
+    for fn in (check_event_dates, check_price_cross_source, check_index_vs_fred, check_incomplete_bars, check_macro_event_times,
+               check_expectations):
+        fn(conn, qa)
+        conn.commit()

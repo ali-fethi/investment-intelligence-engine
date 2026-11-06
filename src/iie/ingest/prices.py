@@ -9,6 +9,7 @@ that basis recorded, store splits/dividends separately, and reconstruct as-trade
 from __future__ import annotations
 
 import json
+from urllib.parse import quote
 from datetime import date, datetime, timezone
 
 from ..timeutil import ET, et_to_utc_str
@@ -22,7 +23,7 @@ def ingest_prices(conn, store, company, start: str, run_id, stats, end: str | No
     p1 = int(datetime.fromisoformat(start).replace(tzinfo=timezone.utc).timestamp())
     p2 = int(datetime.fromisoformat(end).replace(tzinfo=timezone.utc).timestamp()) if end else \
         int(datetime.now(timezone.utc).timestamp())
-    url = CHART_URL.format(ticker=company["ticker"], p1=p1, p2=p2)
+    url = CHART_URL.format(ticker=quote(company["ticker"], safe=""), p1=p1, p2=p2)
     f = store.fetch(url, source_system="yahoo_chart", doc_type="price_json", run_id=run_id,
                     company_id=company["company_id"], title=f"Yahoo chart {company['ticker']} daily")
     return load_chart(conn, company, f.doc_id, f.body, f.retrieved_at, run_id, stats)
@@ -42,6 +43,11 @@ def load_chart(conn, company, doc_id, body: bytes, retrieved_at, run_id, stats) 
         if q["close"][i] is None:
             continue
         d = _trade_date(t)
+        if et_to_utc_str(date.fromisoformat(d), 16, 0, 0) > retrieved_at:
+            # session not closed when retrieved: 'close' is a live/partial price, never stored as a daily bar
+            stats[f"incomplete_bars_skipped_{company['ticker']}"] = stats.get(
+                f"incomplete_bars_skipped_{company['ticker']}", 0) + 1
+            continue
         nk = f"bar|yahoo|{company['ticker']}|{d}"
         rows.append((company["company_id"], "yahoo_chart", d, q["open"][i], q["high"][i], q["low"][i], q["close"][i],
                      adj[i], q["volume"][i], CLOSE_BASIS, et_to_utc_str(date.fromisoformat(d), 16, 0, 0),

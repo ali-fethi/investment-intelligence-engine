@@ -1,0 +1,803 @@
+{
+ "attribution_uncertainty": {
+  "level": "high",
+  "reasons": [
+   "tier-1 macro release inside the d0 reaction period (fomc_statement)"
+  ]
+ },
+ "benchmark_notes": {
+  "^GSPC/^IXIC": "price indices (no dividends); used for close-to-close windows only",
+  "contamination": "MSFT is a large XLK constituent (weight not tracked); sector-adjusted returns are damped",
+  "sector": "Information Technology",
+  "sector_etf": "XLK"
+ },
+ "code_version": "0.2.0",
+ "content_sha256": "80168e046c15b3e9975e52830ebb142fd248accdd58739162f0015c71dd8037e",
+ "data_through": "2024-02-28",
+ "event": {
+  "accession_no": "0000950170-24-008809",
+  "availability_basis": "sec_acceptance_datetime",
+  "event_date": "2024-01-30",
+  "event_id": 311,
+  "evidence": {
+   "id": 311,
+   "table": "event"
+  },
+  "public_at_et": "2024-01-30T16:03:17-05:00",
+  "public_at_utc": "2024-01-30T21:03:17Z",
+  "recorded_event_date": "2024-01-30",
+  "ticker": "MSFT",
+  "type": "earnings_release"
+ },
+ "evidence_bars": {
+  "subject": [
+   4759,
+   4760,
+   4761,
+   4762,
+   4763,
+   4764
+  ]
+ },
+ "expectations": {
+  "documented_reactions": [
+   {
+    "evidence": {
+     "id": 46,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "after_hours_move",
+    "notes": "intraday extreme in extended trading, not a closing level; page first published before the event but last modified 2024-01-31T18:28:18Z, after it: content treated as post-event",
+    "point": -2.0,
+    "quote": "Microsoft shares moved as much as 2% lower in extended trading",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 67,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "headline_characterisation",
+    "notes": "headline; 'light' is the publisher's characterisation, the consensus it compares to is not given; page first published before the event but last modified 2024-01-31T18:28:18Z, after it: content treated as post-event",
+    "point": null,
+    "quote": "Microsoft issues light guidance even as Azure growth drives earnings beat",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "unit": null
+   },
+   {
+    "evidence": {
+     "id": 48,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "market_close_2024_01_31",
+    "notes": null,
+    "point": null,
+    "quote": "The S&P 500 fell 1.61% to 4,845.65. The Nasdaq Composite lost 2.23% to finish the session at 15,164.01.",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-31T21:24:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/stock-market-today-live-updates.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 49,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "nasdaq100_futures_evening",
+    "notes": null,
+    "point": -0.8,
+    "quote": "Nasdaq 100 futures fell 0.8% Tuesday night, as the pullback in Microsoft and Alphabet shares dragged down the tech-heavy index.",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T23:04:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/stock-market-today-live-updates.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 47,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "next_session_move",
+    "notes": "journalist attribution to guidance; FOMC the same afternoon not mentioned in this sentence",
+    "point": -3.0,
+    "quote": "Stock in peer tech firms Microsoft and AMD slipped nearly 3% each on lower-than-expected forward guidance after posting quarterly results.",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-31T21:24:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/stock-market-today-live-updates.html",
+    "unit": "percent"
+   }
+  ],
+  "event_key": "MSFT:FY2024Q2",
+  "guidance_issued_with_event": [
+   {
+    "basis": "issuer IR transcript page: call date shown on page; 5:30 PM ET call time assumed (Microsoft standard)",
+    "evidence": {
+     "id": 65,
+     "table": "expectation"
+    },
+    "high": null,
+    "low": null,
+    "metric": "next_q_azure_growth_cc",
+    "notes": "qualitative: 'stable' vs Q2's 28% cc",
+    "public_at": "2024-01-30T22:30:00Z",
+    "quote": "In Azure, we expect Q3 revenue growth in constant currency to remain stable to our stronger than expected Q2 result",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q2",
+    "unit": null
+   },
+   {
+    "basis": "issuer IR transcript page: call date shown on page; 5:30 PM ET call time assumed (Microsoft standard)",
+    "evidence": {
+     "id": 63,
+     "table": "expectation"
+    },
+    "high": 26300000000.0,
+    "low": 26000000000.0,
+    "metric": "next_q_intelligent_cloud_revenue",
+    "notes": "guidance for FY24 Q3",
+    "public_at": "2024-01-30T22:30:00Z",
+    "quote": "Intelligent Cloud we expect revenue of $26 to $26.3 billion or growth between 18% and 19%",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q2",
+    "unit": "USD"
+   },
+   {
+    "basis": "issuer IR transcript page: call date shown on page; 5:30 PM ET call time assumed (Microsoft standard)",
+    "evidence": {
+     "id": 64,
+     "table": "expectation"
+    },
+    "high": 15100000000.0,
+    "low": 14700000000.0,
+    "metric": "next_q_more_personal_computing_revenue",
+    "notes": "guidance for FY24 Q3",
+    "public_at": "2024-01-30T22:30:00Z",
+    "quote": "we expect revenue of $14.7 to $15.1 billion US dollars or growth between 11% and 14%",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q2",
+    "unit": "USD"
+   },
+   {
+    "basis": "issuer IR transcript page: call date shown on page; 5:30 PM ET call time assumed (Microsoft standard)",
+    "evidence": {
+     "id": 62,
+     "table": "expectation"
+    },
+    "high": 19600000000.0,
+    "low": 19300000000.0,
+    "metric": "next_q_productivity_business_processes_revenue",
+    "notes": "guidance for FY24 Q3, given on the call after the release",
+    "public_at": "2024-01-30T22:30:00Z",
+    "quote": "we expect revenue of $19.3 to $19.6 billion or growth between 10% and 12%",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q2",
+    "unit": "USD"
+   }
+  ],
+  "note": null,
+  "point_in_time": [
+   {
+    "actual": 28.0,
+    "actual_vs_range": "above",
+    "basis": "issuer IR event page: call date Oct 24, 2023; 2:30 PM PT call time is Microsoft's standard (assumed); transcript page itself undated",
+    "evidence": {
+     "id": 4,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": 27.0,
+    "low": 26.0,
+    "metric": "azure_growth_cc",
+    "point": null,
+    "provider": "Microsoft management",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-24T21:30:00Z",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q1",
+    "surprise_unit": "percentage points",
+    "surprise_vs_reference": 1.5,
+    "type": "management_guidance",
+    "unit": "percent"
+   },
+   {
+    "actual": 25900000000.0,
+    "actual_vs_range": "above",
+    "basis": "issuer IR event page: call date Oct 24, 2023; 2:30 PM PT call time is Microsoft's standard (assumed); transcript page itself undated",
+    "evidence": {
+     "id": 2,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": 25400000000.0,
+    "low": 25100000000.0,
+    "metric": "intelligent_cloud_revenue",
+    "point": null,
+    "provider": "Microsoft management",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-24T21:30:00Z",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q1",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.025742574257425765,
+    "type": "management_guidance",
+    "unit": "USD"
+   },
+   {
+    "basis": "issuer IR event page: call date Oct 24, 2023; 2:30 PM PT call time is Microsoft's standard (assumed); transcript page itself undated",
+    "evidence": {
+     "id": 3,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": 16900000000.0,
+    "low": 16500000000.0,
+    "metric": "more_personal_computing_revenue",
+    "point": null,
+    "provider": "Microsoft management",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-24T21:30:00Z",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q1",
+    "type": "management_guidance",
+    "unit": "USD"
+   },
+   {
+    "basis": "issuer IR event page: call date Oct 24, 2023; 2:30 PM PT call time is Microsoft's standard (assumed); transcript page itself undated",
+    "evidence": {
+     "id": 1,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": 19100000000.0,
+    "low": 18800000000.0,
+    "metric": "productivity_business_processes_revenue",
+    "point": null,
+    "provider": "Microsoft management",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-24T21:30:00Z",
+    "source_url": "https://www.microsoft.com/en-us/investor/events/fy-2024/earnings-fy-2024-q1",
+    "type": "management_guidance",
+    "unit": "USD"
+   },
+   {
+    "actual": 2.93,
+    "basis": "page datetime attribute; consistent with page metadata",
+    "evidence": {
+     "id": 6,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 2.76,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-24T15:39:00Z",
+    "source_url": "https://finance.yahoo.com/news/microsoft-msft-report-q2-earnings-153900673.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.061594202898550776,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 62020000000.0,
+    "basis": "page datetime attribute; consistent with page metadata",
+    "evidence": {
+     "id": 5,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "revenue",
+    "point": 61030000000.0,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-24T15:39:00Z",
+    "source_url": "https://finance.yahoo.com/news/microsoft-msft-report-q2-earnings-153900673.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.01622153039488783,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "post_event_documented": [
+   {
+    "actual": 30.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 9,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "azure_growth",
+    "point": 27.5,
+    "provider": "StreetAccount",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "surprise_unit": "percentage points",
+    "surprise_vs_reference": 2.5,
+    "type": "sell_side_consensus",
+    "unit": "percent"
+   },
+   {
+    "actual": 2.93,
+    "basis": "page byline (Published 12:00 PM EST); consistent with page metadata",
+    "evidence": {
+     "id": 8,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 2.78,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.05395683453237421,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 25900000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 10,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "intelligent_cloud_revenue",
+    "point": 25290000000.0,
+    "provider": "StreetAccount",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.024120205614867496,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   },
+   {
+    "actual": 62020000000.0,
+    "basis": "page byline (Published 12:00 PM EST); consistent with page metadata",
+    "evidence": {
+     "id": 7,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "revenue",
+    "point": 61120000000.0,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-01-30T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/01/30/microsoft-msft-q2-earnings-report-2024.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.014725130890052451,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "rejected": [],
+  "reported_kpis": [
+   {
+    "evidence": {
+     "id": 44,
+     "table": "expectation"
+    },
+    "metric": "azure_growth",
+    "quote": "Azure and other cloud services revenue growth of 30%",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024008809/msft-ex99_1.htm",
+    "unit": "percent",
+    "value": 30.0
+   },
+   {
+    "evidence": {
+     "id": 43,
+     "table": "expectation"
+    },
+    "metric": "azure_growth_cc",
+    "quote": "Azure and other cloud services revenue growth of 30% (up 28% in constant currency)",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024008809/msft-ex99_1.htm",
+    "unit": "percent",
+    "value": 28.0
+   },
+   {
+    "evidence": {
+     "id": 45,
+     "table": "expectation"
+    },
+    "metric": "intelligent_cloud_revenue",
+    "quote": "Revenue in Intelligent Cloud was $25.9 billion",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/789019/000095017024008809/msft-ex99_1.htm",
+    "unit": "USD",
+    "value": 25900000000.0
+   }
+  ]
+ },
+ "extended_hours": {
+  "reason": "no licensed intraday/extended-hours history in this system; the overnight gap is the measured upper level of detail",
+  "status": "not_measured"
+ },
+ "knowledge_time": "2026-11-06T15:46:20Z",
+ "market_model": {
+  "alpha": 0.001133193390531611,
+  "benchmark": "SPY",
+  "beta": 1.1957281624428449,
+  "first": "2023-01-18",
+  "last": "2024-01-16",
+  "n_obs": 250,
+  "sigma_eps": 0.011969024658438484
+ },
+ "observations_vs_hypotheses": {
+  "hypotheses_and_caveats": [
+   "Attribution uncertainty high: tier-1 macro release inside the d0 reaction period (fomc_statement). The abnormal return cannot be attributed to the earnings release alone without intraday data.",
+   "Any statement that the move was caused by a specific item (guidance, segment growth, capex) is a hypothesis unless it is documented by a dated source; see expectations and documented_explanations."
+  ],
+  "observable": [
+   "MSFT -2.69% on 2024-01-31 (close-to-close); SPY -1.63%, QQQ -1.96%.",
+   "Market-model abnormal return -0.86% (standardised -0.7 sigma of pre-event idiosyncratic noise).",
+   "Overnight gap -0.40%, then regular session -2.30% (continuation intraday)."
+  ]
+ },
+ "overlapping_events": [
+  {
+   "available_at": "2024-01-30T21:01:26Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 119,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-01-31",
+   "ticker": "GOOGL",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-30T21:05:46Z",
+   "event_type": "periodic_report",
+   "evidence": {
+    "id": 218,
+    "table": "event"
+   },
+   "kind": "same_company_companion_filing",
+   "label": null,
+   "reaction_day": "2024-01-31",
+   "ticker": "MSFT",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-30T21:16:19Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 1194,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,7.01,9.01",
+   "reaction_day": "2024-01-31",
+   "ticker": "AMD",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-31T19:00:00Z",
+   "event_type": "fomc_statement",
+   "evidence": {
+    "id": 2758,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "FOMC policy_decision: maintain 5-1/4 to 5-1/2%",
+   "reaction_day": "2024-01-31",
+   "ticker": null,
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-01-31T21:01:55Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2051,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-01",
+   "ticker": "QCOM",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:06:02Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 847,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AMZN",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:10:29Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 510,
+    "table": "event"
+   },
+   "kind": "universe_earnings",
+   "label": "2.02,8.01,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "META",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-01T21:30:30Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 681,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AAPL",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2024-02-02T13:30:00Z",
+   "event_type": "employment_situation_release",
+   "evidence": {
+    "id": 3016,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BLS Employment Situation (nonfarm payrolls)",
+   "reaction_day": "2024-02-02",
+   "ticker": null,
+   "within": "d1_to_d4"
+  }
+ ],
+ "previous_close_day": "2024-01-30",
+ "reaction_day": "2024-01-31",
+ "status": "ok",
+ "timing": "after_close",
+ "timing_note": "after the close: after-hours, pre-market and next session react",
+ "windows": {
+  "d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.0073602083019211895,
+     "return": -0.019586143454865534
+    },
+    "SPY": {
+     "excess": -0.010629031121610288,
+     "return": -0.016317320635176435
+    },
+    "XLK": {
+     "excess": -0.00594790914776655,
+     "return": -0.020998442609020174
+    },
+    "^GSPC": {
+     "excess": -0.010840607145188752,
+     "return": -0.016105744611597972
+    },
+    "^IXIC": {
+     "excess": -0.004645072168358522,
+     "return": -0.022301279588428202
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.008568465328228102,
+    "n_days": 1,
+    "scar": -0.7158866802222772
+   },
+   "return": -0.026946351756786724,
+   "to": "close 2024-01-31"
+  },
+  "d0_d1": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.0037308437021336127,
+     "return": -0.00804134260126299
+    },
+    "SPY": {
+     "excess": -0.008329454956301219,
+     "return": -0.0034427313470953846
+    },
+    "XLK": {
+     "excess": -0.003105387492632894,
+     "return": -0.00866679881076371
+    },
+    "^GSPC": {
+     "excess": -0.007958909751815346,
+     "return": -0.0038132765515812572
+    },
+    "^IXIC": {
+     "excess": -0.0022130828627893173,
+     "return": -0.009559103440607286
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.009757154683778715,
+    "n_days": 2,
+    "scar": -0.5764337896256054
+   },
+   "return": -0.011772186303396603,
+   "to": "close 2024-02-01"
+  },
+  "d0_d4": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.012971537489568696,
+     "return": 0.005384454762873414
+    },
+    "SPY": {
+     "excess": -0.01388176431663024,
+     "return": 0.006294681589934958
+    },
+    "XLK": {
+     "excess": -0.006844244484596529,
+     "return": -0.0007428382420987534
+    },
+    "^GSPC": {
+     "excess": -0.0135281878194351,
+     "return": 0.005941105092739818
+    },
+    "^IXIC": {
+     "excess": -0.013976524752699504,
+     "return": 0.006389442026004222
+    }
+   },
+   "from": "close 2024-01-30",
+   "market_model": {
+    "car": -0.020375953889300795,
+    "n_days": 5,
+    "scar": -0.7613321770668314
+   },
+   "return": -0.007587082726695282,
+   "to": "close 2024-02-06"
+  },
+  "overnight_gap": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.006473818549879717,
+     "return": -0.01046315969239886
+    },
+    "SPY": {
+     "excess": 0.0006349524130866424,
+     "return": -0.004624293555605785
+    },
+    "XLK": {
+     "excess": 0.00551936619878568,
+     "return": -0.009508707341304823
+    }
+   },
+   "from": "close 2024-01-30",
+   "interpretation": "after-hours (16:00-20:00 ET on the announcement day) + pre-market (04:00-09:30 ET on d0); not separable without intraday data",
+   "market_model": {
+    "ar_beta_adjusted": 0.0015400568933216525,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.003989341142519143,
+   "to": "open 2024-01-31"
+  },
+  "post_d1_d19": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.016505422382851354,
+     "return": 0.043888020095917524
+    },
+    "SPY": {
+     "excess": -0.021035238284277558,
+     "return": 0.04841783599734373
+    },
+    "XLK": {
+     "excess": -0.008129363702142012,
+     "return": 0.03551196141520818
+    },
+    "^GSPC": {
+     "excess": -0.018867104142787916,
+     "return": 0.046249701855854086
+    },
+    "^IXIC": {
+     "excess": -0.024300992634298302,
+     "return": 0.05168359034736447
+    }
+   },
+   "from": "close 2024-01-31",
+   "market_model": {
+    "car": -0.050350510112726406,
+    "n_days": 19,
+    "scar": -0.9650911045725319
+   },
+   "return": 0.02738259771306617,
+   "to": "close 2024-02-28"
+  },
+  "pre_event_5d": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.019994140205459532,
+     "return": 0.004297668743328931
+    },
+    "SPY": {
+     "excess": 0.01185516851845314,
+     "return": 0.012436640430335322
+    },
+    "XLK": {
+     "excess": 0.023994585336322594,
+     "return": 0.0002972236124658689
+    },
+    "^GSPC": {
+     "excess": 0.011881720560107611,
+     "return": 0.012410088388680851
+    },
+    "^IXIC": {
+     "excess": 0.018849031484413192,
+     "return": 0.00544277746437527
+    }
+   },
+   "from": "close 2024-01-23",
+   "market_model": {
+    "car": 0.003665911816439275,
+    "n_days": 5,
+    "scar": 0.1369740351449386
+   },
+   "return": 0.024291808948788463,
+   "to": "close 2024-01-30"
+  },
+  "session_d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.013829512459265558,
+     "return": -0.00921944832254118
+    },
+    "SPY": {
+     "excess": -0.011301610506060489,
+     "return": -0.011747350275746249
+    },
+    "XLK": {
+     "excess": -0.01144892416071297,
+     "return": -0.011600036621093768
+    }
+   },
+   "from": "open 2024-01-31",
+   "market_model": {
+    "ar_beta_adjusted": -0.009002323223016228,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.023048960781806738,
+   "to": "close 2024-01-31"
+  }
+ }
+}

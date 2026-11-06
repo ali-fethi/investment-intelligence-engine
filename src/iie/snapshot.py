@@ -373,6 +373,9 @@ def verify_snapshot(conn, sid: int, store=None, out_dir: Path = SNAPSHOT_DIR) ->
     file_hash_ok = content_hash(stored["content"]) == row["content_sha256"]
     tickers = list(stored["content"]["companies"])
     rebuilt = build_snapshot(conn, row["cutoff"], row["knowledge_time"], tickers)
+    # the code version is part of the content; compare as if built by the version that wrote the snapshot, so
+    # a mismatch means the current code computes something different (a behaviour change), not a version bump
+    rebuilt["meta"]["code_version"] = row["code_version"]
     rebuild_ok = content_hash(rebuilt) == row["content_sha256"]
     evidence_ok, bad = True, []
     if store is not None:

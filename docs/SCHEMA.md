@@ -53,6 +53,21 @@ QA surfaces each of these.
 evidence row the snapshot cites). The JSON file under `data/snapshots/` holds the full content.
 Its hash is recomputed by `iie verify`.
 
+## v2 additions (Milestone 2)
+
+- `company.kind` (issuer | etf | index) and `company.role` (universe | context | benchmark); `cik` is
+  nullable for ETFs and indices. Migrated in place: ids and snapshots are unchanged.
+- `expectation`: curated claims (guidance, consensus, reported KPIs, guidance issued with the event,
+  documented reactions). Each carries `source_doc_id`, `verbatim_quote`, `quote_verified` (0/1/2),
+  `provenance_grade` (A–D) and `available_at`, which is NULL unless the grade is A/B. Append-only;
+  readers take the latest row per `natural_key`.
+- `event_reaction`: engine results, with result JSON, data-through date, knowledge time and code
+  version. Append-only.
+- `data_correction`: append-only record of errors found in stored evidence (table, row filter, field,
+  wrong → correct value, reason, how it was established).
+- `event` rows with `company_id IS NULL` are macro events (FOMC statements, CPI/payrolls/GDP/PCE
+  release dates).
+
 ## Canonical metric mapping
 
 `metric_definition` + `metric_concept_map` (from `config.METRICS`): e.g. `revenue` ←

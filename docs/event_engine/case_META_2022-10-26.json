@@ -1,0 +1,556 @@
+{
+ "attribution_uncertainty": {
+  "level": "medium",
+  "reasons": [
+   "tier-2 macro release inside the d0 reaction period (gdp_release)"
+  ]
+ },
+ "benchmark_notes": {
+  "^GSPC/^IXIC": "price indices (no dividends); used for close-to-close windows only",
+  "contamination": "META and GOOGL are large XLC constituents (weights not tracked); sector-adjusted returns are damped. XLC starts 2018-06-19",
+  "sector": "Communication Services",
+  "sector_etf": "XLC"
+ },
+ "code_version": "0.2.0",
+ "content_sha256": "62e41659915dc7301c751e151a798d824b7ec669c51762719d559455b0a472bf",
+ "data_through": "2022-11-23",
+ "event": {
+  "accession_no": "0001326801-22-000105",
+  "availability_basis": "sec_acceptance_datetime",
+  "event_date": "2022-10-26",
+  "event_id": 496,
+  "evidence": {
+   "id": 496,
+   "table": "event"
+  },
+  "public_at_et": "2022-10-26T16:19:09-04:00",
+  "public_at_utc": "2022-10-26T20:19:09Z",
+  "recorded_event_date": "2022-10-26",
+  "ticker": "META",
+  "type": "earnings_release"
+ },
+ "evidence_bars": {
+  "subject": [
+   7171,
+   7172,
+   7173,
+   7174,
+   7175,
+   7176
+  ]
+ },
+ "expectations": {
+  "documented_reactions": [
+   {
+    "evidence": {
+     "id": 54,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "after_hours_move",
+    "notes": "page first published before the event but last modified 2022-10-27T01:27:21Z, after it: content treated as post-event",
+    "point": -19.0,
+    "quote": "plunging 19% in extended trading on Wednesday",
+    "reported_by": "CNBC",
+    "source_published_at": "2022-10-26T12:00:00Z",
+    "source_url": "https://www.cnbc.com/2022/10/26/facebook-parent-meta-earnings-q3-2022.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 55,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "next_session_move",
+    "notes": null,
+    "point": -24.5,
+    "quote": "Shares of Meta plunged 24.5% Thursday",
+    "reported_by": "CNBC",
+    "source_published_at": "2022-10-27T12:19:00Z",
+    "source_url": "https://www.cnbc.com/2022/10/27/meta-stock-falls-23percent-on-earnings-miss-analyst-downgrades.html",
+    "unit": "percent"
+   }
+  ],
+  "event_key": "META:FY2022Q3",
+  "guidance_issued_with_event": [],
+  "note": null,
+  "point_in_time": [
+   {
+    "actual": 27714000000.0,
+    "actual_vs_range": "within",
+    "basis": "sec_acceptance_datetime",
+    "evidence": {
+     "id": 24,
+     "table": "expectation"
+    },
+    "grade": "A",
+    "high": 28500000000.0,
+    "low": 26000000000.0,
+    "metric": "revenue",
+    "point": null,
+    "provider": "Meta management (CFO outlook)",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2022-07-27T20:07:22Z",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680122000079/meta06302022-exhibit991.htm",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.017027522935779915,
+    "type": "management_guidance",
+    "unit": "USD"
+   },
+   {
+    "actual": 1.64,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 26,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.82,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2022-10-21T14:33:02Z",
+    "source_url": "https://finance.yahoo.com/news/meta-platforms-meta-report-q3-143302975.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": -0.098901098901099,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 27714000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 25,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "revenue",
+    "point": 27440000000.0,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2022-10-21T14:33:02Z",
+    "source_url": "https://finance.yahoo.com/news/meta-platforms-meta-report-q3-143302975.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.009985422740524719,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "post_event_documented": [
+   {
+    "actual": 1.64,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 28,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 1.89,
+    "provider": "Refinitiv",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2022-10-26T12:00:00Z",
+    "source_url": "https://www.cnbc.com/2022/10/26/facebook-parent-meta-earnings-q3-2022.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": -0.13227513227513232,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 27714000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 27,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "revenue",
+    "point": 27380000000.0,
+    "provider": "Refinitiv",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2022-10-26T12:00:00Z",
+    "source_url": "https://www.cnbc.com/2022/10/26/facebook-parent-meta-earnings-q3-2022.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.01219868517165823,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "rejected": [],
+  "reported_kpis": []
+ },
+ "extended_hours": {
+  "reason": "no licensed intraday/extended-hours history in this system; the overnight gap is the measured upper level of detail",
+  "status": "not_measured"
+ },
+ "knowledge_time": "2026-11-06T15:46:20Z",
+ "market_model": {
+  "alpha": -0.0019100444592931095,
+  "benchmark": "SPY",
+  "beta": 1.7399228129349917,
+  "first": "2021-10-15",
+  "last": "2022-10-12",
+  "n_obs": 250,
+  "sigma_eps": 0.0253303497313756
+ },
+ "observations_vs_hypotheses": {
+  "hypotheses_and_caveats": [
+   "Attribution uncertainty medium: tier-2 macro release inside the d0 reaction period (gdp_release). The abnormal return cannot be attributed to the earnings release alone without intraday data.",
+   "Any statement that the move was caused by a specific item (guidance, segment growth, capex) is a hypothesis unless it is documented by a dated source; see expectations and documented_explanations."
+  ],
+  "observable": [
+   "META -24.56% on 2022-10-27 (close-to-close); SPY -0.53%, QQQ -1.82%.",
+   "Market-model abnormal return -23.44% (standardised -9.3 sigma of pre-event idiosyncratic noise).",
+   "Overnight gap -24.53%, then regular session -0.04% (continuation intraday)."
+  ]
+ },
+ "overlapping_events": [
+  {
+   "available_at": "2022-10-27T00:26:36Z",
+   "event_type": "periodic_report",
+   "evidence": {
+    "id": 423,
+    "table": "event"
+   },
+   "kind": "same_company_companion_filing",
+   "label": null,
+   "reaction_day": "2022-10-27",
+   "ticker": "META",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2022-10-27T12:30:00Z",
+   "event_type": "gdp_release",
+   "evidence": {
+    "id": 3128,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BEA Gross Domestic Product",
+   "reaction_day": "2022-10-27",
+   "ticker": null,
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2022-10-27T20:02:53Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 1821,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2022-10-28",
+   "ticker": "INTC",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-10-27T20:08:26Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2638,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "1.01,2.02,2.03,9.01",
+   "reaction_day": "2022-10-28",
+   "ticker": "PINS",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-10-27T20:09:35Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 834,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2022-10-28",
+   "ticker": "AMZN",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-10-27T20:30:22Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 673,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2022-10-28",
+   "ticker": "AAPL",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-10-28T12:30:00Z",
+   "event_type": "pce_release",
+   "evidence": {
+    "id": 3256,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BEA Personal Income and Outlays (PCE price index)",
+   "reaction_day": "2022-10-28",
+   "ticker": null,
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-11-01T20:17:39Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 1183,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,7.01,9.01",
+   "reaction_day": "2022-11-02",
+   "ticker": "AMD",
+   "within": "d1_to_d4"
+  },
+  {
+   "available_at": "2022-11-02T18:00:00Z",
+   "event_type": "fomc_statement",
+   "evidence": {
+    "id": 2748,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "FOMC policy_decision: raise 3-3/4 to 4%",
+   "reaction_day": "2022-11-02",
+   "ticker": null,
+   "within": "d1_to_d4"
+  }
+ ],
+ "previous_close_day": "2022-10-26",
+ "reaction_day": "2022-10-27",
+ "status": "ok",
+ "timing": "after_close",
+ "timing_note": "after the close: after-hours, pre-market and next session react",
+ "windows": {
+  "d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.22736479928769027,
+     "return": -0.018206014794871272
+    },
+    "SPY": {
+     "excess": -0.24023083689285818,
+     "return": -0.00533997718970336
+    },
+    "XLC": {
+     "excess": -0.19816043496017144,
+     "return": -0.0474103791223901
+    },
+    "^GSPC": {
+     "excess": -0.2394882034643503,
+     "return": -0.006082610618211248
+    },
+    "^IXIC": {
+     "excess": -0.22931701121786885,
+     "return": -0.01625380286469269
+    }
+   },
+   "from": "close 2022-10-26",
+   "market_model": {
+    "car": -0.23436962149035107,
+    "n_days": 1,
+    "scar": -9.252522131585401
+   },
+   "return": -0.24557081408256154,
+   "to": "close 2022-10-27"
+  },
+  "d0_d1": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.2477026546253942,
+     "return": 0.011837544099674746
+    },
+    "SPY": {
+     "excess": -0.2541887590292262,
+     "return": 0.018323648503506762
+    },
+    "XLC": {
+     "excess": -0.21255829845677743,
+     "return": -0.02330681206894203
+    },
+    "^GSPC": {
+     "excess": -0.254259085135758,
+     "return": 0.018393974610038555
+    },
+    "^IXIC": {
+     "excess": -0.24784761694757385,
+     "return": 0.011982506421854389
+    }
+   },
+   "from": "close 2022-10-26",
+   "market_model": {
+    "car": -0.26098853883371753,
+    "n_days": 2,
+    "scar": -7.285598800584274
+   },
+   "return": -0.23586511052571946,
+   "to": "close 2022-10-28"
+  },
+  "d0_d4": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.25849697779580916,
+     "return": -0.04407584759767291
+    },
+    "SPY": {
+     "excess": -0.2838565432561395,
+     "return": -0.018716282137342555
+    },
+    "XLC": {
+     "excess": -0.22986363275590838,
+     "return": -0.0727091926375737
+    },
+    "^GSPC": {
+     "excess": -0.2840613247298168,
+     "return": -0.018511500663665248
+    },
+    "^IXIC": {
+     "excess": -0.26190280198124094,
+     "return": -0.04067002341224113
+    }
+   },
+   "from": "close 2022-10-26",
+   "market_model": {
+    "car": -0.27935016965019893,
+    "n_days": 5,
+    "scar": -4.931996403430795
+   },
+   "return": -0.30257282539348207,
+   "to": "close 2022-11-02"
+  },
+  "overnight_gap": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.24116099286350756,
+     "return": -0.0041016952502467285
+    },
+    "SPY": {
+     "excess": -0.24801128332014089,
+     "return": 0.002748595206386595
+    },
+    "XLC": {
+     "excess": -0.20940613015152,
+     "return": -0.0358565579622343
+    }
+   },
+   "from": "close 2022-10-26",
+   "interpretation": "after-hours (16:00-20:00 ET on the announcement day) + pre-market (04:00-09:30 ET on d0); not separable without intraday data",
+   "market_model": {
+    "ar_beta_adjusted": -0.2500450316168701,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.2452626881137543,
+   "to": "open 2022-10-27"
+  },
+  "post_d1_d19": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.08755492062802284,
+     "return": 0.058452788846135695
+    },
+    "SPY": {
+     "excess": 0.08695196498076241,
+     "return": 0.05905574449339612
+    },
+    "XLC": {
+     "excess": 0.09038245091314678,
+     "return": 0.05562525856101175
+    },
+    "^GSPC": {
+     "excess": 0.08823449535482397,
+     "return": 0.05777321411933456
+    },
+    "^IXIC": {
+     "excess": 0.1003609516106132,
+     "return": 0.04564675786354533
+    }
+   },
+   "from": "close 2022-10-27",
+   "market_model": {
+    "car": 0.0814368213404663,
+    "n_days": 19,
+    "scar": 0.7375692925695069
+   },
+   "return": 0.14600770947415853,
+   "to": "close 2022-11-23"
+  },
+  "pre_event_5d": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": -0.053100397711411396,
+     "return": 0.027505647935288424
+    },
+    "SPY": {
+     "excess": -0.062284000830863495,
+     "return": 0.036689251054740524
+    },
+    "XLC": {
+     "excess": -0.03545195531809331,
+     "return": 0.009857205541970337
+    },
+    "^GSPC": {
+     "excess": -0.06224815281370877,
+     "return": 0.0366534030375858
+    },
+    "^IXIC": {
+     "excess": -0.052791997391110956,
+     "return": 0.027197247614987985
+    }
+   },
+   "from": "close 2022-10-19",
+   "market_model": {
+    "car": -0.0765260014146374,
+    "n_days": 5,
+    "scar": -1.3510855003902191
+   },
+   "return": -0.02559474977612297,
+   "to": "close 2022-10-26"
+  },
+  "session_d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.013754153521154167,
+     "return": -0.014162409432124323
+    },
+    "SPY": {
+     "excess": 0.007658145213656042,
+     "return": -0.008066401124626199
+    },
+    "XLC": {
+     "excess": 0.011575252617321286,
+     "return": -0.011983508528291442
+    }
+   },
+   "from": "open 2022-10-27",
+   "market_model": {
+    "ar_beta_adjusted": 0.01362665942405144,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": -0.0004082559109701567,
+   "to": "close 2022-10-27"
+  }
+ }
+}

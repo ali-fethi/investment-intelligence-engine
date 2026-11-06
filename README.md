@@ -1,4 +1,4 @@
-# Investment Intelligence Engine — Sprint 1: Data Foundation
+# Investment Intelligence Engine — data foundation and Event Reaction Engine (v0.2.0)
 
 An auditable, reproducible, point-in-time public-market data foundation for **GOOGL, MSFT, META**.
 Every number keeps its source bytes (sha256), the period it describes, when it became public, and
@@ -9,6 +9,14 @@ bit-for-bit.
 * [Schema](docs/SCHEMA.md): tables and audit columns (DDL: `src/iie/schema.sql`)
 * [Data sources](docs/DATA_SOURCES.md): licensing, point-in-time reliability, documented gaps
 * [Sample output](docs/sample_output/): three snapshots, QA summary, verification, search
+
+**Milestone 2 (v0.2.0): Event Reaction Engine**
+* [Event Reaction Engine](docs/EVENT_ENGINE.md): windows, benchmarks, market model, overlaps, expectation grades
+* [Corrected Microsoft 30 Jan 2024 analysis](docs/MSFT_2024-01-30_CORRECTED.md) and
+  [five validation cases](docs/VALIDATION_CASES.md); full reports and the 127-event summary in [`docs/event_engine/`](docs/event_engine/)
+* [QA and provenance report](docs/QA_PROVENANCE_REPORT.md)
+* [Next milestone: Expectations Engine](docs/EXPECTATIONS_ENGINE_PROPOSAL.md)
+* Curated, machine-verified claims: [`registry/expectations.json`](registry/expectations.json), [`registry/case_notes.json`](registry/case_notes.json)
 
 ## Install
 
@@ -41,6 +49,14 @@ Ingest targets can be run separately: `sec`, `docs`, `releases`, `prices`, `even
 default 2023-01-01), `--vintage-start`, `--vintage` (exact ALFRED vintages, e.g. your snapshot
 cutoffs).
 
+Milestone 2 commands:
+
+```bash
+.venv/bin/iie ingest benchmarks context macro_events crosscheck expectations
+.venv/bin/iie case 0000950170-24-008809 --knowledge-time 2026-11-06T16:00:00Z   # one report per accession
+.venv/bin/iie reactions                                                         # all earnings releases since 2016
+```
+
 Rebuild the whole database offline from stored evidence (keeps original retrieval timestamps):
 
 ```bash
@@ -50,7 +66,7 @@ mv data/iie.sqlite data/old.sqlite && .venv/bin/iie rebuild --from-db data/old.s
 ## Tests
 
 ```bash
-.venv/bin/pytest                                   # 29 offline unit + integration tests (~2 s)
+.venv/bin/pytest                                   # 41 offline unit, integration and adversarial tests (~2 s)
 IIE_NETWORK_TESTS=1 .venv/bin/pytest -m network    # 3 live checks of provider formats and timestamp conventions
 ```
 
@@ -80,10 +96,13 @@ Warnings are documented gaps (see `docs/sample_output/qa_summary.txt`).
 ## Layout
 
 ```
-src/iie/            config, db + schema.sql, evidence (fetch/store/replay), pit, derive, snapshot, qa, search, cli
-src/iie/ingest/     sec, documents, earnings_release, prices, macro, events
-tests/              conftest (synthetic sources), test_units, test_pipeline, test_network
-docs/               ARCHITECTURE, SCHEMA, DATA_SOURCES, sample_output/
+src/iie/            config, db + schema.sql, evidence (fetch/store/replay), pit, derive, snapshot, qa, search, cli,
+                    reaction (event engine), expectations (claim registry), casestudy (reports)
+src/iie/ingest/     sec, documents, earnings_release, prices, macro, events, macro_events, crosscheck
+registry/           curated claims (expectations.json) and labelled case notes (case_notes.json)
+tests/              conftest (synthetic sources), test_units, test_pipeline, test_reaction, test_network
+docs/               ARCHITECTURE, SCHEMA, DATA_SOURCES, EVENT_ENGINE, QA_PROVENANCE_REPORT, VALIDATION_CASES,
+                    MSFT_2024-01-30_CORRECTED, EXPECTATIONS_ENGINE_PROPOSAL, event_engine/, sample_output/
 data/               (git-ignored) iie.sqlite, evidence/ (content-addressed gzip), snapshots/
 ```
 

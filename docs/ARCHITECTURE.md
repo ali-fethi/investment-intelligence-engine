@@ -90,6 +90,18 @@ are adjusted only for splits known by that cutoff. Example: GOOGL at 2022-06-30 
 * A snapshot hash covers the full canonical JSON content (not creation metadata). `verify` checks: the
   file hash, the rebuild hash, the code version, the evidence bytes (sha256) and the look-ahead audit.
 
+## Milestone 2 additions
+
+`reaction.py` (Event Reaction Engine), `expectations.py` (claim registry with quote verification and
+provenance grades), `casestudy.py` (reports), `ingest/macro_events.py`, `ingest/crosscheck.py`.
+
+- They read prices only through `PriceSeries`, which applies the same two clocks as `pit.py`. It also
+  excludes bars retrieved before their session closed.
+- Estimation windows end 10 sessions before the event.
+- Expectations enter a computation only if graded A/B and available before the event's public timestamp.
+
+See [EVENT_ENGINE.md](EVENT_ENGINE.md).
+
 ## Deliberate non-goals (Sprint 1)
 
 No strategy, no sentiment, no recommendations, no UI. Values are reported as the filer reported them;

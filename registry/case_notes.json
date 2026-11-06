@@ -1,0 +1,67 @@
+{
+ "MSFT:2024-01-30": {
+  "documented": [
+   "Primary (Microsoft 8-K EX-99.1, public 16:03 ET): Q2 revenue $62.02bn, diluted EPS $2.93, Azure +30% (+28% in constant currency), above the 26-27% cc guidance Microsoft gave on 24 Oct 2023.",
+   "Primary (Microsoft call transcript, 30 Jan 2024, after the release): Q3 guidance of Intelligent Cloud $26.0-26.3bn, Productivity $19.3-19.6bn, More Personal Computing $14.7-15.1bn; Azure growth in cc 'to remain stable' with Q2.",
+   "Primary (Federal Reserve, 31 Jan 2024, 14:00 ET): FOMC held the target range at 5-1/4 to 5-1/2% and said it did not expect to cut 'until it has gained greater confidence' on inflation.",
+   "Press (CNBC, Wed 31 Jan 2024 16:24 ET, written after the close): 'Microsoft and AMD slipped nearly 3% each on lower-than-expected forward guidance'. That is CNBC's attribution. The article does not quote a pre-event consensus for the guidance.",
+   "Press (CNBC, 31 Jan 2024): S&P 500 -1.61%, Nasdaq Composite -2.23%. This system measures -1.611% and -2.230%, an exact match."
+  ],
+  "inference": [
+   "Most of MSFT's -2.69% on 31 Jan is consistent with market and tech-sector movement. With beta 1.20 the market-model abnormal return is only -0.86% (-0.7 sigma), inside normal daily noise. XLK (-2.10%) and QQQ (-1.96%) also fell; MSFT is itself a large XLK constituent (index weight not tracked here), which damps the sector-adjusted figure.",
+   "The overnight gap (-0.40%; QQQ -1.05% over the same window) came before the 14:00 FOMC statement. The -2.30% regular session spans it. Without intraday data the post-FOMC share of the decline cannot be measured.",
+   "The press narrative ('lower-than-expected guidance') cannot be tested here: no point-in-time consensus for FY24 Q3 segment revenue was found, so 'light' is a characterisation, not a measured surprise.",
+   "Earlier statements in this conversation implied a significant negative reaction to the earnings. The corrected reading is that the reaction was not statistically distinguishable from market and sector moves that day."
+  ]
+ },
+ "GOOGL:2024-01-30": {
+  "documented": [
+   "Primary (Alphabet 8-K, 16:01 ET): Q4 2023 revenue $86.31bn, diluted EPS $1.64; Alphabet does not issue quantitative guidance (no outlook section in its prior-quarter release).",
+   "Press (CNBC, page updated 30 Jan 17:49 ET): ad revenue '$65.52 billion trailed analysts' estimates of $65.94 billion, according to StreetAccount'. This is a grade-C expectation (documented after the event)."
+  ],
+  "inference": [
+   "Unlike MSFT, the GOOGL move is large relative to its own noise: -5.30% abnormal (-3.5 sigma), and -5.18% happened in the overnight gap, before the FOMC statement. That timing favours a company-specific explanation for most of the decline.",
+   "The ad-revenue shortfall against StreetAccount is a plausible driver, but StreetAccount's estimate is only documented after the event (grade C) and the dated pre-event Zacks consensus is on a different (ex-TAC) basis, so the surprise cannot be measured cleanly."
+  ]
+ },
+ "META:2024-02-01": {
+  "documented": [
+   "Primary (Meta 8-K, 16:10 ET, Items 2.02/8.01/9.01): Q4 2023 revenue $40.1bn, above the $36.5-40bn range Meta guided on 25 Oct 2023; first quarterly dividend of $0.50 per share announced in the same release.",
+   "Press (CNBC, 2 Feb 2024): 'Meta shares closed up more than 20% on Friday'. Measured: +20.32%."
+  ],
+  "inference": [
+   "The +18.1% abnormal return (9 sigma) is far outside normal noise. The 08:30 ET payrolls release fell inside the overnight-gap window, but SPY rose only +1.05% on the day, so macro news cannot account for the move's magnitude.",
+   "Revenue above the top of guidance and the first dividend arrived together in one document. This data cannot separate their effects."
+  ]
+ },
+ "META:2022-10-26": {
+  "documented": [
+   "Primary (Meta 8-K, 16:19 ET): Q3 2022 revenue $27.71bn, inside the $26-28.5bn range guided on 27 Jul 2022; 2023 total expenses outlook $96-101bn.",
+   "Press (CNBC, 27 Oct 2022): 'Shares of Meta plunged 24.5% Thursday'. Measured: -24.56%."
+  ],
+  "inference": [
+   "Revenue was within guidance and roughly at the dated Zacks consensus, while diluted EPS was ~10% below the Zacks consensus. The size of the reaction (-23.4% abnormal, -9.3 sigma, almost all in the overnight gap) suggests the market reacted to forward cost commitments rather than to the quarter's revenue. That is a hypothesis: no point-in-time consensus for 2023 expenses is in the registry."
+  ]
+ },
+ "GOOGL:2023-10-24": {
+  "documented": [
+   "Primary (Alphabet 8-K, 16:01 ET): Q3 2023 revenue $76.69bn, diluted EPS $1.55.",
+   "Press (CNBC, page updated 25 Oct 2023): Google Cloud revenue '$8.41 billion vs. $8.64 billion, according to StreetAccount' (grade C). The dated pre-event Zacks Cloud consensus was $8.54bn (grade B).",
+   "Measured, same evening: MSFT also reported after the close on 24 Oct 2023 and rose +3.07% on 25 Oct, while GOOGL fell -9.51%."
+  ],
+  "inference": [
+   "Opposite moves by two mega-caps that reported in the same post-close window argue against a common market factor. The -7.5% abnormal return (-4.8 sigma) is most plausibly company-specific; the Cloud shortfall against both the dated Zacks estimate and StreetAccount is the documented candidate."
+  ]
+ },
+ "MSFT:2024-10-30": {
+  "documented": [
+   "Primary (Microsoft 8-K, 16:04 ET): Azure +33% (+34% in constant currency), above the 28-29% cc guidance given on 30 Jul 2024.",
+   "Primary (Microsoft call transcript, 30 Oct 2024): 'In Azure, we expect Q2 revenue growth to be 31% to 32% in constant currency'.",
+   "Press (CNBC, 31 Oct 2024): 'Microsoft shares fell more than 6% on Thursday after guidance fell short of analysts' estimates'. Measured: -6.05%."
+  ],
+  "inference": [
+   "The decline is mostly idiosyncratic (-3.9% abnormal, -4.4 sigma) and followed results that beat both the dated Zacks consensus and Microsoft's own Azure guidance. That pattern is consistent with the press attribution to forward guidance, but the pre-event consensus for Q2 Azure growth is not documented point-in-time, so it remains a hypothesis.",
+   "META reported in the same window and fell -4.09% the same day. The PCE release on the morning of 31 Oct 2024 (tracked by this system from ALFRED vintage dates) also falls inside the overnight window."
+  ]
+ }
+}

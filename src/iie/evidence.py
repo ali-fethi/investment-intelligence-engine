@@ -24,8 +24,29 @@ LICENSES = {
     "us_treasury": "US government work (U.S. Treasury); public domain.",
     "fred": "FRED (St. Louis Fed). Series may carry third-party copyright; check series notes before redistribution.",
     "alfred": "ALFRED (St. Louis Fed) vintage data; same terms as FRED.",
+    "federal_reserve": "US government work (Federal Reserve Board); public domain.",
+    "nasdaq_api": "Nasdaq.com historical quotes endpoint (unofficial). Used only to cross-check prices; "
+                  "no redistribution.",
+    "issuer_ir": "Issuer investor-relations website; issuer copyright. Stored for private verification only.",
+    "press": "News publisher; copyrighted. Stored for private verification of quoted figures only; "
+             "never redistributed.",
     "yahoo_chart": "Yahoo Finance unofficial chart endpoint. No licence for redistribution; personal research use "
                    "only; no SLA; history is silently re-adjusted.",
+}
+
+
+# Hosts that refuse non-browser clients. Values are request headers only; nothing here bypasses an
+# access control (no cookies, no challenge solving).
+BROWSER_UA = ("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) "
+              "Chrome/124.0 Safari/537.36")
+HOST_HEADERS = {
+    "api.nasdaq.com": {"User-Agent": BROWSER_UA, "Accept": "application/json, text/plain, */*",
+                       "Origin": "https://www.nasdaq.com", "Referer": "https://www.nasdaq.com/"},
+    "www.federalreserve.gov": {"User-Agent": BROWSER_UA},
+    "www.cnbc.com": {"User-Agent": BROWSER_UA},
+    "www.microsoft.com": {"User-Agent": BROWSER_UA},
+    "finance.yahoo.com": {"User-Agent": BROWSER_UA},
+    "www.fool.com": {"User-Agent": BROWSER_UA},
 }
 
 
@@ -54,6 +75,7 @@ class Transport:
             time.sleep(wait)
         ua = SEC_USER_AGENT if "sec.gov" in host else GENERIC_USER_AGENT
         headers = {"User-Agent": ua, "Accept-Encoding": "gzip, deflate"}
+        headers.update(HOST_HEADERS.get(host, {}))
         last_exc = None
         for attempt in range(4):
             try:

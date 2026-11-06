@@ -24,13 +24,17 @@ CREATE TABLE IF NOT EXISTS ingest_run (
     notes         TEXT
 );
 
+-- Instruments and issuers.  role: universe (fully ingested) | context (EDGAR filings only, used to
+-- detect overlapping events) | benchmark (prices only).  kind: issuer | etf | index.
 CREATE TABLE IF NOT EXISTS company (
     company_id       INTEGER PRIMARY KEY,
     ticker           TEXT NOT NULL UNIQUE,
-    cik              TEXT NOT NULL UNIQUE,            -- 10-digit, zero padded
+    cik              TEXT UNIQUE,                     -- 10-digit, zero padded; NULL for ETFs/indices
     name             TEXT NOT NULL,
-    fiscal_year_end  TEXT NOT NULL,                   -- 'MMDD' as reported by EDGAR
-    exchange         TEXT
+    fiscal_year_end  TEXT NOT NULL,                   -- 'MMDD' as reported by EDGAR ('0000' if n/a)
+    exchange         TEXT,
+    kind             TEXT NOT NULL DEFAULT 'issuer',
+    role             TEXT NOT NULL DEFAULT 'universe'
 );
 
 -- Every artifact fetched from the outside world. One row per retrieval (immutable).
@@ -309,3 +313,71 @@ CREATE TRIGGER IF NOT EXISTS ro_snapshot_item_u BEFORE UPDATE ON snapshot_item B
 CREATE TRIGGER IF NOT EXISTS ro_snapshot_item_d BEFORE DELETE ON snapshot_item BEGIN SELECT RAISE(ABORT, 'snapshot_item is immutable'); END;
 CREATE TRIGGER IF NOT EXISTS ro_derived_u BEFORE UPDATE ON derived_metric BEGIN SELECT RAISE(ABORT, 'derived_metric is append-only'); END;
 CREATE TRIGGER IF NOT EXISTS ro_derived_d BEFORE DELETE ON derived_metric BEGIN SELECT RAISE(ABORT, 'derived_metric is append-only'); END;
+
+-- ---------------------------------------------------------------- v2: expectations & event reactions
+-- Curated expectation claims (guidance, consensus). Each claim cites a stored source document and a
+-- verbatim quote that is machine-checked against the stored bytes.  Append-only.
+CREATE TABLE IF NOT EXISTS expectation (
+    expectation_id        INTEGER PRIMARY KEY,
+    company_id            INTEGER NOT NULL REFERENCES company(company_id),
+    event_key             TEXT NOT NULL,       -- e.g. MSFT:FY2024Q2
+    expectation_type      TEXT NOT NULL,       -- management_guidance | sell_side_consensus | no_guidance_policy
+    metric                TEXT NOT NULL,
+    period_end            TEXT,
+    value_low             REAL,
+    value_high            REAL,
+    value_point           REAL,
+    unit                  TEXT,
+    provider              TEXT NOT NULL,       -- who produced the expectation (e.g. LSEG, Microsoft management)
+    reported_by           TEXT,                -- who published it (e.g. CNBC)
+    source_doc_id         INTEGER REFERENCES source_document(doc_id),
+    source_url            TEXT NOT NULL,
+    source_published_at   TEXT,                -- as stated by the source (UTC) or NULL
+    published_at_basis    TEXT NOT NULL,
+    verbatim_quote        TEXT,
+    quote_verified        INTEGER NOT NULL,    -- 1 if the quote was found in the stored source bytes
+    provenance_grade      TEXT NOT NULL,       -- A | B | C | D (see docs/EVENT_ENGINE.md)
+    available_at          TEXT,                -- usable point-in-time from here; NULL = never usable PIT
+    notes                 TEXT,
+    retrieved_at          TEXT NOT NULL,
+    natural_key           TEXT NOT NULL,
+    run_id                INTEGER REFERENCES ingest_run(run_id)
+);
+CREATE UNIQUE INDEX IF NOT EXISTS ux_exp_nk ON expectation(natural_key, quote_verified, source_doc_id);
+CREATE TRIGGER IF NOT EXISTS ro_exp_u BEFORE UPDATE ON expectation BEGIN SELECT RAISE(ABORT, 'expectation is append-only'); END;
+CREATE TRIGGER IF NOT EXISTS ro_exp_d BEFORE DELETE ON expectation BEGIN SELECT RAISE(ABORT, 'expectation is append-only'); END;
+
+-- Measured reactions (derived). One row per (event, computation); full detail in result_json.
+CREATE TABLE IF NOT EXISTS event_reaction (
+    reaction_id       INTEGER PRIMARY KEY,
+    event_id          INTEGER NOT NULL REFERENCES event(event_id),
+    company_id        INTEGER NOT NULL REFERENCES company(company_id),
+    reaction_day      TEXT NOT NULL,           -- first trading session that could react (d0)
+    timing            TEXT NOT NULL,           -- after_close | pre_market | intraday | non_trading_day
+    car_d0_mm         REAL,                    -- market-model abnormal return, d0 close-to-close vs SPY
+    attribution       TEXT NOT NULL,           -- low | medium | high uncertainty
+    result_json       TEXT NOT NULL,
+    data_through      TEXT NOT NULL,           -- last trade date used
+    knowledge_time    TEXT NOT NULL,
+    computed_at       TEXT NOT NULL,
+    code_version      TEXT NOT NULL
+);
+CREATE TRIGGER IF NOT EXISTS ro_react_u BEFORE UPDATE ON event_reaction BEGIN SELECT RAISE(ABORT, 'event_reaction is append-only'); END;
+CREATE TRIGGER IF NOT EXISTS ro_react_d BEFORE DELETE ON event_reaction BEGIN SELECT RAISE(ABORT, 'event_reaction is append-only'); END;
+
+-- Errors found in stored evidence are never edited away: a correction row supersedes the faulty field.
+CREATE TABLE IF NOT EXISTS data_correction (
+    correction_id   INTEGER PRIMARY KEY,
+    table_name      TEXT NOT NULL,
+    row_filter      TEXT NOT NULL,          -- SQL predicate identifying the affected rows
+    field           TEXT NOT NULL,
+    wrong_value     TEXT,
+    correct_value   TEXT,
+    reason          TEXT NOT NULL,
+    evidence        TEXT,                   -- how the error was established
+    recorded_at     TEXT NOT NULL,
+    code_version    TEXT NOT NULL,
+    UNIQUE (table_name, row_filter, field, correct_value)
+);
+CREATE TRIGGER IF NOT EXISTS ro_corr_u BEFORE UPDATE ON data_correction BEGIN SELECT RAISE(ABORT, 'data_correction is append-only'); END;
+CREATE TRIGGER IF NOT EXISTS ro_corr_d BEFORE DELETE ON data_correction BEGIN SELECT RAISE(ABORT, 'data_correction is append-only'); END;

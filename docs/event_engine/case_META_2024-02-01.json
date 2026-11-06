@@ -1,0 +1,504 @@
+{
+ "attribution_uncertainty": {
+  "level": "high",
+  "reasons": [
+   "tier-1 macro release inside the d0 reaction period (employment_situation_release)"
+  ]
+ },
+ "benchmark_notes": {
+  "^GSPC/^IXIC": "price indices (no dividends); used for close-to-close windows only",
+  "contamination": "META and GOOGL are large XLC constituents (weights not tracked); sector-adjusted returns are damped. XLC starts 2018-06-19",
+  "sector": "Communication Services",
+  "sector_etf": "XLC"
+ },
+ "code_version": "0.2.0",
+ "content_sha256": "635d657a52a8020e6b00f1847e2b2d9e1585a8d597c27cb6d7a11a001616bcba",
+ "data_through": "2024-03-01",
+ "event": {
+  "accession_no": "0001326801-24-000010",
+  "availability_basis": "sec_acceptance_datetime",
+  "event_date": "2024-02-01",
+  "event_id": 510,
+  "evidence": {
+   "id": 510,
+   "table": "event"
+  },
+  "public_at_et": "2024-02-01T16:10:29-05:00",
+  "public_at_utc": "2024-02-01T21:10:29Z",
+  "recorded_event_date": "2024-02-01",
+  "ticker": "META",
+  "type": "earnings_release"
+ },
+ "evidence_bars": {
+  "subject": [
+   7488,
+   7489,
+   7490,
+   7491,
+   7492,
+   7493
+  ]
+ },
+ "expectations": {
+  "documented_reactions": [
+   {
+    "evidence": {
+     "id": 52,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "after_hours_move",
+    "notes": "page first published before the event but last modified 2024-02-02T12:47:44Z, after it: content treated as post-event",
+    "point": 14.0,
+    "quote": "The stock soared 14% in extended trading overnight.",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-02-01T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/02/01/meta-earnings-q4-2024.html",
+    "unit": "percent"
+   },
+   {
+    "evidence": {
+     "id": 53,
+     "table": "expectation"
+    },
+    "label": "documented by a dated news source (not measured by this system)",
+    "metric": "next_session_move",
+    "notes": null,
+    "point": 20.0,
+    "quote": "Meta shares closed up more than 20% on Friday",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-02-02T12:02:00Z",
+    "source_url": "https://www.cnbc.com/2024/02/02/meta-shares-surge-17percent-as-investors-cheer-first-ever-dividend.html",
+    "unit": "percent"
+   }
+  ],
+  "event_key": "META:FY2023Q4",
+  "guidance_issued_with_event": [],
+  "note": null,
+  "point_in_time": [
+   {
+    "actual": 40111000000.0,
+    "actual_vs_range": "above",
+    "basis": "sec_acceptance_datetime",
+    "evidence": {
+     "id": 19,
+     "table": "expectation"
+    },
+    "grade": "A",
+    "high": 40000000000.0,
+    "low": 36500000000.0,
+    "metric": "revenue",
+    "point": null,
+    "provider": "Meta management (CFO outlook)",
+    "quote_verified": "rendered_text",
+    "reported_by": null,
+    "source_published_at": "2023-10-25T20:20:51Z",
+    "source_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000100/meta09302023-exhibit991.htm",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.04865359477124187,
+    "type": "management_guidance",
+    "unit": "USD"
+   },
+   {
+    "actual": 5.33,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 21,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 4.84,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-30T16:09:00Z",
+    "source_url": "https://finance.yahoo.com/news/meta-platforms-meta-report-q4-160900083.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.10123966942148765,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 40111000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 20,
+     "table": "expectation"
+    },
+    "grade": "B",
+    "high": null,
+    "low": null,
+    "metric": "revenue",
+    "point": 38930000000.0,
+    "provider": "Zacks",
+    "quote_verified": "rendered_text",
+    "reported_by": "Zacks via Yahoo Finance",
+    "source_published_at": "2024-01-30T16:09:00Z",
+    "source_url": "https://finance.yahoo.com/news/meta-platforms-meta-report-q4-160900083.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.030336501412792094,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "post_event_documented": [
+   {
+    "actual": 5.33,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 23,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "eps_diluted",
+    "point": 4.96,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-02-01T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/02/01/meta-earnings-q4-2024.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.07459677419354849,
+    "type": "sell_side_consensus",
+    "unit": "USD/shares"
+   },
+   {
+    "actual": 40111000000.0,
+    "basis": "as stated in registry; consistent with page metadata",
+    "evidence": {
+     "id": 22,
+     "table": "expectation"
+    },
+    "grade": "C",
+    "high": null,
+    "label": "documented after the event: descriptive only, not point-in-time",
+    "low": null,
+    "metric": "revenue",
+    "point": 39180000000.0,
+    "provider": "LSEG",
+    "quote_verified": "rendered_text",
+    "reported_by": "CNBC",
+    "source_published_at": "2024-02-01T17:00:00Z",
+    "source_url": "https://www.cnbc.com/2024/02/01/meta-earnings-q4-2024.html",
+    "surprise_unit": "relative",
+    "surprise_vs_reference": 0.02376212353241458,
+    "type": "sell_side_consensus",
+    "unit": "USD"
+   }
+  ],
+  "rejected": [],
+  "reported_kpis": []
+ },
+ "extended_hours": {
+  "reason": "no licensed intraday/extended-hours history in this system; the overnight gap is the measured upper level of detail",
+  "status": "not_measured"
+ },
+ "knowledge_time": "2026-11-06T15:46:20Z",
+ "market_model": {
+  "alpha": 0.002691576889578626,
+  "benchmark": "SPY",
+  "beta": 1.8449235063473215,
+  "first": "2023-01-20",
+  "last": "2024-01-18",
+  "n_obs": 250,
+  "sigma_eps": 0.020214337380891474
+ },
+ "observations_vs_hypotheses": {
+  "hypotheses_and_caveats": [
+   "Attribution uncertainty high: tier-1 macro release inside the d0 reaction period (employment_situation_release). The abnormal return cannot be attributed to the earnings release alone without intraday data.",
+   "Any statement that the move was caused by a specific item (guidance, segment growth, capex) is a hypothesis unless it is documented by a dated source; see expectations and documented_explanations."
+  ],
+  "observable": [
+   "META +20.32% on 2024-02-02 (close-to-close); SPY +1.05%, QQQ +1.69%.",
+   "Market-model abnormal return +18.11% (standardised +9.0 sigma of pre-event idiosyncratic noise).",
+   "Overnight gap +16.42%, then regular session +3.35% (continuation intraday)."
+  ]
+ },
+ "overlapping_events": [
+  {
+   "available_at": "2024-02-01T21:06:02Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 847,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AMZN",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-02-01T21:30:30Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 681,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-02",
+   "ticker": "AAPL",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-02-02T00:39:02Z",
+   "event_type": "periodic_report",
+   "evidence": {
+    "id": 399,
+    "table": "event"
+   },
+   "kind": "same_company_companion_filing",
+   "label": null,
+   "reaction_day": "2024-02-02",
+   "ticker": "META",
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-02-02T13:30:00Z",
+   "event_type": "employment_situation_release",
+   "evidence": {
+    "id": 3016,
+    "table": "event"
+   },
+   "kind": "macro",
+   "label": "BLS Employment Situation (nonfarm payrolls)",
+   "reaction_day": "2024-02-02",
+   "ticker": null,
+   "within": "d0_reaction_period"
+  },
+  {
+   "available_at": "2024-02-06T21:12:25Z",
+   "event_type": "earnings_release",
+   "evidence": {
+    "id": 2545,
+    "table": "event"
+   },
+   "kind": "context_earnings",
+   "label": "2.02,9.01",
+   "reaction_day": "2024-02-07",
+   "ticker": "SNAP",
+   "within": "d1_to_d4"
+  }
+ ],
+ "previous_close_day": "2024-02-01",
+ "reaction_day": "2024-02-02",
+ "status": "ok",
+ "timing": "after_close",
+ "timing_note": "after the close: after-hours, pre-market and next session react",
+ "windows": {
+  "d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.18627587987494199,
+     "return": 0.01690055181637029
+    },
+    "SPY": {
+     "excess": 0.1926490527706739,
+     "return": 0.010527378920638375
+    },
+    "XLC": {
+     "excess": 0.16299910251669214,
+     "return": 0.040177329174620136
+    },
+    "^GSPC": {
+     "excess": 0.19249198561379766,
+     "return": 0.01068444607751462
+    },
+    "^IXIC": {
+     "excess": 0.18577525883525015,
+     "return": 0.01740117285606213
+    }
+   },
+   "from": "close 2024-02-01",
+   "market_model": {
+    "car": 0.1810626459708226,
+    "n_days": 1,
+    "scar": 8.957139804245097
+   },
+   "return": 0.20317643169131228,
+   "to": "close 2024-02-02"
+  },
+  "d0_d1": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.1481382811478349,
+     "return": 0.015573165943344014
+    },
+    "SPY": {
+     "excess": 0.15686358220494556,
+     "return": 0.006847864886233346
+    },
+    "XLC": {
+     "excess": 0.13814401960824219,
+     "return": 0.025567427482936722
+    },
+    "^GSPC": {
+     "excess": 0.15624738279182493,
+     "return": 0.0074640642993539785
+    },
+    "^IXIC": {
+     "excess": 0.14834589728891512,
+     "return": 0.01536554980226379
+    }
+   },
+   "from": "close 2024-02-01",
+   "market_model": {
+    "car": 0.15228810827365474,
+    "n_days": 2,
+    "scar": 5.327107786187719
+   },
+   "return": 0.1637114470911789,
+   "to": "close 2024-02-05"
+  },
+  "d0_d4": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.16467606239593868,
+     "return": 0.025860442627851032
+    },
+    "SPY": {
+     "excess": 0.17189383354051957,
+     "return": 0.018642671483270146
+    },
+    "XLC": {
+     "excess": 0.1589685679856987,
+     "return": 0.03156793703809102
+    },
+    "^GSPC": {
+     "excess": 0.17184171009347748,
+     "return": 0.01869479493031223
+    },
+    "^IXIC": {
+     "excess": 0.16240992984117608,
+     "return": 0.028126575182613633
+    }
+   },
+   "from": "close 2024-02-01",
+   "market_model": {
+    "car": 0.1460205079527223,
+    "n_days": 5,
+    "scar": 3.230497005555927
+   },
+   "return": 0.19053650502378972,
+   "to": "close 2024-02-08"
+  },
+  "overnight_gap": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.1596417173789919,
+     "return": 0.0045510166112034955
+    },
+    "SPY": {
+     "excess": 0.16327290226855862,
+     "return": 0.000919831721636788
+    },
+    "XLC": {
+     "excess": 0.13275527093792028,
+     "return": 0.03143746305227513
+    }
+   },
+   "from": "close 2024-02-01",
+   "interpretation": "after-hours (16:00-20:00 ET on the announcement day) + pre-market (04:00-09:30 ET on d0); not separable without intraday data",
+   "market_model": {
+    "ar_beta_adjusted": 0.16249571482506378,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": 0.1641927339901954,
+   "to": "open 2024-02-02"
+  },
+  "post_d1_d19": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.019931995313803075,
+     "return": 0.038693678954033084
+    },
+    "SPY": {
+     "excess": 0.02120285793525567,
+     "return": 0.03742281633258049
+    },
+    "XLC": {
+     "excess": 0.055114277393017774,
+     "return": 0.0035113968748183844
+    },
+    "^GSPC": {
+     "excess": 0.022633688658052042,
+     "return": 0.035991985609784116
+    },
+    "^IXIC": {
+     "excess": 0.017292748748069187,
+     "return": 0.04133292551976697
+    }
+   },
+   "from": "close 2024-02-02",
+   "market_model": {
+    "car": -0.059455152199249975,
+    "n_days": 19,
+    "scar": -0.674765989958724
+   },
+   "return": 0.05862567426783616,
+   "to": "close 2024-03-01"
+  },
+  "pre_event_5d": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.014553745141082541,
+     "return": -0.01048434656200714
+    },
+    "SPY": {
+     "excess": 0.0016719774560689515,
+     "return": 0.002397421123006449
+    },
+    "XLC": {
+     "excess": 0.014013821154713169,
+     "return": -0.009944422575637768
+    },
+    "^GSPC": {
+     "excess": 0.0016114109423432943,
+     "return": 0.0024579876367321063
+    },
+    "^IXIC": {
+     "excess": 0.013666790769043202,
+     "return": -0.009597392189967802
+    }
+   },
+   "from": "close 2024-01-25",
+   "market_model": {
+    "car": -0.013739849200399331,
+    "n_days": 5,
+    "scar": -0.3039747109567052
+   },
+   "return": 0.004069398579075401,
+   "to": "close 2024-02-01"
+  },
+  "session_d0": {
+   "benchmarks": {
+    "QQQ": {
+     "excess": 0.021192017826804355,
+     "return": 0.012293586887032637
+    },
+    "SPY": {
+     "excess": 0.02388688672013295,
+     "return": 0.009598717993704042
+    },
+    "XLC": {
+     "excess": 0.02501212334882852,
+     "return": 0.008473481365008473
+    }
+   },
+   "from": "open 2024-02-02",
+   "market_model": {
+    "ar_beta_adjusted": 0.015776704256453403,
+    "note": "partial-day window: beta-adjusted only, no z"
+   },
+   "return": 0.03348560471383699,
+   "to": "close 2024-02-02"
+  }
+ }
+}

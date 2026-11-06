@@ -25,6 +25,8 @@ RATE_LIMITS = {
     "fred.stlouisfed.org": 0.4,
     "home.treasury.gov": 0.5,
     "query1.finance.yahoo.com": 1.0,
+    "api.nasdaq.com": 1.0,
+    "www.federalreserve.gov": 0.5,
 }
 
 
@@ -36,11 +38,54 @@ class CompanySpec:
     exchange: str
 
 
+@dataclass(frozen=True)
+class InstrumentSpec:
+    ticker: str
+    name: str
+    kind: str          # etf | index
+
+
 UNIVERSE = [
     CompanySpec("GOOGL", "0001652044", "Alphabet Inc.", "NASDAQ"),
     CompanySpec("MSFT", "0000789019", "Microsoft Corporation", "NASDAQ"),
     CompanySpec("META", "0001326801", "Meta Platforms, Inc.", "NASDAQ"),
 ]
+
+# Context issuers: only their EDGAR filing index is ingested, to detect overlapping earnings events
+# (peer and mega-cap releases that move the same benchmarks on the same evening).
+CONTEXT_ISSUERS = [
+    CompanySpec("AAPL", "0000320193", "Apple Inc.", "NASDAQ"),
+    CompanySpec("AMZN", "0001018724", "Amazon.com, Inc.", "NASDAQ"),
+    CompanySpec("NVDA", "0001045810", "NVIDIA Corporation", "NASDAQ"),
+    CompanySpec("AMD", "0000002488", "Advanced Micro Devices, Inc.", "NASDAQ"),
+    CompanySpec("TSLA", "0001318605", "Tesla, Inc.", "NASDAQ"),
+    CompanySpec("NFLX", "0001065280", "Netflix, Inc.", "NASDAQ"),
+    CompanySpec("INTC", "0000050863", "Intel Corporation", "NASDAQ"),
+    CompanySpec("QCOM", "0000804328", "QUALCOMM Incorporated", "NASDAQ"),
+    CompanySpec("ORCL", "0001341439", "Oracle Corporation", "NYSE"),
+    CompanySpec("CRM", "0001108524", "Salesforce, Inc.", "NYSE"),
+    CompanySpec("SNAP", "0001564408", "Snap Inc.", "NYSE"),
+    CompanySpec("PINS", "0001506293", "Pinterest, Inc.", "NYSE"),
+]
+
+# Benchmarks (prices only). ETFs give tradable opens/closes and dividends; indices are price-only.
+BENCHMARKS = [
+    InstrumentSpec("SPY", "SPDR S&P 500 ETF Trust", "etf"),
+    InstrumentSpec("QQQ", "Invesco QQQ Trust (Nasdaq-100)", "etf"),
+    InstrumentSpec("XLK", "Technology Select Sector SPDR (S&P 500 Information Technology)", "etf"),
+    InstrumentSpec("XLC", "Communication Services Select Sector SPDR", "etf"),
+    InstrumentSpec("^GSPC", "S&P 500 index (price)", "index"),
+    InstrumentSpec("^IXIC", "Nasdaq Composite index (price)", "index"),
+]
+# GICS sector of each subject and the sector ETF used as benchmark. The subject is itself a large
+# weight of its sector ETF (contamination), which the engine reports rather than hides.
+SECTOR_BENCHMARK = {
+    "MSFT": ("XLK", "Information Technology", "MSFT is a large XLK constituent (weight not tracked); sector-adjusted returns are damped"),
+    "GOOGL": ("XLC", "Communication Services", "GOOGL (both classes) and META are large XLC constituents (weights not "
+                                               "tracked); sector-adjusted returns are damped. XLC starts 2018-06-19"),
+    "META": ("XLC", "Communication Services", "META and GOOGL are large XLC constituents (weights not tracked); "
+                                              "sector-adjusted returns are damped. XLC starts 2018-06-19"),
+}
 
 # Canonical metrics -> reported XBRL concepts, in priority order.
 # accounting basis is "US GAAP as reported in the filer's XBRL"; no harmonisation is applied.
@@ -106,6 +151,17 @@ FRED_DAILY_SERIES = {
     "DFF": ("Percent", "Effective federal funds rate, daily (FRB NY via H.15)"),
     "T10YIE": ("Percent", "10-year breakeven inflation rate"),
 }
+# Macro data releases tracked as events (release dates = ALFRED vintage dates; time = agency convention)
+MACRO_RELEASE_SERIES = {
+    "CPIAUCSL": ("cpi_release", "BLS Consumer Price Index", 8, 30),
+    "PAYEMS": ("employment_situation_release", "BLS Employment Situation (nonfarm payrolls)", 8, 30),
+    "GDP": ("gdp_release", "BEA Gross Domestic Product", 8, 30),
+    "PCEPI": ("pce_release", "BEA Personal Income and Outlays (PCE price index)", 8, 30),
+}
+# Tier 1 macro events make attribution 'high' when they fall in the d0 reaction period; tier 2 'medium'.
+MACRO_TIER1 = ("fomc_statement", "cpi_release", "employment_situation_release")
+MACRO_TIER2 = ("gdp_release", "pce_release")
+
 ALFRED_REVISED_SERIES = {
     "CPIAUCSL": ("Index 1982-1984=100, SA", "CPI for All Urban Consumers: All items, seasonally adjusted (BLS)"),
     "UNRATE": ("Percent, SA", "Unemployment rate (BLS)"),

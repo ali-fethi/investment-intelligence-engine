@@ -20,6 +20,11 @@ ITEM_LABELS = {
 }
 
 
+def _et_date(utc: str) -> str:
+    from ..timeutil import ET, parse_utc
+    return parse_utc(utc).astimezone(ET).date().isoformat()
+
+
 def build_events(conn, company, since, run_id, stats) -> int:
     cid = company["company_id"]
     rows = conn.execute("""SELECT * FROM filing WHERE company_id=? AND filing_date>=?
@@ -39,7 +44,10 @@ def build_events(conn, company, since, run_id, stats) -> int:
         cur = conn.execute(
             """INSERT OR IGNORE INTO event(company_id, event_type, event_date, available_at, availability_basis,
                  accession_no, details_json, source_doc_id, natural_key, run_id) VALUES (?,?,?,?,?,?,?,?,?,?)""",
-            (cid, etype, f["report_date"] or f["filing_date"], f["acceptance_datetime"], "sec_acceptance_datetime",
+            # event_date = public date (acceptance, New York time). An 8-K's report_date is the date of the EARLIEST
+            # event it reports (e.g. an officer change days before the results), so it is kept in details only.
+            (cid, etype, _et_date(f["acceptance_datetime"]) if f["form"].startswith("8-K") else
+             (f["report_date"] or f["filing_date"]), f["acceptance_datetime"], "sec_acceptance_datetime",
              f["accession_no"], json.dumps(details, sort_keys=True), f["source_doc_id"],
              f"filing|{f['accession_no']}", run_id))
         n += cur.rowcount

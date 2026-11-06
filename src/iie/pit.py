@@ -139,19 +139,19 @@ def _to_fact(metric, r) -> Fact:
 def latest_bar(conn, company_id, cutoff, knowledge_time):
     return conn.execute(
         """SELECT * FROM price_bar WHERE company_id=? AND available_at<=? AND retrieved_at<=?
-           ORDER BY trade_date DESC, retrieved_at DESC, bar_id DESC LIMIT 1""",
+           AND provider='yahoo_chart' AND retrieved_at>=available_at ORDER BY trade_date DESC, retrieved_at DESC, bar_id DESC LIMIT 1""",
         (company_id, cutoff, knowledge_time)).fetchone()
 
 
 def bar_on_or_before(conn, company_id, trade_date, knowledge_time):
     return conn.execute(
         """SELECT * FROM price_bar WHERE company_id=? AND trade_date<=? AND retrieved_at<=?
-           ORDER BY trade_date DESC, retrieved_at DESC, bar_id DESC LIMIT 1""",
+           AND provider='yahoo_chart' AND retrieved_at>=available_at ORDER BY trade_date DESC, retrieved_at DESC, bar_id DESC LIMIT 1""",
         (company_id, trade_date, knowledge_time)).fetchone()
 
 
 def corporate_actions(conn, company_id, knowledge_time, action_type=None):
-    sql = "SELECT * FROM corporate_action WHERE company_id=? AND retrieved_at<=?"
+    sql = "SELECT * FROM corporate_action WHERE company_id=? AND retrieved_at<=? AND provider='yahoo_chart'"
     params = [company_id, knowledge_time]
     if action_type:
         sql += " AND action_type=?"
