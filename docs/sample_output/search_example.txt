@@ -1,0 +1,17 @@
+$ iie search "capital expenditures data centers AI infrastructure" --ticker META --as-of 2024-01-30T17:30:00 --limit 3
+1.  … artificial intelligence ([AI]) and [AI] hardware, and [data] [centers] as we ramp up construction on sites with the new [data] [center] architecture we announced … 
+   ↳ META 8-K (EX-99.1, period 2023-10-25), no section — https://www.sec.gov/Archives/edgar/data/1326801/000132680123000100/meta09302023-exhibit991.htm chars 5663-7130; public 2023-10-25T20:20:51Z; sha256 5b520dc68226…; doc#160 chunk#6985
+
+2.  … [data] [center] architecture that is more cost efficient and can support both [AI] and non-[AI] workloads. Substantially all of our [capital] [expenditures] continue … 
+   ↳ META 8-K (EX-99.1, period 2023-02-01), no section — https://www.sec.gov/Archives/edgar/data/1326801/000132680123000008/meta-12312022xexhibit991.htm chars 5770-7022; public 2023-02-01T21:22:15Z; sha256 c4f10657a0a2…; doc#148 chunk#6069
+
+3.  … total [capital] [expenditures] to grow in 2024, driven by our investments across both [data] [centers] and servers, particularly in support of our [AI] work … 
+   ↳ META 8-K (EX-99.1, period 2023-07-26), no section — https://www.sec.gov/Archives/edgar/data/1326801/000132680123000089/meta06302023-exhibit991.htm chars 5698-7299; public 2023-07-26T20:06:51Z; sha256 cd2193e9854a…; doc#156 chunk#6700
+
+$ iie search "\"remaining performance obligation\"" --ticker MSFT --limit 2
+1.  … We expect to recognize approximately 25 % of both our total company [remaining performance obligation] revenue and commercial [remaining performance obligation] revenue over the next … 
+   ↳ MSFT 10-Q (10-Q, period 2025-12-31), PART I — https://www.sec.gov/Archives/edgar/data/789019/000119312526027207/msft-20251231.htm chars 47161-48792; public 2026-01-28T21:07:34Z; sha256 b13f1da2517b…; doc#134 chunk#5335
+
+2.  … We expect to recognize approximately 30 % of both our total company [remaining performance obligation] revenue and commercial [remaining performance obligation] revenue over the next … 
+   ↳ MSFT 10-Q (10-Q, period 2026-09-30), PART I — https://www.sec.gov/Archives/edgar/data/789019/000119312526436133/msft-20260930.htm chars 46190-47570; public 2026-10-28T20:07:39Z; sha256 c738b08782f8…; doc#146 chunk#5949
+

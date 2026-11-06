@@ -1,0 +1,31 @@
+check_name                        severity  n 
+--------------------------------  --------  --
+acceptance_crosscheck             pass      1 
+availability_unverified           info      1 
+available_before_period_end       pass      1 
+balance_sheet_identity            pass      3 
+concept_switch_over_time          info      4 
+conflicting_values_same_filing    pass      1 
+definition_conflicts_same_period  pass      2 
+definition_conflicts_same_period  warn      1 
+earnings_release_vs_xbrl          pass      3 
+evidence_integrity                pass      1 
+fred_availability_lag             pass      24
+missing_quarters                  info      3 
+missing_quarters                  pass      8 
+missing_quarters                  warn      1 
+price_sanity                      pass      3 
+quarter_additivity                pass      3 
+restatements_detected             info      3 
+split_vs_xbrl                     pass      1 
+vendor_history_rewrites           pass      1 
+|acceptance_crosscheck|{"filings_compared": 97, "mismatches": 0}
+GOOGL|missing_quarters|{"metric": "eps_diluted", "missing": ["FY2016Q4", "FY2017Q4", "FY2018Q4", "FY2019Q4", "FY2020Q4", "FY2021Q4"]}
+MSFT|missing_quarters|{"metric": "operating_cash_flow", "missing": ["FY2016Q1", "FY2016Q2", "FY2016Q3", "FY2016Q4", "FY2017Q1"]}
+MSFT|missing_quarters|{"metric": "eps_diluted", "missing": ["FY2021Q4", "FY2022Q4"]}
+META|missing_quarters|{"metric": "eps_diluted", "missing": ["FY2016Q4", "FY2017Q4", "FY2018Q4", "FY2019Q4", "FY2020Q4", "FY2021Q4"]}
+MSFT|definition_conflicts_same_period|{"count": 3, "examples": [{"metric": "revenue", "period_end": "2016-06-30", "chosen": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax", "chosen_value": 91154000000.0, "concept": "us-gaap:SalesRevenueNet", "value": 85320000000.0, "obs_id": 51766}, {"metric": "revenue", "period_end": "2017-06-30", "chosen": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax", "chosen_value": 96571000000.0, "concept": "us-gaap:SalesRevenueNet", "value": 89950000000.0, "obs_id": 51782}, {"metric": "revenue", "period_end": "2017-06-30", "chosen": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax", "chosen_value": 25605000000.0, "concept": "us-gaap:SalesRevenueNet", "value": 23317000000.0, "obs_id": 51783}]}
+GOOGL|earnings_release_vs_xbrl|{"release_values": 64, "reconciled_exact": 59, "within_rounding": 1, "rounding_cases": [{"obs_id": 73104, "metric": "revenue", "period_end": "2025-12-31", "release_value": 113828000000.0, "xbrl_value": 113829000000.0, "difference": -1000000.0, "xbrl_kind": "derived", "release_url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000012/googexhibit991q42025.htm"}], "mismatched": 0, "awaiting_xbrl": 4}
+MSFT|earnings_release_vs_xbrl|{"release_values": 64, "reconciled_exact": 60, "within_rounding": 0, "rounding_cases": [], "mismatched": 0, "awaiting_xbrl": 4}
+META|earnings_release_vs_xbrl|{"release_values": 64, "reconciled_exact": 58, "within_rounding": 2, "rounding_cases": [{"obs_id": 73186, "metric": "net_income", "period_end": "2022-12-31", "release_value": 4652000000.0, "xbrl_value": 4653000000.0, "difference": -1000000.0, "xbrl_kind": "derived", "release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680123000008/meta-12312022xexhibit991.htm"}, {"obs_id": 73217, "metric": "operating_income", "period_end": "2024-12-31", "release_value": 23365000000.0, "xbrl_value": 23364000000.0, "difference": 1000000.0, "xbrl_kind": "derived", "release_url": "https://www.sec.gov/Archives/edgar/data/1326801/000132680125000014/meta-12312024xexhibit991.htm"}], "mismatched": 0, "awaiting_xbrl": 4}
+GOOGL|split_vs_xbrl|{"ex_date": "2022-07-18", "vendor_ratio": 20.0, "xbrl_ratios": [2.0, 20.0], "note": null}

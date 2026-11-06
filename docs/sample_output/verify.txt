@@ -1,0 +1,30 @@
+{
+ "snapshot_id": 1,
+ "stored_hash": "2279c1d8df6496335bca1a7637178a2629e6f179e246163fc8decc4e3008bcb4",
+ "file_hash_matches": true,
+ "code_version_matches": true,
+ "rebuild_hash_matches": true,
+ "evidence_bytes_verified": true,
+ "evidence_errors": [],
+ "lookahead": "pass"
+}
+{
+ "snapshot_id": 2,
+ "stored_hash": "818e51910e12b0c6bd12102b6b3e04f3eaa336a960a97c1e51170805bfe1b72c",
+ "file_hash_matches": true,
+ "code_version_matches": true,
+ "rebuild_hash_matches": true,
+ "evidence_bytes_verified": true,
+ "evidence_errors": [],
+ "lookahead": "pass"
+}
+{
+ "snapshot_id": 3,
+ "stored_hash": "69be9ebc31d60d4455dade54bb1e6639b7e22f19802585125563bfac7d7ac94a",
+ "file_hash_matches": true,
+ "code_version_matches": true,
+ "rebuild_hash_matches": true,
+ "evidence_bytes_verified": true,
+ "evidence_errors": [],
+ "lookahead": "pass"
+}

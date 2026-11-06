@@ -1,0 +1,12 @@
+source_document             542
+filing                   11,499
+observation              73,247
+price_bar                 8,181
+corporate_action             65
+macro_observation        52,427
+event                       564
+document_chunk           11,025
+derived_metric              114
+snapshot                      3
+qa_result                    65
+data_gap                      5
