@@ -2,14 +2,28 @@
  "companies": {
   "GOOGL": {
    "base": {
-    "implied_revenue_cagr_y1_5": 0.21173326529677505,
+    "implied_revenue_cagr_y1_5": 0.20499163953430022,
     "margin": 0.33321304696687315,
-    "ronic": 0.09631732691046979,
+    "roic_incremental_y1_5": 0.25629507358640763,
+    "ronic": 0.09031803681305509,
     "s2c": 0.9386733416770964,
+    "s2c_path": [
+     0.9386733416770964,
+     0.9386733416770964,
+     0.9386733416770964,
+     0.9386733416770964,
+     0.9386733416770964,
+     0.8170961162005567,
+     0.6955188907240168,
+     0.5739416652474771,
+     0.4523644397709374,
+     0.3307872142943976
+    ],
     "target_ev": 3359550850585.9375,
     "tax": 0.18058525154969632,
     "terminal_growth": 0.0326,
-    "wacc": 0.09631732691046979
+    "transition": "fade",
+    "wacc": 0.09031803681305509
    },
    "bridge": [
     [
@@ -33,8 +47,16 @@
      0.15595223751735998
     ],
     [
-     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (Sprint 2.1 base)",
      0.21173326529677505
+    ],
+    [
+     "6. ERP: latest point-in-time monthly 'ERP (T12m)' instead of the last year-end value",
+     0.19066829342957325
+    ],
+    [
+     "7. incremental ROIC fades from m(1-tau)S2C to RONIC = WACC over years 6-10 (v2.1 base)",
+     0.20499163953430022
     ]
    ],
    "inputs": {
@@ -58,8 +80,15 @@
     "depreciation_ttm": 27995000000.0,
     "ebit_ttm": 156976000000.0,
     "effective_tax": 0.18058525154969632,
-    "erp": 0.0423,
-    "erp_year": "2025",
+    "erp": 0.037,
+    "erp_annual": 0.0423,
+    "erp_annual_year": "2025",
+    "erp_availability_verified": 1,
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_basis": "monthly ERP (T12m)",
+    "erp_date": "2026-10-01",
+    "erp_mobs_id": 61221,
+    "erp_year": "2026",
     "finance_leases": 3705000000.0,
     "flags": [
      "share count approximated by diluted weighted-average shares FY2026Q3: the cover-page count is reported per class (dimensional XBRL, absent from companyfacts)"
@@ -130,6 +159,15 @@
      },
      "ttm_capex": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        17024,
        17023,
@@ -138,10 +176,20 @@
        17022,
        17021,
        17020
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_depreciation": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        20542,
        20541,
@@ -150,30 +198,56 @@
        20540,
        20539,
        20538
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_income_tax": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        10198,
        10196,
        10194,
        10193,
        10190
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_interest_expense": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        20720,
        20718,
        20716,
        20715,
        20712
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_operating_cash_flow": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        13009,
        13008,
@@ -182,47 +256,98 @@
        13007,
        13006,
        13005
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_operating_income": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        13796,
        13794,
        13792,
        13791,
        13788
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_pretax_income": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        9875,
        9873,
        9871,
        9870,
        9867
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_revenue": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
+      "inputs": [
+       18761,
+       18759,
+       18757,
+       18756,
+       18753
+      ],
+      "period": "TTM to FY2026Q3"
+     },
+     "ttm_revenue_FY2023Q3": {
       "available_at": "2025-02-05T01:41:40Z",
+      "fiscal_periods": [
+       "2023Q3",
+       "2023Q2",
+       "2023Q1",
+       "2022FY",
+       "2022YTD9"
+      ],
       "inputs": [
        18642,
        18638,
        18634,
        18632,
        18627
-      ]
+      ],
+      "period": "TTM to FY2023Q3"
      },
      "ttm_sbc": {
       "available_at": "2026-10-29T00:29:06Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        872,
        870,
        19252,
        19251,
        19250
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      }
     },
     "tax_basis": "TTM",
@@ -232,48 +357,89 @@
    },
    "sensitivities": {
     "other": {
-     "RONIC 20% (growth creates value)": 0.1751854063656123,
-     "S2C x0.5 (capex intensity doubles)": 0.3182510505310988,
-     "S2C x2 (capex intensity halves)": 0.18260430298266195,
-     "margin +5pt": 0.1723471881766262,
-     "margin -5pt": 0.2621012197601512,
-     "raw beta (no Blume)": 0.2239173888229241,
-     "tax 21% statutory": 0.22257766619615615
+     "ERP: annual year-end value (Sprint 2.1 input)": 0.22726720392654898,
+     "RONIC 20% (growth creates value)": 0.15160337469241847,
+     "S2C x0.5 (capex intensity doubles)": 0.30201535551902914,
+     "S2C x2 (capex intensity halves)": 0.17468717631831143,
+     "margin +5pt": 0.16447786866182657,
+     "margin -5pt": 0.2568483155252709,
+     "raw beta (no Blume)": 0.2163700458924423,
+     "tax 21% statutory": 0.21615868364510804
     },
+    "roic_scenarios": [
+     {
+      "implied_revenue_cagr_y1_5": 0.19066829342957325,
+      "scenario": "A. abrupt: ROIC_f to year 10, RONIC = WACC from year 11 (Sprint 2.1 base)",
+      "terminal_ronic": 0.09031803681305509,
+      "transition": "abrupt"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.20499163953430022,
+      "scenario": "B. fade years 6-10 to RONIC = WACC (v2.1 base)",
+      "terminal_ronic": 0.09031803681305509,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.1575208103740603,
+      "scenario": "C. fade to half the forecast spread, RONIC = WACC + (ROIC_f - WACC)/2",
+      "terminal_ronic": 0.17330655519973137,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.1434096342502877,
+      "scenario": "D. persistent: RONIC = ROIC_f forever (no fade)",
+      "terminal_ronic": 0.25629507358640763,
+      "transition": "fade"
+     }
+    ],
     "wacc_x_terminal": {
-     "wacc+0%|gT2.5%": 0.21559822472732237,
-     "wacc+0%|gT3.0%": 0.21305441669528802,
-     "wacc+0%|gT3.5%": 0.21051474277916127,
-     "wacc+0%|gT4.0%": 0.20797928160041124,
-     "wacc+1%|gT2.5%": 0.2503784892864499,
-     "wacc+1%|gT3.0%": 0.2478053771860439,
-     "wacc+1%|gT3.5%": 0.24523598856154238,
-     "wacc+1%|gT4.0%": 0.2426704109085237,
-     "wacc-1%|gT2.5%": 0.18031116540394698,
-     "wacc-1%|gT3.0%": 0.1777936680567761,
-     "wacc-1%|gT3.5%": 0.17528076560186717,
-     "wacc-1%|gT4.0%": 0.17277252716072933
+     "wacc+0%|gT2.5%": 0.2078265851919761,
+     "wacc+0%|gT3.0%": 0.20596326218920835,
+     "wacc+0%|gT3.5%": 0.20409314586244864,
+     "wacc+0%|gT4.0%": 0.2022163939019589,
+     "wacc+1%|gT2.5%": 0.2449289056688434,
+     "wacc+1%|gT3.0%": 0.24301349501994435,
+     "wacc+1%|gT3.5%": 0.2410909718197728,
+     "wacc+1%|gT4.0%": 0.2391615046811556,
+     "wacc-1%|gT2.5%": 0.1700418392773414,
+     "wacc-1%|gT3.0%": 0.1682232166052301,
+     "wacc-1%|gT3.5%": 0.16639820066687128,
+     "wacc-1%|gT4.0%": 0.16456693897336805
     }
    },
    "status": "ok",
    "wacc": {
     "kd_after_tax": 0.04941070933155332,
-    "ke": 0.09805977648429526,
-    "wacc": 0.09631732691046979,
+    "ke": 0.09183762954891075,
+    "wacc": 0.09031803681305509,
     "wd": 0.03581671090125424,
     "we": 0.9641832890987457
    }
   },
   "META": {
    "base": {
-    "implied_revenue_cagr_y1_5": 0.2008592213315913,
+    "implied_revenue_cagr_y1_5": 0.1903882306230395,
     "margin": 0.3285514432588595,
-    "ronic": 0.10700511437890452,
+    "roic_incremental_y1_5": 0.278138898430999,
+    "ronic": 0.09969966715884038,
     "s2c": 0.9406235364956178,
+    "s2c_path": [
+     0.9406235364956178,
+     0.9406235364956178,
+     0.9406235364956178,
+     0.9406235364956178,
+     0.9406235364956178,
+     0.8199326574308068,
+     0.6992417783659958,
+     0.5785508993011848,
+     0.4578600202363738,
+     0.3371691411715627
+    ],
     "target_ev": 1558090883972.168,
     "tax": 0.1,
     "terminal_growth": 0.0326,
-    "wacc": 0.10700511437890452
+    "transition": "fade",
+    "wacc": 0.09969966715884038
    },
    "bridge": [
     [
@@ -297,8 +463,16 @@
      0.15432265575786974
     ],
     [
-     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (Sprint 2.1 base)",
      0.2008592213315913
+    ],
+    [
+     "6. ERP: latest point-in-time monthly 'ERP (T12m)' instead of the last year-end value",
+     0.1772589577482767
+    ],
+    [
+     "7. incremental ROIC fades from m(1-tau)S2C to RONIC = WACC over years 6-10 (v2.1 base)",
+     0.1903882306230395
     ]
    ],
    "inputs": {
@@ -322,8 +496,15 @@
     "depreciation_ttm": 23610000000.0,
     "ebit_ttm": 79380000000.0,
     "effective_tax": 0.045826306379417474,
-    "erp": 0.0423,
-    "erp_year": "2025",
+    "erp": 0.037,
+    "erp_annual": 0.0423,
+    "erp_annual_year": "2025",
+    "erp_availability_verified": 1,
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_basis": "monthly ERP (T12m)",
+    "erp_date": "2026-10-01",
+    "erp_mobs_id": 61221,
+    "erp_year": "2026",
     "finance_leases": 0,
     "flags": [
      "commercial_paper not tagged at 2026-09-30: treated as 0",
@@ -391,6 +572,15 @@
      },
      "ttm_capex": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        68306,
        68305,
@@ -399,30 +589,56 @@
        68304,
        68303,
        68302
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_depreciation": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        59309,
        59307,
        59305,
        59304,
        59301
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_income_tax": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        62709,
        62707,
        62705,
        62704,
        62701
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_interest_expense": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        64286,
        64285,
@@ -431,10 +647,20 @@
        64284,
        72731,
        64282
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_operating_cash_flow": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026YTD9",
+       "2026YTD6",
+       "2026YTD6",
+       "2026Q1",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        65507,
        65506,
@@ -443,47 +669,98 @@
        65505,
        65504,
        65503
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_operating_income": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        66290,
        66288,
        66286,
        66285,
        66282
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_pretax_income": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        62397,
        62395,
        62393,
        62392,
        62389
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      },
      "ttm_revenue": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
+      "inputs": [
+       69618,
+       69616,
+       69614,
+       69613,
+       69610
+      ],
+      "period": "TTM to FY2026Q3"
+     },
+     "ttm_revenue_FY2023Q3": {
       "available_at": "2025-01-30T01:00:50Z",
+      "fiscal_periods": [
+       "2023Q3",
+       "2023Q2",
+       "2023Q1",
+       "2022FY",
+       "2022YTD9"
+      ],
       "inputs": [
        69587,
        69583,
        69579,
        69577,
        69572
-      ]
+      ],
+      "period": "TTM to FY2023Q3"
      },
      "ttm_sbc": {
       "available_at": "2026-10-22T00:00:08Z",
+      "fiscal_periods": [
+       "2026Q3",
+       "2026Q2",
+       "2026Q1",
+       "2025FY",
+       "2025YTD9"
+      ],
       "inputs": [
        55839,
        55838,
        70045,
        70044,
        70043
-      ]
+      ],
+      "period": "TTM to FY2026Q3"
      }
     },
     "tax_basis": "TTM",
@@ -493,48 +770,89 @@
    },
    "sensitivities": {
     "other": {
-     "RONIC 20% (growth creates value)": 0.17354120717363253,
-     "S2C x0.5 (capex intensity doubles)": 0.30909419241856684,
-     "S2C x2 (capex intensity halves)": 0.17200598626233254,
-     "margin +5pt": 0.16018221595386917,
-     "margin -5pt": 0.25307177136632963,
-     "raw beta (no Blume)": 0.22951009657421928,
-     "tax 21% statutory": 0.24156789718660193
+     "ERP: annual year-end value (Sprint 2.1 input)": 0.2152431725723719,
+     "RONIC 20% (growth creates value)": 0.14850770665115282,
+     "S2C x0.5 (capex intensity doubles)": 0.2853956389562815,
+     "S2C x2 (capex intensity halves)": 0.1613166046216971,
+     "margin +5pt": 0.14892239194035012,
+     "margin -5pt": 0.24360636786367362,
+     "raw beta (no Blume)": 0.21700283737566417,
+     "tax 21% statutory": 0.23189387888526586
     },
+    "roic_scenarios": [
+     {
+      "implied_revenue_cagr_y1_5": 0.1772589577482767,
+      "scenario": "A. abrupt: ROIC_f to year 10, RONIC = WACC from year 11 (Sprint 2.1 base)",
+      "terminal_ronic": 0.09969966715884038,
+      "transition": "abrupt"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.1903882306230395,
+      "scenario": "B. fade years 6-10 to RONIC = WACC (v2.1 base)",
+      "terminal_ronic": 0.09969966715884038,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.15070128137980088,
+      "scenario": "C. fade to half the forecast spread, RONIC = WACC + (ROIC_f - WACC)/2",
+      "terminal_ronic": 0.18891928279491968,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.13823061137267112,
+      "scenario": "D. persistent: RONIC = ROIC_f forever (no fade)",
+      "terminal_ronic": 0.278138898430999,
+      "transition": "fade"
+     }
+    ],
     "wacc_x_terminal": {
-     "wacc+0%|gT2.5%": 0.20454457620381084,
-     "wacc+0%|gT3.0%": 0.20211927100492877,
-     "wacc+0%|gT3.5%": 0.19969678665274115,
-     "wacc+0%|gT4.0%": 0.19727721355781996,
-     "wacc+1%|gT2.5%": 0.236591671538397,
-     "wacc+1%|gT3.0%": 0.23414489870187494,
-     "wacc+1%|gT3.5%": 0.2317005330215306,
-     "wacc+1%|gT4.0%": 0.22925867238083442,
-     "wacc-1%|gT2.5%": 0.17214608783403057,
-     "wacc-1%|gT3.0%": 0.16973970163050145,
-     "wacc-1%|gT3.5%": 0.16733659168010784,
-     "wacc-1%|gT4.0%": 0.1649368404005877
+     "wacc+0%|gT2.5%": 0.19309012792352698,
+     "wacc+0%|gT3.0%": 0.1913143780556802,
+     "wacc+0%|gT3.5%": 0.18953167391168424,
+     "wacc+0%|gT4.0%": 0.18774216062444038,
+     "wacc+1%|gT2.5%": 0.2271231763653757,
+     "wacc+1%|gT3.0%": 0.22530545030604265,
+     "wacc+1%|gT3.5%": 0.22348047130790782,
+     "wacc+1%|gT4.0%": 0.22164839291984328,
+     "wacc-1%|gT2.5%": 0.15854921225048957,
+     "wacc-1%|gT3.0%": 0.15680957307572363,
+     "wacc-1%|gT3.5%": 0.1550633392559514,
+     "wacc-1%|gT4.0%": 0.15331064810418782
     }
    },
    "status": "ok",
    "wacc": {
     "kd_after_tax": 0.05427,
-    "ke": 0.1098391928695441,
-    "wacc": 0.10700511437890452,
+    "ke": 0.10214113797099603,
+    "wacc": 0.09969966715884038,
     "wd": 0.051000893557927945,
     "we": 0.9489991064420721
    }
   },
   "MSFT": {
    "base": {
-    "implied_revenue_cagr_y1_5": 0.22537664990578865,
+    "implied_revenue_cagr_y1_5": 0.2205322727103335,
     "margin": 0.4710444659325434,
-    "ronic": 0.09249352620548894,
+    "roic_incremental_y1_5": 0.29561927103443797,
+    "ronic": 0.0869689062783755,
     "s2c": 0.781386014751492,
+    "s2c_path": [
+     0.781386014751492,
+     0.781386014751492,
+     0.781386014751492,
+     0.781386014751492,
+     0.781386014751492,
+     0.671084357878661,
+     0.5607827010058303,
+     0.4504810441329994,
+     0.3401793872601686,
+     0.22987773038733772
+    ],
     "target_ev": 4021865391862.2866,
     "tax": 0.19683420990393388,
     "terminal_growth": 0.0326,
-    "wacc": 0.09249352620548894
+    "transition": "fade",
+    "wacc": 0.0869689062783755
    },
    "bridge": [
     [
@@ -558,8 +876,16 @@
      0.168803793049768
     ],
     [
-     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (Sprint 2.1 base)",
      0.22537664990578865
+    ],
+    [
+     "6. ERP: latest point-in-time monthly 'ERP (T12m)' instead of the last year-end value",
+     0.20638586805978576
+    ],
+    [
+     "7. incremental ROIC fades from m(1-tau)S2C to RONIC = WACC over years 6-10 (v2.1 base)",
+     0.2205322727103335
     ]
    ],
    "inputs": {
@@ -583,8 +909,15 @@
     "depreciation_ttm": 38300000000.0,
     "ebit_ttm": 163191000000.0,
     "effective_tax": 0.19683420990393388,
-    "erp": 0.0423,
-    "erp_year": "2025",
+    "erp": 0.037,
+    "erp_annual": 0.0423,
+    "erp_annual_year": "2025",
+    "erp_availability_verified": 1,
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_basis": "monthly ERP (T12m)",
+    "erp_date": "2026-10-01",
+    "erp_mobs_id": 61221,
+    "erp_year": "2026",
     "finance_leases": 70973000000.0,
     "flags": [
      "commercial_paper not tagged at 2026-09-30: treated as 0"
@@ -649,93 +982,183 @@
      },
      "ttm_capex": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        48960,
        48959,
        48957,
        48958,
        48956
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_depreciation": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        30639,
        30638,
        30636,
        30637,
        30635
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_income_tax": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        38267,
        38266,
        38264,
        38265,
        38263
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_interest_expense": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        54458,
        54457,
        54455,
        54456,
        54454
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_operating_cash_flow": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        44098,
        44097,
        44095,
        44096,
        44094
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_operating_income": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        45152,
        45151,
        45149,
        45150,
        45148
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_pretax_income": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        54309,
        54308,
        54306,
        54307,
        54305
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      },
      "ttm_revenue": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
+      "inputs": [
+       51274,
+       51273,
+       51271,
+       51272,
+       51270
+      ],
+      "period": "TTM to FY2027Q1"
+     },
+     "ttm_revenue_FY2024Q1": {
       "available_at": "2025-07-30T20:11:40Z",
+      "fiscal_periods": [
+       "2024Q1",
+       "2023FY",
+       "2023YTD9",
+       "2023Q3",
+       "2023Q2"
+      ],
       "inputs": [
        51242,
        51240,
        51234,
        51236,
        51232
-      ]
+      ],
+      "period": "TTM to FY2024Q1"
      },
      "ttm_sbc": {
       "available_at": "2026-10-28T20:07:39Z",
+      "fiscal_periods": [
+       "2027Q1",
+       "2026FY",
+       "2026YTD9",
+       "2026Q3",
+       "2026Q2"
+      ],
       "inputs": [
        52242,
        52241,
        52239,
        52240,
        52238
-      ]
+      ],
+      "period": "TTM to FY2027Q1"
      }
     },
     "tax_basis": "TTM",
@@ -745,39 +1168,66 @@
    },
    "sensitivities": {
     "other": {
-     "RONIC 20% (growth creates value)": 0.1870460780127317,
-     "S2C x0.5 (capex intensity doubles)": 0.29983942481144243,
-     "S2C x2 (capex intensity halves)": 0.20132750781821446,
-     "margin +5pt": 0.19872442628688314,
-     "margin -5pt": 0.25665139347642774,
-     "raw beta (no Blume)": 0.230232470560782,
-     "tax 21% statutory": 0.22986784702055563
+     "ERP: annual year-end value (Sprint 2.1 input)": 0.2405900634153294,
+     "RONIC 20% (growth creates value)": 0.16599428941576494,
+     "S2C x0.5 (capex intensity doubles)": 0.2933372663554188,
+     "S2C x2 (capex intensity halves)": 0.19438116342129053,
+     "margin +5pt": 0.19291968046334496,
+     "margin -5pt": 0.2530255402177931,
+     "raw beta (no Blume)": 0.2250857842904222,
+     "tax 21% statutory": 0.2251931616411062
     },
+    "roic_scenarios": [
+     {
+      "implied_revenue_cagr_y1_5": 0.20638586805978576,
+      "scenario": "A. abrupt: ROIC_f to year 10, RONIC = WACC from year 11 (Sprint 2.1 base)",
+      "terminal_ronic": 0.0869689062783755,
+      "transition": "abrupt"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.2205322727103335,
+      "scenario": "B. fade years 6-10 to RONIC = WACC (v2.1 base)",
+      "terminal_ronic": 0.0869689062783755,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.16764636957386292,
+      "scenario": "C. fade to half the forecast spread, RONIC = WACC + (ROIC_f - WACC)/2",
+      "terminal_ronic": 0.19129408865640674,
+      "transition": "fade"
+     },
+     {
+      "implied_revenue_cagr_y1_5": 0.1545187437710719,
+      "scenario": "D. persistent: RONIC = ROIC_f forever (no fade)",
+      "terminal_ronic": 0.29561927103443797,
+      "transition": "fade"
+     }
+    ],
     "wacc_x_terminal": {
-     "wacc+0%|gT2.5%": 0.2292504694489107,
-     "wacc+0%|gT3.0%": 0.22670077689589913,
-     "wacc+0%|gT3.5%": 0.224155430579151,
-     "wacc+0%|gT4.0%": 0.22161450082670264,
-     "wacc+1%|gT2.5%": 0.2630091980961171,
-     "wacc+1%|gT3.0%": 0.26044315428216047,
-     "wacc+1%|gT3.5%": 0.2578809601567059,
-     "wacc+1%|gT4.0%": 0.25532269465426727,
-     "wacc-1%|gT2.5%": 0.19461934897743516,
-     "wacc-1%|gT3.0%": 0.19208478906857562,
-     "wacc-1%|gT3.5%": 0.18955511597381958,
-     "wacc-1%|gT4.0%": 0.18703039057337045
+     "wacc+0%|gT2.5%": 0.22336874115224237,
+     "wacc+0%|gT3.0%": 0.22150427985969323,
+     "wacc+0%|gT3.5%": 0.2196335476227712,
+     "wacc+0%|gT4.0%": 0.2177566867888704,
+     "wacc+1%|gT2.5%": 0.25953068742028085,
+     "wacc+1%|gT3.0%": 0.2576317617149183,
+     "wacc+1%|gT3.5%": 0.2557261909221248,
+     "wacc+1%|gT4.0%": 0.25381412492276534,
+     "wacc-1%|gT2.5%": 0.18616495305819464,
+     "wacc-1%|gT3.0%": 0.18433002521565023,
+     "wacc-1%|gT3.5%": 0.1824892681793001,
+     "wacc-1%|gT4.0%": 0.18064281704470664
     }
    },
    "status": "ok",
    "wacc": {
     "kd_after_tax": 0.048430897142792785,
-    "ke": 0.09367210332573264,
-    "wacc": 0.09249352620548894,
+    "ke": 0.08799971212889143,
+    "wacc": 0.0869689062783755,
     "wd": 0.026050965915407873,
     "we": 0.9739490340845921
    }
   }
  },
  "cutoff": "2026-11-06T04:59:59Z",
- "knowledge_time": "2026-11-07T16:29:27Z"
+ "knowledge_time": "2026-11-07T16:58:47Z"
 }

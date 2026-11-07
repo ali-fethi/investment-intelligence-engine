@@ -1,0 +1,783 @@
+{
+ "companies": {
+  "GOOGL": {
+   "base": {
+    "implied_revenue_cagr_y1_5": 0.21173326529677505,
+    "margin": 0.33321304696687315,
+    "ronic": 0.09631732691046979,
+    "s2c": 0.9386733416770964,
+    "target_ev": 3359550850585.9375,
+    "tax": 0.18058525154969632,
+    "terminal_growth": 0.0326,
+    "wacc": 0.09631732691046979
+   },
+   "bridge": [
+    [
+     "0. v1: FCFE = CFO - capex, equity value, r = r_f + 5% (no beta), terminal 3%",
+     0.36905526303949665
+    ],
+    [
+     "1. cost of equity = r_f + beta x Damodaran ERP (CAPM)",
+     0.3680692564979132
+    ],
+    [
+     "2. treat stock-based compensation as a cost (CFO adds it back)",
+     null
+    ],
+    [
+     "3. enterprise basis: FCFF at WACC vs EV (net cash, debt, leases)",
+     null
+    ],
+    [
+     "4. normalise capex: NOPAT less growth-linked reinvestment (S2C); metric = revenue growth y1-5",
+     0.15595223751735998
+    ],
+    [
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     0.21173326529677505
+    ]
+   ],
+   "inputs": {
+    "as_of_quarter": "FY2026Q3",
+    "balance_sheet_date": "2026-09-30",
+    "beta": {
+     "blume": 1.1739899878083986,
+     "first": "2024-11-08",
+     "last": "2026-11-05",
+     "n_weeks": 104,
+     "raw": 1.2596865489677591,
+     "se": 0.18838098148462729,
+     "unused_last": "2026-11-06T21:00:00Z"
+    },
+    "breakeven": 0.0226,
+    "capex_to_cfo": 0.8900201057081275,
+    "capex_ttm": 159804000000.0,
+    "cash_st": 265098000000.0,
+    "cfo_ttm": 179551000000.0,
+    "debt": 126118000000.0,
+    "depreciation_ttm": 27995000000.0,
+    "ebit_ttm": 156976000000.0,
+    "effective_tax": 0.18058525154969632,
+    "erp": 0.0423,
+    "erp_year": "2025",
+    "finance_leases": 3705000000.0,
+    "flags": [
+     "share count approximated by diluted weighted-average shares FY2026Q3: the cover-page count is reported per class (dimensional XBRL, absent from companyfacts)"
+    ],
+    "inputs_available_at": "2026-11-06T04:59:59Z",
+    "interest_ttm": 3076000000.0,
+    "market_cap": 3494825850585.9375,
+    "missing": [],
+    "net_capex_3y": 127840000000.0,
+    "pretax_ttm": 287637000000.0,
+    "price": 282.57000732421875,
+    "price_date": "2026-11-05",
+    "rd": 0.0603,
+    "rd_month": "2026-09",
+    "revenue_added_3y": 120000000000.0,
+    "revenue_ttm": 471098000000.0,
+    "revenue_ttm_3y_ago": 297132000000.0,
+    "rf": 0.0484,
+    "rf_date": "2026-11-05",
+    "sales_to_capital": 0.9386733416770964,
+    "sales_to_capital_years": "FY2023-FY2025",
+    "sbc_ttm": 30522000000.0,
+    "shares": 12368000000.0,
+    "shares_basis": "diluted weighted-average shares FY2026Q3",
+    "sources": {
+     "cash_st_investments": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       2054
+      ]
+     },
+     "commercial_paper": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       2316
+      ]
+     },
+     "debt_current": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       12226
+      ]
+     },
+     "debt_noncurrent": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       12442
+      ]
+     },
+     "finance_lease_liability": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       8490
+      ]
+     },
+     "sales_to_capital": {
+      "available_at": "2026-02-05T02:56:03Z",
+      "inputs": [
+       18756,
+       18632,
+       17021,
+       17014,
+       17006,
+       20539,
+       20532,
+       20524
+      ]
+     },
+     "ttm_capex": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       17024,
+       17023,
+       17023,
+       17022,
+       17022,
+       17021,
+       17020
+      ]
+     },
+     "ttm_depreciation": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       20542,
+       20541,
+       20541,
+       20540,
+       20540,
+       20539,
+       20538
+      ]
+     },
+     "ttm_income_tax": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       10198,
+       10196,
+       10194,
+       10193,
+       10190
+      ]
+     },
+     "ttm_interest_expense": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       20720,
+       20718,
+       20716,
+       20715,
+       20712
+      ]
+     },
+     "ttm_operating_cash_flow": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       13009,
+       13008,
+       13008,
+       13007,
+       13007,
+       13006,
+       13005
+      ]
+     },
+     "ttm_operating_income": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       13796,
+       13794,
+       13792,
+       13791,
+       13788
+      ]
+     },
+     "ttm_pretax_income": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       9875,
+       9873,
+       9871,
+       9870,
+       9867
+      ]
+     },
+     "ttm_revenue": {
+      "available_at": "2025-02-05T01:41:40Z",
+      "inputs": [
+       18642,
+       18638,
+       18634,
+       18632,
+       18627
+      ]
+     },
+     "ttm_sbc": {
+      "available_at": "2026-10-29T00:29:06Z",
+      "inputs": [
+       872,
+       870,
+       19252,
+       19251,
+       19250
+      ]
+     }
+    },
+    "tax_basis": "TTM",
+    "tax_rate_used": 0.18058525154969632,
+    "tax_ttm": 51943000000.0,
+    "trailing_3y_revenue_cagr": 0.16605923120203192
+   },
+   "sensitivities": {
+    "other": {
+     "RONIC 20% (growth creates value)": 0.1751854063656123,
+     "S2C x0.5 (capex intensity doubles)": 0.3182510505310988,
+     "S2C x2 (capex intensity halves)": 0.18260430298266195,
+     "margin +5pt": 0.1723471881766262,
+     "margin -5pt": 0.2621012197601512,
+     "raw beta (no Blume)": 0.2239173888229241,
+     "tax 21% statutory": 0.22257766619615615
+    },
+    "wacc_x_terminal": {
+     "wacc+0%|gT2.5%": 0.21559822472732237,
+     "wacc+0%|gT3.0%": 0.21305441669528802,
+     "wacc+0%|gT3.5%": 0.21051474277916127,
+     "wacc+0%|gT4.0%": 0.20797928160041124,
+     "wacc+1%|gT2.5%": 0.2503784892864499,
+     "wacc+1%|gT3.0%": 0.2478053771860439,
+     "wacc+1%|gT3.5%": 0.24523598856154238,
+     "wacc+1%|gT4.0%": 0.2426704109085237,
+     "wacc-1%|gT2.5%": 0.18031116540394698,
+     "wacc-1%|gT3.0%": 0.1777936680567761,
+     "wacc-1%|gT3.5%": 0.17528076560186717,
+     "wacc-1%|gT4.0%": 0.17277252716072933
+    }
+   },
+   "status": "ok",
+   "wacc": {
+    "kd_after_tax": 0.04941070933155332,
+    "ke": 0.09805977648429526,
+    "wacc": 0.09631732691046979,
+    "wd": 0.03581671090125424,
+    "we": 0.9641832890987457
+   }
+  },
+  "META": {
+   "base": {
+    "implied_revenue_cagr_y1_5": 0.2008592213315913,
+    "margin": 0.3285514432588595,
+    "ronic": 0.10700511437890452,
+    "s2c": 0.9406235364956178,
+    "target_ev": 1558090883972.168,
+    "tax": 0.1,
+    "terminal_growth": 0.0326,
+    "wacc": 0.10700511437890452
+   },
+   "bridge": [
+    [
+     "0. v1: FCFE = CFO - capex, equity value, r = r_f + 5% (no beta), terminal 3%",
+     0.20271308259181542
+    ],
+    [
+     "1. cost of equity = r_f + beta x Damodaran ERP (CAPM)",
+     0.22974315149734326
+    ],
+    [
+     "2. treat stock-based compensation as a cost (CFO adds it back)",
+     0.6540528917418402
+    ],
+    [
+     "3. enterprise basis: FCFF at WACC vs EV (net cash, debt, leases)",
+     0.5338171302040255
+    ],
+    [
+     "4. normalise capex: NOPAT less growth-linked reinvestment (S2C); metric = revenue growth y1-5",
+     0.15432265575786974
+    ],
+    [
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     0.2008592213315913
+    ]
+   ],
+   "inputs": {
+    "as_of_quarter": "FY2026Q3",
+    "balance_sheet_date": "2026-09-30",
+    "beta": {
+     "blume": 1.452463188405298,
+     "first": "2024-11-08",
+     "last": "2026-11-05",
+     "n_weeks": 104,
+     "raw": 1.6753181916496984,
+     "se": 0.207475311696299,
+     "unused_last": "2026-11-06T21:00:00Z"
+    },
+    "breakeven": 0.0226,
+    "capex_to_cfo": 0.7847347975384523,
+    "capex_ttm": 104438000000.0,
+    "cash_st": 82449000000.0,
+    "cfo_ttm": 133087000000.0,
+    "debt": 83669000000.0,
+    "depreciation_ttm": 23610000000.0,
+    "ebit_ttm": 79380000000.0,
+    "effective_tax": 0.045826306379417474,
+    "erp": 0.0423,
+    "erp_year": "2025",
+    "finance_leases": 0,
+    "flags": [
+     "commercial_paper not tagged at 2026-09-30: treated as 0",
+     "finance_lease_liability not tagged at 2026-09-30: treated as 0",
+     "share count approximated by diluted weighted-average shares FY2026Q3: the cover-page count is reported per class (dimensional XBRL, absent from companyfacts)",
+     "effective tax rate 0.0458 (TTM) bounded to 0.1"
+    ],
+    "inputs_available_at": "2026-11-06T04:59:59Z",
+    "interest_ttm": 1930000000.0,
+    "market_cap": 1556870883972.168,
+    "missing": [],
+    "net_capex_3y": 89682000000.0,
+    "pretax_ttm": 78863000000.0,
+    "price": 605.0800170898438,
+    "price_date": "2026-11-05",
+    "rd": 0.0603,
+    "rd_month": "2026-09",
+    "revenue_added_3y": 84357000000.0,
+    "revenue_ttm": 241606000000.0,
+    "revenue_ttm_3y_ago": 126955000000.0,
+    "rf": 0.0484,
+    "rf_date": "2026-11-05",
+    "sales_to_capital": 0.9406235364956178,
+    "sales_to_capital_years": "FY2023-FY2025",
+    "sbc_ttm": 26836000000.0,
+    "shares": 2573000000.0,
+    "shares_basis": "diluted weighted-average shares FY2026Q3",
+    "sources": {
+     "cash_and_equivalents": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       57072
+      ]
+     },
+     "debt_current": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       72913
+      ]
+     },
+     "debt_noncurrent": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       64956
+      ]
+     },
+     "marketable_securities_current": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       65097
+      ]
+     },
+     "sales_to_capital": {
+      "available_at": "2026-01-29T00:13:46Z",
+      "inputs": [
+       69613,
+       69577,
+       68303,
+       68296,
+       68288,
+       59304,
+       59293,
+       59281
+      ]
+     },
+     "ttm_capex": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       68306,
+       68305,
+       68305,
+       68304,
+       68304,
+       68303,
+       68302
+      ]
+     },
+     "ttm_depreciation": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       59309,
+       59307,
+       59305,
+       59304,
+       59301
+      ]
+     },
+     "ttm_income_tax": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       62709,
+       62707,
+       62705,
+       62704,
+       62701
+      ]
+     },
+     "ttm_interest_expense": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       64286,
+       64285,
+       64285,
+       64284,
+       64284,
+       72731,
+       64282
+      ]
+     },
+     "ttm_operating_cash_flow": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       65507,
+       65506,
+       65506,
+       65505,
+       65505,
+       65504,
+       65503
+      ]
+     },
+     "ttm_operating_income": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       66290,
+       66288,
+       66286,
+       66285,
+       66282
+      ]
+     },
+     "ttm_pretax_income": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       62397,
+       62395,
+       62393,
+       62392,
+       62389
+      ]
+     },
+     "ttm_revenue": {
+      "available_at": "2025-01-30T01:00:50Z",
+      "inputs": [
+       69587,
+       69583,
+       69579,
+       69577,
+       69572
+      ]
+     },
+     "ttm_sbc": {
+      "available_at": "2026-10-22T00:00:08Z",
+      "inputs": [
+       55839,
+       55838,
+       70045,
+       70044,
+       70043
+      ]
+     }
+    },
+    "tax_basis": "TTM",
+    "tax_rate_used": 0.1,
+    "tax_ttm": 3614000000.0,
+    "trailing_3y_revenue_cagr": 0.23923204483253002
+   },
+   "sensitivities": {
+    "other": {
+     "RONIC 20% (growth creates value)": 0.17354120717363253,
+     "S2C x0.5 (capex intensity doubles)": 0.30909419241856684,
+     "S2C x2 (capex intensity halves)": 0.17200598626233254,
+     "margin +5pt": 0.16018221595386917,
+     "margin -5pt": 0.25307177136632963,
+     "raw beta (no Blume)": 0.22951009657421928,
+     "tax 21% statutory": 0.24156789718660193
+    },
+    "wacc_x_terminal": {
+     "wacc+0%|gT2.5%": 0.20454457620381084,
+     "wacc+0%|gT3.0%": 0.20211927100492877,
+     "wacc+0%|gT3.5%": 0.19969678665274115,
+     "wacc+0%|gT4.0%": 0.19727721355781996,
+     "wacc+1%|gT2.5%": 0.236591671538397,
+     "wacc+1%|gT3.0%": 0.23414489870187494,
+     "wacc+1%|gT3.5%": 0.2317005330215306,
+     "wacc+1%|gT4.0%": 0.22925867238083442,
+     "wacc-1%|gT2.5%": 0.17214608783403057,
+     "wacc-1%|gT3.0%": 0.16973970163050145,
+     "wacc-1%|gT3.5%": 0.16733659168010784,
+     "wacc-1%|gT4.0%": 0.1649368404005877
+    }
+   },
+   "status": "ok",
+   "wacc": {
+    "kd_after_tax": 0.05427,
+    "ke": 0.1098391928695441,
+    "wacc": 0.10700511437890452,
+    "wd": 0.051000893557927945,
+    "we": 0.9489991064420721
+   }
+  },
+  "MSFT": {
+   "base": {
+    "implied_revenue_cagr_y1_5": 0.22537664990578865,
+    "margin": 0.4710444659325434,
+    "ronic": 0.09249352620548894,
+    "s2c": 0.781386014751492,
+    "target_ev": 4021865391862.2866,
+    "tax": 0.19683420990393388,
+    "terminal_growth": 0.0326,
+    "wacc": 0.09249352620548894
+   },
+   "bridge": [
+    [
+     "0. v1: FCFE = CFO - capex, equity value, r = r_f + 5% (no beta), terminal 3%",
+     0.23011607286214442
+    ],
+    [
+     "1. cost of equity = r_f + beta x Damodaran ERP (CAPM)",
+     0.2178890254715441
+    ],
+    [
+     "2. treat stock-based compensation as a cost (CFO adds it back)",
+     0.2500140237582472
+    ],
+    [
+     "3. enterprise basis: FCFF at WACC vs EV (net cash, debt, leases)",
+     0.24093555156316893
+    ],
+    [
+     "4. normalise capex: NOPAT less growth-linked reinvestment (S2C); metric = revenue growth y1-5",
+     0.168803793049768
+    ],
+    [
+     "5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+     0.22537664990578865
+    ]
+   ],
+   "inputs": {
+    "as_of_quarter": "FY2027Q1",
+    "balance_sheet_date": "2026-09-30",
+    "beta": {
+     "blume": 1.0702624899700388,
+     "first": "2024-11-08",
+     "last": "2026-11-05",
+     "n_weeks": 104,
+     "raw": 1.1048693880149831,
+     "se": 0.17180039178191628,
+     "unused_last": "2026-11-06T21:00:00Z"
+    },
+    "breakeven": 0.0226,
+    "capex_to_cfo": 0.6939064111334606,
+    "capex_ttm": 135921000000.0,
+    "cash_st": 64509000000.0,
+    "cfo_ttm": 195878000000.0,
+    "debt": 35481000000.0,
+    "depreciation_ttm": 38300000000.0,
+    "ebit_ttm": 163191000000.0,
+    "effective_tax": 0.19683420990393388,
+    "erp": 0.0423,
+    "erp_year": "2025",
+    "finance_leases": 70973000000.0,
+    "flags": [
+     "commercial_paper not tagged at 2026-09-30: treated as 0"
+    ],
+    "inputs_available_at": "2026-11-06T04:59:59Z",
+    "interest_ttm": 3223000000.0,
+    "market_cap": 3979920391862.2866,
+    "missing": [],
+    "net_capex_3y": 153476000000.0,
+    "pretax_ttm": 177586000000.0,
+    "price": 535.9299926757812,
+    "price_date": "2026-11-05",
+    "rd": 0.0603,
+    "rd_month": "2026-09",
+    "revenue_added_3y": 119924000000.0,
+    "revenue_ttm": 346445000000.0,
+    "revenue_ttm_3y_ago": 218310000000.0,
+    "rf": 0.0484,
+    "rf_date": "2026-11-05",
+    "sales_to_capital": 0.781386014751492,
+    "sales_to_capital_years": "FY2024-FY2026",
+    "sbc_ttm": 12556000000.0,
+    "shares": 7426194552.0,
+    "shares_basis": "cover page shares outstanding as of 2026-10-22",
+    "sources": {
+     "cash_st_investments": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       25948
+      ]
+     },
+     "debt_current": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       42627
+      ]
+     },
+     "debt_noncurrent": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       43134
+      ]
+     },
+     "finance_lease_liability": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       34489
+      ]
+     },
+     "sales_to_capital": {
+      "available_at": "2026-07-29T20:08:01Z",
+      "inputs": [
+       51273,
+       51240,
+       48959,
+       48952,
+       48940,
+       30638,
+       30631,
+       30624
+      ]
+     },
+     "ttm_capex": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       48960,
+       48959,
+       48957,
+       48958,
+       48956
+      ]
+     },
+     "ttm_depreciation": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       30639,
+       30638,
+       30636,
+       30637,
+       30635
+      ]
+     },
+     "ttm_income_tax": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       38267,
+       38266,
+       38264,
+       38265,
+       38263
+      ]
+     },
+     "ttm_interest_expense": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       54458,
+       54457,
+       54455,
+       54456,
+       54454
+      ]
+     },
+     "ttm_operating_cash_flow": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       44098,
+       44097,
+       44095,
+       44096,
+       44094
+      ]
+     },
+     "ttm_operating_income": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       45152,
+       45151,
+       45149,
+       45150,
+       45148
+      ]
+     },
+     "ttm_pretax_income": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       54309,
+       54308,
+       54306,
+       54307,
+       54305
+      ]
+     },
+     "ttm_revenue": {
+      "available_at": "2025-07-30T20:11:40Z",
+      "inputs": [
+       51242,
+       51240,
+       51234,
+       51236,
+       51232
+      ]
+     },
+     "ttm_sbc": {
+      "available_at": "2026-10-28T20:07:39Z",
+      "inputs": [
+       52242,
+       52241,
+       52239,
+       52240,
+       52238
+      ]
+     }
+    },
+    "tax_basis": "TTM",
+    "tax_rate_used": 0.19683420990393388,
+    "tax_ttm": 34955000000.0,
+    "trailing_3y_revenue_cagr": 0.16641623563443164
+   },
+   "sensitivities": {
+    "other": {
+     "RONIC 20% (growth creates value)": 0.1870460780127317,
+     "S2C x0.5 (capex intensity doubles)": 0.29983942481144243,
+     "S2C x2 (capex intensity halves)": 0.20132750781821446,
+     "margin +5pt": 0.19872442628688314,
+     "margin -5pt": 0.25665139347642774,
+     "raw beta (no Blume)": 0.230232470560782,
+     "tax 21% statutory": 0.22986784702055563
+    },
+    "wacc_x_terminal": {
+     "wacc+0%|gT2.5%": 0.2292504694489107,
+     "wacc+0%|gT3.0%": 0.22670077689589913,
+     "wacc+0%|gT3.5%": 0.224155430579151,
+     "wacc+0%|gT4.0%": 0.22161450082670264,
+     "wacc+1%|gT2.5%": 0.2630091980961171,
+     "wacc+1%|gT3.0%": 0.26044315428216047,
+     "wacc+1%|gT3.5%": 0.2578809601567059,
+     "wacc+1%|gT4.0%": 0.25532269465426727,
+     "wacc-1%|gT2.5%": 0.19461934897743516,
+     "wacc-1%|gT3.0%": 0.19208478906857562,
+     "wacc-1%|gT3.5%": 0.18955511597381958,
+     "wacc-1%|gT4.0%": 0.18703039057337045
+    }
+   },
+   "status": "ok",
+   "wacc": {
+    "kd_after_tax": 0.048430897142792785,
+    "ke": 0.09367210332573264,
+    "wacc": 0.09249352620548894,
+    "wd": 0.026050965915407873,
+    "we": 0.9739490340845921
+   }
+  }
+ },
+ "cutoff": "2026-11-06T04:59:59Z",
+ "knowledge_time": "2026-11-07T16:29:27Z"
+}

@@ -5,17 +5,21 @@ Model (enterprise value, FCFF, after Damodaran's "sales-to-capital" formulation)
     NOPAT_t   = R_t * m * (1 - tau)                      m = TTM operating margin (GAAP EBIT: SBC already expensed)
     Reinvest_t = (R_t - R_{t-1}) / S2C                    S2C = 3y delta revenue / 3y (capex - depreciation)
     FCFF_t    = NOPAT_t - Reinvest_t
+    ROIC      incremental ROIC in years 1-5 = m (1-tau) S2C; in years 6-10 it fades linearly to RONIC
+              (S2C_t = ROIC_t / (m (1-tau))), so returns on new capital converge as growth converges (v2.1)
     Terminal  FCFF_11 = R_10 (1+g_T) m (1-tau) (1 - g_T / RONIC);  TV = FCFF_11 / (WACC - g_T)
     EV        = sum FCFF_t / (1+WACC)^t + TV / (1+WACC)^10
     Equity    = EV + cash & short-term investments - debt - finance leases     (non-marketable investments excluded)
     Solve g such that Equity = market value of equity (as-traded price x shares).
 Discount rate (CAPM / WACC), all point-in-time at the valuation date:
-    r_f   10-year Treasury par yield (U.S. Treasury)          ERP  Damodaran implied ERP (FCFE), latest year-end
+    r_f   10-year Treasury par yield (U.S. Treasury)
+    ERP   Damodaran implied ERP, monthly 'ERP (T12m)' (same trailing-12-month cash-yield definition as the annual
+          'Implied ERP (FCFE)'), latest month whose publication is evidenced before the cutoff (v2.1)
     beta  OLS on 104 weekly total returns vs SPY, Blume-adjusted (0.67 b + 0.33), from stored prices
     r_d   Moody's Aaa corporate yield (FRED AAA, monthly)      tax  TTM effective rate, bounded to [10%, 30%]
     WACC  = E/(D+E) (r_f + beta ERP) + D/(D+E) r_d (1 - tax),  D = book debt + finance leases
 Terminal growth g_T = min(r_f, 10-year breakeven inflation + 1.0% real), RONIC = WACC (no value created by
-growth in perpetuity) in the base case. When an essential input is missing, the result is an explicit
+growth in perpetuity) in the base case, reached by the year 6-10 fade. When an essential input is missing, the result is an explicit
 `not_computed` with the reason, never a number.
 """
 from __future__ import annotations
@@ -32,6 +36,9 @@ from ..timeutil import et_to_utc_str, parse_utc
 DAMODARAN_URL = "https://pages.stern.nyu.edu/~adamodar/pc/datasets/histimpl.xls"
 ERP_SERIES = "DAMODARAN:ERP_FCFE"      # parsed from the spreadsheet column 'Implied ERP (FCFE)'
 # superseded: 'DAMODARAN:ERP_IMPLIED_FCFE' was parsed from the HTML page and took the DDM column on long rows
+ERP_MONTHLY_URL = "https://pages.stern.nyu.edu/~adamodar/pc/implprem/ERPbymonth.xlsx"
+ERP_MONTHLY_SERIES = "DAMODARAN:ERP_T12M_MONTHLY"   # column 'ERP (T12m)', value at the start of each month
+ERP_ASSUMED_LAG_DAYS = 14       # only when no dated capture exists: assumed publication 14 days after month start
 AAA_URL = "https://fred.stlouisfed.org/graph/fredgraph.csv?id=AAA&cosd=2010-01-01"
 REAL_GROWTH = 0.01
 TAX_BOUNDS = (0.10, 0.30)
@@ -65,6 +72,7 @@ def ingest_sources(conn, store, run_id, stats):
             availability_basis="monthly average; assumed available 7 days after month end", availability_verified=0,
             source_doc_id=g.doc_id, source_url=g.url, retrieved_at=g.retrieved_at,
             natural_key=f"fred|AAA|{obs_date}", run_id=run_id))
+    n += ingest_erp_monthly(conn, store, run_id, stats)
     stats["valuation_source_obs_new"] = n
     return n
 
@@ -85,6 +93,110 @@ def parse_damodaran_xls(body: bytes):
             continue
         if 1950 < y < 2100 and v == v:
             out.append((y, v))
+    return out
+
+
+def _pct(v):
+    if isinstance(v, str):
+        v = v.strip().replace(",", ".")
+        return float(v[:-1]) / 100 if v.endswith("%") else float(v)
+    return float(v)
+
+
+def parse_damodaran_monthly(body: bytes):
+    """[(YYYY-MM-01, ERP (T12m))] from ERPbymonth.xlsx (or an archived copy). Returns [] if the layout differs."""
+    import io
+    import warnings
+    import pandas as pd
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        try:
+            book = pd.read_excel(io.BytesIO(body), sheet_name=None, header=None)
+        except Exception:
+            return []
+    df = book.get("Historical ERP")
+    if df is None:
+        return []
+    hs = [i for i in range(min(len(df), 10)) if str(df.iloc[i, 0]).strip() == "Start of month"]
+    if not hs:
+        return []
+    cols = [str(c).strip() for c in df.iloc[hs[0]]]
+    if "ERP (T12m)" not in cols:
+        return []
+    j = cols.index("ERP (T12m)")
+    out = []
+    for i in range(hs[0] + 1, len(df)):
+        d, v = df.iloc[i, 0], df.iloc[i, j]
+        try:
+            d = pd.Timestamp(d).date()
+            v = _pct(v)
+        except (TypeError, ValueError):
+            continue
+        if v == v and 0 < v < 0.2:
+            out.append((d.replace(day=1).isoformat(), round(v, 6)))
+    return out
+
+
+def ingest_erp_monthly(conn, store, run_id, stats):
+    """Monthly implied ERP with vintages. Every Wayback capture of the file is a dated vintage: a value is available
+    from the first capture that shows it (verified). The current file is a vintage at retrieval. A month whose first
+    evidence comes more than 45 days after the month began is given an assumed availability (month start + 14 days,
+    unverified): the file existed, but its publication date for that month cannot be observed."""
+    from . import archive
+    vint = []                                         # (available_at, value-by-month, doc_id, url, retrieved_at, basis)
+    for cap in archive.list_captures(store, ERP_MONTHLY_URL.split("://")[1], start="2016", end="2026", run_id=run_id):
+        doc_id, body = archive.fetch_capture(store, cap, run_id=run_id, title="Damodaran ERPbymonth.xlsx (archived)")
+        rows = parse_damodaran_monthly(body) if body else []
+        if rows:
+            r = conn.execute("SELECT url, retrieved_at FROM source_document WHERE doc_id=?", (doc_id,)).fetchone()
+            vint.append((cap["served_at"], dict(rows), doc_id, r["url"], r["retrieved_at"], "wayback_capture"))
+    f = store.fetch(ERP_MONTHLY_URL, source_system="damodaran", doc_type="erp_table_xlsx", run_id=run_id,
+                    title="Damodaran ERPbymonth.xlsx (monthly implied ERP, US)")
+    cur = parse_damodaran_monthly(f.body)
+    vint.append((f.retrieved_at, dict(cur), f.doc_id, f.url, f.retrieved_at, "retrieval"))
+    vint.sort(key=lambda v: v[0])
+    n, revisions, seen = 0, [], {}
+    for at, vals, doc_id, url, ret, basis in vint:
+        for m, v in sorted(vals.items()):
+            if seen.get(m) == v:
+                continue
+            first = m not in seen
+            if not first:
+                revisions.append({"month": m, "from": seen[m], "to": v, "seen_at": at})
+            seen[m] = v
+            assumed = first and at > et_to_utc_str(date.fromisoformat(m) + timedelta(days=45), 0, 0)
+            avail = et_to_utc_str(date.fromisoformat(m) + timedelta(days=ERP_ASSUMED_LAG_DAYS), 0, 0) if assumed else at
+            nk = f"damodaran|erp_t12m|{m}|{v}"
+            if conn.execute("SELECT 1 FROM macro_observation WHERE natural_key=?", (nk,)).fetchone():
+                continue                                # append-only: re-runs add nothing already recorded
+            cur_ = conn.execute(
+                """INSERT OR IGNORE INTO macro_observation(series_id, obs_date, value, unit, definition, vintage_date,
+                     available_at, availability_basis, availability_verified, source_doc_id, source_url, retrieved_at,
+                     natural_key, run_id) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)""",
+                (ERP_MONTHLY_SERIES, m, v, "ratio",
+                 "Implied ERP on the S&P 500 at the start of the month, trailing-12-month cash yield "
+                 "(A. Damodaran, ERPbymonth.xlsx, column 'ERP (T12m)')", at[:10], avail,
+                 f"assumed: month start + {ERP_ASSUMED_LAG_DAYS} days (first dated evidence {at[:10]})" if assumed else
+                 ("first Wayback capture showing this value" if basis == "wayback_capture" else
+                  "first seen at retrieval of the current file"),
+                 0 if assumed else 1, doc_id, url, ret, nk, run_id))
+            n += cur_.rowcount
+    stats["erp_monthly_vintages"] = len(vint)
+    stats["erp_monthly_revisions"] = revisions
+    return n
+
+
+def erp_definition_check(conn, kt):
+    """Annual 'Implied ERP (FCFE)' at year-end Y vs monthly 'ERP (T12m)' at 1 January Y+1 (same date, same method)."""
+    out = []
+    for r in conn.execute("SELECT obs_date, value FROM macro_observation WHERE series_id=? AND retrieved_at<=? "
+                          "ORDER BY obs_date", (ERP_SERIES, kt)):
+        y = int(r["obs_date"][:4])
+        m = conn.execute("SELECT value FROM macro_observation WHERE series_id=? AND obs_date=? AND retrieved_at<=? "
+                         "ORDER BY vintage_date DESC LIMIT 1", (ERP_MONTHLY_SERIES, f"{y + 1}-01-01", kt)).fetchone()
+        if m:
+            out.append({"year_end": y, "annual_fcfe": r["value"], "monthly_t12m_jan": m["value"],
+                        "difference": m["value"] - r["value"]})
     return out
 
 
@@ -163,7 +275,11 @@ def inputs_at(conn, company, cutoff, kt, fundamentals_cutoff=None):
             if essential:
                 out["missing"].append(f"TTM {metric}")
             return None
-        out["sources"][f"ttm_{metric}"] = {"inputs": [i["id"] for i in it["inputs"]], "available_at": it["available_at"]}
+        # one lineage entry per (metric, period): the 3-years-ago revenue TTM used to overwrite the current one
+        key = f"ttm_{metric}" if fyq == (fy, q) else f"ttm_{metric}_FY{fyq[0]}Q{fyq[1]}"
+        out["sources"][key] = {"period": f"TTM to FY{fyq[0]}Q{fyq[1]}", "inputs": [i["id"] for i in it["inputs"]],
+                               "fiscal_periods": [i.get("fiscal_period") or i.get("role") for i in it["inputs"]],
+                               "available_at": it["available_at"]}
         return it["value"]
     rev, ebit = t("revenue"), t("operating_income")
     # used only by the v1 -> v2 bridge, not by the v2 model:
@@ -254,7 +370,14 @@ def inputs_at(conn, company, cutoff, kt, fundamentals_cutoff=None):
         out["missing"].append("share count")
     bar = latest_bar(conn, cid, cutoff, kt)
     rf = _macro_at(conn, "UST:10 Yr", cutoff, kt)
-    erp = _macro_at(conn, ERP_SERIES, cutoff, kt)
+    erp = _macro_at(conn, ERP_MONTHLY_SERIES, cutoff, kt)
+    erp_annual = _macro_at(conn, ERP_SERIES, cutoff, kt)
+    erp_basis = "monthly ERP (T12m)"
+    if erp is None:
+        erp, erp_basis = erp_annual, "annual Implied ERP (FCFE) (no monthly value available)"
+        out["flags"].append("monthly ERP not available at the cutoff: annual year-end value used")
+    elif not erp["availability_verified"]:
+        out["flags"].append(f"ERP for {erp['obs_date'][:7]}: publication date assumed ({erp['availability_basis']})")
     aaa = _macro_at(conn, "FRED:AAA", cutoff, kt)
     bei = _macro_at(conn, "FRED:T10YIE", cutoff, kt)
     for name, v in (("price", bar), ("10y Treasury", rf), ("Damodaran ERP", erp), ("Aaa yield", aaa),
@@ -282,6 +405,10 @@ def inputs_at(conn, company, cutoff, kt, fundamentals_cutoff=None):
         "sales_to_capital": (rev_add_3y / net_capex_3y) if net_capex_3y and net_capex_3y > 0 and rev_add_3y else None,
         "sales_to_capital_years": s2c_years,
         "rf": rf["value"] / 100, "rf_date": rf["obs_date"], "erp": erp["value"], "erp_year": erp["obs_date"][:4],
+        "erp_date": erp["obs_date"], "erp_basis": erp_basis, "erp_available_at": erp["available_at"],
+        "erp_availability_verified": erp["availability_verified"], "erp_mobs_id": erp["mobs_id"],
+        "erp_annual": erp_annual["value"] if erp_annual else None,
+        "erp_annual_year": erp_annual["obs_date"][:4] if erp_annual else None,
         "rd": aaa["value"] / 100, "rd_month": aaa["obs_date"][:7], "breakeven": bei["value"] / 100,
         "beta": beta, "capex_to_cfo": capex / cfo if (cfo and capex) else None, "tax_basis": tax_basis,
         "trailing_3y_revenue_cagr": (rev / rev3) ** (1 / 3) - 1 if rev and rev3 else None,
@@ -311,13 +438,28 @@ def growth_path(g, gt, years=YEARS, high=HIGH):
     return [g if t <= high else g + (gt - g) * (t - high) / (years - high) for t in range(1, years + 1)]
 
 
-def enterprise_value(r0, g, margin, tau, s2c, w, gt, ronic):
+TRANSITIONS = ("fade", "abrupt")
+
+
+def s2c_path(margin, tau, s2c, ronic, transition="fade", years=YEARS, high=HIGH):
+    """Sales-to-capital by year. 'fade': incremental ROIC m(1-tau)S2C in years 1-5, then linear to RONIC by year 10.
+    'abrupt' (Sprint 2.1): S2C constant to year 10, RONIC applies only from year 11."""
+    after_tax = margin * (1 - tau)
+    if transition == "abrupt" or after_tax <= 0:
+        return [s2c] * years
+    roic_f = after_tax * s2c
+    return [s2c if t <= high else (roic_f + (ronic - roic_f) * (t - high) / (years - high)) / after_tax
+            for t in range(1, years + 1)]
+
+
+def enterprise_value(r0, g, margin, tau, s2c, w, gt, ronic, transition="fade"):
     if w <= gt:
         return None
     rev, ev, prev = r0, 0.0, r0
+    sp = s2c_path(margin, tau, s2c, ronic, transition)
     for t, gr in enumerate(growth_path(g, gt), 1):
         rev = prev * (1 + gr)
-        fcff = rev * margin * (1 - tau) - (rev - prev) / s2c
+        fcff = rev * margin * (1 - tau) - (rev - prev) / sp[t - 1]
         ev += fcff / (1 + w) ** t
         prev = rev
     nopat_11 = rev * (1 + gt) * margin * (1 - tau)
@@ -339,7 +481,7 @@ def solve(f, target, lo=-0.5, hi=1.5, it=200):
     return (lo + hi) / 2
 
 
-def implied_growth(inp, w=None, gt=None, margin=None, s2c=None, ronic=None, tau=None):
+def implied_growth(inp, w=None, gt=None, margin=None, s2c=None, ronic=None, tau=None, transition="fade"):
     w = w if w is not None else wacc(inp)["wacc"]
     gt = gt if gt is not None else min(inp["rf"], inp["breakeven"] + REAL_GROWTH)
     margin = margin if margin is not None else inp["ebit_ttm"] / inp["revenue_ttm"]
@@ -347,9 +489,25 @@ def implied_growth(inp, w=None, gt=None, margin=None, s2c=None, ronic=None, tau=
     ronic = ronic if ronic is not None else w
     tau = tau if tau is not None else inp["tax_rate_used"]
     target_ev = inp["market_cap"] + inp["debt"] + inp["finance_leases"] - inp["cash_st"]
-    g = solve(lambda x: enterprise_value(inp["revenue_ttm"], x, margin, tau, s2c, w, gt, ronic), target_ev)
+    g = solve(lambda x: enterprise_value(inp["revenue_ttm"], x, margin, tau, s2c, w, gt, ronic, transition), target_ev)
     return {"implied_revenue_cagr_y1_5": g, "wacc": w, "terminal_growth": gt, "margin": margin, "s2c": s2c,
-            "ronic": ronic, "tax": tau, "target_ev": target_ev}
+            "ronic": ronic, "tax": tau, "target_ev": target_ev, "transition": transition,
+            "roic_incremental_y1_5": margin * (1 - tau) * s2c,
+            "s2c_path": s2c_path(margin, tau, s2c, ronic, transition)}
+
+
+def roic_scenarios(inp):
+    """Explicit alternatives for returns on new capital after year 5 (implied revenue growth, years 1-5)."""
+    b = implied_growth(inp)
+    w, roic_f = b["wacc"], b["roic_incremental_y1_5"]
+    mid = w + 0.5 * (roic_f - w)
+    sc = [("A. abrupt: ROIC_f to year 10, RONIC = WACC from year 11 (Sprint 2.1 base)", "abrupt", w),
+          ("B. fade years 6-10 to RONIC = WACC (v2.1 base)", "fade", w),
+          ("C. fade to half the forecast spread, RONIC = WACC + (ROIC_f - WACC)/2", "fade", mid),
+          ("D. persistent: RONIC = ROIC_f forever (no fade)", "fade", roic_f)]
+    return [{"scenario": name, "transition": tr, "terminal_ronic": r,
+             "implied_revenue_cagr_y1_5": implied_growth(inp, ronic=r, transition=tr)["implied_revenue_cagr_y1_5"]}
+            for name, tr, r in sc]
 
 
 def sensitivities(inp):
@@ -369,7 +527,10 @@ def sensitivities(inp):
         "tax 21% statutory": implied_growth(inp, tau=0.21)["implied_revenue_cagr_y1_5"],
         "raw beta (no Blume)": implied_growth(inp, w=wacc(inp, "raw")["wacc"])["implied_revenue_cagr_y1_5"],
     }
-    return {"wacc_x_terminal": grid, "other": other}
+    if inp.get("erp_annual") is not None:
+        other["ERP: annual year-end value (Sprint 2.1 input)"] = implied_growth(
+            inp, w=wacc(inp, erp=inp["erp_annual"])["wacc"])["implied_revenue_cagr_y1_5"]
+    return {"wacc_x_terminal": grid, "other": other, "roic_scenarios": roic_scenarios(inp)}
 
 
 # ----------------------------------------------------------------------------------------- bridge from v1
@@ -385,7 +546,8 @@ def bridge(inp):
     if None in (inp.get("cfo_ttm"), inp.get("capex_ttm"), inp.get("sbc_ttm")):
         return []
     mcap, rf = inp["market_cap"], inp["rf"]
-    w = wacc(inp)
+    ann = dict(inp, erp=inp["erp_annual"]) if inp.get("erp_annual") is not None else inp   # steps 0-5: Sprint 2.1 ERP
+    w = wacc(ann)
     fcfe = inp["cfo_ttm"] - inp["capex_ttm"]
     fcff = fcfe - inp["sbc_ttm"] + (inp["interest_ttm"] or 0) * (1 - inp["tax_rate_used"])
     ev_target = mcap + inp["debt"] + inp["finance_leases"] - inp["cash_st"]
@@ -395,9 +557,14 @@ def bridge(inp):
         ("2. treat stock-based compensation as a cost (CFO adds it back)", _fcf_growth(mcap, fcfe - inp["sbc_ttm"], w["ke"], 0.03)),
         ("3. enterprise basis: FCFF at WACC vs EV (net cash, debt, leases)", _fcf_growth(ev_target, fcff, w["wacc"], 0.03)),
     ]
-    base_gt3 = implied_growth(inp, gt=0.03, ronic=10.0)["implied_revenue_cagr_y1_5"]   # ronic huge: no terminal reinvestment
+    base_gt3 = implied_growth(ann, w=w["wacc"], gt=0.03, ronic=10.0, transition="abrupt")[
+        "implied_revenue_cagr_y1_5"]                                                     # ronic huge: no terminal reinvestment
     steps.append(("4. normalise capex: NOPAT less growth-linked reinvestment (S2C); metric = revenue growth y1-5", base_gt3))
-    steps.append(("5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (base case)",
+    steps.append(("5. terminal: g_T = min(r_f, breakeven + 1%) with reinvestment g_T/RONIC, RONIC = WACC (Sprint 2.1 base)",
+                  implied_growth(ann, w=w["wacc"], transition="abrupt")["implied_revenue_cagr_y1_5"]))
+    steps.append(("6. ERP: latest point-in-time monthly 'ERP (T12m)' instead of the last year-end value",
+                  implied_growth(inp, transition="abrupt")["implied_revenue_cagr_y1_5"]))
+    steps.append(("7. incremental ROIC fades from m(1-tau)S2C to RONIC = WACC over years 6-10 (v2.1 base)",
                   implied_growth(inp)["implied_revenue_cagr_y1_5"]))
     return steps
 
@@ -431,18 +598,44 @@ def ingest_history(conn, run_id, stats, kt) -> int:
                     continue
                 res = implied_growth(inp)
                 w = wacc(inp)
-                n += put(conn, company_id=c["company_id"], cls="market_implied", provider="reverse DCF v2 (model)",
-                         metric="implied_revenue_cagr_y1_5", basis="FCFF/EV, CAPM WACC, S2C reinvestment, fade to g_T",
+                n += put(conn, company_id=c["company_id"], cls="market_implied", provider="reverse DCF v2.1 (model)",
+                         metric="implied_revenue_cagr_y1_5",
+                         basis="FCFF/EV, CAPM WACC (monthly ERP), S2C reinvestment, ROIC fade to WACC, fade to g_T",
                          target_period=key, stat=tag, value=res["implied_revenue_cagr_y1_5"], unit="ratio",
                          as_of=inp["inputs_available_at"], as_of_basis="computed from point-in-time inputs",
-                         available_at=inp["inputs_available_at"], grade="B", method="reverse_dcf_v2",
+                         available_at=inp["inputs_available_at"], grade="B", method="reverse_dcf_v2_1",
                          checks={"wacc": w, "terminal_growth": res["terminal_growth"], "margin": res["margin"],
                                  "s2c": res["s2c"], "flags": inp["flags"], "shares_basis": inp["shares_basis"],
-                                 "beta": inp["beta"]["blume"], "erp": inp["erp"], "rf": inp["rf"]},
+                                 "beta": inp["beta"]["blume"], "erp": inp["erp"], "erp_date": inp["erp_date"],
+                                 "rf": inp["rf"], "roic_incremental_y1_5": res["roic_incremental_y1_5"]},
                          notes=None if res["implied_revenue_cagr_y1_5"] is not None else
                          "no growth rate in [-50%, 150%] reproduces the price",
-                         natural_key=f"rdcf2|{c['ticker']}|{ev['accession_no']}|{tag}", run_id=run_id)
+                         natural_key=f"rdcf21|{c['ticker']}|{ev['accession_no']}|{tag}", run_id=run_id)
     stats["implied_growth_v2_new"] = n
     stats["implied_growth_v2_not_computed"] = len(skipped)
     stats["implied_growth_v2_not_computed_reasons"] = sorted({m for v in skipped.values() for m in v})
     return n
+
+
+# ----------------------------------------------------------------------------------------- ERP vintage audit
+def annual_erp_vintages(store, run_id=None):
+    """Audit of the annual series (histimpl.xls) against its own archived vintages: for each year-end, the first
+    capture showing it, its value then, and any later change. Evidence is stored; no observation is written."""
+    from . import archive
+    first, changes, caps = {}, [], []
+    for cap in archive.list_captures(store, DAMODARAN_URL.split("://")[1], start="2016", end="2026", run_id=run_id):
+        doc_id, body = archive.fetch_capture(store, cap, run_id=run_id, title="Damodaran histimpl.xls (archived)")
+        if not body:
+            continue
+        try:
+            rows = dict(parse_damodaran_xls(body))
+        except Exception:
+            caps.append({"served_at": cap.get("served_at"), "doc_id": doc_id, "parsed": False})
+            continue
+        caps.append({"served_at": cap["served_at"], "doc_id": doc_id, "parsed": True, "last_year": max(rows)})
+        for y, v in rows.items():
+            if y not in first:
+                first[y] = {"first_seen": cap["served_at"], "value": v, "doc_id": doc_id}
+            elif abs(first[y]["value"] - v) > 1e-9 and not any(c["year"] == y and c["to"] == v for c in changes):
+                changes.append({"year": y, "from": first[y]["value"], "to": v, "seen_at": cap["served_at"]})
+    return {"captures": caps, "first_seen": first, "revisions": changes}

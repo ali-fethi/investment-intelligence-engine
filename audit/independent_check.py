@@ -21,9 +21,12 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-ROOT = Path(__file__).resolve().parents[1]
-DB = ROOT / "data" / "iie.sqlite"
-EVID = ROOT / "data" / "evidence"
+import os
+
+ROOT = Path(os.environ.get("IIE_AUDIT_ROOT") or Path(__file__).resolve().parents[1])
+# repository: data/iie.sqlite + data/evidence; external bundle (audit/make_bundle.py): bundle.sqlite + evidence/
+DB = ROOT / "data" / "iie.sqlite" if (ROOT / "data" / "iie.sqlite").exists() else ROOT / "bundle.sqlite"
+EVID = ROOT / "data" / "evidence" if (ROOT / "data" / "evidence").exists() else ROOT / "evidence"
 ET = ZoneInfo("America/New_York")
 CIK = {"MSFT": "0000789019", "GOOGL": "0001652044", "META": "0001326801"}
 FYE = {"MSFT": 6, "GOOGL": 12, "META": 12}
@@ -38,9 +41,12 @@ def raw(doc_id: int) -> bytes:
         return f.read()
 
 
-def latest_doc(url_like: str, before: str | None = None):
+def latest_doc(url_like: str, before: str | None = None, system: str | None = None):
     sql = "SELECT doc_id, retrieved_at FROM source_document WHERE url LIKE ? AND http_status=200"
     p = [url_like]
+    if system:
+        sql += " AND source_system=?"
+        p.append(system)
     if before:
         sql += " AND retrieved_at<=?"
         p.append(before)
@@ -181,13 +187,78 @@ def fred_latest(series, cutoff_date, lag_days):
 
 def damodaran(cutoff_date):
     import pandas as pd
-    d = latest_doc("%histimpl.xls")
+    d = latest_doc("%histimpl.xls", system="damodaran")      # the publisher's file, not an archived copy
     df = pd.read_excel(io.BytesIO(raw(d["doc_id"])), header=None)
     h = df.index[df[0].astype(str).str.strip() == "Year"][0]
     col = list(df.iloc[h].astype(str).str.strip()).index("Implied ERP (FCFE)")
     year = int(cutoff_date[:4]) - 1 if cutoff_date[5:] >= "01-10" else int(cutoff_date[:4]) - 2
     row = df[df[0].astype(str).str.startswith(str(year))]
     return float(row.iloc[0, col]), year
+
+
+def _served_utc(doc):
+    """Capture actually served for an archived document (stored served-check), else its requested timestamp."""
+    url = doc["url"]
+    chk = db.execute("""SELECT doc_id FROM source_document WHERE doc_type='wayback_served_check' AND url=?
+                        ORDER BY doc_id DESC LIMIT 1""", (url + "#served",)).fetchone()
+    ts = json.loads(raw(chk["doc_id"]))["served"] if chk else url.split("/web/")[1][:14]
+    return datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def _monthly_rows(body):
+    """openpyxl, cell by cell (the engine uses pandas): {YYYY-MM-01: ERP (T12m)}."""
+    import openpyxl
+    import warnings
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")
+        try:
+            wb = openpyxl.load_workbook(io.BytesIO(body), read_only=True, data_only=True)
+        except Exception:
+            return {}
+    if "Historical ERP" not in wb.sheetnames:
+        return {}
+    rows = list(wb["Historical ERP"].iter_rows(values_only=True))
+    hdr = next((i for i, r in enumerate(rows[:10]) if r and str(r[0]).strip() == "Start of month"), None)
+    if hdr is None:
+        return {}
+    names = [str(c).strip() if c is not None else "" for c in rows[hdr]]
+    if "ERP (T12m)" not in names:
+        return {}
+    j, out = names.index("ERP (T12m)"), {}
+    for r in rows[hdr + 1:]:
+        if not isinstance(r[0], datetime):
+            continue
+        v = r[j]
+        if isinstance(v, str):
+            v = v.strip().replace(",", ".")
+            v = float(v[:-1]) / 100 if v.endswith("%") else float(v)
+        if isinstance(v, (int, float)) and 0 < v < 0.2:
+            out[r[0].date().replace(day=1).isoformat()] = round(float(v), 6)
+    return out
+
+
+def damodaran_monthly(cutoff_utc):
+    """Latest month whose value is evidenced (first archived capture showing it, or month start + 14 days when the
+    first evidence is more than 45 days late) by the cutoff."""
+    docs = db.execute("""SELECT doc_id, url, doc_type, retrieved_at FROM source_document WHERE url LIKE '%ERPbymonth.xlsx'
+                         AND http_status=200 ORDER BY doc_id""").fetchall()
+    ev = []
+    for d in docs:
+        at = _served_utc(d) if d["doc_type"] == "archived_page" else d["retrieved_at"]
+        rows = _monthly_rows(raw(d["doc_id"]))
+        if rows:
+            ev.append((at, rows))
+    ev.sort(key=lambda x: x[0])
+    first = {}
+    for at, rows in ev:
+        for m, v in rows.items():
+            if m not in first:
+                late = at > (datetime.fromisoformat(m) + timedelta(days=45)).strftime("%Y-%m-%dT05:00:00Z")
+                avail = (datetime.fromisoformat(m) + timedelta(days=14)).strftime("%Y-%m-%dT05:00:00Z") if late else at
+                first[m] = (avail, v, not late)
+    usable = sorted(m for m, (a, _, _) in first.items() if a <= cutoff_utc)
+    m = usable[-1]
+    return first[m][1], m, first[m][0], first[m][2], len(ev)
 
 
 # ------------------------------------------------------------------------------------------- DCF (independent)
@@ -200,6 +271,20 @@ def dcf_ev(r0, g, m, tau, s2c, w, gt, ronic, n=10, high=5):
     disc = [(1 + w) ** -t for t in range(1, n + 1)]
     tv = revs[n] * (1 + gt) * m * (1 - tau) * (1 - gt / ronic) / (w - gt)
     return sum(f * d for f, d in zip(fcff, disc)) + tv * disc[-1]
+
+
+def dcf_ev_fade(r0, g, m, tau, s2c, w, gt, ronic, n=10, high=5):
+    """Same model with the v2.1 transition: incremental ROIC = m(1-tau)S2C in years 1-5, then linear to RONIC."""
+    nopat_margin = m * (1 - tau)
+    roic = [nopat_margin * s2c] * high + [nopat_margin * s2c + (ronic - nopat_margin * s2c) * k / (n - high)
+                                          for k in range(1, n - high + 1)]
+    rev, pv = r0, 0.0
+    for t in range(1, n + 1):
+        gr = g if t <= high else g + (gt - g) * (t - high) / (n - high)
+        new = rev * (1 + gr)
+        pv += (new * nopat_margin - (new - rev) * nopat_margin / roic[t - 1]) / (1 + w) ** t
+        rev = new
+    return pv + rev * (1 + gt) * nopat_margin * (1 - gt / ronic) / (w - gt) / (1 + w) ** n
 
 
 def secant(f, x0, x1, tol=1e-10, it=200):
@@ -243,7 +328,9 @@ def valuation_check(cutoff="2026-11-05"):
         beta_raw, nw = beta_independent(tk, cutoff)
         beta = 0.67 * beta_raw + 0.33
         rf, rf_d = treasury_10y(cutoff)
-        erp, erp_y = damodaran(cutoff)
+        erp_annual, erp_y = damodaran(cutoff)
+        cutoff_utc = pub["cutoff"]
+        erp, erp_m, erp_at, erp_verified, n_vint = damodaran_monthly(cutoff_utc)
         rd, rd_m = fred_latest("AAA", cutoff, 38)
         be, _ = fred_latest("T10YIE", cutoff, 1)
         shares = e["shares"]                            # share count compared separately with the 10-Q cover page
@@ -253,6 +340,7 @@ def valuation_check(cutoff="2026-11-05"):
         tau = min(max(etr, 0.10), 0.30)
         wd = (debt + fl) / (mcap + debt + fl)
         w = (1 - wd) * (rf + beta * erp) + wd * rd * (1 - tau)
+        w_annual = (1 - wd) * (rf + beta * erp_annual) + wd * rd * (1 - tau)
         gt = min(rf, be + 0.01)
         s2c = e["sales_to_capital"]                      # recomputed below from annual facts
         # annual S2C independently
@@ -278,18 +366,35 @@ def valuation_check(cutoff="2026-11-05"):
         except TypeError:
             s2c_ind = None
         target = mcap + debt + fl - cash1
-        g = secant(lambda x: dcf_ev(rev, x, ebit / rev, tau, s2c_ind or s2c, w, gt, w) - target, 0.05, 0.25)
+        s_ = s2c_ind or s2c
+        g_before = secant(lambda x: dcf_ev(rev, x, ebit / rev, tau, s_, w_annual, gt, w_annual) - target, 0.05, 0.25)
+        g_erp_only = secant(lambda x: dcf_ev(rev, x, ebit / rev, tau, s_, w, gt, w) - target, 0.05, 0.25)
+        g = secant(lambda x: dcf_ev_fade(rev, x, ebit / rev, tau, s_, w, gt, w) - target, 0.05, 0.25)
+        roic_f = ebit / rev * (1 - tau) * s_
+        g_mid = secant(lambda x: dcf_ev_fade(rev, x, ebit / rev, tau, s_, w, gt, w + (roic_f - w) / 2) - target, 0.05, 0.25)
+        g_persist = secant(lambda x: dcf_ev_fade(rev, x, ebit / rev, tau, s_, w, gt, roic_f) - target, 0.05, 0.25)
+        sc_eng = {d["scenario"][0]: d["implied_revenue_cagr_y1_5"] for d in eng["sensitivities"]["roic_scenarios"]}
+        bridge = dict((n_[0], v_) for n_, v_ in eng["bridge"])
         out[tk] = {
             "independent": {"revenue_ttm": rev, "revenue_source": rev_src, "ebit_ttm": ebit, "eff_tax": etr,
                             "cash_st": cash1, "debt": debt, "finance_leases": fl, "balance_sheet_date": bsd,
                             "price": price, "price_date": last, "beta_raw": beta_raw, "beta_weeks": nw, "rf": rf,
-                            "rf_date": rf_d, "erp": erp, "erp_year": erp_y, "rd": rd, "rd_month": rd_m,
+                            "rf_date": rf_d, "erp": erp, "erp_date": erp_m, "erp_available_at": erp_at,
+                            "erp_availability_verified": erp_verified, "erp_vintages_read": n_vint,
+                            "erp_annual": erp_annual, "erp_year": erp_y, "rd": rd, "rd_month": rd_m,
                             "breakeven": be, "wacc": w, "terminal_growth": gt, "s2c": s2c_ind,
+                            "roic_incremental_y1_5": roic_f,
+                            "before_patch_g": g_before, "after_erp_only_g": g_erp_only,
+                            "scenario_C_g": g_mid, "scenario_D_g": g_persist,
                             "implied_revenue_cagr_y1_5": g},
             "engine": {"revenue_ttm": e["revenue_ttm"], "ebit_ttm": e["ebit_ttm"], "eff_tax": e["effective_tax"],
                        "cash_st": e["cash_st"], "debt": e["debt"], "finance_leases": e["finance_leases"],
                        "price": e["price"], "beta_raw": e["beta"]["raw"], "rf": e["rf"], "erp": e["erp"],
                        "rd": e["rd"], "breakeven": e["breakeven"], "wacc": eng["wacc"]["wacc"],
+                       "erp_date": e["erp_date"], "erp_available_at": e["erp_available_at"],
+                       "erp_annual": e["erp_annual"], "roic_incremental_y1_5": eng["base"]["roic_incremental_y1_5"],
+                       "before_patch_g": bridge["5"], "after_erp_only_g": bridge["6"],
+                       "scenario_C_g": sc_eng["C"], "scenario_D_g": sc_eng["D"],
                        "terminal_growth": eng["base"]["terminal_growth"], "s2c": e["sales_to_capital"],
                        "implied_revenue_cagr_y1_5": eng["base"]["implied_revenue_cagr_y1_5"]},
         }
@@ -401,6 +506,36 @@ def accounting_checks():
     return out
 
 
+def lineage_check(cutoff="2026-11-05"):
+    """TTM revenue lineage: the observation IDs the engine records must be facts of the current TTM window (latest
+    period end filed by the cutoff), filed by the cutoff, with the recorded availability. Run on the patched output and
+    on the pre-patch output kept in git (which recorded the 3-years-ago window)."""
+    cur = json.loads((ROOT / "docs" / "valuation" / f"valuation_{cutoff}.json").read_text())
+    before = ROOT / "docs" / "valuation" / f"valuation_{cutoff}_before_patch.json"     # Sprint 2.1 output (ccb55aa)
+    old = json.loads(before.read_text()) if before.exists() else None
+    out = {}
+    for tk in ("GOOGL", "MSFT", "META"):
+        fx = facts(tk)
+        ends = [f["end"] for c in ("RevenueFromContractWithCustomerExcludingAssessedTax", "Revenues")
+                for u in fx["us-gaap"].get(c, {"units": {}})["units"].values() for f in u
+                if "start" in f and f["filed"] <= cutoff]
+        window_end = max(ends)
+        res = {"independent_window_end": window_end}
+        for tag, doc in (("after", cur), ("before", old)):
+            if doc is None:
+                continue
+            src = doc["companies"][tk]["inputs"]["sources"]["ttm_revenue"]
+            obs = [db.execute("SELECT period_end, available_at, published_at FROM observation WHERE obs_id=?", (i,)).fetchone()
+                   for i in src["inputs"]]
+            res[tag] = {"max_period_end": max(o["period_end"] for o in obs),
+                        "recorded_available_at": src["available_at"],
+                        "max_obs_available_at": max(o["available_at"] for o in obs),
+                        "window_matches": max(o["period_end"] for o in obs) == window_end,
+                        "availability_matches": max(o["available_at"] for o in obs) == src["available_at"]}
+        out[tk] = res
+    return out
+
+
 def lookahead_checks():
     rows = json.loads((ROOT / "docs" / "expectations" / "events.json").read_text())
     v = 0
@@ -452,10 +587,25 @@ def external_figures():
     return out
 
 
+if __name__ == "__main__" and "--scope=valuation" in sys.argv:
+    # the part reproducible from the external evidence bundle (audit/make_bundle.py)
+    res = {"valuation": valuation_check(), "ttm_lineage": lineage_check(), "external_10q": external_figures()}
+    out = Path(os.environ.get("IIE_AUDIT_OUT") or ROOT / "audit" / "results_valuation.json")
+    out.write_text(json.dumps(res, indent=1, default=str))
+    for tk, d in res["valuation"].items():
+        diffs = d["relative_differences"]
+        print(tk, "implied growth engine", round(d["engine"]["implied_revenue_cagr_y1_5"], 6), "independent",
+              round(d["independent"]["implied_revenue_cagr_y1_5"], 6), "| max relative difference",
+              f"{max(abs(x) for x in diffs.values()):.1e}")
+    print("TTM lineage:", {tk: {k: v.get("window_matches") for k, v in d.items() if isinstance(v, dict)}
+                           for tk, d in res["ttm_lineage"].items()})
+    print("->", out)
+    sys.exit(0)
+
 if __name__ == "__main__":
     res = {"valuation": valuation_check(), "eps_surprises": surprise_check(), "car": car_check(),
            "accounting": accounting_checks(), "lookahead": lookahead_checks(), "external_10q": external_figures(),
-           "served_captures": served_capture_checks()}
+           "served_captures": served_capture_checks(), "ttm_lineage": lineage_check()}
     (ROOT / "audit" / "results.json").write_text(json.dumps(res, indent=1, default=str))
     v = res["valuation"]
     for tk, d in v.items():
@@ -467,5 +617,6 @@ if __name__ == "__main__":
     print("CAR max abs diff:", max(c["abs_diff"] for c in res["car"]))
     print("accounting:", res["accounting"])
     print("look-ahead:", res["lookahead"], "| served captures:", res["served_captures"])
+    print("TTM lineage:", res["ttm_lineage"])
     print("external 10-Q:", {tk: {k: round(x["rel_diff"], 4) for k, x in d.items()} for tk, d in res["external_10q"].items()})
     sys.exit(0)

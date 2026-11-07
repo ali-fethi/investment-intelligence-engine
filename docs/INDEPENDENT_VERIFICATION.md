@@ -23,6 +23,9 @@ the only fully independent check.
 | Archived consensus pages: value and capture date | 8 captures | 7/8 identical. **1 served a different capture than requested** (see below) |
 | Dated previews: value, datePublished, dateModified | 4 articles | **4/4 identical**; none modified after publication |
 | Valuation re-computation from raw files (TTM, beta, WACC, sales-to-capital, DCF with a different solver) | 3 companies, 5 Nov 2026 | **Identical to machine precision.** A first run differed for GOOGL; the fault was in the audit script (a revenue tag Alphabet stopped using in 2025) |
+| **Patch v0.3.2:** monthly ERP from raw vintages (own openpyxl reader, served-capture dates), ROIC-fade DCF (own arrays), scenarios C/D, before-patch value | 3 companies, 5 Nov 2026 | **Max relative difference 9×10⁻¹⁶ / 3×10⁻¹⁵ / 4×10⁻⁶** (GOOGL / MSFT / META). The META figure is a $1m quarterly-vs-YTD rounding in revenue already present in Sprint 2.1, where "identical" was overstated for META |
+| **Patch v0.3.2:** TTM revenue lineage vs raw companyfacts | 3 companies | After: recorded window ends at the latest period filed (2026-09-30) for all three. Before: it ended 2023-09-30 (the 3-years-ago TTM had overwritten it) |
+| **Patch v0.3.2:** external reproduction from the evidence bundle in an empty folder | 58 documents | 23/23 Wayback copies and both current Damodaran files byte-identical; Yahoo bytes changed (expected); results identical |
 | EPS consensus re-read from raw archived HTML with a different parser; GAAP EPS from raw XBRL | 12 releases | **12/12 identical** |
 | Abnormal return recomputed from raw price JSON | 8 releases | **Maximum difference 0.0** |
 | Accounting consistency: net income ≈ diluted EPS × diluted shares (raw XBRL) | MSFT 55, META 47 quarters | 0 exceptions for MSFT. 7 for META, all 2011–2012 (pre-IPO two-class method), outside the analysis window |
@@ -32,7 +35,7 @@ the only fully independent check.
 | Sprint 1 snapshots rebuilt (`iie verify`) | 3 snapshots | **3/3 identical** |
 | Event Reaction Engine case studies recomputed at their knowledge time | 6 cases | **6/6 identical** (code version field substituted) |
 | QA suite (`iie qa`) | full database | 0 failures |
-| Automated tests | 70 offline + 3 network | all pass |
+| Automated tests | 74 offline + 3 network | all pass |
 
 ## The material finding: archive redirects (look-ahead the earlier audit could not see)
 
@@ -71,7 +74,8 @@ timestamp.
 
 ## Not verified / unresolved
 
-- Damodaran's past values cannot be checked against their original vintages.
+- Damodaran ERP: monthly vintages exist from Nov 2021 (no revision found). Earlier monthly publication dates and annual
+  values for 2022 and earlier cannot be checked against their original vintages.
 - Moody's Aaa is used as the cost of debt for all three companies. Actual ratings: MSFT AAA, GOOGL AA+,
   META AA−. The debt weight is ≤5%.
 - The vendor's street EPS definition (FactSet contributors) is not documented per quarter. It is inferred

@@ -16,15 +16,25 @@
     "beta_weeks": 104,
     "rf": 0.0484,
     "rf_date": "11/05/2026",
-    "erp": 0.0423,
+    "erp": 0.037,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_availability_verified": true,
+    "erp_vintages_read": 24,
+    "erp_annual": 0.0423,
     "erp_year": 2025,
     "rd": 0.0603,
     "rd_month": "2026-09-01",
     "breakeven": 0.0226,
-    "wacc": 0.09631732691046979,
+    "wacc": 0.09031803681305509,
     "terminal_growth": 0.0326,
     "s2c": 0.9386733416770964,
-    "implied_revenue_cagr_y1_5": 0.21173326529677508
+    "roic_incremental_y1_5": 0.25629507358640763,
+    "before_patch_g": 0.21173326529677508,
+    "after_erp_only_g": 0.1906682934295734,
+    "scenario_C_g": 0.1575208103740604,
+    "scenario_D_g": 0.14340963425028783,
+    "implied_revenue_cagr_y1_5": 0.20499163953430038
    },
    "engine": {
     "revenue_ttm": 471098000000.0,
@@ -36,13 +46,21 @@
     "price": 282.57000732421875,
     "beta_raw": 1.2596865489677591,
     "rf": 0.0484,
-    "erp": 0.0423,
+    "erp": 0.037,
     "rd": 0.0603,
     "breakeven": 0.0226,
-    "wacc": 0.09631732691046979,
+    "wacc": 0.09031803681305509,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_annual": 0.0423,
+    "roic_incremental_y1_5": 0.25629507358640763,
+    "before_patch_g": 0.21173326529677505,
+    "after_erp_only_g": 0.19066829342957325,
+    "scenario_C_g": 0.1575208103740603,
+    "scenario_D_g": 0.1434096342502877,
     "terminal_growth": 0.0326,
     "s2c": 0.9386733416770964,
-    "implied_revenue_cagr_y1_5": 0.21173326529677505
+    "implied_revenue_cagr_y1_5": 0.20499163953430022
    },
    "relative_differences": {
     "revenue_ttm": 0.0,
@@ -55,12 +73,18 @@
     "beta_raw": 2.220446049250313e-16,
     "rf": 0.0,
     "erp": 0.0,
+    "erp_annual": 0.0,
     "rd": 0.0,
     "breakeven": 0.0,
     "wacc": 0.0,
     "terminal_growth": 0.0,
     "s2c": 0.0,
-    "implied_revenue_cagr_y1_5": 2.220446049250313e-16
+    "roic_incremental_y1_5": 0.0,
+    "before_patch_g": 2.220446049250313e-16,
+    "after_erp_only_g": 6.661338147750939e-16,
+    "scenario_C_g": 6.661338147750939e-16,
+    "scenario_D_g": 8.881784197001252e-16,
+    "implied_revenue_cagr_y1_5": 8.881784197001252e-16
    }
   },
   "MSFT": {
@@ -79,15 +103,25 @@
     "beta_weeks": 104,
     "rf": 0.0484,
     "rf_date": "11/05/2026",
-    "erp": 0.0423,
+    "erp": 0.037,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_availability_verified": true,
+    "erp_vintages_read": 24,
+    "erp_annual": 0.0423,
     "erp_year": 2025,
     "rd": 0.0603,
     "rd_month": "2026-09-01",
     "breakeven": 0.0226,
-    "wacc": 0.09249352620548891,
+    "wacc": 0.08696890627837549,
     "terminal_growth": 0.0326,
     "s2c": 0.781386014751492,
-    "implied_revenue_cagr_y1_5": 0.22537664990578868
+    "roic_incremental_y1_5": 0.29561927103443797,
+    "before_patch_g": 0.22537664990578868,
+    "after_erp_only_g": 0.2063858680597854,
+    "scenario_C_g": 0.16764636957386234,
+    "scenario_D_g": 0.1545187437710715,
+    "implied_revenue_cagr_y1_5": 0.22053227271033296
    },
    "engine": {
     "revenue_ttm": 346445000000.0,
@@ -99,13 +133,21 @@
     "price": 535.9299926757812,
     "beta_raw": 1.1048693880149831,
     "rf": 0.0484,
-    "erp": 0.0423,
+    "erp": 0.037,
     "rd": 0.0603,
     "breakeven": 0.0226,
-    "wacc": 0.09249352620548894,
+    "wacc": 0.0869689062783755,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_annual": 0.0423,
+    "roic_incremental_y1_5": 0.29561927103443797,
+    "before_patch_g": 0.22537664990578865,
+    "after_erp_only_g": 0.20638586805978576,
+    "scenario_C_g": 0.16764636957386292,
+    "scenario_D_g": 0.1545187437710719,
     "terminal_growth": 0.0326,
     "s2c": 0.781386014751492,
-    "implied_revenue_cagr_y1_5": 0.22537664990578865
+    "implied_revenue_cagr_y1_5": 0.2205322727103335
    },
    "relative_differences": {
     "revenue_ttm": 0.0,
@@ -118,12 +160,18 @@
     "beta_raw": -5.551115123125783e-16,
     "rf": 0.0,
     "erp": 0.0,
+    "erp_annual": 0.0,
     "rd": 0.0,
     "breakeven": 0.0,
-    "wacc": -3.3306690738754696e-16,
+    "wacc": -1.1102230246251565e-16,
     "terminal_growth": 0.0,
     "s2c": 0.0,
-    "implied_revenue_cagr_y1_5": 2.220446049250313e-16
+    "roic_incremental_y1_5": 0.0,
+    "before_patch_g": 2.220446049250313e-16,
+    "after_erp_only_g": -1.7763568394002505e-15,
+    "scenario_C_g": -3.4416913763379853e-15,
+    "scenario_D_g": -2.55351295663786e-15,
+    "implied_revenue_cagr_y1_5": -2.4424906541753444e-15
    }
   },
   "META": {
@@ -142,15 +190,25 @@
     "beta_weeks": 104,
     "rf": 0.0484,
     "rf_date": "11/05/2026",
-    "erp": 0.0423,
+    "erp": 0.037,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_availability_verified": true,
+    "erp_vintages_read": 24,
+    "erp_annual": 0.0423,
     "erp_year": 2025,
     "rd": 0.0603,
     "rd_month": "2026-09-01",
     "breakeven": 0.0226,
-    "wacc": 0.10700511437890452,
+    "wacc": 0.09969966715884038,
     "terminal_growth": 0.0326,
     "s2c": 0.9406235364956178,
-    "implied_revenue_cagr_y1_5": 0.20085894039925728
+    "roic_incremental_y1_5": 0.27814004964433653,
+    "before_patch_g": 0.20085894039925728,
+    "after_erp_only_g": 0.17725872146216962,
+    "scenario_C_g": 0.15070099920866564,
+    "scenario_D_g": 0.13823037334260227,
+    "implied_revenue_cagr_y1_5": 0.19038795810298978
    },
    "engine": {
     "revenue_ttm": 241606000000.0,
@@ -162,13 +220,21 @@
     "price": 605.0800170898438,
     "beta_raw": 1.6753181916496984,
     "rf": 0.0484,
-    "erp": 0.0423,
+    "erp": 0.037,
     "rd": 0.0603,
     "breakeven": 0.0226,
-    "wacc": 0.10700511437890452,
+    "wacc": 0.09969966715884038,
+    "erp_date": "2026-10-01",
+    "erp_available_at": "2026-10-21T09:27:10Z",
+    "erp_annual": 0.0423,
+    "roic_incremental_y1_5": 0.278138898430999,
+    "before_patch_g": 0.2008592213315913,
+    "after_erp_only_g": 0.1772589577482767,
+    "scenario_C_g": 0.15070128137980088,
+    "scenario_D_g": 0.13823061137267112,
     "terminal_growth": 0.0326,
     "s2c": 0.9406235364956178,
-    "implied_revenue_cagr_y1_5": 0.2008592213315913
+    "implied_revenue_cagr_y1_5": 0.1903882306230395
    },
    "relative_differences": {
     "revenue_ttm": -4.138970058686908e-06,
@@ -180,12 +246,18 @@
     "beta_raw": 2.220446049250313e-16,
     "rf": 0.0,
     "erp": 0.0,
+    "erp_annual": 0.0,
     "rd": 0.0,
     "breakeven": 0.0,
     "wacc": 0.0,
     "terminal_growth": 0.0,
     "s2c": 0.0,
-    "implied_revenue_cagr_y1_5": -1.3986529079357268e-06
+    "roic_incremental_y1_5": 4.138987189650223e-06,
+    "before_patch_g": -1.3986529079357268e-06,
+    "after_erp_only_g": -1.3329995284250273e-06,
+    "scenario_C_g": -1.872387100143591e-06,
+    "scenario_D_g": -1.7219779793187229e-06,
+    "implied_revenue_cagr_y1_5": -1.4313912620744773e-06
    }
   }
  },
@@ -500,5 +572,58 @@
   "archived_consensus_used": 81,
   "served_after_release": [],
   "served_unverified": 0
+ },
+ "ttm_lineage": {
+  "GOOGL": {
+   "independent_window_end": "2026-09-30",
+   "after": {
+    "max_period_end": "2026-09-30",
+    "recorded_available_at": "2026-10-29T00:29:06Z",
+    "max_obs_available_at": "2026-10-29T00:29:06Z",
+    "window_matches": true,
+    "availability_matches": true
+   },
+   "before": {
+    "max_period_end": "2023-09-30",
+    "recorded_available_at": "2025-02-05T01:41:40Z",
+    "max_obs_available_at": "2025-02-05T01:41:40Z",
+    "window_matches": false,
+    "availability_matches": true
+   }
+  },
+  "MSFT": {
+   "independent_window_end": "2026-09-30",
+   "after": {
+    "max_period_end": "2026-09-30",
+    "recorded_available_at": "2026-10-28T20:07:39Z",
+    "max_obs_available_at": "2026-10-28T20:07:39Z",
+    "window_matches": true,
+    "availability_matches": true
+   },
+   "before": {
+    "max_period_end": "2023-09-30",
+    "recorded_available_at": "2025-07-30T20:11:40Z",
+    "max_obs_available_at": "2025-07-30T20:11:40Z",
+    "window_matches": false,
+    "availability_matches": true
+   }
+  },
+  "META": {
+   "independent_window_end": "2026-09-30",
+   "after": {
+    "max_period_end": "2026-09-30",
+    "recorded_available_at": "2026-10-22T00:00:08Z",
+    "max_obs_available_at": "2026-10-22T00:00:08Z",
+    "window_matches": true,
+    "availability_matches": true
+   },
+   "before": {
+    "max_period_end": "2023-09-30",
+    "recorded_available_at": "2025-01-30T01:00:50Z",
+    "max_obs_available_at": "2025-01-30T01:00:50Z",
+    "window_matches": false,
+    "availability_matches": true
+   }
+  }
  }
 }
