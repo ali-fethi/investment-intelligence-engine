@@ -58,16 +58,16 @@ class Fact:
         return d
 
 
-def _concept_priority():
+def _concept_priority(metrics=None):
     pr = {}
-    for mid, m in METRICS.items():
+    for mid, m in (metrics or METRICS).items():
         for i, qc in enumerate(m["concepts"]):
             tax, c = qc.split(":")
             pr[(tax, c)] = (mid, i)
     return pr
 
 
-def load_facts(conn, company_id: int, cutoff: str, knowledge_time: str) -> dict:
+def load_facts(conn, company_id: int, cutoff: str, knowledge_time: str, metrics=None) -> dict:
     """{(metric, period_start, period_end): Fact} — the value known at the cutoff for each period.
 
     Rules, in order:
@@ -78,7 +78,8 @@ def load_facts(conn, company_id: int, cutoff: str, knowledge_time: str) -> dict:
       4. within a concept, the most recently *available* report wins (restatements supersede);
          the first report is kept in the audit trail
     """
-    prio = _concept_priority()
+    metrics = metrics or METRICS
+    prio = _concept_priority(metrics)
     concepts = [(t, c) for (t, c) in prio]
     q_marks = ",".join("(?,?)" for _ in concepts)
     params = [x for tc in concepts for x in tc]
@@ -94,7 +95,7 @@ def load_facts(conn, company_id: int, cutoff: str, knowledge_time: str) -> dict:
         else:
             mid, p = prio[(r["taxonomy"], r["concept"])]
             rank = 0
-        if METRICS[mid]["unit"] != _unit_family(r["unit"]):
+        if mid not in metrics or metrics[mid]["unit"] != _unit_family(r["unit"]):
             continue
         groups[(mid, r["period_start"], r["period_end"])].append((rank, p, r))
     out = {}

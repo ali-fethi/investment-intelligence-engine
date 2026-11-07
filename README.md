@@ -1,4 +1,4 @@
-# Investment Intelligence Engine — data foundation, Event Reaction Engine, Expectations Engine (v0.3.0)
+# Investment Intelligence Engine — data foundation, Event Reaction Engine, Expectations Engine (v0.3.1)
 
 An auditable, reproducible, point-in-time public-market data foundation for **GOOGL, MSFT, META**.
 Every number keeps its source bytes (sha256), the period it describes, when it became public, and
@@ -23,6 +23,18 @@ bit-for-bit.
 * [Coverage report](docs/EXPECTATIONS_COVERAGE.md) · [Sources investigated](docs/EXPECTATIONS_SOURCES.md) ·
   [Checked examples](docs/EXPECTATIONS_EXAMPLES.md) · [Market vs fundamentals hypotheses](docs/MARKET_VS_FUNDAMENTALS.md) ·
   [Audit](docs/EXPECTATIONS_AUDIT.md); generated tables in [`docs/expectations/`](docs/expectations/)
+
+**Sprint 2.1 (v0.3.1): corrections and independent audit**
+* [Reverse DCF v2: audit, methodology and valuation bridge](docs/VALUATION_METHODOLOGY.md) (output: `docs/valuation/`)
+* [Consensus / EPS comparability audit](docs/CONSENSUS_EPS_AUDIT.md) (output: `docs/expectations/quality.*`)
+* [Independent verification report](docs/INDEPENDENT_VERIFICATION.md) (scripts and results: `audit/`)
+* [Market vs fundamentals, v2](docs/MARKET_VS_FUNDAMENTALS.md)
+
+```bash
+.venv/bin/iie valuation --cutoff 2026-11-05        # inputs, WACC, implied growth, sensitivities, bridge
+.venv/bin/iie expect-quality                        # comparability and statistical-quality report
+.venv/bin/python audit/independent_check.py         # independent re-computation from raw source files
+```
 
 ## SEC contact (one-time, local only)
 
@@ -87,7 +99,7 @@ mv data/iie.sqlite data/old.sqlite && .venv/bin/iie rebuild --from-db data/old.s
 ## Tests
 
 ```bash
-.venv/bin/pytest                                   # 58 offline unit, integration and adversarial tests (~2 s)
+.venv/bin/pytest                                   # 70 offline unit, integration and adversarial tests (~3 s)
 IIE_NETWORK_TESTS=1 .venv/bin/pytest -m network    # 3 live checks of provider formats and timestamp conventions
 ```
 

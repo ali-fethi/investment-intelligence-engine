@@ -1,48 +1,35 @@
-# Where the market may be pricing something our fundamentals do not show (hypotheses)
+# Where the market may be pricing something our fundamentals do not show (hypotheses), v2
 
-Cutoff: close of 5 Nov 2026. All inputs are point-in-time. The method restates each price as the 10-year
-FCF growth it requires (reverse DCF):
+Cutoff: close of 5 Nov 2026. Model and inputs: [VALUATION_METHODOLOGY.md](VALUATION_METHODOLOGY.md).
 
-- discount rate = 10-year Treasury 4.84% + an equity risk premium of 4%, 5% or 6%;
-- terminal growth 3%;
-- FCF = trailing-twelve-month operating cash flow − capex.
-
-That growth figure is then compared with what extrapolating reported fundamentals gives. **No forecast is
-made, and no fundamental number is adjusted to fit the price.**
+> **Superseded figures.** The Sprint 2 version of this page quoted price-implied "FCF growth" of 37% / 23% /
+> 20%. The valuation bridge shows those figures were an artefact of a capex-depressed FCF base. With
+> stock-based compensation treated as a cost, Alphabet has no positive FCF to solve from, and Meta's
+> figure jumps to 65%. The v2 figures below replace them.
 
 | | GOOGL | MSFT | META |
 |---|---:|---:|---:|
-| Market value (as-traded close × diluted shares) | $3,495bn | $3,991bn | $1,557bn |
-| TTM free cash flow | $19.7bn | $60.0bn | $28.6bn |
-| Capex as share of operating cash flow (TTM) | 89% | 69% | 78% |
-| **Price-implied FCF growth, 10 years** (ERP 4% / 5% / 6%) | 34% / **37%** / 40% | 20% / **23%** / 25% | 18% / **20%** / 23% |
-| Trailing 3-year FCF growth (per year) | −37% | −2% | −9% |
-| Trailing 3-year revenue growth (per year) | 17% | 17% | 24% |
-| Latest capex guidance (point-in-time) | FY2026 $175–185bn (Feb 2026) | not issued as a figure in the release | FY2026 $135–145bn (raised from $115–135bn over the year) |
+| **Price-implied revenue growth, years 1–5** (base case, fade to 3.3%) | **21.2%** | **22.5%** | **20.1%** |
+| Trailing 3-year revenue growth | 16.6% | 16.6% | 23.9% |
+| Operating margin (TTM) held in the model | 33% | 47% | 33% |
+| Sales-to-capital (last 3 fiscal years) | 0.94 | 0.78 | 0.94 |
+| WACC | 9.6% | 9.25% | 10.7% |
+| Range: WACC ±1 pt | 17.8–24.8% | 19.2–26.0% | 17.0–23.4% |
+| Range: capex intensity doubles / halves | 31.8% / 18.3% | 30.0% / 20.1% | 30.9% / 17.2% |
 
 ## Hypotheses (to investigate, not conclusions)
 
-1. **The price treats current capex as growth investment, not as a permanent cost.**
-   - Extrapolating trailing FCF (falling at all three) cannot justify these prices under any ERP in the grid.
-   - The price is consistent only with FCF growth of roughly 20–37% a year for a decade, i.e. a large share
-     of today's capex turning into future cash flow.
-   - What would test this: depreciation lives and impairments, cloud and AI segment margins, capex
-     intensity once construction slows, and a maintenance-vs-growth capex split where disclosed.
-2. **Alphabet is the most extreme case.** Its FCF is the most depressed (capex 89% of operating cash
-   flow), so its implied growth is the most sensitive to how quickly capex normalises. A modest change in
-   assumed normalised capex moves the implied growth by many points. The figure is unstable, not precise.
-3. **The market's expectation shows up in reactions to capex news, not only to EPS.**
-   - Over 2020–2026, street EPS surprises correlate only moderately with abnormal returns
-     (Spearman +0.42, n = 43).
-   - Large moves occurred with EPS beats in both directions (MSFT Oct 2024 −3.9%, META Feb 2024 +18.1%).
-   - The hypothesis: forward capex and cloud-growth guidance carry more of the information. It cannot be
-     tested yet, because dated consensus for capex and Azure/Cloud growth exists for only a handful of
-     releases (see the PM brief).
+1. **Alphabet and Microsoft: the price requires faster growth than recent history.** Revenue would need to
+   grow about 5–6 pts a year faster than in the last three years, without margin erosion, while sustaining
+   recent capital intensity. The hypothesis the market may be pricing: AI-related demand (Cloud, Azure)
+   accelerates revenue beyond its trailing rate. The inputs to test it, as dated evidence becomes
+   available: cloud and AI segment growth, backlog and remaining performance obligations, and guidance.
+2. **Meta: the price requires slightly *less* than recent growth.** Read literally, the market prices some
+   deceleration from 24%, or a lower return on the current capex cycle. Meta's own 2026 capex guidance was
+   raised from $115–135bn to $135–145bn during the year (grade A, from 8-Ks).
+3. **For all three, the dominant uncertainty is the return on the current capex cycle, not the discount
+   rate.** Doubling or halving capital intensity moves the requirement by roughly −4 to +10 pts. A ±1 pt
+   WACC change moves it by about ±3.5 pts.
 
-## Limits
-
-- Net cash is ignored: it would lower the implied growth for all three.
-- Finance-lease capex is excluded from "capex" (XBRL `PaymentsToAcquirePropertyPlantAndEquipment`).
-- A single discount rate is used for a decade.
-- These are model outputs. They are stored in `expectation_obs` as `market_implied` with grade B, never
-  as facts.
+These are statements about what the price implies under the stated assumptions. No forecast is produced
+and no fundamental figure is adjusted to match the price.

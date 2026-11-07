@@ -1,77 +1,128 @@
 [
  {
   "ticker": "GOOGL",
-  "inputs": {
-   "as_of_quarter": "FY2026Q3",
-   "price": 282.57000732421875,
-   "price_date": "2026-11-05",
-   "market_cap": 3494825850585.9375,
-   "fcf_ttm": 19747000000.0,
-   "rf_10y": 0.0484,
-   "shares_from": "FY2026Q3"
-  },
-  "implied_fcf_cagr_10y": {
-   "erp_4pct": 0.3388541040538863,
-   "erp_5pct": 0.36905526303949665,
-   "erp_6pct": 0.3969624860486062
-  },
-  "trailing_3y_fcf_cagr": -0.3663546880667726,
+  "status": "ok",
+  "implied_revenue_cagr_y1_5": 0.21173326529677505,
   "trailing_3y_revenue_cagr": 0.16605923120203192,
-  "capex_to_cfo_ttm": 0.8900201057081275,
+  "wacc": 0.09631732691046979,
+  "margin": 0.33321304696687315,
+  "s2c": 0.9386733416770964,
+  "flags": [
+   "share count approximated by diluted weighted-average shares FY2026Q3: the cover-page count is reported per class (dimensional XBRL, absent from companyfacts)"
+  ],
+  "sensitivities": {
+   "wacc_x_terminal": {
+    "wacc-1%|gT2.5%": 0.18031116540394698,
+    "wacc-1%|gT3.0%": 0.1777936680567761,
+    "wacc-1%|gT3.5%": 0.17528076560186717,
+    "wacc-1%|gT4.0%": 0.17277252716072933,
+    "wacc+0%|gT2.5%": 0.21559822472732237,
+    "wacc+0%|gT3.0%": 0.21305441669528802,
+    "wacc+0%|gT3.5%": 0.21051474277916127,
+    "wacc+0%|gT4.0%": 0.20797928160041124,
+    "wacc+1%|gT2.5%": 0.2503784892864499,
+    "wacc+1%|gT3.0%": 0.2478053771860439,
+    "wacc+1%|gT3.5%": 0.24523598856154238,
+    "wacc+1%|gT4.0%": 0.2426704109085237
+   },
+   "other": {
+    "margin -5pt": 0.2621012197601512,
+    "margin +5pt": 0.1723471881766262,
+    "S2C x0.5 (capex intensity doubles)": 0.3182510505310988,
+    "S2C x2 (capex intensity halves)": 0.18260430298266195,
+    "RONIC 20% (growth creates value)": 0.1751854063656123,
+    "tax 21% statutory": 0.22257766619615615,
+    "raw beta (no Blume)": 0.2239173888229241
+   }
+  },
   "questions": [
-   "The price implies ~36.9%/yr FCF growth for 10 years (ERP 5%; +33.9%\u2013+39.7% for ERP 4\u20136%), vs -36.6%/yr trailing 3-year FCF growth: a gap of +73.5 pts.",
-   "Capex absorbs 89% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
-   "Trailing 3-year revenue CAGR is 16.6%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+   "The price requires ~21.2%/yr revenue growth for five years (fading to 3.3%), at today's 33% operating margin and sales-to-capital 0.94; trailing 3-year revenue growth is 16.6%.",
+   "If capital intensity doubled (sales-to-capital x0.5) the requirement rises to 31.8%; if it halved, it falls to 18.3%. The return on the current capex cycle is the assumption the price is most sensitive to."
   ]
  },
  {
   "ticker": "MSFT",
-  "inputs": {
-   "as_of_quarter": "FY2027Q1",
-   "price": 535.9299926757812,
-   "price_date": "2026-11-05",
-   "market_cap": 3990534725463.867,
-   "fcf_ttm": 59957000000.0,
-   "rf_10y": 0.0484,
-   "shares_from": "FY2027Q1"
-  },
-  "implied_fcf_cagr_10y": {
-   "erp_4pct": 0.20399472750663816,
-   "erp_5pct": 0.2304826188725254,
-   "erp_6pct": 0.25494094476419404
-  },
-  "trailing_3y_fcf_cagr": -0.01754033558372925,
+  "status": "ok",
+  "implied_revenue_cagr_y1_5": 0.22537664990578865,
   "trailing_3y_revenue_cagr": 0.16641623563443164,
-  "capex_to_cfo_ttm": 0.6939064111334606,
+  "wacc": 0.09249352620548894,
+  "margin": 0.4710444659325434,
+  "s2c": 0.781386014751492,
+  "flags": [
+   "commercial_paper not tagged at 2026-09-30: treated as 0"
+  ],
+  "sensitivities": {
+   "wacc_x_terminal": {
+    "wacc-1%|gT2.5%": 0.19461934897743516,
+    "wacc-1%|gT3.0%": 0.19208478906857562,
+    "wacc-1%|gT3.5%": 0.18955511597381958,
+    "wacc-1%|gT4.0%": 0.18703039057337045,
+    "wacc+0%|gT2.5%": 0.2292504694489107,
+    "wacc+0%|gT3.0%": 0.22670077689589913,
+    "wacc+0%|gT3.5%": 0.224155430579151,
+    "wacc+0%|gT4.0%": 0.22161450082670264,
+    "wacc+1%|gT2.5%": 0.2630091980961171,
+    "wacc+1%|gT3.0%": 0.26044315428216047,
+    "wacc+1%|gT3.5%": 0.2578809601567059,
+    "wacc+1%|gT4.0%": 0.25532269465426727
+   },
+   "other": {
+    "margin -5pt": 0.25665139347642774,
+    "margin +5pt": 0.19872442628688314,
+    "S2C x0.5 (capex intensity doubles)": 0.29983942481144243,
+    "S2C x2 (capex intensity halves)": 0.20132750781821446,
+    "RONIC 20% (growth creates value)": 0.1870460780127317,
+    "tax 21% statutory": 0.22986784702055563,
+    "raw beta (no Blume)": 0.230232470560782
+   }
+  },
   "questions": [
-   "The price implies ~23.0%/yr FCF growth for 10 years (ERP 5%; +20.4%\u2013+25.5% for ERP 4\u20136%), vs -1.8%/yr trailing 3-year FCF growth: a gap of +24.8 pts.",
-   "Capex absorbs 69% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
-   "Trailing 3-year revenue CAGR is 16.6%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+   "The price requires ~22.5%/yr revenue growth for five years (fading to 3.3%), at today's 47% operating margin and sales-to-capital 0.78; trailing 3-year revenue growth is 16.6%.",
+   "If capital intensity doubled (sales-to-capital x0.5) the requirement rises to 30.0%; if it halved, it falls to 20.1%. The return on the current capex cycle is the assumption the price is most sensitive to."
   ]
  },
  {
   "ticker": "META",
-  "inputs": {
-   "as_of_quarter": "FY2026Q3",
-   "price": 605.0800170898438,
-   "price_date": "2026-11-05",
-   "market_cap": 1556870883972.168,
-   "fcf_ttm": 28649000000.0,
-   "rf_10y": 0.0484,
-   "shares_from": "FY2026Q3"
-  },
-  "implied_fcf_cagr_10y": {
-   "erp_4pct": 0.17699387162767566,
-   "erp_5pct": 0.20271308259181542,
-   "erp_6pct": 0.226457843350082
-  },
-  "trailing_3y_fcf_cagr": -0.08961148673188257,
+  "status": "ok",
+  "implied_revenue_cagr_y1_5": 0.2008592213315913,
   "trailing_3y_revenue_cagr": 0.23923204483253002,
-  "capex_to_cfo_ttm": 0.7847347975384523,
+  "wacc": 0.10700511437890452,
+  "margin": 0.3285514432588595,
+  "s2c": 0.9406235364956178,
+  "flags": [
+   "commercial_paper not tagged at 2026-09-30: treated as 0",
+   "finance_lease_liability not tagged at 2026-09-30: treated as 0",
+   "share count approximated by diluted weighted-average shares FY2026Q3: the cover-page count is reported per class (dimensional XBRL, absent from companyfacts)",
+   "effective tax rate 0.0458 (TTM) bounded to 0.1"
+  ],
+  "sensitivities": {
+   "wacc_x_terminal": {
+    "wacc-1%|gT2.5%": 0.17214608783403057,
+    "wacc-1%|gT3.0%": 0.16973970163050145,
+    "wacc-1%|gT3.5%": 0.16733659168010784,
+    "wacc-1%|gT4.0%": 0.1649368404005877,
+    "wacc+0%|gT2.5%": 0.20454457620381084,
+    "wacc+0%|gT3.0%": 0.20211927100492877,
+    "wacc+0%|gT3.5%": 0.19969678665274115,
+    "wacc+0%|gT4.0%": 0.19727721355781996,
+    "wacc+1%|gT2.5%": 0.236591671538397,
+    "wacc+1%|gT3.0%": 0.23414489870187494,
+    "wacc+1%|gT3.5%": 0.2317005330215306,
+    "wacc+1%|gT4.0%": 0.22925867238083442
+   },
+   "other": {
+    "margin -5pt": 0.25307177136632963,
+    "margin +5pt": 0.16018221595386917,
+    "S2C x0.5 (capex intensity doubles)": 0.30909419241856684,
+    "S2C x2 (capex intensity halves)": 0.17200598626233254,
+    "RONIC 20% (growth creates value)": 0.17354120717363253,
+    "tax 21% statutory": 0.24156789718660193,
+    "raw beta (no Blume)": 0.22951009657421928
+   }
+  },
   "questions": [
-   "The price implies ~20.3%/yr FCF growth for 10 years (ERP 5%; +17.7%\u2013+22.6% for ERP 4\u20136%), vs -9.0%/yr trailing 3-year FCF growth: a gap of +29.2 pts.",
-   "Capex absorbs 78% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
-   "Trailing 3-year revenue CAGR is 23.9%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+   "The price requires ~20.1%/yr revenue growth for five years (fading to 3.3%), at today's 33% operating margin and sales-to-capital 0.94; trailing 3-year revenue growth is 23.9%.",
+   "If capital intensity doubled (sales-to-capital x0.5) the requirement rises to 30.9%; if it halved, it falls to 17.2%. The return on the current capex cycle is the assumption the price is most sensitive to."
   ]
  }
 ]

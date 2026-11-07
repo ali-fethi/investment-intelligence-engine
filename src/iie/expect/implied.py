@@ -207,8 +207,11 @@ def ingest_implied_growth(conn, run_id, stats, kt) -> int:
 
 def ingest(conn, store, run_id, stats):
     from ..timeutil import utcnow
+    from . import valuation
     ingest_vxgog(conn, store, run_id, stats)
+    valuation.ingest_sources(conn, store, run_id, stats)
     conn.commit()
     kt = utcnow()
     ingest_implied_moves(conn, run_id, stats, kt)
-    ingest_implied_growth(conn, run_id, stats, kt)
+    ingest_implied_growth(conn, run_id, stats, kt)          # v1, kept for the before/after bridge
+    valuation.ingest_history(conn, run_id, stats, kt)       # v2

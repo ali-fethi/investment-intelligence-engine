@@ -25,7 +25,26 @@ def _period_end(label: str) -> date:          # 'Dec 2026' -> 2026-12-31
 def snapshot(conn, store, company, run_id, stats) -> int:
     f = store.fetch(FORECAST.format(t=company["ticker"]), source_system="nasdaq_api", doc_type="consensus_json",
                     run_id=run_id, company_id=company["company_id"], title=f"Nasdaq earnings forecast {company['ticker']}")
-    data = json.loads(f.body).get("data") or {}
+    return _load(conn, company, f.doc_id, f.body, f.retrieved_at, f.url, run_id, stats)
+
+
+def replay(conn, store, company, run_id, stats) -> int:
+    """Re-parse every stored snapshot (each keeps its own retrieval time as as_of): used when rebuilding."""
+    n = 0
+    for d in conn.execute("""SELECT doc_id, retrieved_at, url FROM source_document WHERE doc_type='consensus_json'
+                             AND company_id=? AND http_status=200 ORDER BY doc_id""", (company["company_id"],)):
+        n += _load(conn, company, d["doc_id"], store.read(d["doc_id"]), d["retrieved_at"], d["url"], run_id, stats)
+    return n
+
+
+class _F:
+    def __init__(self, doc_id, retrieved_at, url):
+        self.doc_id, self.retrieved_at, self.url = doc_id, retrieved_at, url
+
+
+def _load(conn, company, doc_id, body, retrieved_at, url, run_id, stats) -> int:
+    f = _F(doc_id, retrieved_at, url)
+    data = json.loads(body).get("data") or {}
     fye = company["fiscal_year_end"]
     n = 0
     for block, kind in (("quarterlyForecast", "Q"), ("yearlyForecast", "FY")):

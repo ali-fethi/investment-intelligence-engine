@@ -94,6 +94,15 @@ def _ingest_pre(conn, store, company, ev, key, cap, prev_event_at, run_id, stats
     doc_id, body = fetch_capture(store, cap, cid, run_id, f"MarketWatch estimates {company['ticker']} {cap['timestamp']}")
     if body is None:
         return 0
+    served_at = cap.get("served_at", cap["captured_at"])
+    if served_at >= t_a:
+        stats["consensus_redirected_past_release"] = stats.get("consensus_redirected_past_release", 0) + 1
+        return 0                                  # the archive served a capture made after the release: never PIT
+    if cap.get("served_unverified"):
+        stats["consensus_served_capture_unverified"] = stats.get("consensus_served_capture_unverified", 0) + 1
+    if served_at != cap["captured_at"]:
+        stats["consensus_capture_redirected"] = stats.get("consensus_capture_redirected", 0) + 1
+        cap = dict(cap, captured_at=served_at, timestamp=cap["served_timestamp"])
     new, old = parse_marketwatch(body), None
     vals, checks, label_how = None, {}, None
     if new and fiscal_to_mw(key) in new["forward"]:
@@ -130,6 +139,7 @@ def _ingest_pre(conn, store, company, ev, key, cap, prev_event_at, run_id, stats
     stale = (parse_utc(t_a) - parse_utc(cap["captured_at"])).days
     checks["days_before_release"] = stale
     checks["label"] = label_how
+    checks["served_capture"] = "unverified" if cap.get("served_unverified") else "verified"
     n = 0
     for stat, v in vals.items():
         if v is None:

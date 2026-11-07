@@ -236,3 +236,38 @@ def test_meta_2020_wording():
          "$54-59 billion.")
     o = guidance.parse_meta_outlook(t)[0]
     assert (o["target"], o["low"], o["high"], o["prior_low"]) == ("FY2020", 52e9, 56e9, 54e9)
+
+
+def test_archive_redirect_to_later_capture_is_never_point_in_time(googl):
+    """The archive can redirect a capture request to a neighbouring capture. Content must be dated with the capture
+    actually served; if that capture is after the release it must not be used."""
+    conn, store, c, doc = googl
+
+    class Redirecting(FakeTransport):
+        def get(self, url):
+            st, body, ct = super().get(url)
+            # request for 2024-01-29 is served from 2024-02-15 (after the 2024-01-30 release)
+            self.last_final_url = url.replace("20240129120000", "20240215120000")
+            return st, body, ct
+    store.transport = Redirecting({"cdx/search": lambda u: cdx([("20240129120000", "d2")]),
+                                   "20240129120000id_": MW_NEW})
+    stats = {}
+    consensus.ingest(conn, store, c, None, stats)
+    pit = conn.execute("SELECT count(*) FROM expectation_obs WHERE target_period='FY2023Q4' AND stat='mean' "
+                       "AND available_at IS NOT NULL").fetchone()[0]
+    assert pit == 0 and stats.get("consensus_redirected_past_release") == 1
+
+
+def test_archive_redirect_to_earlier_capture_is_redated(googl):
+    conn, store, c, doc = googl
+
+    class Redirecting(FakeTransport):
+        def get(self, url):
+            st, body, ct = super().get(url)
+            self.last_final_url = url.replace("20240129120000", "20240110120000")
+            return st, body, ct
+    store.transport = Redirecting({"cdx/search": lambda u: cdx([("20240129120000", "d2")]),
+                                   "20240129120000id_": MW_NEW})
+    consensus.ingest(conn, store, c, None, {})
+    r = conn.execute("SELECT as_of FROM expectation_obs WHERE target_period='FY2023Q4' AND stat='mean'").fetchone()
+    assert r["as_of"] == "2024-01-10T12:00:00Z"

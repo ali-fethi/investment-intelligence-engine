@@ -48,6 +48,10 @@ Dated consensus EPS by period: 2016-2019: 41/48; 2020-2022: 34/36; 2023-2026: 41
 
 ## Descriptive results (no model fitted, no threshold searched)
 
+> Superseded by [CONSENSUS_EPS_AUDIT.md](CONSENSUS_EPS_AUDIT.md) (Sprint 2.1). The EPS-surprise row below
+> used 43 releases (2020+ only). The comparable sample is now 86: primary ρ = +0.33, but ρ = +0.24
+> (p = 0.056) with fresh consensus only.
+
 | Observation | n | Value |
 |---|---:|---|
 | Street EPS surprise vs market-model abnormal return on d0: Spearman correlation | 43 | +0.42 |

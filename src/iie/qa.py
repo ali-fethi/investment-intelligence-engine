@@ -328,6 +328,11 @@ def record_correction(conn, table, row_filter, field, wrong, correct, reason, ev
 
 
 KNOWN_CORRECTIONS = [
+    ("macro_observation", "series_id='DAMODARAN:ERP_IMPLIED_FCFE'", "value",
+     "last percentage on each row of the HTML table", "column 'Implied ERP (FCFE)' of histimpl.xls (series DAMODARAN:ERP_FCFE)",
+     "HTML rows from 2015 have an extra column; the parser took the DDM premium (e.g. 2016: 5.54% instead of 5.69%) "
+     "and the HTML page stops at 2016. The series is superseded and not read by any model.",
+     "Sprint 2.1 valuation audit: HTML 2016 row '... 5.54% 5.69%' vs spreadsheet column 'Implied ERP (FCFE)' = 0.0569"),
     ("event", "event_type IN ('earnings_release','material_event_8k') AND accession_no IS NOT NULL",
      "event_date", "8-K report_date (date of earliest event reported)", "acceptance date in America/New_York",
      "8-Ks combining Item 2.02 with e.g. Item 5.02 carry a report_date days before publication; readers now use "

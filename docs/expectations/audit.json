@@ -3,7 +3,7 @@
  "c_or_d_with_available_at": 0,
  "inferred_label_checks": {
   "mismatch (street vs GAAP or label)": 35,
-  "pass": 51,
+  "pass": 49,
   "unverifiable": 10
  },
  "split_rebased_observations": [
@@ -18,6 +18,22 @@
   {
    "target": "FY2020",
    "metric": "total_expenses",
+   "as_of": "2020-04-29T20:10:26Z",
+   "stated_prior_low": 54000000000.0,
+   "previous_published_low": null,
+   "consistent": false
+  },
+  {
+   "target": "FY2020",
+   "metric": "total_expenses",
+   "as_of": "2020-07-30T23:18:23Z",
+   "stated_prior_low": 52000000000.0,
+   "previous_published_low": 52000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2020",
+   "metric": "total_expenses",
    "as_of": "2020-10-29T20:07:58Z",
    "stated_prior_low": 52000000000.0,
    "previous_published_low": 52000000000.0,
@@ -29,6 +45,14 @@
    "as_of": "2021-04-28T20:09:19Z",
    "stated_prior_low": 68000000000.0,
    "previous_published_low": 68000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2021",
+   "metric": "capex",
+   "as_of": "2021-04-28T20:09:19Z",
+   "stated_prior_low": 21000000000.0,
+   "previous_published_low": 21000000000.0,
    "consistent": true
   },
   {
@@ -213,22 +237,6 @@
    "as_of": "2026-10-21T20:03:35Z",
    "stated_prior_low": 130000000000.0,
    "previous_published_low": 130000000000.0,
-   "consistent": true
-  },
-  {
-   "target": "FY2020",
-   "metric": "total_expenses",
-   "as_of": "2020-04-29T20:10:26Z",
-   "stated_prior_low": 54000000000.0,
-   "previous_published_low": null,
-   "consistent": false
-  },
-  {
-   "target": "FY2020",
-   "metric": "total_expenses",
-   "as_of": "2020-07-30T23:18:23Z",
-   "stated_prior_low": 52000000000.0,
-   "previous_published_low": 52000000000.0,
    "consistent": true
   }
  ],
@@ -493,59 +501,59 @@
  ],
  "archive_refetch": [
   {
-   "capture": "https://web.archive.org/web/20230310124835/https://www.marketwatch.com/investing/stock/meta/analystestimates",
-   "quarter": "FY2023Q2",
-   "stored_value": 2.36,
-   "refetched_value": 2.36,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20250729032921/https://www.marketwatch.com/investing/stock/MSFT/analystestimates",
-   "quarter": "FY2025Q4",
-   "stored_value": 3.38,
-   "refetched_value": 3.38,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20170916110725/http://www.marketwatch.com/investing/stock/FB/analystestimates",
-   "quarter": "FY2017Q3",
-   "stored_value": 1.26,
-   "refetched_value": 1.26,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20180724210048/https://www.marketwatch.com/investing/stock/FB/analystestimates",
-   "quarter": "FY2018Q2",
-   "stored_value": 1.71,
-   "refetched_value": 1.71,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20200422152718/https://www.marketwatch.com/investing/stock/googl/analystestimates",
-   "quarter": "FY2020Q1",
-   "stored_value": 10.71,
-   "refetched_value": 10.71,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20170605110144/http://www.marketwatch.com/investing/stock/MSFT/analystestimates",
-   "quarter": "FY2017Q4",
-   "stored_value": 0.71,
-   "refetched_value": 0.71,
-   "bytes_identical": true
-  },
-  {
-   "capture": "https://web.archive.org/web/20220202102851/https://www.marketwatch.com/investing/stock/FB/analystestimates",
+   "capture": "https://web.archive.org/web/20211010011932/https://www.marketwatch.com/investing/stock/googl/analystestimates",
    "quarter": "FY2021Q4",
-   "stored_value": 3.85,
-   "refetched_value": 3.85,
+   "stored_value": 25.61,
+   "refetched_value": 25.61,
    "bytes_identical": true
   },
   {
-   "capture": "https://web.archive.org/web/20181005211524/https://www.marketwatch.com/investing/stock/GOOGL/analystestimates",
-   "quarter": "FY2018Q3",
-   "stored_value": 10.45,
-   "refetched_value": 10.45,
+   "capture": "https://web.archive.org/web/20161209233217/http://www.marketwatch.com/investing/stock/MSFT/analystestimates",
+   "quarter": "FY2017Q2",
+   "stored_value": 0.78,
+   "refetched_value": 0.78,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20160307165435/http://www.marketwatch.com:80/investing/stock/GOOGL/analystestimates",
+   "quarter": "FY2016Q1",
+   "stored_value": 7.98,
+   "refetched_value": 7.98,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20221217031335/https://www.marketwatch.com/investing/stock/GOOGL/analystestimates",
+   "quarter": "FY2022Q4",
+   "stored_value": 1.19,
+   "refetched_value": 1.19,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20210727073337/https://www.marketwatch.com/investing/stock/GOOGL/analystestimates",
+   "quarter": "FY2021Q2",
+   "stored_value": 19.24,
+   "refetched_value": 19.24,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20200314041512/https://www.marketwatch.com/investing/stock/FB/analystestimates",
+   "quarter": "FY2020Q1",
+   "stored_value": 1.93,
+   "refetched_value": 1.93,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20240310130106/https://www.marketwatch.com/investing/stock/msft/analystestimates",
+   "quarter": "FY2024Q3",
+   "stored_value": 2.81,
+   "refetched_value": 2.81,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20170124120653/http://www.marketwatch.com/investing/stock/GOOGL/analystestimates",
+   "quarter": "FY2016Q4",
+   "stored_value": 9.62,
+   "refetched_value": 9.62,
    "bytes_identical": true
   }
  ]

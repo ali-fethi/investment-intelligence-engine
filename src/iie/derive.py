@@ -5,7 +5,7 @@ from __future__ import annotations
 from datetime import date
 from typing import Optional
 
-from .config import METRICS
+from .config import ALL_METRICS as METRICS
 from .pit import Fact
 
 

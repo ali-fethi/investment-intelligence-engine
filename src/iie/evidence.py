@@ -81,6 +81,8 @@ class Transport:
             try:
                 r = self._s.get(url, headers=headers, timeout=60)
                 self._last[host] = time.monotonic()
+                self.last_final_url = r.url              # after redirects (e.g. the capture the archive served)
+                self.last_headers = dict(r.headers)
                 if r.status_code in (429, 500, 502, 503, 504):
                     time.sleep(2 ** attempt)
                     continue

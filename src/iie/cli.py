@@ -221,6 +221,9 @@ def cmd_expect(a):
                 print(f"[{c['ticker']}] forward consensus snapshot")
                 forward.snapshot(conn, store, c, run_id, stats)
                 conn.commit()
+            if "forward_replay" in a.what:
+                forward.replay(conn, store, c, run_id, stats)
+                conn.commit()
             if "guidance" in a.what:
                 print(f"[{c['ticker']}] management guidance")
                 guidance.ingest(conn, store, c, run_id, stats)
@@ -258,6 +261,51 @@ def cmd_expect_report(a):
     print(f"{len(rows)} events -> {out}")
     print(json.dumps(desc, indent=1, default=str))
     print("leakage violations:", len(aud["leakage_violations"]), "| C/D usable:", aud["c_or_d_with_available_at"])
+
+
+def cmd_valuation(a):
+    from pathlib import Path
+    from .expect import valuation as V
+    from .timeutil import utcnow
+    conn = connect(a.db)
+    kt = parse_cutoff(a.knowledge_time) if a.knowledge_time else utcnow()
+    cut = parse_cutoff(a.cutoff)
+    out = {"cutoff": cut, "knowledge_time": kt, "companies": {}}
+    for c in companies(conn):
+        inp = V.inputs_at(conn, c, cut, kt)
+        if inp["missing"]:
+            out["companies"][c["ticker"]] = {"status": "not_computed", "missing": inp["missing"], "flags": inp["flags"]}
+            continue
+        out["companies"][c["ticker"]] = {"status": "ok", "inputs": inp, "wacc": V.wacc(inp),
+                                         "base": V.implied_growth(inp), "sensitivities": V.sensitivities(inp),
+                                         "bridge": V.bridge(inp)}
+    p = Path(a.out)
+    p.mkdir(parents=True, exist_ok=True)
+    f = p / f"valuation_{a.cutoff[:10]}.json"          # cutoff as given (New York date)
+    f.write_text(json.dumps(out, indent=1, default=str, sort_keys=True))
+    for tk, v in out["companies"].items():
+        if v["status"] != "ok":
+            print(tk, "not computed:", v["missing"])
+            continue
+        print(f"{tk}: WACC {v['wacc']['wacc']:.2%}  implied revenue growth y1-5 {v['base']['implied_revenue_cagr_y1_5']:.1%}")
+    print(f"-> {f}")
+
+
+def cmd_expect_quality(a):
+    from pathlib import Path
+    from .expect import link, quality
+    from .timeutil import utcnow
+    conn = connect(a.db)
+    kt = parse_cutoff(a.knowledge_time) if a.knowledge_time else utcnow()
+    rows = link.build(conn, kt, store=_store(conn, online=False))
+    rep = quality.report(conn, rows)
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    (out / "quality.json").write_text(json.dumps(rep, indent=1, default=str))
+    (out / "quality.md").write_text(f"Knowledge time {kt}.\n\n" + quality.render(rep))
+    print(json.dumps(rep["reconciliation"], indent=1, default=str))
+    for k, v in rep["samples"].items():
+        print(f"{k:60s} n={v['n']:3d} rho={v.get('spearman', float('nan')):+.2f} p={v.get('perm_p_two_sided', float('nan')):.3f}")
 
 
 def cmd_status(a):
@@ -312,7 +360,8 @@ def main(argv=None):
     pr2.add_argument("--knowledge-time")
     pr2.set_defaults(fn=cmd_reactions)
     pe = sp.add_parser("expect", help="Expectations Engine ingestion")
-    pe.add_argument("what", nargs="+", choices=["consensus", "guidance", "registry", "implied", "forward"])
+    pe.add_argument("what", nargs="+", choices=["consensus", "guidance", "registry", "implied", "forward",
+                                                     "forward_replay"])
     pe.add_argument("--tickers", nargs="*")
     pe.set_defaults(fn=cmd_expect)
     per = sp.add_parser("expect-report", help="coverage, linked event table, hypotheses and audit")
@@ -321,6 +370,15 @@ def main(argv=None):
     per.add_argument("--cutoff", help="cutoff for the market-vs-fundamentals hypotheses (default: knowledge time)")
     per.add_argument("--offline", action="store_true", help="skip the archive re-fetch audit")
     per.set_defaults(fn=cmd_expect_report)
+    pq2 = sp.add_parser("expect-quality", help="consensus/EPS comparability and statistical-quality report")
+    pq2.add_argument("--out", default="docs/expectations")
+    pq2.add_argument("--knowledge-time")
+    pq2.set_defaults(fn=cmd_expect_quality)
+    pvv = sp.add_parser("valuation", help="reverse DCF v2 at a cutoff (inputs, WACC, implied growth, sensitivities)")
+    pvv.add_argument("--cutoff", required=True)
+    pvv.add_argument("--knowledge-time")
+    pvv.add_argument("--out", default="docs/valuation")
+    pvv.set_defaults(fn=cmd_valuation)
     sp.add_parser("status").set_defaults(fn=cmd_status)
     a = p.parse_args(argv)
     a.fn(a)

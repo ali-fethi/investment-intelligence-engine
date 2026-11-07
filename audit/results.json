@@ -1,0 +1,504 @@
+{
+ "valuation": {
+  "GOOGL": {
+   "independent": {
+    "revenue_ttm": 471098000000,
+    "revenue_source": "Revenues YTD 2026-01-01..2026-09-30 + FY - prior YTD",
+    "ebit_ttm": 156976000000,
+    "eff_tax": 0.18058525154969632,
+    "cash_st": 265098000000,
+    "debt": 126118000000,
+    "finance_leases": 3705000000,
+    "balance_sheet_date": "2026-09-30",
+    "price": 282.57000732421875,
+    "price_date": "2026-11-05",
+    "beta_raw": 1.2596865489677593,
+    "beta_weeks": 104,
+    "rf": 0.0484,
+    "rf_date": "11/05/2026",
+    "erp": 0.0423,
+    "erp_year": 2025,
+    "rd": 0.0603,
+    "rd_month": "2026-09-01",
+    "breakeven": 0.0226,
+    "wacc": 0.09631732691046979,
+    "terminal_growth": 0.0326,
+    "s2c": 0.9386733416770964,
+    "implied_revenue_cagr_y1_5": 0.21173326529677508
+   },
+   "engine": {
+    "revenue_ttm": 471098000000.0,
+    "ebit_ttm": 156976000000.0,
+    "eff_tax": 0.18058525154969632,
+    "cash_st": 265098000000.0,
+    "debt": 126118000000.0,
+    "finance_leases": 3705000000.0,
+    "price": 282.57000732421875,
+    "beta_raw": 1.2596865489677591,
+    "rf": 0.0484,
+    "erp": 0.0423,
+    "rd": 0.0603,
+    "breakeven": 0.0226,
+    "wacc": 0.09631732691046979,
+    "terminal_growth": 0.0326,
+    "s2c": 0.9386733416770964,
+    "implied_revenue_cagr_y1_5": 0.21173326529677505
+   },
+   "relative_differences": {
+    "revenue_ttm": 0.0,
+    "ebit_ttm": 0.0,
+    "eff_tax": 0.0,
+    "cash_st": 0.0,
+    "debt": 0.0,
+    "finance_leases": 0.0,
+    "price": 0.0,
+    "beta_raw": 2.220446049250313e-16,
+    "rf": 0.0,
+    "erp": 0.0,
+    "rd": 0.0,
+    "breakeven": 0.0,
+    "wacc": 0.0,
+    "terminal_growth": 0.0,
+    "s2c": 0.0,
+    "implied_revenue_cagr_y1_5": 2.220446049250313e-16
+   }
+  },
+  "MSFT": {
+   "independent": {
+    "revenue_ttm": 346445000000,
+    "revenue_source": "RevenueFromContractWithCustomerExcludingAssessedTax YTD 2026-07-01..2026-09-30 + FY - prior YTD",
+    "ebit_ttm": 163191000000,
+    "eff_tax": 0.19683420990393388,
+    "cash_st": 64509000000,
+    "debt": 35481000000,
+    "finance_leases": 70973000000,
+    "balance_sheet_date": "2026-09-30",
+    "price": 535.9299926757812,
+    "price_date": "2026-11-05",
+    "beta_raw": 1.1048693880149825,
+    "beta_weeks": 104,
+    "rf": 0.0484,
+    "rf_date": "11/05/2026",
+    "erp": 0.0423,
+    "erp_year": 2025,
+    "rd": 0.0603,
+    "rd_month": "2026-09-01",
+    "breakeven": 0.0226,
+    "wacc": 0.09249352620548891,
+    "terminal_growth": 0.0326,
+    "s2c": 0.781386014751492,
+    "implied_revenue_cagr_y1_5": 0.22537664990578868
+   },
+   "engine": {
+    "revenue_ttm": 346445000000.0,
+    "ebit_ttm": 163191000000.0,
+    "eff_tax": 0.19683420990393388,
+    "cash_st": 64509000000.0,
+    "debt": 35481000000.0,
+    "finance_leases": 70973000000.0,
+    "price": 535.9299926757812,
+    "beta_raw": 1.1048693880149831,
+    "rf": 0.0484,
+    "erp": 0.0423,
+    "rd": 0.0603,
+    "breakeven": 0.0226,
+    "wacc": 0.09249352620548894,
+    "terminal_growth": 0.0326,
+    "s2c": 0.781386014751492,
+    "implied_revenue_cagr_y1_5": 0.22537664990578865
+   },
+   "relative_differences": {
+    "revenue_ttm": 0.0,
+    "ebit_ttm": 0.0,
+    "eff_tax": 0.0,
+    "cash_st": 0.0,
+    "debt": 0.0,
+    "finance_leases": 0.0,
+    "price": 0.0,
+    "beta_raw": -5.551115123125783e-16,
+    "rf": 0.0,
+    "erp": 0.0,
+    "rd": 0.0,
+    "breakeven": 0.0,
+    "wacc": -3.3306690738754696e-16,
+    "terminal_growth": 0.0,
+    "s2c": 0.0,
+    "implied_revenue_cagr_y1_5": 2.220446049250313e-16
+   }
+  },
+  "META": {
+   "independent": {
+    "revenue_ttm": 241605000000,
+    "revenue_source": "RevenueFromContractWithCustomerExcludingAssessedTax YTD 2026-01-01..2026-09-30 + FY - prior YTD",
+    "ebit_ttm": 79380000000,
+    "eff_tax": 0.045826306379417474,
+    "cash_st": 82449000000,
+    "debt": 83669000000,
+    "finance_leases": 0,
+    "balance_sheet_date": "2026-09-30",
+    "price": 605.0800170898438,
+    "price_date": "2026-11-05",
+    "beta_raw": 1.6753181916496986,
+    "beta_weeks": 104,
+    "rf": 0.0484,
+    "rf_date": "11/05/2026",
+    "erp": 0.0423,
+    "erp_year": 2025,
+    "rd": 0.0603,
+    "rd_month": "2026-09-01",
+    "breakeven": 0.0226,
+    "wacc": 0.10700511437890452,
+    "terminal_growth": 0.0326,
+    "s2c": 0.9406235364956178,
+    "implied_revenue_cagr_y1_5": 0.20085894039925728
+   },
+   "engine": {
+    "revenue_ttm": 241606000000.0,
+    "ebit_ttm": 79380000000.0,
+    "eff_tax": 0.045826306379417474,
+    "cash_st": 82449000000.0,
+    "debt": 83669000000.0,
+    "finance_leases": 0,
+    "price": 605.0800170898438,
+    "beta_raw": 1.6753181916496984,
+    "rf": 0.0484,
+    "erp": 0.0423,
+    "rd": 0.0603,
+    "breakeven": 0.0226,
+    "wacc": 0.10700511437890452,
+    "terminal_growth": 0.0326,
+    "s2c": 0.9406235364956178,
+    "implied_revenue_cagr_y1_5": 0.2008592213315913
+   },
+   "relative_differences": {
+    "revenue_ttm": -4.138970058686908e-06,
+    "ebit_ttm": 0.0,
+    "eff_tax": 0.0,
+    "cash_st": 0.0,
+    "debt": 0.0,
+    "price": 0.0,
+    "beta_raw": 2.220446049250313e-16,
+    "rf": 0.0,
+    "erp": 0.0,
+    "rd": 0.0,
+    "breakeven": 0.0,
+    "wacc": 0.0,
+    "terminal_growth": 0.0,
+    "s2c": 0.0,
+    "implied_revenue_cagr_y1_5": -1.3986529079357268e-06
+   }
+  }
+ },
+ "eps_surprises": [
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2016Q2",
+   "engine_consensus": 0.71,
+   "recomputed_consensus_from_raw_page": 0.71,
+   "engine_gaap": 0.62,
+   "recomputed_gaap_from_raw_xbrl": 0.62,
+   "engine_surprise_gaap": -0.12676056338028163,
+   "recomputed_surprise_gaap": -0.12676056338028163,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2017Q2",
+   "engine_consensus": 0.79,
+   "recomputed_consensus_from_raw_page": 0.79,
+   "engine_gaap": 0.66,
+   "recomputed_gaap_from_raw_xbrl": 0.66,
+   "engine_surprise_gaap": -0.16455696202531644,
+   "recomputed_surprise_gaap": -0.16455696202531644,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2018Q2",
+   "engine_consensus": 0.85,
+   "recomputed_consensus_from_raw_page": 0.85,
+   "engine_gaap": -0.82,
+   "recomputed_gaap_from_raw_xbrl": -0.82,
+   "engine_surprise_gaap": -1.9647058823529413,
+   "recomputed_surprise_gaap": -1.9647058823529413,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2021Q1",
+   "engine_consensus": 1.54,
+   "recomputed_consensus_from_raw_page": 1.54,
+   "engine_gaap": 1.82,
+   "recomputed_gaap_from_raw_xbrl": 1.82,
+   "engine_surprise_gaap": 0.18181818181818188,
+   "recomputed_surprise_gaap": 0.18181818181818188,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2022Q2",
+   "engine_consensus": 2.31,
+   "recomputed_consensus_from_raw_page": 2.31,
+   "engine_gaap": 2.48,
+   "recomputed_gaap_from_raw_xbrl": 2.48,
+   "engine_surprise_gaap": 0.07359307359307365,
+   "recomputed_surprise_gaap": 0.07359307359307365,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2023Q2",
+   "engine_consensus": 2.3,
+   "recomputed_consensus_from_raw_page": 2.3,
+   "engine_gaap": 2.2,
+   "recomputed_gaap_from_raw_xbrl": 2.2,
+   "engine_surprise_gaap": -0.04347826086956508,
+   "recomputed_surprise_gaap": -0.04347826086956508,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2024Q2",
+   "engine_consensus": 2.76,
+   "recomputed_consensus_from_raw_page": 2.76,
+   "engine_gaap": 2.93,
+   "recomputed_gaap_from_raw_xbrl": 2.93,
+   "engine_surprise_gaap": 0.061594202898550776,
+   "recomputed_surprise_gaap": 0.061594202898550776,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2025Q2",
+   "engine_consensus": 3.13,
+   "recomputed_consensus_from_raw_page": 3.13,
+   "engine_gaap": 3.23,
+   "recomputed_gaap_from_raw_xbrl": 3.23,
+   "engine_surprise_gaap": 0.03194888178913735,
+   "recomputed_surprise_gaap": 0.03194888178913735,
+   "available_before_release": true
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2026Q2",
+   "engine_consensus": 3.88,
+   "recomputed_consensus_from_raw_page": 3.88,
+   "engine_gaap": 5.16,
+   "recomputed_gaap_from_raw_xbrl": 5.16,
+   "engine_surprise_gaap": 0.329896907216495,
+   "recomputed_surprise_gaap": 0.329896907216495,
+   "available_before_release": true
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2016Q1",
+   "engine_consensus": 7.96,
+   "recomputed_consensus_from_raw_page": 7.96,
+   "engine_gaap": 6.02,
+   "recomputed_gaap_from_raw_xbrl": 6.02,
+   "engine_surprise_gaap": -0.24371859296482412,
+   "recomputed_surprise_gaap": -0.24371859296482412,
+   "available_before_release": true
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2017Q1",
+   "engine_consensus": 7.39,
+   "recomputed_consensus_from_raw_page": 7.39,
+   "engine_gaap": 7.73,
+   "recomputed_gaap_from_raw_xbrl": 7.73,
+   "engine_surprise_gaap": 0.04600811907983782,
+   "recomputed_surprise_gaap": 0.04600811907983782,
+   "available_before_release": true
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2018Q2",
+   "engine_consensus": 9.65,
+   "recomputed_consensus_from_raw_page": 9.65,
+   "engine_gaap": 4.54,
+   "recomputed_gaap_from_raw_xbrl": 4.54,
+   "engine_surprise_gaap": -0.5295336787564767,
+   "recomputed_surprise_gaap": -0.5295336787564767,
+   "available_before_release": true
+  }
+ ],
+ "car": [
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2017Q4",
+   "engine_car": -0.005362880855986317,
+   "recomputed_car": -0.005362880855986317,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2020Q4",
+   "engine_car": -0.03162481835593623,
+   "recomputed_car": -0.03162481835593623,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2023Q4",
+   "engine_car": -0.03818981052588687,
+   "recomputed_car": -0.03818981052588687,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "MSFT",
+   "quarter": "FY2026Q4",
+   "engine_car": 0.143599057225822,
+   "recomputed_car": 0.143599057225822,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2019Q4",
+   "engine_car": -0.04423695700965709,
+   "recomputed_car": -0.04423695700965709,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2022Q4",
+   "engine_car": -0.012799200154501499,
+   "recomputed_car": -0.012799200154501499,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "GOOGL",
+   "quarter": "FY2025Q3",
+   "engine_car": 0.0351381837372432,
+   "recomputed_car": 0.0351381837372432,
+   "abs_diff": 0.0
+  },
+  {
+   "ticker": "META",
+   "quarter": "FY2019Q1",
+   "engine_car": 0.05934521699677198,
+   "recomputed_car": 0.05934521699677198,
+   "abs_diff": 0.0
+  }
+ ],
+ "accounting": {
+  "MSFT": {
+   "periods_checked": 55,
+   "over_2pct": [],
+   "n_over_2pct": 0
+  },
+  "META": {
+   "periods_checked": 47,
+   "over_2pct": [
+    {
+     "period": [
+      "2011-04-01",
+      "2011-06-30"
+     ],
+     "rel": -0.3079166666666666
+    },
+    {
+     "period": [
+      "2011-07-01",
+      "2011-09-30"
+     ],
+     "rel": -1.6696035242290748
+    },
+    {
+     "period": [
+      "2012-01-01",
+      "2012-03-31"
+     ],
+     "rel": -0.32960975609756094
+    },
+    {
+     "period": [
+      "2012-04-01",
+      "2012-06-30"
+     ],
+     "rel": -0.04254777070063698
+    },
+    {
+     "period": [
+      "2012-07-01",
+      "2012-09-30"
+     ],
+     "rel": -0.1796610169491526
+    }
+   ],
+   "n_over_2pct": 7
+  }
+ },
+ "lookahead": {
+  "expectations_used_after_or_at_release": 0,
+  "valuation_inputs_after_cutoff": []
+ },
+ "external_10q": {
+  "MSFT": {
+   "cash_st": {
+    "10-Q": 64509000000,
+    "engine": 64509000000.0,
+    "rel_diff": 0.0
+   },
+   "debt": {
+    "10-Q": 35481000000,
+    "engine": 35481000000.0,
+    "rel_diff": 0.0
+   },
+   "finance_leases": {
+    "10-Q": 70973000000,
+    "engine": 70973000000.0,
+    "rel_diff": 0.0
+   },
+   "shares": {
+    "10-Q": 7426194552,
+    "engine": 7426194552.0,
+    "rel_diff": 0.0
+   }
+  },
+  "GOOGL": {
+   "cash_st": {
+    "10-Q": 265098000000,
+    "engine": 265098000000.0,
+    "rel_diff": 0.0
+   },
+   "debt": {
+    "10-Q": 126118000000,
+    "engine": 126118000000.0,
+    "rel_diff": 0.0
+   },
+   "finance_leases": {
+    "10-Q": 3705000000,
+    "engine": 3705000000.0,
+    "rel_diff": 0.0
+   },
+   "shares": {
+    "10-Q": 12294000000,
+    "engine": 12368000000.0,
+    "rel_diff": 0.006019196355945944
+   }
+  },
+  "META": {
+   "cash_st": {
+    "10-Q": 82449000000,
+    "engine": 82449000000.0,
+    "rel_diff": 0.0
+   },
+   "debt": {
+    "10-Q": 83669000000,
+    "engine": 83669000000.0,
+    "rel_diff": 0.0
+   },
+   "shares": {
+    "10-Q": 2556241253,
+    "engine": 2573000000.0,
+    "rel_diff": 0.006556011479875723
+   }
+  }
+ },
+ "served_captures": {
+  "archived_consensus_used": 81,
+  "served_after_release": [],
+  "served_unverified": 0
+ }
+}

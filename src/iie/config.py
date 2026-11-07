@@ -172,6 +172,44 @@ METRICS = {
 # release of Friday's rate, i.e. two business days after a Saturday.
 FRED_LAG_BUSINESS_DAYS = {"DFF": 2}
 
+# Metrics used only by the valuation module (Sprint 2.1). Kept out of METRICS so that Sprint 1 snapshots, which
+# read METRICS, are unchanged. derive.* looks metrics up in ALL_METRICS.
+VALUATION_METRICS = {
+    "depreciation": dict(label="Depreciation", period_type="duration", unit="USD", additive=1,
+                         concepts=["us-gaap:Depreciation", "us-gaap:DepreciationDepletionAndAmortization"],
+                         description="Depreciation of property and equipment (cash-flow statement / notes)."),
+    "sbc": dict(label="Stock-based compensation", period_type="duration", unit="USD", additive=1,
+                concepts=["us-gaap:ShareBasedCompensation", "us-gaap:AllocatedShareBasedCompensationExpense"],
+                description="Stock-based compensation (non-cash add-back in operating cash flow)."),
+    "pretax_income": dict(label="Income before taxes", period_type="duration", unit="USD", additive=1,
+                          concepts=["us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+                                    "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"],
+                          description="Income before income taxes."),
+    "income_tax": dict(label="Income tax expense", period_type="duration", unit="USD", additive=1,
+                       concepts=["us-gaap:IncomeTaxExpenseBenefit"], description="Provision for income taxes."),
+    "interest_expense": dict(label="Interest expense", period_type="duration", unit="USD", additive=1,
+                             concepts=["us-gaap:InterestExpenseNonoperating", "us-gaap:InterestExpense",
+                                       "us-gaap:InterestPaidNet"],
+                             description="Interest expense (or interest paid where only that is tagged)."),
+    "cash_st_investments": dict(label="Cash and short-term investments", period_type="instant", unit="USD", additive=0,
+                                concepts=["us-gaap:CashCashEquivalentsAndShortTermInvestments"],
+                                description="Cash, cash equivalents and short-term investments."),
+    "marketable_securities_current": dict(label="Marketable securities (current)", period_type="instant", unit="USD",
+                                          additive=0, concepts=["us-gaap:MarketableSecuritiesCurrent",
+                                                                "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+                                                                "us-gaap:ShortTermInvestments"],
+                                          description="Marketable securities classified as current."),
+    "debt_current": dict(label="Long-term debt, current", period_type="instant", unit="USD", additive=0,
+                         concepts=["us-gaap:LongTermDebtCurrent"], description="Current portion of long-term debt."),
+    "debt_noncurrent": dict(label="Long-term debt, noncurrent", period_type="instant", unit="USD", additive=0,
+                            concepts=["us-gaap:LongTermDebtNoncurrent"], description="Long-term debt, noncurrent."),
+    "commercial_paper": dict(label="Commercial paper", period_type="instant", unit="USD", additive=0,
+                             concepts=["us-gaap:CommercialPaper"], description="Commercial paper outstanding."),
+    "finance_lease_liability": dict(label="Finance lease liabilities", period_type="instant", unit="USD", additive=0,
+                                    concepts=["us-gaap:FinanceLeaseLiability"], description="Finance lease liabilities."),
+}
+ALL_METRICS = {**METRICS, **VALUATION_METRICS}
+
 # FRED series: daily market series are taken from the latest FRED vintage (not revised in practice);
 # revised macro series are taken from ALFRED vintages.
 FRED_DAILY_SERIES = {

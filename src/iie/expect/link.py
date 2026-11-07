@@ -168,15 +168,15 @@ def event_row(conn, ev, kt, store=None):
     im = _latest(conn, cid, "market_implied", "implied_abs_move_event_day", key, t, kt, "point")
     if im and im[0]["value"] is not None:
         row["implied_move"] = im[0]["value"]
-    pre = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric='implied_fcf_cagr_10y_erp_5pct'
-                          AND target_period=? AND stat='pre' ORDER BY eo_id DESC LIMIT 1""", (cid, key)).fetchone()
-    post = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric='implied_fcf_cagr_10y_erp_5pct'
-                           AND target_period=? AND stat='post' ORDER BY eo_id DESC LIMIT 1""", (cid, key)).fetchone()
+    IMP = "implied_revenue_cagr_y1_5"          # reverse DCF v2 (v1 'implied_fcf_cagr_10y_*' kept for the bridge only)
+    pre = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric=? AND target_period=?
+                          AND stat='pre' ORDER BY eo_id DESC LIMIT 1""", (cid, IMP, key)).fetchone()
+    post = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric=? AND target_period=?
+                           AND stat='post' ORDER BY eo_id DESC LIMIT 1""", (cid, IMP, key)).fetchone()
     if pre and pre["value"] is not None:
         row["implied_growth_pre"] = pre["value"]
-    same = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric='implied_fcf_cagr_10y_erp_5pct'
-                           AND target_period=? AND stat='post_same_fundamentals' ORDER BY eo_id DESC LIMIT 1""",
-                        (cid, key)).fetchone()
+    same = conn.execute("""SELECT value FROM expectation_obs WHERE company_id=? AND metric=? AND target_period=?
+                           AND stat='post_same_fundamentals' ORDER BY eo_id DESC LIMIT 1""", (cid, IMP, key)).fetchone()
     if pre and pre["value"] is not None:
         if same and same["value"] is not None:
             row["implied_growth_change"] = same["value"] - pre["value"]          # price-driven (fundamentals fixed)

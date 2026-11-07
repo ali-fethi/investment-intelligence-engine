@@ -5,7 +5,6 @@ import random
 from collections import defaultdict
 
 from ..db import companies
-from .implied import implied_growth_at
 
 
 def pct(x, d=1):
@@ -100,35 +99,29 @@ def render_events(rows) -> str:
 
 # --------------------------------------------------------------------------------------------- hypotheses
 def hypotheses(conn, cutoff, kt):
-    """Contrast what the price implies with what extrapolating reported fundamentals implies.
-    Output: numbers plus questions. No forecast is made and nothing is fitted to the price."""
+    """Reverse DCF v2: the revenue growth the price requires vs reported history. Numbers plus questions; no forecast,
+    nothing fitted to the price. Not computed when an essential input is missing."""
+    from . import valuation as V
     out = []
     for c in companies(conn):
-        res = implied_growth_at(conn, c, cutoff, kt)
-        if not res or "error" in res:
-            out.append({"ticker": c["ticker"], "error": (res or {}).get("error")})
+        inp = V.inputs_at(conn, c, cutoff, kt)
+        if inp["missing"]:
+            out.append({"ticker": c["ticker"], "status": "not_computed", "missing": inp["missing"]})
             continue
-        g = res["implied_fcf_cagr_10y"]
-        tr_fcf, tr_rev = res["trailing_3y_fcf_cagr"], res["trailing_3y_revenue_cagr"]
+        base, sens = V.implied_growth(inp), V.sensitivities(inp)
+        g, tr = base["implied_revenue_cagr_y1_5"], inp["trailing_3y_revenue_cagr"]
         qs = []
-        if g.get("erp_5pct") is not None and tr_fcf is not None:
-            gap = g["erp_5pct"] - tr_fcf
-            qs.append(f"The price implies ~{g['erp_5pct']:.1%}/yr FCF growth for 10 years (ERP 5%; "
-                      f"{pct(g.get('erp_4pct'))}–{pct(g.get('erp_6pct'))} for ERP 4–6%), vs {tr_fcf:.1%}/yr trailing 3-year "
-                      f"FCF growth: a gap of {gap * 100:+.1f} pts.")
-        if res["capex_to_cfo_ttm"] is not None:
-            qs.append(f"Capex absorbs {res['capex_to_cfo_ttm']:.0%} of operating cash flow (TTM). If the market treats "
-                      "part of this capex as growth investment that will convert into future FCF, a price-implied growth "
-                      "above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one "
-                      "applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).")
-        if tr_rev is not None:
-            qs.append(f"Trailing 3-year revenue CAGR is {tr_rev:.1%}; implied FCF growth can exceed revenue growth only "
-                      "through margin expansion or lower capital intensity: the price embeds a view on one of these.")
-        out.append({"ticker": c["ticker"], "inputs": {k: res[k] for k in ("as_of_quarter", "price", "price_date",
-                                                                         "market_cap", "fcf_ttm", "rf_10y",
-                                                                         "shares_from")},
-                    "implied_fcf_cagr_10y": g, "trailing_3y_fcf_cagr": tr_fcf, "trailing_3y_revenue_cagr": tr_rev,
-                    "capex_to_cfo_ttm": res["capex_to_cfo_ttm"], "questions": qs})
+        if g is not None and tr is not None:
+            qs.append(f"The price requires ~{g:.1%}/yr revenue growth for five years (fading to {base['terminal_growth']:.1%}), "
+                      f"at today's {base['margin']:.0%} operating margin and sales-to-capital {base['s2c']:.2f}; "
+                      f"trailing 3-year revenue growth is {tr:.1%}.")
+        qs.append(f"If capital intensity doubled (sales-to-capital x0.5) the requirement rises to "
+                  f"{sens['other']['S2C x0.5 (capex intensity doubles)']:.1%}; if it halved, it falls to "
+                  f"{sens['other']['S2C x2 (capex intensity halves)']:.1%}. The return on the current capex cycle is the "
+                  "assumption the price is most sensitive to.")
+        out.append({"ticker": c["ticker"], "status": "ok", "implied_revenue_cagr_y1_5": g, "trailing_3y_revenue_cagr": tr,
+                    "wacc": base["wacc"], "margin": base["margin"], "s2c": base["s2c"], "flags": inp["flags"],
+                    "sensitivities": sens, "questions": qs})
     return out
 
 
