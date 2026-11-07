@@ -1,0 +1,6043 @@
+[
+ {
+  "ticker": "MSFT",
+  "event_id": 227,
+  "accession_no": "0001193125-16-441813",
+  "quarter": "FY2016Q2",
+  "public_at": "2016-01-28T21:07:06Z",
+  "consensus_eps": 0.71,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 23,
+  "consensus_eps_as_of": "2016-01-05T02:18:15Z",
+  "consensus_eps_evidence": 296,
+  "eps_gaap": 0.62,
+  "revenue_gaap": 23796000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.12676056338028163,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-01-29",
+  "d0_return": 0.05820204954607222,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": 0.05128694004059575,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 229,
+  "accession_no": "0001193125-16-550250",
+  "quarter": "FY2016Q3",
+  "public_at": "2016-04-21T20:07:06Z",
+  "consensus_eps": 0.64,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 12,
+  "consensus_eps_as_of": "2016-04-08T21:09:08Z",
+  "consensus_eps_evidence": 300,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-03-07T18:40:35Z",
+   "2016-04-08T21:09:08Z"
+  ],
+  "eps_gaap": 0.47,
+  "revenue_gaap": 20531000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.2656250000000001,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-04-22",
+  "d0_return": -0.07171029199600176,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": -0.06937968835741781,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "GOOGL"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 234,
+  "accession_no": "0001193125-16-651176",
+  "quarter": "FY2016Q4",
+  "public_at": "2016-07-19T20:06:56Z",
+  "consensus_eps": 0.58,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2016-07-18T23:27:49Z",
+  "consensus_eps_evidence": 308,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-05-29T09:27:55Z",
+   "2016-07-18T23:27:49Z"
+  ],
+  "eps_gaap": 0.39,
+  "revenue_gaap": 20614000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.3275862068965516,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-07-20",
+  "d0_return": 0.053117341998853984,
+  "car_d0": 0.04868579170597319,
+  "scar_d0": 4.262191802844332,
+  "gap": 0.05763799895453303,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 237,
+  "accession_no": "0001193125-16-742793",
+  "quarter": "FY2017Q1",
+  "public_at": "2016-10-20T20:06:32Z",
+  "consensus_eps": 0.68,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2016-10-19T05:57:49Z",
+  "consensus_eps_evidence": 316,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-08-26T06:43:15Z",
+   "2016-10-19T05:57:49Z"
+  ],
+  "eps_gaap": 0.72,
+  "revenue_gaap": 21928000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.0588235294117645,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-10-21",
+  "d0_return": 0.04209606720370496,
+  "car_d0": 0.04163168322493016,
+  "scar_d0": 4.06697783127396,
+  "gap": 0.05292574286981444,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 240,
+  "accession_no": "0001193125-17-019726",
+  "quarter": "FY2017Q2",
+  "public_at": "2017-01-26T21:07:02Z",
+  "consensus_eps": 0.79,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2017-01-22T08:59:10Z",
+  "consensus_eps_evidence": 324,
+  "consensus_eps_revision": 0.012820512820512775,
+  "consensus_eps_revision_window": [
+   "2016-12-09T23:32:17Z",
+   "2017-01-22T08:59:10Z"
+  ],
+  "eps_gaap": 0.66,
+  "revenue_gaap": 25826000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.16455696202531644,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-01-27",
+  "d0_return": 0.02349466648670462,
+  "car_d0": 0.025509665404105836,
+  "scar_d0": 2.520611969170618,
+  "gap": 0.017426525674213877,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL",
+   "INTC",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 243,
+  "accession_no": "0001193125-17-142963",
+  "quarter": "FY2017Q3",
+  "public_at": "2017-04-27T20:08:56Z",
+  "consensus_eps": 0.7,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2017-04-25T11:43:54Z",
+  "consensus_eps_evidence": 332,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2017-03-10T22:38:31Z",
+   "2017-04-25T11:43:54Z"
+  ],
+  "eps_gaap": 0.61,
+  "revenue_gaap": 23212000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.12857142857142856,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-04-28",
+  "d0_return": 0.002783103130935105,
+  "car_d0": 0.005163314167883166,
+  "scar_d0": 0.5687681701045623,
+  "gap": 0.009374645532635562,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "GOOGL",
+   "INTC",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 245,
+  "accession_no": "0001193125-17-232047",
+  "quarter": "FY2017Q4",
+  "public_at": "2017-07-20T20:08:03Z",
+  "consensus_eps": 0.71,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2017-07-19T21:34:31Z",
+  "consensus_eps_evidence": 340,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2017-06-05T11:01:44Z",
+   "2017-07-19T21:34:31Z"
+  ],
+  "eps_gaap": 0.83,
+  "revenue_gaap": 25605000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.16901408450704225,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-07-21",
+  "d0_return": -0.005793590650815528,
+  "car_d0": -0.005362880855986317,
+  "scar_d0": -0.687322013467765,
+  "gap": -0.010374619506825722,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 248,
+  "accession_no": "0001193125-17-321202",
+  "quarter": "FY2018Q1",
+  "public_at": "2017-10-26T20:04:05Z",
+  "consensus_eps": 0.71,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 18,
+  "consensus_eps_as_of": "2017-10-08T14:01:16Z",
+  "consensus_eps_evidence": 348,
+  "consensus_eps_revision": -0.04054054054054057,
+  "consensus_eps_revision_window": [
+   "2017-09-08T12:09:22Z",
+   "2017-10-08T14:01:16Z"
+  ],
+  "eps_gaap": 0.84,
+  "revenue_gaap": 24538000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.18309859154929575,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-10-27",
+  "d0_return": 0.0641187821913507,
+  "car_d0": 0.054115925367765993,
+  "scar_d0": 7.276073271871393,
+  "gap": 0.07122905609687513,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "GOOGL",
+   "INTC",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 250,
+  "accession_no": "0001193125-18-027377",
+  "quarter": "FY2018Q2",
+  "public_at": "2018-01-31T21:05:57Z",
+  "consensus_eps": 0.85,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 94,
+  "consensus_eps_as_of": "2017-10-28T22:51:36Z",
+  "consensus_eps_evidence": 356,
+  "eps_gaap": -0.82,
+  "revenue_gaap": 28918000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -1.9647058823529413,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2018-02-01",
+  "d0_return": -0.007893905727152872,
+  "car_d0": -0.006776070391124335,
+  "scar_d0": -0.8887848450346163,
+  "gap": -0.0023155585281187108,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 251,
+  "accession_no": "0001193125-18-134732",
+  "quarter": "FY2018Q3",
+  "public_at": "2018-04-26T20:04:03Z",
+  "consensus_eps": 0.85,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 23,
+  "consensus_eps_as_of": "2018-04-03T09:00:49Z",
+  "consensus_eps_evidence": 360,
+  "eps_gaap": 0.95,
+  "revenue_gaap": 26819000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.11764705882352944,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2018-04-27",
+  "d0_return": 0.016549941897297415,
+  "car_d0": 0.014488457316532987,
+  "scar_d0": 1.7373338819664794,
+  "gap": 0.03543386656265346,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "INTC",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 253,
+  "accession_no": "0001193125-18-221458",
+  "quarter": "FY2018Q4",
+  "public_at": "2018-07-19T20:02:35Z",
+  "eps_gaap": 1.14,
+  "revenue_gaap": 30085000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2018-07-20",
+  "d0_return": 0.01791183036260735,
+  "car_d0": 0.01874812598156218,
+  "scar_d0": 2.293815654491067,
+  "gap": 0.03524904455354405,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 255,
+  "accession_no": "0001193125-18-306365",
+  "quarter": "FY2019Q1",
+  "public_at": "2018-10-24T20:03:06Z",
+  "eps_gaap": 1.14,
+  "revenue_gaap": 29084000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2018-10-25",
+  "d0_return": 0.058444129933242106,
+  "car_d0": 0.03135742240618769,
+  "scar_d0": 3.60309180377444,
+  "gap": 0.041340924252832645,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 257,
+  "accession_no": "0001193125-19-022553",
+  "quarter": "FY2019Q2",
+  "public_at": "2019-01-30T21:03:36Z",
+  "eps_gaap": 1.08,
+  "revenue_gaap": 32471000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "implied_growth_pre": 0.05101646560421991,
+  "implied_growth_change": -0.0028575362436042973,
+  "implied_growth_fundamentals_effect": 0.00040754728100944604,
+  "narrative_items": 0,
+  "reaction_day": "2019-01-31",
+  "d0_return": -0.01833048504031176,
+  "car_d0": -0.03201651278225385,
+  "scar_d0": -3.5773991091183572,
+  "gap": -0.024252625195262056,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 258,
+  "accession_no": "0001193125-19-117108",
+  "quarter": "FY2019Q3",
+  "public_at": "2019-04-24T20:04:03Z",
+  "eps_gaap": 1.14,
+  "revenue_gaap": 30571000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "implied_growth_pre": 0.06737842061549582,
+  "implied_growth_change": 0.0029088589060211056,
+  "implied_growth_fundamentals_effect": -0.006988103274377266,
+  "narrative_items": 0,
+  "reaction_day": "2019-04-25",
+  "d0_return": 0.03311728413333137,
+  "car_d0": 0.033416227436697254,
+  "scar_d0": 3.8376525878014878,
+  "gap": 0.04039673095005636,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 259,
+  "accession_no": "0001193125-19-196501",
+  "quarter": "FY2019Q4",
+  "public_at": "2019-07-18T20:03:33Z",
+  "eps_gaap": 1.71,
+  "revenue_gaap": 33717000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "implied_growth_pre": 0.0560345829979193,
+  "implied_growth_change": -0.0004436346640255273,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2019-07-19",
+  "d0_return": 0.0014660383442792746,
+  "car_d0": 0.008629533214736257,
+  "scar_d0": 0.9610920838606489,
+  "gap": 0.027855175947530952,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 261,
+  "accession_no": "0001193125-19-272562",
+  "quarter": "FY2020Q1",
+  "public_at": "2019-10-23T20:06:06Z",
+  "eps_gaap": 1.38,
+  "revenue_gaap": 33055000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "implied_growth_pre": 0.03245855778155138,
+  "implied_growth_change": 0.0020275375650398164,
+  "implied_growth_fundamentals_effect": -0.0018549332764032922,
+  "narrative_items": 0,
+  "reaction_day": "2019-10-24",
+  "d0_return": 0.019673541534335426,
+  "car_d0": 0.01663281114002724,
+  "scar_d0": 1.9274973498496109,
+  "gap": 0.015665941492486013,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 263,
+  "accession_no": "0001193125-20-018383",
+  "quarter": "FY2020Q2",
+  "public_at": "2020-01-29T21:03:50Z",
+  "eps_gaap": 1.51,
+  "revenue_gaap": 36906000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "implied_growth_pre": 0.050716406408387926,
+  "implied_growth_change": 0.0016462950012812172,
+  "implied_growth_fundamentals_effect": -0.006186788874682492,
+  "narrative_items": 0,
+  "reaction_day": "2020-01-30",
+  "d0_return": 0.028207603442907514,
+  "car_d0": 0.023487577143945428,
+  "scar_d0": 3.2744059251862687,
+  "gap": 0.03576535352147614,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "TSLA",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 267,
+  "accession_no": "0001193125-20-126089",
+  "quarter": "FY2020Q3",
+  "public_at": "2020-04-29T20:03:54Z",
+  "consensus_eps": 1.3,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 12,
+  "consensus_eps_as_of": "2020-04-17T07:24:25Z",
+  "consensus_eps_evidence": 364,
+  "eps_gaap": 1.4,
+  "revenue_gaap": 35021000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.07692307692307687,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.012086887669682356,
+  "implied_growth_change": 0.0015705912783574583,
+  "implied_growth_fundamentals_effect": -0.007818878466184565,
+  "narrative_items": 0,
+  "reaction_day": "2020-04-30",
+  "d0_return": 0.010032204878340778,
+  "car_d0": 0.019327722289625537,
+  "scar_d0": 1.9715616820610358,
+  "gap": 0.014484627347727708,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM",
+   "TSLA",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 274,
+  "accession_no": "0001193125-20-197109",
+  "quarter": "FY2020Q4",
+  "public_at": "2020-07-22T20:03:04Z",
+  "consensus_eps": 1.39,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 7,
+  "consensus_eps_as_of": "2020-07-15T05:17:35Z",
+  "consensus_eps_evidence": 368,
+  "eps_gaap": 1.46,
+  "revenue_gaap": 38033000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.05035971223021596,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.024074680644324276,
+  "implied_growth_change": -0.005532972519874724,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2020-07-23",
+  "d0_return": -0.04349471883762546,
+  "car_d0": -0.03162481835593623,
+  "scar_d0": -2.9152713370321637,
+  "gap": -0.021534817277892526,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 277,
+  "accession_no": "0001193125-20-278410",
+  "quarter": "FY2021Q1",
+  "public_at": "2020-10-27T20:12:57Z",
+  "consensus_eps": 1.54,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 34,
+  "consensus_eps_as_of": "2020-09-23T18:50:16Z",
+  "consensus_eps_evidence": 372,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2020-09-02T04:01:06Z",
+   "2020-09-23T18:50:16Z"
+  ],
+  "eps_gaap": 1.82,
+  "revenue_gaap": 37154000000.0,
+  "eps_street_actual": 1.82,
+  "eps_surprise_street": 0.18181818181818188,
+  "eps_surprise_gaap": 0.18181818181818188,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.02861879066170736,
+  "implied_growth_change": -0.006704231003627603,
+  "implied_growth_fundamentals_effect": -0.010456242322561593,
+  "narrative_items": 0,
+  "reaction_day": "2020-10-28",
+  "d0_return": -0.04956627115694612,
+  "car_d0": -0.01141489398053104,
+  "scar_d0": -0.9004867887345487,
+  "gap": -0.02616647986426579,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 279,
+  "accession_no": "0001193125-21-017683",
+  "quarter": "FY2021Q2",
+  "public_at": "2021-01-26T21:04:05Z",
+  "consensus_eps": 1.64,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 47,
+  "consensus_eps_as_of": "2020-12-10T00:59:28Z",
+  "consensus_eps_evidence": 382,
+  "eps_gaap": 2.03,
+  "revenue_gaap": 43076000000.0,
+  "eps_street_actual": 2.03,
+  "eps_surprise_street": 0.23780487804878048,
+  "eps_surprise_gaap": 0.23780487804878048,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.03762687518367824,
+  "implied_growth_change": 0.0002874362017426524,
+  "implied_growth_fundamentals_effect": -0.0031630109441733723,
+  "narrative_items": 0,
+  "reaction_day": "2021-01-27",
+  "d0_return": 0.00245337262057177,
+  "car_d0": 0.02990107994068991,
+  "scar_d0": 2.1851469240133103,
+  "gap": 0.02440493317375525,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 284,
+  "accession_no": "0001193125-21-134213",
+  "quarter": "FY2021Q3",
+  "public_at": "2021-04-27T20:04:57Z",
+  "consensus_eps": 1.78,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2021-04-26T02:31:03Z",
+  "consensus_eps_evidence": 387,
+  "consensus_eps_revision": 0.11949685534591192,
+  "consensus_eps_revision_window": [
+   "2020-12-10T00:59:28Z",
+   "2021-04-26T02:31:03Z"
+  ],
+  "eps_gaap": 2.03,
+  "revenue_gaap": 41706000000.0,
+  "eps_street_actual": 1.95,
+  "eps_surprise_street": 0.09550561797752799,
+  "eps_surprise_gaap": 0.14044943820224698,
+  "gaap_vs_street_gap": 0.07999999999999985,
+  "guidance": {},
+  "implied_growth_pre": 0.06822502643368,
+  "implied_growth_change": -0.0017214306882344932,
+  "implied_growth_fundamentals_effect": -0.008067690491985635,
+  "narrative_items": 0,
+  "reaction_day": "2021-04-28",
+  "d0_return": -0.02828569541390591,
+  "car_d0": -0.027851174154089026,
+  "scar_d0": -2.2313299498483374,
+  "gap": -0.02248354628771143,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "GOOGL",
+   "PINS",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 288,
+  "accession_no": "0001193125-21-225746",
+  "quarter": "FY2021Q4",
+  "public_at": "2021-07-27T20:41:19Z",
+  "consensus_eps": 1.91,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 49,
+  "consensus_eps_as_of": "2021-06-08T15:22:09Z",
+  "consensus_eps_evidence": 395,
+  "eps_gaap": null,
+  "revenue_gaap": 46152000000.0,
+  "eps_street_actual": 2.17,
+  "eps_surprise_street": 0.1361256544502618,
+  "guidance": {},
+  "implied_growth_pre": 0.06045933880478327,
+  "implied_growth_change": -0.0016340056481007892,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2021-07-28",
+  "d0_return": -0.0011167980549864343,
+  "car_d0": -0.00022181684512837332,
+  "scar_d0": -0.01978269098039104,
+  "gap": 0.008550225505661091,
+  "attribution": "high",
+  "confounders_d0": [
+   "AAPL",
+   "AMD",
+   "GOOGL",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 289,
+  "accession_no": "0001193125-21-307941",
+  "quarter": "FY2022Q1",
+  "public_at": "2021-10-26T20:04:14Z",
+  "consensus_eps": 2.09,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 76,
+  "consensus_eps_as_of": "2021-08-11T06:25:43Z",
+  "consensus_eps_evidence": 400,
+  "eps_gaap": 2.71,
+  "revenue_gaap": 45317000000.0,
+  "eps_street_actual": 2.27,
+  "eps_surprise_street": 0.0861244019138756,
+  "eps_surprise_gaap": 0.2966507177033493,
+  "gaap_vs_street_gap": 0.43999999999999995,
+  "guidance": {},
+  "implied_growth_pre": 0.08266328850094007,
+  "implied_growth_change": 0.004660148501543171,
+  "implied_growth_fundamentals_effect": -0.014583910787169696,
+  "narrative_items": 0,
+  "reaction_day": "2021-10-27",
+  "d0_return": 0.042114181074711654,
+  "car_d0": 0.047116855036750976,
+  "scar_d0": 4.918966277848553,
+  "gap": 0.01899330858940318,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "GOOGL"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 292,
+  "accession_no": "0001193125-22-017041",
+  "quarter": "FY2022Q2",
+  "public_at": "2022-01-25T21:03:05Z",
+  "consensus_eps": 2.31,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 20,
+  "consensus_eps_as_of": "2022-01-05T18:04:40Z",
+  "consensus_eps_evidence": 405,
+  "eps_gaap": 2.48,
+  "revenue_gaap": 51728000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.07359307359307365,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.06309691368633874,
+  "implied_growth_change": 0.004413467304322571,
+  "implied_growth_fundamentals_effect": -0.0007401540030176346,
+  "narrative_items": 0,
+  "reaction_day": "2022-01-26",
+  "d0_return": 0.028493193867922484,
+  "car_d0": 0.030884465288750305,
+  "scar_d0": 3.3735480783137,
+  "gap": 0.06759333307945203,
+  "attribution": "high",
+  "confounders_d0": [
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 293,
+  "accession_no": "0001193125-22-120207",
+  "quarter": "FY2022Q3",
+  "public_at": "2022-04-26T20:03:59Z",
+  "consensus_eps": 2.18,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2022-04-22T15:41:03Z",
+  "consensus_eps_evidence": 1203,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2022-01-05T18:04:40Z",
+   "2022-04-22T15:41:03Z"
+  ],
+  "consensus_revenue": 48960000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1202,
+  "eps_gaap": 2.22,
+  "revenue_gaap": 49360000000.0,
+  "eps_street_actual": 2.22,
+  "eps_surprise_street": 0.01834862385321112,
+  "eps_surprise_gaap": 0.01834862385321112,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.008169934640522847,
+  "guidance": {},
+  "implied_growth_pre": 0.08671034591851512,
+  "implied_growth_change": 0.0047884761306706825,
+  "implied_growth_fundamentals_effect": -0.0063388688854146835,
+  "narrative_items": 0,
+  "reaction_day": "2022-04-27",
+  "d0_return": 0.048108948047047795,
+  "car_d0": 0.04441718722424105,
+  "scar_d0": 4.855779434356233,
+  "gap": 0.043964195208146206,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 295,
+  "accession_no": "0001193125-22-202034",
+  "quarter": "FY2022Q4",
+  "public_at": "2022-07-26T20:02:59Z",
+  "consensus_eps": 2.29,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-07-26T03:31:24Z",
+  "consensus_eps_evidence": 413,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2022-07-21T13:53:01Z",
+   "2022-07-26T03:31:24Z"
+  ],
+  "consensus_revenue": 52280000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1204,
+  "eps_gaap": 2.23,
+  "revenue_gaap": 51865000000.0,
+  "eps_street_actual": 2.23,
+  "eps_surprise_street": -0.026200873362445476,
+  "eps_surprise_gaap": -0.026200873362445476,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": -0.007938026013772026,
+  "guidance": {},
+  "implied_growth_pre": 0.0715385594732828,
+  "implied_growth_change": 0.008139891241404351,
+  "narrative_items": 0,
+  "reaction_day": "2022-07-27",
+  "d0_return": 0.06685191244907629,
+  "car_d0": 0.0350392829257279,
+  "scar_d0": 3.5233758607857304,
+  "gap": 0.03676065895194225,
+  "attribution": "high",
+  "confounders_d0": [
+   "GOOGL",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 296,
+  "accession_no": "0001193125-22-268356",
+  "quarter": "FY2023Q1",
+  "public_at": "2022-10-25T20:02:59Z",
+  "consensus_eps": 2.31,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-10-25T02:56:43Z",
+  "consensus_eps_evidence": 418,
+  "consensus_eps_revision": -0.008583690987124526,
+  "consensus_eps_revision_window": [
+   "2022-09-09T02:05:19Z",
+   "2022-10-25T02:56:43Z"
+  ],
+  "consensus_revenue": 49580000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1206,
+  "eps_gaap": 2.35,
+  "revenue_gaap": 50122000000.0,
+  "eps_street_actual": 2.35,
+  "eps_surprise_street": 0.017316017316017396,
+  "eps_surprise_gaap": 0.017316017316017396,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.010931827349737855,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 20300000000.0,
+    "high": 20600000000.0,
+    "grade": "B",
+    "as_of": "2022-07-26T21:30:00Z",
+    "evidence": [
+     506,
+     507
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 15950000000.0,
+    "high": 16250000000.0,
+    "grade": "B",
+    "as_of": "2022-07-26T21:30:00Z",
+    "evidence": [
+     504,
+     505
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 13000000000.0,
+    "high": 13400000000.0,
+    "grade": "B",
+    "as_of": "2022-07-26T21:30:00Z",
+    "evidence": [
+     508,
+     509
+    ]
+   }
+  },
+  "implied_growth_pre": 0.10451492197670775,
+  "implied_growth_change": -0.014069225610543246,
+  "implied_growth_fundamentals_effect": 0.0027430897112479258,
+  "narrative_items": 0,
+  "reaction_day": "2022-10-26",
+  "d0_return": -0.07715629161148907,
+  "car_d0": -0.0678780429990741,
+  "scar_d0": -6.62312798448552,
+  "gap": -0.07775474829816353,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 299,
+  "accession_no": "0001193125-23-014230",
+  "quarter": "FY2023Q2",
+  "public_at": "2023-01-24T21:28:00Z",
+  "consensus_eps": 2.3,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 3,
+  "consensus_eps_as_of": "2023-01-21T01:54:23Z",
+  "consensus_eps_evidence": 426,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2022-12-10T01:33:55Z",
+   "2023-01-21T01:54:23Z"
+  ],
+  "consensus_revenue": 52930000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1208,
+  "eps_gaap": 2.2,
+  "revenue_gaap": 52747000000.0,
+  "eps_street_actual": 2.32,
+  "eps_surprise_street": 0.008695652173912993,
+  "eps_surprise_gaap": -0.04347826086956508,
+  "gaap_vs_street_gap": -0.11999999999999966,
+  "revenue_surprise": -0.003457396561496351,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 21250000000.0,
+    "high": 21550000000.0,
+    "grade": "B",
+    "as_of": "2022-10-25T21:30:00Z",
+    "evidence": [
+     512,
+     513
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 16600000000.0,
+    "high": 16900000000.0,
+    "grade": "B",
+    "as_of": "2022-10-25T21:30:00Z",
+    "evidence": [
+     510,
+     511
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 14500000000.0,
+    "high": 14900000000.0,
+    "grade": "B",
+    "as_of": "2022-10-25T21:30:00Z",
+    "evidence": [
+     514,
+     515
+    ]
+   }
+  },
+  "implied_growth_pre": 0.0849553439297378,
+  "implied_growth_change": -0.0022767856503340678,
+  "implied_growth_fundamentals_effect": 0.00756472595653368,
+  "narrative_items": 0,
+  "reaction_day": "2023-01-25",
+  "d0_return": -0.005908084264779956,
+  "car_d0": -0.006063739599808932,
+  "scar_d0": -0.5410069869881373,
+  "gap": -0.031234497472723555,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 300,
+  "accession_no": "0001193125-23-115280",
+  "quarter": "FY2023Q3",
+  "public_at": "2023-04-25T20:03:03Z",
+  "consensus_eps": 2.22,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2023-04-19T12:06:12Z",
+  "consensus_eps_evidence": 1211,
+  "consensus_eps_revision": -0.008928571428571397,
+  "consensus_eps_revision_window": [
+   "2023-02-17T09:08:56Z",
+   "2023-04-19T12:06:12Z"
+  ],
+  "consensus_revenue": 50960000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1210,
+  "eps_gaap": 2.45,
+  "revenue_gaap": 52857000000.0,
+  "eps_street_actual": 2.45,
+  "eps_surprise_street": 0.10360360360360366,
+  "eps_surprise_gaap": 0.10360360360360366,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.037225274725274815,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 21700000000.0,
+    "high": 22000000000.0,
+    "grade": "B",
+    "as_of": "2023-01-24T22:30:00Z",
+    "evidence": [
+     518,
+     519
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 16900000000.0,
+    "high": 17200000000.0,
+    "grade": "B",
+    "as_of": "2023-01-24T22:30:00Z",
+    "evidence": [
+     516,
+     517
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 11900000000.0,
+    "high": 12300000000.0,
+    "grade": "B",
+    "as_of": "2023-01-24T22:30:00Z",
+    "evidence": [
+     520,
+     521
+    ]
+   }
+  },
+  "implied_growth_pre": 0.10920242841797101,
+  "implied_growth_change": 0.005870991117283841,
+  "implied_growth_fundamentals_effect": 0.00472151148993083,
+  "narrative_items": 0,
+  "reaction_day": "2023-04-26",
+  "d0_return": 0.0724347567962329,
+  "car_d0": 0.07738306255460822,
+  "scar_d0": 6.63894961209027,
+  "gap": 0.07726380706491542,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 302,
+  "accession_no": "0000950170-23-034400",
+  "quarter": "FY2023Q4",
+  "public_at": "2023-07-25T20:02:47Z",
+  "consensus_eps": 2.55,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2023-07-19T15:02:00Z",
+  "consensus_eps_evidence": 1213,
+  "consensus_eps_revision": -0.003906250000000111,
+  "consensus_eps_revision_window": [
+   "2023-06-03T03:58:04Z",
+   "2023-07-19T15:02:00Z"
+  ],
+  "consensus_revenue": 55360000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1212,
+  "eps_gaap": 2.69,
+  "revenue_gaap": 56189000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.05490196078431375,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.014974710982659012,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 23600000000.0,
+    "high": 23900000000.0,
+    "grade": "B",
+    "as_of": "2023-04-25T21:30:00Z",
+    "evidence": [
+     524,
+     525
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 17900000000.0,
+    "high": 18200000000.0,
+    "grade": "B",
+    "as_of": "2023-04-25T21:30:00Z",
+    "evidence": [
+     522,
+     523
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 13350000000.0,
+    "high": 13750000000.0,
+    "grade": "B",
+    "as_of": "2023-04-25T21:30:00Z",
+    "evidence": [
+     528,
+     529
+    ]
+   },
+   "azure_growth_cc": {
+    "low": 26.0,
+    "high": 27.0,
+    "grade": "B",
+    "as_of": "2023-04-25T21:30:00Z",
+    "evidence": [
+     526,
+     527
+    ]
+   }
+  },
+  "implied_growth_pre": 0.15445340552537845,
+  "implied_growth_change": -0.003750636022712195,
+  "narrative_items": 0,
+  "reaction_day": "2023-07-26",
+  "d0_return": -0.03763753364624178,
+  "car_d0": -0.03818981052588687,
+  "scar_d0": -3.1145530700026036,
+  "gap": -0.027181059451540923,
+  "attribution": "high",
+  "confounders_d0": [
+   "GOOGL",
+   "SNAP",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 306,
+  "accession_no": "0000950170-23-054848",
+  "quarter": "FY2024Q1",
+  "public_at": "2023-10-24T20:03:29Z",
+  "consensus_eps": 2.65,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 7,
+  "consensus_eps_as_of": "2023-10-17T14:16:00Z",
+  "consensus_eps_evidence": 1215,
+  "consensus_eps_revision": 0.019230769230769162,
+  "consensus_eps_revision_window": [
+   "2023-06-24T03:05:34Z",
+   "2023-10-17T14:16:00Z"
+  ],
+  "consensus_revenue": 54420000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1214,
+  "eps_gaap": 2.99,
+  "revenue_gaap": 56517000000.0,
+  "eps_street_actual": 2.99,
+  "eps_surprise_street": 0.12830188679245302,
+  "eps_surprise_gaap": 0.12830188679245302,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.03853362734288868,
+  "guidance": {
+   "segment_revenue_pbp": {
+    "low": 18000000000.0,
+    "high": 18300000000.0,
+    "grade": "B",
+    "as_of": "2023-07-25T21:30:00Z",
+    "evidence": [
+     530,
+     531
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 12500000000.0,
+    "high": 12900000000.0,
+    "grade": "B",
+    "as_of": "2023-07-25T21:30:00Z",
+    "evidence": [
+     533,
+     534
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect revenue growth to be 25 to 26% in constant currency, including roughly 2 points from all Azure AI services.",
+    "grade": "B",
+    "evidence": [
+     532
+    ]
+   }
+  },
+  "implied_growth_pre": 0.1666959113548251,
+  "implied_growth_change": 0.0033712701591479544,
+  "implied_growth_fundamentals_effect": -0.008435622024001166,
+  "narrative_items": 0,
+  "reaction_day": "2023-10-25",
+  "d0_return": 0.030678046428119332,
+  "car_d0": 0.049923103873180316,
+  "scar_d0": 3.984552189528044,
+  "gap": 0.04383865394333042,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL",
+   "SNAP"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 311,
+  "accession_no": "0000950170-24-008809",
+  "quarter": "FY2024Q2",
+  "public_at": "2024-01-30T21:03:17Z",
+  "consensus_eps": 2.76,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2024-01-24T15:39:00Z",
+  "consensus_eps_evidence": 1132,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2023-12-20T11:49:26Z",
+   "2024-01-24T15:39:00Z"
+  ],
+  "consensus_revenue": 61030000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1131,
+  "eps_gaap": 2.93,
+  "revenue_gaap": 62020000000.0,
+  "eps_street_actual": 2.93,
+  "eps_surprise_street": 0.061594202898550776,
+  "eps_surprise_gaap": 0.061594202898550776,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.01622153039488783,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 25100000000.0,
+    "high": 25400000000.0,
+    "grade": "B",
+    "as_of": "2023-10-24T21:30:00Z",
+    "evidence": [
+     1125,
+     1126
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 18800000000.0,
+    "high": 19100000000.0,
+    "grade": "B",
+    "as_of": "2023-10-24T21:30:00Z",
+    "evidence": [
+     1123,
+     1124
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 16500000000.0,
+    "high": 16900000000.0,
+    "grade": "B",
+    "as_of": "2023-10-24T21:30:00Z",
+    "evidence": [
+     1127,
+     1128
+    ]
+   },
+   "azure_growth_cc": {
+    "low": 26.0,
+    "high": 27.0,
+    "grade": "B",
+    "as_of": "2023-10-24T21:30:00Z",
+    "evidence": [
+     1129,
+     1130
+    ]
+   }
+  },
+  "implied_growth_pre": 0.16746908937605853,
+  "implied_growth_change": -0.004141784631175094,
+  "implied_growth_fundamentals_effect": -0.008450116406240049,
+  "narrative_items": 5,
+  "reaction_day": "2024-01-31",
+  "d0_return": -0.026946351756786724,
+  "car_d0": -0.008568465328228102,
+  "scar_d0": -0.7158866802222772,
+  "gap": -0.003989341142519143,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "GOOGL",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 312,
+  "accession_no": "0000950170-24-048268",
+  "quarter": "FY2024Q3",
+  "public_at": "2024-04-25T20:03:19Z",
+  "consensus_eps": 2.81,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 3,
+  "consensus_eps_as_of": "2024-04-22T14:19:00Z",
+  "consensus_eps_evidence": 1219,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2024-03-10T13:01:06Z",
+   "2024-04-22T14:19:00Z"
+  ],
+  "consensus_revenue": 60630000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1218,
+  "eps_gaap": 2.94,
+  "revenue_gaap": 61858000000.0,
+  "eps_street_actual": 2.94,
+  "eps_surprise_street": 0.0462633451957295,
+  "eps_surprise_gaap": 0.0462633451957295,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.020253999670130307,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 26000000000.0,
+    "high": 26300000000.0,
+    "grade": "B",
+    "as_of": "2024-01-30T22:30:00Z",
+    "evidence": [
+     545,
+     546
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 19300000000.0,
+    "high": 19600000000.0,
+    "grade": "B",
+    "as_of": "2024-01-30T22:30:00Z",
+    "evidence": [
+     543,
+     544
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 14700000000.0,
+    "high": 15100000000.0,
+    "grade": "B",
+    "as_of": "2024-01-30T22:30:00Z",
+    "evidence": [
+     548,
+     549
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q3 revenue growth in constant currency to remain stable to our stronger than expected Q2 result.",
+    "grade": "B",
+    "evidence": [
+     547
+    ]
+   }
+  },
+  "implied_growth_pre": 0.17004047398301203,
+  "implied_growth_change": 0.0036471163532398876,
+  "implied_growth_fundamentals_effect": -0.006042273400407083,
+  "narrative_items": 0,
+  "reaction_day": "2024-04-26",
+  "d0_return": 0.01824378163443563,
+  "car_d0": 0.0065920850936814785,
+  "scar_d0": 0.6077771889752638,
+  "gap": 0.0329039810586671,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL",
+   "INTC",
+   "SNAP",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 313,
+  "accession_no": "0000950170-24-087835",
+  "quarter": "FY2024Q4",
+  "public_at": "2024-07-30T20:03:22Z",
+  "consensus_eps": 2.9,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 7,
+  "consensus_eps_as_of": "2024-07-23T15:08:00Z",
+  "consensus_eps_evidence": 1221,
+  "consensus_eps_revision": 0.0034602076124565784,
+  "consensus_eps_revision_window": [
+   "2024-03-10T13:01:06Z",
+   "2024-07-23T15:08:00Z"
+  ],
+  "consensus_revenue": 64130000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1220,
+  "eps_gaap": 2.95,
+  "revenue_gaap": 64727000000.0,
+  "eps_street_actual": 2.95,
+  "eps_surprise_street": 0.017241379310344973,
+  "eps_surprise_gaap": 0.017241379310344973,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.00930921565569931,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 28400000000.0,
+    "high": 28700000000.0,
+    "grade": "B",
+    "as_of": "2024-04-25T21:30:00Z",
+    "evidence": [
+     550,
+     551
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 15200000000.0,
+    "high": 15600000000.0,
+    "grade": "B",
+    "as_of": "2024-04-25T21:30:00Z",
+    "evidence": [
+     554,
+     555
+    ]
+   },
+   "azure_growth_cc": {
+    "low": 30.0,
+    "high": 31.0,
+    "grade": "B",
+    "as_of": "2024-04-25T21:30:00Z",
+    "evidence": [
+     552,
+     553
+    ]
+   }
+  },
+  "implied_growth_pre": 0.15992142689714106,
+  "implied_growth_change": -0.0019491407419238715,
+  "implied_growth_fundamentals_effect": -0.006461253591990124,
+  "narrative_items": 0,
+  "reaction_day": "2024-07-31",
+  "d0_return": -0.010805843136103221,
+  "car_d0": -0.030240214474187455,
+  "scar_d0": -3.2424167453611297,
+  "gap": -0.0057221539555916134,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "PINS",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 315,
+  "accession_no": "0000950170-24-118955",
+  "quarter": "FY2025Q1",
+  "public_at": "2024-10-30T20:04:07Z",
+  "consensus_eps": 3.08,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2024-10-25T16:13:00Z",
+  "consensus_eps_evidence": 1167,
+  "consensus_eps_revision": -0.025316455696202556,
+  "consensus_eps_revision_window": [
+   "2024-07-22T08:23:07Z",
+   "2024-10-25T16:13:00Z"
+  ],
+  "consensus_revenue": 64410000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1166,
+  "eps_gaap": 3.3,
+  "revenue_gaap": 65585000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.0714285714285714,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.018242508927185153,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 28600000000.0,
+    "high": 28900000000.0,
+    "grade": "B",
+    "as_of": "2024-07-30T21:30:00Z",
+    "evidence": [
+     558,
+     559
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 20300000000.0,
+    "high": 20600000000.0,
+    "grade": "B",
+    "as_of": "2024-07-30T21:30:00Z",
+    "evidence": [
+     556,
+     557
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 14900000000.0,
+    "high": 15300000000.0,
+    "grade": "B",
+    "as_of": "2024-07-30T21:30:00Z",
+    "evidence": [
+     562,
+     563
+    ]
+   },
+   "azure_growth_cc": {
+    "low": 28.0,
+    "high": 29.0,
+    "grade": "B",
+    "as_of": "2024-07-30T21:30:00Z",
+    "evidence": [
+     1162,
+     1163
+    ]
+   }
+  },
+  "implied_growth_pre": 0.15919650878379354,
+  "implied_growth_change": -0.008055665862042316,
+  "implied_growth_fundamentals_effect": 0.0025707554019842593,
+  "narrative_items": 2,
+  "reaction_day": "2024-10-31",
+  "d0_return": -0.06052757669911324,
+  "car_d0": -0.03888147667592706,
+  "scar_d0": -4.361486753303055,
+  "gap": -0.03969669959584832,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 319,
+  "accession_no": "0000950170-25-010484",
+  "quarter": "FY2025Q2",
+  "public_at": "2025-01-29T21:08:56Z",
+  "consensus_eps": 3.13,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2025-01-24T13:47:00Z",
+  "consensus_eps_evidence": 1223,
+  "consensus_eps_revision": -0.03395061728395077,
+  "consensus_eps_revision_window": [
+   "2024-09-26T21:48:54Z",
+   "2025-01-24T13:47:00Z"
+  ],
+  "consensus_revenue": 68720000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1222,
+  "eps_gaap": 3.23,
+  "revenue_gaap": 69632000000.0,
+  "eps_street_actual": 3.23,
+  "eps_surprise_street": 0.03194888178913735,
+  "eps_surprise_gaap": 0.03194888178913735,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.013271245634458584,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 25550000000.0,
+    "high": 25850000000.0,
+    "grade": "B",
+    "as_of": "2024-10-30T21:30:00Z",
+    "evidence": [
+     566,
+     567
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 28700000000.0,
+    "high": 29000000000.0,
+    "grade": "B",
+    "as_of": "2024-10-30T21:30:00Z",
+    "evidence": [
+     564,
+     565
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 13850000000.0,
+    "high": 14250000000.0,
+    "grade": "B",
+    "as_of": "2024-10-30T21:30:00Z",
+    "evidence": [
+     570,
+     571
+    ]
+   },
+   "azure_growth_cc": {
+    "low": 31.0,
+    "high": 32.0,
+    "grade": "B",
+    "as_of": "2024-10-30T21:30:00Z",
+    "evidence": [
+     568,
+     569
+    ]
+   }
+  },
+  "implied_growth_pre": 0.17146662555005687,
+  "implied_growth_change": -0.008561626117353116,
+  "implied_growth_fundamentals_effect": 0.00491083607526277,
+  "narrative_items": 0,
+  "reaction_day": "2025-01-30",
+  "d0_return": -0.0618090501839037,
+  "car_d0": -0.06745980386399451,
+  "scar_d0": -8.150062103150887,
+  "gap": -0.05326339672597491,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "TSLA",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 320,
+  "accession_no": "0000950170-25-061032",
+  "quarter": "FY2025Q3",
+  "public_at": "2025-04-30T20:06:03Z",
+  "consensus_eps": 3.22,
+  "consensus_eps_provider": "GuruFocus (provider not named)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2025-04-29T12:27:05Z",
+  "consensus_eps_evidence": 1225,
+  "consensus_eps_revision": -0.003095975232198067,
+  "consensus_eps_revision_window": [
+   "2025-03-14T01:26:36Z",
+   "2025-04-29T12:27:05Z"
+  ],
+  "consensus_revenue": 68430000000.0,
+  "consensus_revenue_provider": "GuruFocus (provider not named)",
+  "consensus_revenue_evidence": 1224,
+  "eps_gaap": 3.46,
+  "revenue_gaap": 70066000000.0,
+  "eps_street_actual": 3.46,
+  "eps_surprise_street": 0.07453416149068315,
+  "eps_surprise_gaap": 0.07453416149068315,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.023907642846704658,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 25900000000.0,
+    "high": 26200000000.0,
+    "grade": "B",
+    "as_of": "2025-01-29T22:30:00Z",
+    "evidence": [
+     574,
+     575
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 29400000000.0,
+    "high": 29700000000.0,
+    "grade": "B",
+    "as_of": "2025-01-29T22:30:00Z",
+    "evidence": [
+     572,
+     573
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 12400000000.0,
+    "high": 12800000000.0,
+    "grade": "B",
+    "as_of": "2025-01-29T22:30:00Z",
+    "evidence": [
+     577,
+     578
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q3 revenue growth to be between 31% and 32% in constant currency driven by strong demand for our portfolio of services.",
+    "grade": "B",
+    "evidence": [
+     576
+    ]
+   }
+  },
+  "implied_growth_pre": 0.15240628153822067,
+  "implied_growth_change": 0.009250602150964182,
+  "implied_growth_fundamentals_effect": 0.001145304611786635,
+  "narrative_items": 0,
+  "reaction_day": "2025-05-01",
+  "d0_return": 0.07625356318928223,
+  "car_d0": 0.07007503107975577,
+  "scar_d0": 7.018421719559646,
+  "gap": 0.09069972853361818,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 322,
+  "accession_no": "0000950170-25-100226",
+  "quarter": "FY2025Q4",
+  "public_at": "2025-07-30T20:08:53Z",
+  "consensus_eps": 3.38,
+  "consensus_eps_provider": "GuruFocus (provider not named)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2025-07-29T12:11:55Z",
+  "consensus_eps_evidence": 1227,
+  "consensus_eps_revision": 0.0029673590504450953,
+  "consensus_eps_revision_window": [
+   "2025-05-28T04:57:30Z",
+   "2025-07-29T12:11:55Z"
+  ],
+  "consensus_revenue": 73810000000.0,
+  "consensus_revenue_provider": "GuruFocus (provider not named)",
+  "consensus_revenue_evidence": 1226,
+  "eps_gaap": 3.65,
+  "revenue_gaap": 76441000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.0798816568047338,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.035645576480151764,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 28750000000.0,
+    "high": 29050000000.0,
+    "grade": "B",
+    "as_of": "2025-04-30T21:30:00Z",
+    "evidence": [
+     581,
+     582
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 32050000000.0,
+    "high": 32350000000.0,
+    "grade": "B",
+    "as_of": "2025-04-30T21:30:00Z",
+    "evidence": [
+     579,
+     580
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 12350000000.0,
+    "high": 12850000000.0,
+    "grade": "B",
+    "as_of": "2025-04-30T21:30:00Z",
+    "evidence": [
+     584,
+     585
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q4 revenue growth to be between 34% and 35% in constant currency driven by strong demand for our portfolio of services.",
+    "grade": "B",
+    "evidence": [
+     583
+    ]
+   }
+  },
+  "implied_growth_pre": 0.19225581949882142,
+  "implied_growth_change": 0.006248870093675807,
+  "implied_growth_fundamentals_effect": -0.004225539925409416,
+  "narrative_items": 0,
+  "reaction_day": "2025-07-31",
+  "d0_return": 0.03947472946598163,
+  "car_d0": 0.04284105928424741,
+  "scar_d0": 4.112475596018262,
+  "gap": 0.08181355902372278,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 324,
+  "accession_no": "0001193125-25-256310",
+  "quarter": "FY2026Q1",
+  "public_at": "2025-10-29T20:07:42Z",
+  "consensus_eps": 3.65,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2025-10-27T15:42:00Z",
+  "consensus_eps_evidence": 1229,
+  "consensus_eps_revision": 0.02528089887640439,
+  "consensus_eps_revision_window": [
+   "2025-07-31T05:18:42Z",
+   "2025-10-27T15:42:00Z"
+  ],
+  "consensus_revenue": 74960000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1228,
+  "eps_gaap": 3.72,
+  "revenue_gaap": 77673000000.0,
+  "eps_street_actual": 4.13,
+  "eps_surprise_street": 0.1315068493150684,
+  "eps_surprise_gaap": 0.019178082191780854,
+  "gaap_vs_street_gap": -0.4099999999999997,
+  "revenue_surprise": 0.03619263607257195,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 30100000000.0,
+    "high": 30400000000.0,
+    "grade": "B",
+    "as_of": "2025-07-30T21:30:00Z",
+    "evidence": [
+     588,
+     589
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 32200000000.0,
+    "high": 32500000000.0,
+    "grade": "B",
+    "as_of": "2025-07-30T21:30:00Z",
+    "evidence": [
+     586,
+     587
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 12400000000.0,
+    "high": 12900000000.0,
+    "grade": "B",
+    "as_of": "2025-07-30T21:30:00Z",
+    "evidence": [
+     591,
+     592
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q1 revenue growth of approximately 37% in constant currency driven by strong demand for our portfolio of services on a significant base.",
+    "grade": "B",
+    "evidence": [
+     590
+    ]
+   }
+  },
+  "implied_growth_pre": 0.18607950062930334,
+  "implied_growth_change": -0.0015631522631418537,
+  "implied_growth_fundamentals_effect": -0.011402746204010716,
+  "narrative_items": 0,
+  "reaction_day": "2025-10-30",
+  "d0_return": -0.029157009294181968,
+  "car_d0": -0.01943457448903245,
+  "scar_d0": -1.80713719434884,
+  "gap": -0.02044133980933771,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL",
+   "META"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 326,
+  "accession_no": "0001193125-26-027198",
+  "quarter": "FY2026Q2",
+  "public_at": "2026-01-28T21:04:38Z",
+  "consensus_eps": 3.88,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2026-01-26T14:02:00Z",
+  "consensus_eps_evidence": 1231,
+  "consensus_eps_revision": -0.007672634271099765,
+  "consensus_eps_revision_window": [
+   "2026-01-21T00:02:28Z",
+   "2026-01-26T14:02:00Z"
+  ],
+  "consensus_revenue": 80320000000.0,
+  "consensus_revenue_provider": "StockStory",
+  "consensus_revenue_evidence": 1232,
+  "eps_gaap": 5.16,
+  "revenue_gaap": 81273000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.329896907216495,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.01186503984063747,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 32250000000.0,
+    "high": 32550000000.0,
+    "grade": "B",
+    "as_of": "2025-10-29T21:30:00Z",
+    "evidence": [
+     597,
+     598
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 33300000000.0,
+    "high": 33600000000.0,
+    "grade": "B",
+    "as_of": "2025-10-29T21:30:00Z",
+    "evidence": [
+     595,
+     596
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 79500000000.0,
+    "high": 80600000000.0,
+    "grade": "B",
+    "as_of": "2025-10-29T21:30:00Z",
+    "evidence": [
+     593,
+     594
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q2 revenue growth of approximately 37% in constant currency as demand remains significantly ahead of the capacity we have available.",
+    "grade": "B",
+    "evidence": [
+     599
+    ]
+   }
+  },
+  "implied_growth_pre": 0.16554476807758467,
+  "implied_growth_change": -0.013503572446104783,
+  "implied_growth_fundamentals_effect": 0.0009273444875985692,
+  "narrative_items": 0,
+  "reaction_day": "2026-01-29",
+  "d0_return": -0.09993149179840488,
+  "car_d0": -0.09812562735109506,
+  "scar_d0": -8.870250446489509,
+  "gap": -0.08645643798411007,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 327,
+  "accession_no": "0001193125-26-191457",
+  "quarter": "FY2026Q3",
+  "public_at": "2026-04-29T20:03:31Z",
+  "consensus_eps": 4.07,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2026-04-27T16:07:00Z",
+  "consensus_eps_evidence": 1234,
+  "consensus_eps_revision": 0.02518891687657443,
+  "consensus_eps_revision_window": [
+   "2026-01-21T00:02:28Z",
+   "2026-04-27T16:07:00Z"
+  ],
+  "consensus_revenue": 81400000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1233,
+  "eps_gaap": 4.27,
+  "revenue_gaap": 82886000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.04914004914004888,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.01825552825552834,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 34100000000.0,
+    "high": 34400000000.0,
+    "grade": "B",
+    "as_of": "2026-01-28T22:30:00Z",
+    "evidence": [
+     604,
+     605
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 34250000000.0,
+    "high": 34550000000.0,
+    "grade": "B",
+    "as_of": "2026-01-28T22:30:00Z",
+    "evidence": [
+     602,
+     603
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 80650000000.0,
+    "high": 81750000000.0,
+    "grade": "B",
+    "as_of": "2026-01-28T22:30:00Z",
+    "evidence": [
+     600,
+     601
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect Q3 revenue growth to be between 37% and 38% in constant currency against a prior year comparable that included significantly accelerating growth rates in both Q3 and Q4.",
+    "grade": "B",
+    "evidence": [
+     606
+    ]
+   }
+  },
+  "implied_growth_pre": 0.1526369585646591,
+  "implied_growth_change": -0.0038740405638131303,
+  "implied_growth_fundamentals_effect": 0.007709499698458799,
+  "narrative_items": 0,
+  "reaction_day": "2026-04-30",
+  "d0_return": -0.039296972651300055,
+  "car_d0": -0.04835901392045742,
+  "scar_d0": -3.65344363981701,
+  "gap": -0.0321584935477458,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "GOOGL",
+   "META",
+   "QCOM",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 330,
+  "accession_no": "0001193125-26-323632",
+  "quarter": "FY2026Q4",
+  "public_at": "2026-07-29T20:04:53Z",
+  "consensus_eps": 4.21,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2026-07-24T15:31:00Z",
+  "consensus_eps_evidence": 1236,
+  "consensus_revenue": 87420000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1235,
+  "eps_gaap": 4.81,
+  "revenue_gaap": 90007000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.14251781472684066,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.029592770533058754,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 37950000000.0,
+    "high": 38250000000.0,
+    "grade": "B",
+    "as_of": "2026-04-29T21:30:00Z",
+    "evidence": [
+     609,
+     610
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 37000000000.0,
+    "high": 37300000000.0,
+    "grade": "B",
+    "as_of": "2026-04-29T21:30:00Z",
+    "evidence": [
+     607,
+     608
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 11750000000.0,
+    "high": 12250000000.0,
+    "grade": "B",
+    "as_of": "2026-04-29T21:30:00Z",
+    "evidence": [
+     611,
+     612
+    ]
+   }
+  },
+  "implied_growth_pre": 0.15529782564856565,
+  "implied_growth_change": 0.020825663101706082,
+  "implied_growth_fundamentals_effect": 0.011599570753837884,
+  "narrative_items": 0,
+  "reaction_day": "2026-07-30",
+  "d0_return": 0.15506733300956488,
+  "car_d0": 0.143599057225822,
+  "scar_d0": 8.872735400325537,
+  "gap": 0.12126794775269456,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "QCOM",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "event_id": 332,
+  "accession_no": "0001193125-26-436122",
+  "quarter": "FY2027Q1",
+  "public_at": "2026-10-28T20:04:44Z",
+  "consensus_eps": 4.71,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2026-10-26T15:04:00Z",
+  "consensus_eps_evidence": 1238,
+  "consensus_revenue": 90580000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1237,
+  "eps_gaap": 4.92,
+  "revenue_gaap": 92279000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.04458598726114649,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.01875689997791996,
+  "guidance": {
+   "segment_revenue_intelligent_cloud": {
+    "low": 40950000000.0,
+    "high": 41250000000.0,
+    "grade": "B",
+    "as_of": "2026-07-29T21:30:00Z",
+    "evidence": [
+     615,
+     616
+    ]
+   },
+   "segment_revenue_pbp": {
+    "low": 36700000000.0,
+    "high": 37000000000.0,
+    "grade": "B",
+    "as_of": "2026-07-29T21:30:00Z",
+    "evidence": [
+     613,
+     614
+    ]
+   },
+   "segment_revenue_mpc": {
+    "low": 12200000000.0,
+    "high": 12700000000.0,
+    "grade": "B",
+    "as_of": "2026-07-29T21:30:00Z",
+    "evidence": [
+     618,
+     619
+    ]
+   },
+   "azure_growth_cc": {
+    "text": "In Azure, we expect revenue growth of approximately 45% in constant currency and we remain focused on delivering efficiencies that help us bridge the gaps we see as customer demand continues to exceed supply.",
+    "grade": "B",
+    "evidence": [
+     617
+    ]
+   }
+  },
+  "implied_growth_pre": 0.21784953593563838,
+  "implied_growth_change": 0.0012499634132292492,
+  "implied_growth_fundamentals_effect": 0.015165333277888271,
+  "narrative_items": 0,
+  "reaction_day": "2026-10-29",
+  "d0_return": -0.0016383779988845548,
+  "car_d0": 0.0024034186458393512,
+  "scar_d0": 0.12536922800392344,
+  "gap": 0.017344232251977898,
+  "attribution": "high",
+  "confounders_d0": [
+   "GOOGL",
+   "MSFT",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 47,
+  "accession_no": "0001652044-16-000010",
+  "quarter": "FY2015Q4",
+  "public_at": "2016-02-01T21:01:27Z",
+  "eps_gaap": null,
+  "revenue_gaap": 21329000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-02-02",
+  "d0_return": 0.013155674107661275,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": 0.03857181050848402,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 49,
+  "accession_no": "0001652044-16-000015",
+  "quarter": "FY2016Q1",
+  "public_at": "2016-04-21T20:01:58Z",
+  "consensus_eps": 7.96,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2016-04-16T02:33:06Z",
+  "consensus_eps_evidence": 1,
+  "consensus_eps_revision": -0.0025062656641604564,
+  "consensus_eps_revision_window": [
+   "2016-03-07T16:54:35Z",
+   "2016-04-16T02:33:06Z"
+  ],
+  "eps_gaap": 6.02,
+  "revenue_gaap": 20257000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.24371859296482412,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     247
+    ]
+   }
+  },
+  "implied_move": 0.04434015557548873,
+  "narrative_items": 0,
+  "reaction_day": "2016-04-22",
+  "d0_return": -0.05414102016351163,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": -0.04626924563676882,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 54,
+  "accession_no": "0001652044-16-000029",
+  "quarter": "FY2016Q2",
+  "public_at": "2016-07-28T20:01:07Z",
+  "consensus_eps": 8.0,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2016-07-27T21:44:12Z",
+  "consensus_eps_evidence": 9,
+  "consensus_eps_revision": -0.007444168734491385,
+  "consensus_eps_revision_window": [
+   "2016-06-09T20:48:31Z",
+   "2016-07-27T21:44:12Z"
+  ],
+  "eps_gaap": 7.0,
+  "revenue_gaap": 21500000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.125,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     248
+    ]
+   }
+  },
+  "implied_move": 0.02942366031651646,
+  "narrative_items": 0,
+  "reaction_day": "2016-07-29",
+  "d0_return": 0.033296812179456126,
+  "car_d0": 0.0325556954476465,
+  "scar_d0": 2.9025084528981946,
+  "gap": 0.04161449003179718,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 56,
+  "accession_no": "0001652044-16-000035",
+  "quarter": "FY2016Q3",
+  "public_at": "2016-10-27T20:01:30Z",
+  "consensus_eps": 8.63,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 11,
+  "consensus_eps_as_of": "2016-10-16T00:05:46Z",
+  "consensus_eps_evidence": 17,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-09-09T14:28:32Z",
+   "2016-10-16T00:05:46Z"
+  ],
+  "eps_gaap": 7.25,
+  "revenue_gaap": 22451000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.15990730011587495,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     249
+    ]
+   }
+  },
+  "implied_move": 0.054921409229156004,
+  "narrative_items": 0,
+  "reaction_day": "2016-10-28",
+  "d0_return": 0.0027038682294782124,
+  "car_d0": 0.005435190443837469,
+  "scar_d0": 0.5465169305469275,
+  "gap": 0.015403470681413678,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 57,
+  "accession_no": "0001652044-17-000005",
+  "quarter": "FY2016Q4",
+  "public_at": "2017-01-26T21:03:43Z",
+  "consensus_eps": 9.62,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2017-01-24T12:06:53Z",
+  "consensus_eps_evidence": 25,
+  "consensus_eps_revision": 0.0010405827263266776,
+  "consensus_eps_revision_window": [
+   "2016-12-08T23:52:50Z",
+   "2017-01-24T12:06:53Z"
+  ],
+  "eps_gaap": 7.56,
+  "revenue_gaap": 26064000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.2141372141372141,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     250
+    ]
+   }
+  },
+  "implied_move": 0.03798069328747397,
+  "narrative_items": 0,
+  "reaction_day": "2017-01-27",
+  "d0_return": -0.013944312843464313,
+  "car_d0": -0.012298978098442844,
+  "scar_d0": -1.238998155570317,
+  "gap": 0.002357155168238867,
+  "attribution": "medium",
+  "confounders_d0": [
+   "INTC",
+   "MSFT",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 58,
+  "accession_no": "0001652044-17-000011",
+  "quarter": "FY2017Q1",
+  "public_at": "2017-04-27T20:02:04Z",
+  "consensus_eps": 7.39,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2017-04-26T12:17:56Z",
+  "consensus_eps_evidence": 33,
+  "consensus_eps_revision": -0.0040431266846361336,
+  "consensus_eps_revision_window": [
+   "2017-03-11T20:54:00Z",
+   "2017-04-26T12:17:56Z"
+  ],
+  "eps_gaap": 7.73,
+  "revenue_gaap": 24750000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.04600811907983782,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     251
+    ]
+   }
+  },
+  "implied_move": 0.03577016467151452,
+  "narrative_items": 0,
+  "reaction_day": "2017-04-28",
+  "d0_return": 0.037108570299826615,
+  "car_d0": 0.03952006702970526,
+  "scar_d0": 4.734734728790309,
+  "gap": 0.042134125143504786,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "INTC",
+   "MSFT",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 61,
+  "accession_no": "0001652044-17-000024",
+  "quarter": "FY2017Q2",
+  "public_at": "2017-07-24T20:01:31Z",
+  "consensus_eps": 8.25,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2017-07-22T15:42:13Z",
+  "consensus_eps_evidence": 41,
+  "consensus_eps_revision": 0.002430133657351119,
+  "consensus_eps_revision_window": [
+   "2017-06-07T15:32:55Z",
+   "2017-07-22T15:42:13Z"
+  ],
+  "eps_gaap": 5.01,
+  "revenue_gaap": 26010000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.3927272727272727,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     252
+    ]
+   }
+  },
+  "implied_move": 0.042115543017461246,
+  "narrative_items": 0,
+  "reaction_day": "2017-07-25",
+  "d0_return": -0.029329580653461806,
+  "car_d0": -0.03252125049155241,
+  "scar_d0": -4.058485633417051,
+  "gap": -0.02765675543133239,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 62,
+  "accession_no": "0001652044-17-000039",
+  "quarter": "FY2017Q3",
+  "public_at": "2017-10-26T20:02:01Z",
+  "consensus_eps": 8.32,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2017-10-24T23:26:30Z",
+  "consensus_eps_evidence": 49,
+  "consensus_eps_revision": 0.00361881785283491,
+  "consensus_eps_revision_window": [
+   "2017-09-11T13:17:23Z",
+   "2017-10-24T23:26:30Z"
+  ],
+  "eps_gaap": 9.57,
+  "revenue_gaap": 27772000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.15024038461538458,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     253
+    ]
+   }
+  },
+  "implied_move": 0.052438901048201196,
+  "narrative_items": 0,
+  "reaction_day": "2017-10-27",
+  "d0_return": 0.04261562755391801,
+  "car_d0": 0.03245457566427455,
+  "scar_d0": 3.9072665465093097,
+  "gap": 0.03991245688640177,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "INTC",
+   "MSFT",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 64,
+  "accession_no": "0001652044-18-000004",
+  "quarter": "FY2017Q4",
+  "public_at": "2018-02-01T21:01:32Z",
+  "consensus_eps": 10.02,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2018-01-31T23:41:21Z",
+  "consensus_eps_evidence": 57,
+  "consensus_eps_revision": 0.0009990009990010762,
+  "consensus_eps_revision_window": [
+   "2017-12-15T23:39:03Z",
+   "2018-01-31T23:41:21Z"
+  ],
+  "eps_gaap": null,
+  "revenue_gaap": 32323000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     254
+    ]
+   }
+  },
+  "implied_move": 0.05686287621137509,
+  "implied_growth_pre": 0.08636683020764402,
+  "implied_growth_change": -0.005121250722107229,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2018-02-02",
+  "d0_return": -0.052801721354789444,
+  "car_d0": -0.02614301664936824,
+  "scar_d0": -3.206195235400159,
+  "gap": -0.04584500523524515,
+  "attribution": "high",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "employment_situation_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 65,
+  "accession_no": "0001652044-18-000011",
+  "quarter": "FY2018Q1",
+  "public_at": "2018-04-23T20:01:28Z",
+  "consensus_eps": 9.28,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2018-04-22T04:39:15Z",
+  "consensus_eps_evidence": 65,
+  "consensus_eps_revision": -0.0042918454935623185,
+  "consensus_eps_revision_window": [
+   "2018-03-08T23:43:47Z",
+   "2018-04-22T04:39:15Z"
+  ],
+  "eps_gaap": 13.33,
+  "revenue_gaap": 31146000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.43642241379310365,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     255
+    ]
+   }
+  },
+  "implied_move": 0.05546346253464466,
+  "implied_growth_pre": 0.08100367100892492,
+  "implied_growth_change": -0.005632634908786294,
+  "implied_growth_fundamentals_effect": 0.017447314521658486,
+  "narrative_items": 0,
+  "reaction_day": "2018-04-24",
+  "d0_return": -0.04765272182411462,
+  "car_d0": -0.029845479630132943,
+  "scar_d0": -3.4081130244236695,
+  "gap": -0.013605745709198147,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 68,
+  "accession_no": "0001652044-18-000025",
+  "quarter": "FY2018Q2",
+  "public_at": "2018-07-23T20:02:07Z",
+  "consensus_eps": 9.65,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2018-07-20T21:02:46Z",
+  "consensus_eps_evidence": 73,
+  "consensus_eps_revision": 0.005208333333333481,
+  "consensus_eps_revision_window": [
+   "2018-06-07T20:45:06Z",
+   "2018-07-20T21:02:46Z"
+  ],
+  "eps_gaap": 4.54,
+  "revenue_gaap": 32657000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.5295336787564767,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     256
+    ]
+   }
+  },
+  "implied_move": 0.05156943973842975,
+  "implied_growth_pre": 0.11174619689953602,
+  "implied_growth_change": 0.006864693772591135,
+  "implied_growth_fundamentals_effect": -0.0007708022391481606,
+  "narrative_items": 0,
+  "reaction_day": "2018-07-24",
+  "d0_return": 0.038934797908298346,
+  "car_d0": 0.031945562814082666,
+  "scar_d0": 3.5865340079632264,
+  "gap": 0.04954583051693584,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 69,
+  "accession_no": "0001652044-18-000033",
+  "quarter": "FY2018Q3",
+  "public_at": "2018-10-25T20:01:30Z",
+  "consensus_eps": 10.45,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 19,
+  "consensus_eps_as_of": "2018-10-05T21:15:24Z",
+  "consensus_eps_evidence": 81,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2018-09-07T21:13:31Z",
+   "2018-10-05T21:15:24Z"
+  ],
+  "eps_gaap": 13.06,
+  "revenue_gaap": 33740000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.2497607655502394,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     257
+    ]
+   }
+  },
+  "implied_move": 0.08121360441830956,
+  "implied_growth_pre": 0.10504396761580048,
+  "implied_growth_change": -0.0012204868389809054,
+  "implied_growth_fundamentals_effect": -0.009194713683333466,
+  "narrative_items": 0,
+  "reaction_day": "2018-10-26",
+  "d0_return": -0.01797770130954257,
+  "car_d0": 0.006683327995226456,
+  "scar_d0": 0.7098026767813262,
+  "gap": -0.05007295207907381,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "INTC",
+   "SNAP",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 70,
+  "accession_no": "0001652044-19-000002",
+  "quarter": "FY2018Q4",
+  "public_at": "2019-02-04T21:01:19Z",
+  "consensus_eps": 10.86,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2019-02-01T22:03:14Z",
+  "consensus_eps_evidence": 89,
+  "consensus_eps_revision": -0.0009199632014719183,
+  "consensus_eps_revision_window": [
+   "2018-12-20T22:32:25Z",
+   "2019-02-01T22:03:14Z"
+  ],
+  "eps_gaap": null,
+  "revenue_gaap": 39276000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     258
+    ]
+   }
+  },
+  "implied_growth_pre": 0.08894543097537888,
+  "implied_growth_change": 0.0020075696331438575,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2019-02-05",
+  "d0_return": 0.009155246838074449,
+  "car_d0": 0.0033854492187897064,
+  "scar_d0": 0.32781635269109544,
+  "gap": -0.010329246658939861,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 72,
+  "accession_no": "0001652044-19-000011",
+  "quarter": "FY2019Q1",
+  "public_at": "2019-04-29T20:01:22Z",
+  "consensus_eps": 10.47,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2019-04-26T21:06:32Z",
+  "consensus_eps_evidence": 97,
+  "consensus_eps_revision": -0.0019065776930409228,
+  "consensus_eps_revision_window": [
+   "2019-03-14T21:00:27Z",
+   "2019-04-26T21:06:32Z"
+  ],
+  "eps_gaap": 9.5,
+  "revenue_gaap": 36339000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.09264565425023885,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     259
+    ]
+   }
+  },
+  "implied_move": 0.026744843258675193,
+  "implied_growth_pre": 0.09931104036885008,
+  "implied_growth_change": -0.00886781816231541,
+  "implied_growth_fundamentals_effect": -0.01575982761324668,
+  "narrative_items": 0,
+  "reaction_day": "2019-04-30",
+  "d0_return": -0.07501922357929158,
+  "car_d0": -0.0758609104779185,
+  "scar_d0": -7.437723443219796,
+  "gap": -0.08144570262947481,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 75,
+  "accession_no": "0001652044-19-000021",
+  "quarter": "FY2019Q2",
+  "public_at": "2019-07-25T20:01:22Z",
+  "consensus_eps": 11.1,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2019-07-24T21:01:45Z",
+  "consensus_eps_evidence": 105,
+  "consensus_eps_revision": -0.0009000900090009312,
+  "consensus_eps_revision_window": [
+   "2019-06-07T21:03:02Z",
+   "2019-07-24T21:01:45Z"
+  ],
+  "eps_gaap": 14.21,
+  "revenue_gaap": 38944000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.2801801801801802,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     260
+    ]
+   }
+  },
+  "implied_move": 0.04221074626533211,
+  "implied_growth_pre": 0.0533202381361203,
+  "implied_growth_change": 0.012176359418445637,
+  "implied_growth_fundamentals_effect": -0.008577436196492982,
+  "narrative_items": 0,
+  "reaction_day": "2019-07-26",
+  "d0_return": 0.09620227506319612,
+  "car_d0": 0.0880864140120001,
+  "scar_d0": 7.621083497739147,
+  "gap": 0.08104302285587739,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "INTC",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 77,
+  "accession_no": "0001652044-19-000030",
+  "quarter": "FY2019Q3",
+  "public_at": "2019-10-28T20:03:38Z",
+  "consensus_eps": 12.36,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 27,
+  "consensus_eps_as_of": "2019-09-30T21:16:24Z",
+  "consensus_eps_evidence": 113,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2019-09-12T21:19:30Z",
+   "2019-09-30T21:16:24Z"
+  ],
+  "eps_gaap": 10.12,
+  "revenue_gaap": 40499000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.18122977346278324,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     261
+    ]
+   }
+  },
+  "implied_move": 0.03838657408769932,
+  "implied_growth_pre": 0.052213504956817425,
+  "implied_growth_change": -0.0010671430229098888,
+  "implied_growth_fundamentals_effect": -0.003750892189510413,
+  "narrative_items": 0,
+  "reaction_day": "2019-10-29",
+  "d0_return": -0.021970808026413602,
+  "car_d0": -0.02159977739632933,
+  "scar_d0": -1.7795505854925797,
+  "gap": -0.010069951212548056,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 82,
+  "accession_no": "0001652044-20-000004",
+  "quarter": "FY2019Q4",
+  "public_at": "2020-02-03T21:02:04Z",
+  "consensus_eps": 12.57,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2020-02-01T16:57:51Z",
+  "consensus_eps_evidence": 121,
+  "consensus_eps_revision": 0.0007961783439489611,
+  "consensus_eps_revision_window": [
+   "2019-11-06T22:22:29Z",
+   "2020-02-01T16:57:51Z"
+  ],
+  "eps_gaap": 15.35,
+  "revenue_gaap": 46075000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.2211614956245027,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     262
+    ]
+   }
+  },
+  "implied_move": 0.059306878008470953,
+  "implied_growth_pre": 0.05552202005018436,
+  "implied_growth_change": -0.001998837735618153,
+  "implied_growth_fundamentals_effect": -0.010511673169096847,
+  "narrative_items": 0,
+  "reaction_day": "2020-02-04",
+  "d0_return": -0.025084272753386094,
+  "car_d0": -0.04423695700965709,
+  "scar_d0": -3.972612135396635,
+  "gap": -0.018959864319657793,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 83,
+  "accession_no": "0001652044-20-000018",
+  "quarter": "FY2020Q1",
+  "public_at": "2020-04-28T20:01:47Z",
+  "consensus_eps": 10.71,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2020-04-22T15:27:18Z",
+  "consensus_eps_evidence": 129,
+  "consensus_eps_revision": -0.11046511627906963,
+  "consensus_eps_revision_window": [
+   "2020-03-14T04:16:43Z",
+   "2020-04-22T15:27:18Z"
+  ],
+  "eps_gaap": 9.87,
+  "revenue_gaap": 41159000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.07843137254901977,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     263
+    ]
+   }
+  },
+  "implied_growth_pre": -0.008096821866582837,
+  "implied_growth_change": 0.007630499636081978,
+  "implied_growth_fundamentals_effect": 0.006860499336505066,
+  "narrative_items": 0,
+  "reaction_day": "2020-04-29",
+  "d0_return": 0.0889103383527059,
+  "car_d0": 0.06320356668924139,
+  "scar_d0": 5.12319005449566,
+  "gap": 0.09119818487523124,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "fomc_statement",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 85,
+  "accession_no": "0001652044-20-000031",
+  "quarter": "FY2020Q2",
+  "public_at": "2020-07-30T22:40:20Z",
+  "consensus_eps": 7.96,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 9,
+  "consensus_eps_as_of": "2020-07-21T14:42:12Z",
+  "consensus_eps_evidence": 137,
+  "eps_gaap": 10.13,
+  "revenue_gaap": 38297000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.2726130653266332,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     264
+    ]
+   }
+  },
+  "implied_move": 0.01663931147918739,
+  "implied_growth_pre": 0.02025749538829824,
+  "implied_growth_change": -0.005129302310467043,
+  "implied_growth_fundamentals_effect": -0.00888598174205324,
+  "narrative_items": 0,
+  "reaction_day": "2020-07-31",
+  "d0_return": -0.03277499731696387,
+  "car_d0": -0.04127025693876729,
+  "scar_d0": -3.502278258427159,
+  "gap": -0.026859621764313002,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "META",
+   "PINS",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 91,
+  "accession_no": "0001652044-20-000046",
+  "quarter": "FY2020Q3",
+  "public_at": "2020-10-29T20:01:25Z",
+  "consensus_eps": 11.05,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 84,
+  "consensus_eps_as_of": "2020-08-06T11:24:12Z",
+  "consensus_eps_evidence": 141,
+  "eps_gaap": 16.4,
+  "revenue_gaap": 46173000000.0,
+  "eps_street_actual": 16.4,
+  "eps_surprise_street": 0.48416289592760164,
+  "eps_surprise_gaap": 0.48416289592760164,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     265
+    ]
+   }
+  },
+  "implied_move": 0.06065257198858797,
+  "implied_growth_pre": 0.02158475716254038,
+  "implied_growth_change": 0.006774282860013026,
+  "implied_growth_fundamentals_effect": -0.010384503354387897,
+  "narrative_items": 0,
+  "reaction_day": "2020-10-30",
+  "d0_return": 0.038043964576103706,
+  "car_d0": 0.047913900619049876,
+  "scar_d0": 4.12824414012602,
+  "gap": 0.07101381933397355,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "META",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 93,
+  "accession_no": "0001652044-21-000006",
+  "quarter": "FY2020Q4",
+  "public_at": "2021-02-02T21:01:27Z",
+  "consensus_eps": 15.46,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 52,
+  "consensus_eps_as_of": "2020-12-12T05:42:54Z",
+  "consensus_eps_evidence": 147,
+  "eps_gaap": 22.3,
+  "revenue_gaap": 56898000000.0,
+  "eps_street_actual": 22.3,
+  "eps_surprise_street": 0.4424320827943078,
+  "eps_surprise_gaap": 0.4424320827943078,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     266
+    ]
+   }
+  },
+  "implied_move": 0.049885687802644865,
+  "implied_growth_pre": 0.047503475675164775,
+  "implied_growth_change": 0.00946746325025205,
+  "implied_growth_fundamentals_effect": -0.027679486639030637,
+  "narrative_items": 0,
+  "reaction_day": "2021-02-03",
+  "d0_return": 0.07282503302617571,
+  "car_d0": 0.07183511763604075,
+  "scar_d0": 5.6162846504034,
+  "gap": 0.07633187022969046,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 96,
+  "accession_no": "0001652044-21-000018",
+  "quarter": "FY2021Q1",
+  "public_at": "2021-04-27T20:01:33Z",
+  "consensus_eps": 15.76,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2021-04-27T06:17:26Z",
+  "consensus_eps_evidence": 152,
+  "consensus_eps_revision": 0.16913946587537088,
+  "consensus_eps_revision_window": [
+   "2020-12-12T05:42:54Z",
+   "2021-04-27T06:17:26Z"
+  ],
+  "eps_gaap": 26.29,
+  "revenue_gaap": 55314000000.0,
+  "eps_street_actual": 26.29,
+  "eps_surprise_street": 0.6681472081218274,
+  "eps_surprise_gaap": 0.6681472081218274,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     267
+    ]
+   }
+  },
+  "implied_move": 0.028349397441055874,
+  "implied_growth_pre": 0.058573785270800705,
+  "implied_growth_change": 0.0052573370951323195,
+  "implied_growth_fundamentals_effect": -0.020518689741455542,
+  "narrative_items": 0,
+  "reaction_day": "2021-04-28",
+  "d0_return": 0.029707808631674437,
+  "car_d0": 0.029537699809913047,
+  "scar_d0": 2.2247881622535783,
+  "gap": 0.0443128812940472,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "MSFT",
+   "PINS",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 99,
+  "accession_no": "0001652044-21-000041",
+  "quarter": "FY2021Q2",
+  "public_at": "2021-07-27T20:36:42Z",
+  "consensus_eps": 19.24,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2021-07-27T07:33:37Z",
+  "consensus_eps_evidence": 160,
+  "consensus_eps_revision": 0.008914525432616616,
+  "consensus_eps_revision_window": [
+   "2021-06-12T05:57:17Z",
+   "2021-07-27T07:33:37Z"
+  ],
+  "eps_gaap": 27.26,
+  "revenue_gaap": 61880000000.0,
+  "eps_street_actual": 27.26,
+  "eps_surprise_street": 0.41683991683991706,
+  "eps_surprise_gaap": 0.41683991683991706,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     268
+    ]
+   }
+  },
+  "implied_move": 0.037027313564108454,
+  "implied_growth_pre": 0.04473055770539747,
+  "implied_growth_change": 0.002236509750296767,
+  "implied_growth_fundamentals_effect": -0.017313588669596314,
+  "narrative_items": 0,
+  "reaction_day": "2021-07-28",
+  "d0_return": 0.03179681909183474,
+  "car_d0": 0.03185901052087322,
+  "scar_d0": 2.6647600471464785,
+  "gap": 0.03344960400027852,
+  "attribution": "high",
+  "confounders_d0": [
+   "AAPL",
+   "AMD",
+   "MSFT",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 100,
+  "accession_no": "0001652044-21-000054",
+  "quarter": "FY2021Q3",
+  "public_at": "2021-10-26T20:01:30Z",
+  "consensus_eps": 23.69,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 16,
+  "consensus_eps_as_of": "2021-10-10T01:19:32Z",
+  "consensus_eps_evidence": 168,
+  "consensus_eps_revision": -0.002946127946127919,
+  "consensus_eps_revision_window": [
+   "2021-09-11T04:19:24Z",
+   "2021-10-10T01:19:32Z"
+  ],
+  "eps_gaap": 27.99,
+  "revenue_gaap": 65118000000.0,
+  "eps_street_actual": 27.99,
+  "eps_surprise_street": 0.18151118615449535,
+  "eps_surprise_gaap": 0.18151118615449535,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     269
+    ]
+   }
+  },
+  "implied_growth_pre": 0.04604884430493017,
+  "implied_growth_change": 0.0054829246115750685,
+  "implied_growth_fundamentals_effect": -0.01433165278430093,
+  "narrative_items": 0,
+  "reaction_day": "2021-10-27",
+  "d0_return": 0.04959493837818929,
+  "car_d0": 0.05443377628081989,
+  "scar_d0": 4.8433067738018005,
+  "gap": 0.0006926826468538483,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 102,
+  "accession_no": "0001652044-22-000015",
+  "quarter": "FY2021Q4",
+  "public_at": "2022-02-01T21:01:29Z",
+  "consensus_eps": 27.68,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-02-01T09:46:41Z",
+  "consensus_eps_evidence": 176,
+  "consensus_eps_revision": 0.08082780163998438,
+  "consensus_eps_revision_window": [
+   "2021-10-10T01:19:32Z",
+   "2022-02-01T09:46:41Z"
+  ],
+  "eps_gaap": 30.69,
+  "revenue_gaap": 75325000000.0,
+  "eps_street_actual": 27.99,
+  "eps_surprise_street": 0.01119942196531798,
+  "eps_surprise_gaap": 0.10874277456647397,
+  "gaap_vs_street_gap": 2.700000000000003,
+  "guidance": {},
+  "implied_move": 0.06276920141116046,
+  "implied_growth_pre": 0.03515881986796476,
+  "implied_growth_change": 0.009404058182935326,
+  "implied_growth_fundamentals_effect": -0.003169950856768411,
+  "narrative_items": 0,
+  "reaction_day": "2022-02-02",
+  "d0_return": 0.07523759131422758,
+  "car_d0": 0.062234866140975134,
+  "scar_d0": 5.758576103039386,
+  "gap": 0.09884922760997927,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 103,
+  "accession_no": "0001652044-22-000025",
+  "quarter": "FY2022Q1",
+  "public_at": "2022-04-26T20:01:32Z",
+  "consensus_eps": 25.74,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-04-26T09:22:59Z",
+  "consensus_eps_evidence": 184,
+  "consensus_eps_revision": -0.013793103448276,
+  "consensus_eps_revision_window": [
+   "2022-03-12T06:22:08Z",
+   "2022-04-26T09:22:59Z"
+  ],
+  "consensus_revenue_ex_tac": 55940000000.0,
+  "consensus_revenue_ex_tac_evidence": 1239,
+  "eps_gaap": 24.62,
+  "revenue_gaap": 68011000000.0,
+  "eps_street_actual": 24.62,
+  "eps_surprise_street": -0.04351204351204341,
+  "eps_surprise_gaap": -0.04351204351204341,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     270
+    ]
+   }
+  },
+  "implied_move": 0.08970293686842848,
+  "implied_growth_pre": 0.04334142843614208,
+  "implied_growth_change": -0.005748147220078437,
+  "implied_growth_fundamentals_effect": -0.0045690379076666066,
+  "narrative_items": 0,
+  "reaction_day": "2022-04-27",
+  "d0_return": -0.036708800771723005,
+  "car_d0": -0.04058120833751615,
+  "scar_d0": -3.9746366859803004,
+  "gap": -0.03523391311801227,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 107,
+  "accession_no": "0001652044-22-000068",
+  "quarter": "FY2022Q2",
+  "public_at": "2022-07-26T20:02:00Z",
+  "consensus_eps": 1.27,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-07-26T03:01:18Z",
+  "consensus_eps_evidence": 192,
+  "consensus_eps_revision": -0.021948402002310297,
+  "consensus_eps_revision_window": [
+   "2022-05-27T03:38:24Z",
+   "2022-07-26T03:01:18Z"
+  ],
+  "consensus_revenue_ex_tac": 57900000000.0,
+  "consensus_revenue_ex_tac_evidence": 1241,
+  "eps_gaap": 1.21,
+  "revenue_gaap": 69685000000.0,
+  "eps_street_actual": 1.21,
+  "eps_surprise_street": -0.047244094488189003,
+  "eps_surprise_gaap": -0.047244094488189003,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     271
+    ]
+   }
+  },
+  "implied_move": 0.04667849345980528,
+  "implied_growth_pre": 0.023462607107809785,
+  "implied_growth_change": 0.009251621387857512,
+  "implied_growth_fundamentals_effect": 0.005906572564611912,
+  "narrative_items": 0,
+  "reaction_day": "2022-07-27",
+  "d0_return": 0.07655685747975283,
+  "car_d0": 0.04289005084405609,
+  "scar_d0": 3.7154265242480946,
+  "gap": 0.040373315832171075,
+  "attribution": "high",
+  "confounders_d0": [
+   "MSFT",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 108,
+  "accession_no": "0001652044-22-000085",
+  "quarter": "FY2022Q3",
+  "public_at": "2022-10-25T20:01:23Z",
+  "consensus_eps": 1.27,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-10-25T02:29:53Z",
+  "consensus_eps_evidence": 200,
+  "consensus_eps_revision": -0.0078125,
+  "consensus_eps_revision_window": [
+   "2022-09-09T01:34:13Z",
+   "2022-10-25T02:29:53Z"
+  ],
+  "consensus_revenue_ex_tac": 58350000000.0,
+  "consensus_revenue_ex_tac_evidence": 1243,
+  "eps_gaap": 1.06,
+  "revenue_gaap": 69092000000.0,
+  "eps_street_actual": 1.06,
+  "eps_surprise_street": -0.16535433070866135,
+  "eps_surprise_gaap": -0.16535433070866135,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     272
+    ]
+   }
+  },
+  "implied_move": 0.06802561540281153,
+  "implied_growth_pre": 0.06321442317121939,
+  "implied_growth_change": -0.015925215218672406,
+  "implied_growth_fundamentals_effect": 0.004412835469231213,
+  "narrative_items": 0,
+  "reaction_day": "2022-10-26",
+  "d0_return": -0.0914050798709517,
+  "car_d0": -0.08127792316010185,
+  "scar_d0": -6.721745583875784,
+  "gap": -0.07704826563085665,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 112,
+  "accession_no": "0001652044-23-000013",
+  "quarter": "FY2022Q4",
+  "public_at": "2023-02-02T21:01:29Z",
+  "consensus_eps": 1.18,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2023-02-02T05:53:26Z",
+  "consensus_eps_evidence": 208,
+  "consensus_eps_revision": -0.008403361344537785,
+  "consensus_eps_revision_window": [
+   "2022-12-17T03:13:35Z",
+   "2023-02-02T05:53:26Z"
+  ],
+  "consensus_revenue_ex_tac": 63180000000.0,
+  "consensus_revenue_ex_tac_evidence": 1245,
+  "eps_gaap": 1.05,
+  "revenue_gaap": 76048000000.0,
+  "eps_street_actual": 1.05,
+  "eps_surprise_street": -0.11016949152542366,
+  "eps_surprise_gaap": -0.11016949152542366,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     273
+    ]
+   }
+  },
+  "implied_growth_pre": 0.0515212958102339,
+  "implied_growth_change": -0.0033221266576790587,
+  "implied_growth_fundamentals_effect": 0.0038454467062885023,
+  "narrative_items": 0,
+  "reaction_day": "2023-02-03",
+  "d0_return": -0.02747353947616915,
+  "car_d0": -0.012799200154501499,
+  "scar_d0": -0.9410079292130423,
+  "gap": -0.04464449279714755,
+  "attribution": "high",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "QCOM",
+   "employment_situation_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 113,
+  "accession_no": "0001652044-23-000034",
+  "quarter": "FY2023Q1",
+  "public_at": "2023-04-20T20:24:04Z",
+  "consensus_eps": 1.06,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2023-04-20T12:55:12Z",
+  "consensus_eps_evidence": 1248,
+  "consensus_eps_revision": -0.01851851851851849,
+  "consensus_eps_revision_window": [
+   "2023-02-18T03:12:59Z",
+   "2023-04-20T12:55:12Z"
+  ],
+  "consensus_revenue_ex_tac": 56950000000.0,
+  "consensus_revenue_ex_tac_evidence": 1247,
+  "eps_gaap": 1.17,
+  "revenue_gaap": 69787000000.0,
+  "eps_street_actual": 1.17,
+  "eps_surprise_street": 0.10377358490566024,
+  "eps_surprise_gaap": 0.10377358490566024,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     274
+    ]
+   }
+  },
+  "implied_move": 0.043657648396939086,
+  "implied_growth_pre": 0.05381956428308465,
+  "implied_growth_change": -0.0030892589528128678,
+  "implied_growth_fundamentals_effect": -0.0050932043702041074,
+  "narrative_items": 0,
+  "reaction_day": "2023-04-21",
+  "d0_return": 0.0011397354500766177,
+  "car_d0": 0.0005864206582271393,
+  "scar_d0": 0.03960292948228309,
+  "gap": 0.0017095669447300121,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 115,
+  "accession_no": "0001652044-23-000041",
+  "quarter": "FY2023Q1",
+  "public_at": "2023-04-25T20:01:48Z",
+  "consensus_eps": 1.06,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2023-04-20T12:55:12Z",
+  "consensus_eps_evidence": 1248,
+  "consensus_eps_revision": -0.01851851851851849,
+  "consensus_eps_revision_window": [
+   "2023-02-18T03:12:59Z",
+   "2023-04-20T12:55:12Z"
+  ],
+  "consensus_revenue_ex_tac": 56950000000.0,
+  "consensus_revenue_ex_tac_evidence": 1247,
+  "eps_gaap": 1.17,
+  "revenue_gaap": 69787000000.0,
+  "eps_street_actual": 1.17,
+  "eps_surprise_street": 0.10377358490566024,
+  "eps_surprise_gaap": 0.10377358490566024,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     274
+    ]
+   }
+  },
+  "implied_move": 0.03429540404339327,
+  "implied_growth_pre": 0.05381956428308465,
+  "implied_growth_change": -0.0030892589528128678,
+  "implied_growth_fundamentals_effect": -0.0050932043702041074,
+  "narrative_items": 0,
+  "reaction_day": "2023-04-26",
+  "d0_return": -0.0013480923611502993,
+  "car_d0": 0.0047604175179565165,
+  "scar_d0": 0.3182622327083781,
+  "gap": 0.010303319311948389,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 117,
+  "accession_no": "0001652044-23-000067",
+  "quarter": "FY2023Q2",
+  "public_at": "2023-07-25T20:01:21Z",
+  "consensus_eps": 1.32,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2023-07-19T14:48:00Z",
+  "consensus_eps_evidence": 1250,
+  "consensus_eps_revision": -0.007518796992481258,
+  "consensus_eps_revision_window": [
+   "2023-06-24T02:36:14Z",
+   "2023-07-19T14:48:00Z"
+  ],
+  "consensus_revenue_ex_tac": 60230000000.0,
+  "consensus_revenue_ex_tac_evidence": 1249,
+  "eps_gaap": 1.44,
+  "revenue_gaap": 74604000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.09090909090909083,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     276
+    ]
+   }
+  },
+  "implied_move": 0.05572117905468941,
+  "implied_growth_pre": 0.07787464332868355,
+  "implied_growth_change": 0.008501951888633563,
+  "implied_growth_fundamentals_effect": -0.01911506526264395,
+  "narrative_items": 0,
+  "reaction_day": "2023-07-26",
+  "d0_return": 0.057769456189164625,
+  "car_d0": 0.058214104714171676,
+  "scar_d0": 3.8050650926144836,
+  "gap": 0.06431559036599932,
+  "attribution": "high",
+  "confounders_d0": [
+   "MSFT",
+   "SNAP",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 118,
+  "accession_no": "0001652044-23-000088",
+  "quarter": "FY2023Q3",
+  "public_at": "2023-10-24T20:01:23Z",
+  "consensus_eps": 1.45,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2023-10-20T16:23:00Z",
+  "consensus_eps_evidence": 1158,
+  "consensus_eps_revision": 0.07407407407407396,
+  "consensus_eps_revision_window": [
+   "2023-06-24T02:36:14Z",
+   "2023-10-20T16:23:00Z"
+  ],
+  "consensus_revenue_ex_tac": 63130000000.0,
+  "consensus_revenue_ex_tac_evidence": 1157,
+  "eps_gaap": 1.55,
+  "revenue_gaap": 76693000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.06896551724137945,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     1156
+    ]
+   }
+  },
+  "implied_move": 0.06984839165961741,
+  "implied_growth_pre": 0.09801209583792325,
+  "implied_growth_change": -0.014027509748591127,
+  "implied_growth_fundamentals_effect": -0.012317345324242446,
+  "narrative_items": 2,
+  "reaction_day": "2023-10-25",
+  "d0_return": -0.09509399308699129,
+  "car_d0": -0.0753096813809682,
+  "scar_d0": -4.8236195922795835,
+  "gap": -0.07672353637200269,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "SNAP"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 119,
+  "accession_no": "0001652044-24-000014",
+  "quarter": "FY2023Q4",
+  "public_at": "2024-01-30T21:01:26Z",
+  "consensus_eps": 1.6,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2024-01-25T15:51:00Z",
+  "consensus_eps_evidence": 1139,
+  "consensus_revenue_ex_tac": 70710000000.0,
+  "consensus_revenue_ex_tac_evidence": 1138,
+  "eps_gaap": 1.64,
+  "revenue_gaap": 86310000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.02499999999999991,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     1137
+    ]
+   }
+  },
+  "implied_move": 0.052616558855444626,
+  "implied_growth_pre": 0.07989242176124411,
+  "implied_growth_change": -0.010663724365076455,
+  "implied_growth_fundamentals_effect": 0.01354604001393489,
+  "narrative_items": 2,
+  "reaction_day": "2024-01-31",
+  "d0_return": -0.07500330190670379,
+  "car_d0": -0.05300223176868304,
+  "scar_d0": -3.465892074084251,
+  "gap": -0.05176291594579652,
+  "attribution": "high",
+  "confounders_d0": [
+   "AMD",
+   "MSFT",
+   "fomc_statement"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 121,
+  "accession_no": "0001652044-24-000047",
+  "quarter": "FY2024Q1",
+  "public_at": "2024-04-25T20:01:35Z",
+  "consensus_eps": 1.49,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 3,
+  "consensus_eps_as_of": "2024-04-22T16:23:00Z",
+  "consensus_eps_evidence": 1252,
+  "consensus_revenue_ex_tac": 66020000000.0,
+  "consensus_revenue_ex_tac_evidence": 1251,
+  "eps_gaap": 1.89,
+  "revenue_gaap": 80539000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.268456375838926,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     279
+    ]
+   }
+  },
+  "implied_move": 0.06812959619482695,
+  "implied_growth_pre": 0.11050853305376107,
+  "implied_growth_change": 0.014123088886528912,
+  "implied_growth_fundamentals_effect": -0.00026382201393104765,
+  "narrative_items": 0,
+  "reaction_day": "2024-04-26",
+  "d0_return": 0.10224357018103958,
+  "car_d0": 0.08982576090681413,
+  "scar_d0": 6.193584955415484,
+  "gap": 0.11775637895633007,
+  "attribution": "medium",
+  "confounders_d0": [
+   "INTC",
+   "MSFT",
+   "SNAP",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 126,
+  "accession_no": "0001652044-24-000076",
+  "quarter": "FY2024Q2",
+  "public_at": "2024-07-23T20:01:54Z",
+  "consensus_eps": 1.85,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2024-07-17T14:01:00Z",
+  "consensus_eps_evidence": 1254,
+  "consensus_revenue_ex_tac": 70550000000.0,
+  "consensus_revenue_ex_tac_evidence": 1253,
+  "eps_gaap": 1.89,
+  "revenue_gaap": 84742000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.021621621621621623,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     280
+    ]
+   }
+  },
+  "implied_move": 0.07085781225381861,
+  "implied_growth_pre": 0.12147160044031013,
+  "implied_growth_change": -0.007060529490344969,
+  "implied_growth_fundamentals_effect": 0.01668494163936951,
+  "narrative_items": 0,
+  "reaction_day": "2024-07-24",
+  "d0_return": -0.050387748179861136,
+  "car_d0": -0.020147360594135962,
+  "scar_d0": -1.375734794757351,
+  "gap": -0.0450519142146969,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 130,
+  "accession_no": "0001652044-24-000115",
+  "quarter": "FY2024Q3",
+  "public_at": "2024-10-29T20:01:46Z",
+  "consensus_eps": 1.83,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2024-10-24T17:26:00Z",
+  "consensus_eps_evidence": 1256,
+  "consensus_revenue_ex_tac": 72830000000.0,
+  "consensus_revenue_ex_tac_evidence": 1255,
+  "eps_gaap": 2.12,
+  "revenue_gaap": 88268000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.1584699453551912,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     281
+    ]
+   }
+  },
+  "implied_move": 0.0732630420746211,
+  "implied_growth_pre": 0.12954233822546646,
+  "implied_growth_change": 0.003675879409742455,
+  "implied_growth_fundamentals_effect": 0.010478771571575063,
+  "narrative_items": 0,
+  "reaction_day": "2024-10-30",
+  "d0_return": 0.028170758158974074,
+  "car_d0": 0.03269554678005491,
+  "scar_d0": 2.245367796297097,
+  "gap": 0.06482791416085476,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "SNAP",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 131,
+  "accession_no": "0001652044-25-000010",
+  "quarter": "FY2024Q4",
+  "public_at": "2025-02-04T21:01:27Z",
+  "consensus_eps": 2.12,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2025-01-31T16:08:00Z",
+  "consensus_eps_evidence": 1258,
+  "consensus_revenue_ex_tac": 81380000000.0,
+  "consensus_revenue_ex_tac_evidence": 1257,
+  "eps_gaap": 2.15,
+  "revenue_gaap": 96469000000.0,
+  "eps_street_actual": 2.15,
+  "eps_surprise_street": 0.014150943396226356,
+  "eps_surprise_gaap": 0.014150943396226356,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     282
+    ]
+   }
+  },
+  "implied_move": 0.044833297322837314,
+  "implied_growth_pre": 0.1725142055191492,
+  "implied_growth_change": -0.010646389620939889,
+  "implied_growth_fundamentals_effect": -0.03506390010197524,
+  "narrative_items": 0,
+  "reaction_day": "2025-02-05",
+  "d0_return": -0.07292374598161078,
+  "car_d0": -0.07813294776395928,
+  "scar_d0": -5.281967586421382,
+  "gap": -0.07418353133234556,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "SNAP"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 134,
+  "accession_no": "0001652044-25-000040",
+  "quarter": "FY2025Q1",
+  "public_at": "2025-04-24T20:01:26Z",
+  "consensus_eps": 2.02,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 41,
+  "consensus_eps_as_of": "2025-03-14T01:08:50Z",
+  "consensus_eps_evidence": 231,
+  "eps_gaap": 2.81,
+  "revenue_gaap": 90234000000.0,
+  "eps_street_actual": 2.81,
+  "eps_surprise_street": 0.391089108910891,
+  "eps_surprise_gaap": 0.391089108910891,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "no revenue/earnings guidance; capex guidance only",
+    "grade": "A",
+    "evidence": [
+     284
+    ]
+   }
+  },
+  "implied_move": 0.07011901628463516,
+  "implied_growth_pre": 0.09971513056528047,
+  "implied_growth_change": 0.00036209254814312253,
+  "implied_growth_fundamentals_effect": -0.005446996211900368,
+  "narrative_items": 0,
+  "reaction_day": "2025-04-25",
+  "d0_return": 0.016825765664927106,
+  "car_d0": 0.009275209454148444,
+  "scar_d0": 0.619263108711862,
+  "gap": 0.036351133785131884,
+  "attribution": "medium",
+  "confounders_d0": [
+   "INTC"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 139,
+  "accession_no": "0001652044-25-000056",
+  "quarter": "FY2025Q2",
+  "public_at": "2025-07-23T20:01:33Z",
+  "consensus_eps": 2.13,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2025-07-18T15:22:00Z",
+  "consensus_eps_evidence": 1261,
+  "consensus_eps_revision": -0.01388888888888895,
+  "consensus_eps_revision_window": [
+   "2025-05-28T03:13:04Z",
+   "2025-07-18T15:22:00Z"
+  ],
+  "consensus_revenue_ex_tac": 79220000000.0,
+  "consensus_revenue_ex_tac_evidence": 1260,
+  "eps_gaap": 2.31,
+  "revenue_gaap": 96428000000.0,
+  "eps_street_actual": 2.31,
+  "eps_surprise_street": 0.08450704225352124,
+  "eps_surprise_gaap": 0.08450704225352124,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     285
+    ]
+   }
+  },
+  "implied_move": 0.05882576674026927,
+  "implied_growth_pre": 0.11657430482909337,
+  "implied_growth_change": 0.0025185878003592954,
+  "implied_growth_fundamentals_effect": 0.014279254682499465,
+  "narrative_items": 0,
+  "reaction_day": "2025-07-24",
+  "d0_return": 0.010198194212151845,
+  "car_d0": 0.010515473298847229,
+  "scar_d0": 0.6877238006360253,
+  "gap": 0.035746218811344876,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 142,
+  "accession_no": "0001652044-25-000087",
+  "quarter": "FY2025Q3",
+  "public_at": "2025-10-29T20:01:48Z",
+  "consensus_eps": 2.27,
+  "consensus_eps_provider": "Barchart",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 7,
+  "consensus_eps_as_of": "2025-10-22T10:51:15Z",
+  "consensus_eps_evidence": 1262,
+  "consensus_eps_revision": -0.025751072961373467,
+  "consensus_eps_revision_window": [
+   "2025-07-31T04:04:02Z",
+   "2025-10-22T10:51:15Z"
+  ],
+  "eps_gaap": 2.87,
+  "revenue_gaap": 102346000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.26431718061674014,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     286
+    ]
+   }
+  },
+  "implied_move": 0.05881907930375756,
+  "implied_growth_pre": 0.17044131368243087,
+  "implied_growth_change": 0.005658333789250181,
+  "implied_growth_fundamentals_effect": -0.012887842401160032,
+  "narrative_items": 0,
+  "reaction_day": "2025-10-30",
+  "d0_return": 0.025166636842274936,
+  "car_d0": 0.0351381837372432,
+  "scar_d0": 2.1769534513941933,
+  "gap": 0.06198779385825004,
+  "attribution": "medium",
+  "confounders_d0": [
+   "META",
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 144,
+  "accession_no": "0001652044-26-000012",
+  "quarter": "FY2025Q4",
+  "public_at": "2026-02-04T21:01:37Z",
+  "eps_gaap": 2.82,
+  "revenue_gaap": 113828000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "no revenue/earnings guidance; capex guidance only",
+    "grade": "A",
+    "evidence": [
+     289
+    ]
+   }
+  },
+  "implied_move": 0.07482727913649903,
+  "implied_growth_pre": 0.19082784550375942,
+  "implied_growth_change": -0.00046542506892710556,
+  "implied_growth_fundamentals_effect": 0.000820557934669397,
+  "narrative_items": 0,
+  "reaction_day": "2026-02-05",
+  "d0_return": -0.0053747552816328925,
+  "car_d0": 0.005831128702679608,
+  "scar_d0": 0.36338807669757894,
+  "gap": -0.0625150335996657,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM",
+   "SNAP"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 149,
+  "accession_no": "0001652044-26-000043",
+  "quarter": "FY2026Q1",
+  "public_at": "2026-04-29T20:01:35Z",
+  "eps_gaap": 5.11,
+  "revenue_gaap": 109896000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "no revenue/earnings guidance; capex guidance only",
+    "grade": "A",
+    "evidence": [
+     292
+    ]
+   }
+  },
+  "implied_move": 0.0398847597273841,
+  "implied_growth_pre": 0.20038893122146184,
+  "implied_growth_change": 0.014420960243175518,
+  "implied_growth_fundamentals_effect": 0.017606065479034427,
+  "narrative_items": 0,
+  "reaction_day": "2026-04-30",
+  "d0_return": 0.09961703465838956,
+  "car_d0": 0.0860572316991261,
+  "scar_d0": 5.633030063027324,
+  "gap": 0.06895469141700317,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "META",
+   "MSFT",
+   "QCOM",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 156,
+  "accession_no": "0001652044-26-000066",
+  "quarter": "FY2026Q2",
+  "public_at": "2026-07-22T20:01:36Z",
+  "eps_gaap": 9.11,
+  "revenue_gaap": 119796000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     293
+    ]
+   }
+  },
+  "implied_move": 0.057952324686486575,
+  "implied_growth_pre": 0.2218266731204409,
+  "implied_growth_change": -0.0090810979569651,
+  "implied_growth_fundamentals_effect": 0.026844187612434123,
+  "narrative_items": 0,
+  "reaction_day": "2026-07-23",
+  "d0_return": -0.0713262420932762,
+  "car_d0": -0.05676311891078241,
+  "scar_d0": -3.6448513189150535,
+  "gap": -0.06127040158863761,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "GOOGL",
+  "event_id": 158,
+  "accession_no": "0001652044-26-000080",
+  "quarter": "FY2026Q3",
+  "public_at": "2026-10-28T20:01:33Z",
+  "eps_gaap": 2.12,
+  "revenue_gaap": 127577000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "quantitative_guidance": {
+    "text": "none in release",
+    "grade": "A",
+    "evidence": [
+     294
+    ]
+   }
+  },
+  "implied_move": 0.05139500863443822,
+  "implied_growth_pre": 0.2509445394077884,
+  "implied_growth_change": -0.01722588394034541,
+  "implied_growth_fundamentals_effect": 0.1420151091962245,
+  "narrative_items": 0,
+  "reaction_day": "2026-10-29",
+  "d0_return": -0.12641203321887406,
+  "car_d0": -0.1218081772618348,
+  "scar_d0": -7.351925823080298,
+  "gap": -0.11699346871819227,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 436,
+  "accession_no": "0001326801-16-000038",
+  "quarter": "FY2015Q4",
+  "public_at": "2016-01-27T21:07:50Z",
+  "consensus_eps": 0.68,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2016-01-25T18:18:38Z",
+  "consensus_eps_evidence": 621,
+  "eps_gaap": null,
+  "revenue_gaap": 5841000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-01-28",
+  "d0_return": 0.15521444294109332,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": 0.1349920636523354,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 437,
+  "accession_no": "0001326801-16-000060",
+  "quarter": "FY2016Q1",
+  "public_at": "2016-04-27T20:28:32Z",
+  "consensus_eps": 0.62,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2016-04-23T19:57:32Z",
+  "consensus_eps_evidence": 625,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-03-08T10:20:05Z",
+   "2016-04-23T19:57:32Z"
+  ],
+  "eps_gaap": 0.52,
+  "revenue_gaap": 5382000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.16129032258064513,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-04-28",
+  "d0_return": 0.07199930215107031,
+  "car_d0": null,
+  "scar_d0": null,
+  "gap": 0.09817249059900801,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 440,
+  "accession_no": "0001326801-16-000079",
+  "quarter": "FY2016Q2",
+  "public_at": "2016-07-27T20:13:39Z",
+  "consensus_eps": 0.81,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2016-07-27T08:04:29Z",
+  "consensus_eps_evidence": 633,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-06-09T01:03:34Z",
+   "2016-07-27T08:04:29Z"
+  ],
+  "eps_gaap": 0.71,
+  "revenue_gaap": 6436000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.1234567901234569,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-07-28",
+  "d0_return": 0.013458762051214768,
+  "car_d0": 0.011651936347785408,
+  "scar_d0": 0.6141633245906443,
+  "gap": 0.033890063477257204,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "META",
+  "event_id": 441,
+  "accession_no": "0001326801-16-000084",
+  "quarter": "FY2016Q3",
+  "public_at": "2016-11-02T20:11:08Z",
+  "consensus_eps": 0.96,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 17,
+  "consensus_eps_as_of": "2016-10-15T20:41:32Z",
+  "consensus_eps_evidence": 641,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-09-17T16:26:26Z",
+   "2016-10-15T20:41:32Z"
+  ],
+  "eps_gaap": 0.82,
+  "revenue_gaap": 7011000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.14583333333333337,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2016-11-03",
+  "d0_return": -0.056381208399641336,
+  "car_d0": -0.05238267988828978,
+  "scar_d0": -3.305718462956466,
+  "gap": -0.040654228539635406,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 444,
+  "accession_no": "0001326801-17-000004",
+  "quarter": "FY2016Q4",
+  "public_at": "2017-02-01T21:04:53Z",
+  "consensus_eps": 1.3,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 4,
+  "consensus_eps_as_of": "2017-01-28T07:24:45Z",
+  "consensus_eps_evidence": 649,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2016-12-13T10:42:29Z",
+   "2017-01-28T07:24:45Z"
+  ],
+  "eps_gaap": null,
+  "revenue_gaap": 8809000000.0,
+  "eps_street_actual": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-02-02",
+  "d0_return": -0.017938898643636403,
+  "car_d0": -0.019070445770185712,
+  "scar_d0": -1.233787416623892,
+  "gap": -7.501694180322982e-05,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "META",
+  "event_id": 446,
+  "accession_no": "0001326801-17-000021",
+  "quarter": "FY2017Q1",
+  "public_at": "2017-05-03T20:13:45Z",
+  "consensus_eps": 1.12,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2017-05-02T13:12:29Z",
+  "consensus_eps_evidence": 657,
+  "consensus_eps_revision": 0.009009009009008917,
+  "consensus_eps_revision_window": [
+   "2017-02-28T17:39:39Z",
+   "2017-05-02T13:12:29Z"
+  ],
+  "eps_gaap": 1.04,
+  "revenue_gaap": 8032000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.07142857142857151,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-05-04",
+  "d0_return": -0.006258214289483699,
+  "car_d0": -0.007788857662536003,
+  "scar_d0": -0.7403681149459952,
+  "gap": -0.010737844861944623,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 448,
+  "accession_no": "0001326801-17-000035",
+  "quarter": "FY2017Q2",
+  "public_at": "2017-07-26T20:07:54Z",
+  "consensus_eps": 1.12,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2017-07-26T00:19:52Z",
+  "consensus_eps_evidence": 665,
+  "consensus_eps_revision": -0.01754385964912264,
+  "consensus_eps_revision_window": [
+   "2017-06-10T19:33:06Z",
+   "2017-07-26T00:19:52Z"
+  ],
+  "eps_gaap": 1.32,
+  "revenue_gaap": 9321000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.1785714285714286,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-07-27",
+  "d0_return": 0.029164916449814893,
+  "car_d0": 0.029591337194563697,
+  "scar_d0": 3.1593655101800895,
+  "gap": 0.054887967540545146,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "META",
+  "event_id": 450,
+  "accession_no": "0001326801-17-000046",
+  "quarter": "FY2017Q3",
+  "public_at": "2017-11-01T20:11:06Z",
+  "consensus_eps": 1.27,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2017-10-31T23:24:50Z",
+  "consensus_eps_evidence": 673,
+  "consensus_eps_revision": 0.007936507936507908,
+  "consensus_eps_revision_window": [
+   "2017-09-16T11:07:25Z",
+   "2017-10-31T23:24:50Z"
+  ],
+  "eps_gaap": 1.59,
+  "revenue_gaap": 10328000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.25196850393700787,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "narrative_items": 0,
+  "reaction_day": "2017-11-02",
+  "d0_return": -0.02047522948747149,
+  "car_d0": -0.021221482434353484,
+  "scar_d0": -2.133759844520576,
+  "gap": -0.011113537384199512,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 452,
+  "accession_no": "0001326801-18-000006",
+  "quarter": "FY2017Q4",
+  "public_at": "2018-01-31T21:10:19Z",
+  "consensus_eps": 1.94,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2018-01-30T23:37:43Z",
+  "consensus_eps_evidence": 681,
+  "consensus_eps_revision": 0.01041666666666674,
+  "consensus_eps_revision_window": [
+   "2017-12-15T23:38:55Z",
+   "2018-01-30T23:37:43Z"
+  ],
+  "eps_gaap": 1.44,
+  "revenue_gaap": 12972000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.25773195876288657,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.08982731426252222,
+  "implied_growth_change": 0.0038198939289015854,
+  "narrative_items": 0,
+  "reaction_day": "2018-02-01",
+  "d0_return": 0.03317457846054017,
+  "car_d0": 0.03423329119477274,
+  "scar_d0": 3.4723340874836897,
+  "gap": 0.007116495454001059,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 453,
+  "accession_no": "0001326801-18-000026",
+  "quarter": "FY2018Q1",
+  "public_at": "2018-04-25T20:18:44Z",
+  "consensus_eps": 1.35,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2018-04-25T01:59:44Z",
+  "consensus_eps_evidence": 689,
+  "consensus_eps_revision": -0.007352941176470562,
+  "consensus_eps_revision_window": [
+   "2018-03-09T23:48:23Z",
+   "2018-04-25T01:59:44Z"
+  ],
+  "eps_gaap": 1.69,
+  "revenue_gaap": 11966000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.25185185185185177,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.0641687651019952,
+  "implied_growth_change": 0.011773304442269872,
+  "narrative_items": 0,
+  "reaction_day": "2018-04-26",
+  "d0_return": 0.09061306906806821,
+  "car_d0": 0.07777489257099247,
+  "scar_d0": 6.508777918720719,
+  "gap": 0.0847266489601397,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 457,
+  "accession_no": "0001326801-18-000053",
+  "quarter": "FY2018Q2",
+  "public_at": "2018-07-25T20:08:39Z",
+  "consensus_eps": 1.71,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2018-07-24T21:00:48Z",
+  "consensus_eps_evidence": 697,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2018-06-08T20:47:59Z",
+   "2018-07-24T21:00:48Z"
+  ],
+  "eps_gaap": 1.74,
+  "revenue_gaap": 13231000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.01754385964912286,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.09261836980923965,
+  "implied_growth_change": -0.026847293881482104,
+  "narrative_items": 0,
+  "reaction_day": "2018-07-26",
+  "d0_return": -0.1896092206582256,
+  "car_d0": -0.18697957731184237,
+  "scar_d0": -13.946317872324741,
+  "gap": -0.19590804878322554,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMD",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 459,
+  "accession_no": "0001326801-18-000063",
+  "quarter": "FY2018Q3",
+  "public_at": "2018-10-30T20:14:19Z",
+  "consensus_eps": 1.47,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 24,
+  "consensus_eps_as_of": "2018-10-05T21:15:15Z",
+  "consensus_eps_evidence": 705,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2018-09-14T21:10:47Z",
+   "2018-10-05T21:15:15Z"
+  ],
+  "eps_gaap": 1.76,
+  "revenue_gaap": 13727000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.19727891156462585,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.05267609864514389,
+  "implied_growth_change": 0.005768993685509205,
+  "narrative_items": 0,
+  "reaction_day": "2018-10-31",
+  "d0_return": 0.0380932295098424,
+  "car_d0": 0.025597413565086696,
+  "scar_d0": 1.3737950296166779,
+  "gap": 0.06004649641634474,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "META",
+  "event_id": 461,
+  "accession_no": "0001326801-19-000003",
+  "quarter": "FY2018Q4",
+  "public_at": "2019-01-30T21:16:27Z",
+  "consensus_eps": 2.18,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2019-01-29T22:00:43Z",
+  "consensus_eps_evidence": 713,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2018-12-14T22:09:31Z",
+   "2019-01-29T22:00:43Z"
+  ],
+  "eps_gaap": 2.38,
+  "revenue_gaap": 16914000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.09174311926605494,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.04754150117661393,
+  "implied_growth_change": 0.01229318007334479,
+  "narrative_items": 0,
+  "reaction_day": "2019-01-31",
+  "d0_return": 0.10816383772447047,
+  "car_d0": 0.09710127871136319,
+  "scar_d0": 4.924550624734541,
+  "gap": 0.10091748517056076,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 464,
+  "accession_no": "0001326801-19-000035",
+  "quarter": "FY2019Q1",
+  "public_at": "2019-04-24T20:09:20Z",
+  "consensus_eps": 1.62,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2019-04-23T21:03:51Z",
+  "consensus_eps_evidence": 721,
+  "consensus_eps_revision": 0.006211180124223503,
+  "consensus_eps_revision_window": [
+   "2019-03-08T22:00:29Z",
+   "2019-04-23T21:03:51Z"
+  ],
+  "eps_gaap": 0.85,
+  "revenue_gaap": 15077000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.47530864197530864,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.0838202400543061,
+  "implied_growth_change": 0.0059313852701115,
+  "implied_growth_fundamentals_effect": -0.005640403398541105,
+  "narrative_items": 0,
+  "reaction_day": "2019-04-25",
+  "d0_return": 0.0584948656406723,
+  "car_d0": 0.05934521699677198,
+  "scar_d0": 2.906091043735581,
+  "gap": 0.07886950242124002,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 466,
+  "accession_no": "0001326801-19-000053",
+  "quarter": "FY2019Q2",
+  "public_at": "2019-07-24T20:27:15Z",
+  "consensus_eps": 1.87,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2019-07-23T21:01:14Z",
+  "consensus_eps_evidence": 729,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2019-06-07T21:02:52Z",
+   "2019-07-23T21:01:14Z"
+  ],
+  "eps_gaap": 0.91,
+  "revenue_gaap": 16886000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.5133689839572193,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.0774485457396813,
+  "implied_growth_change": -0.0033495857917786864,
+  "implied_growth_fundamentals_effect": -0.01535623341291048,
+  "narrative_items": 0,
+  "reaction_day": "2019-07-25",
+  "d0_return": -0.019300287684757222,
+  "car_d0": -0.01295916870536611,
+  "scar_d0": -0.6263693669018657,
+  "gap": 0.009967718409215065,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 467,
+  "accession_no": "0001326801-19-000066",
+  "quarter": "FY2019Q3",
+  "public_at": "2019-10-30T20:13:02Z",
+  "consensus_eps": 1.9,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 29,
+  "consensus_eps_as_of": "2019-09-30T21:16:13Z",
+  "consensus_eps_evidence": 737,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2019-09-13T21:19:33Z",
+   "2019-09-30T21:16:13Z"
+  ],
+  "eps_gaap": 2.12,
+  "revenue_gaap": 17652000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.11578947368421066,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.044297652270996246,
+  "implied_growth_change": 0.00022718050353720542,
+  "implied_growth_fundamentals_effect": -0.010475216211460747,
+  "narrative_items": 0,
+  "reaction_day": "2019-10-31",
+  "d0_return": 0.018061056555029875,
+  "car_d0": 0.02105838896420704,
+  "scar_d0": 1.3089589984235506,
+  "gap": 0.04488710198269419,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 468,
+  "accession_no": "0001326801-20-000010",
+  "quarter": "FY2019Q4",
+  "public_at": "2020-01-29T21:10:08Z",
+  "consensus_eps": 2.53,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2020-01-29T12:59:58Z",
+  "consensus_eps_evidence": 745,
+  "consensus_eps_revision": 0.003968253968253954,
+  "consensus_eps_revision_window": [
+   "2019-11-06T22:22:12Z",
+   "2020-01-29T12:59:58Z"
+  ],
+  "eps_gaap": 2.56,
+  "revenue_gaap": 21082000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.011857707509881577,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.048147517251571625,
+  "implied_growth_change": -0.009286550020512152,
+  "implied_growth_fundamentals_effect": -0.009709710647168635,
+  "narrative_items": 0,
+  "reaction_day": "2020-01-30",
+  "d0_return": -0.06137166693746465,
+  "car_d0": -0.06591197827884263,
+  "scar_d0": -4.5992243594784314,
+  "gap": -0.07481072108528453,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "TSLA",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 473,
+  "accession_no": "0001326801-20-000046",
+  "quarter": "FY2020Q1",
+  "public_at": "2020-04-29T20:10:26Z",
+  "consensus_eps": 1.75,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 7,
+  "consensus_eps_as_of": "2020-04-22T12:38:00Z",
+  "consensus_eps_evidence": 753,
+  "consensus_eps_revision": -0.09326424870466321,
+  "consensus_eps_revision_window": [
+   "2020-03-14T04:15:12Z",
+   "2020-04-22T12:38:00Z"
+  ],
+  "eps_gaap": 1.71,
+  "revenue_gaap": 17737000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.02285714285714291,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": -0.015791431105463605,
+  "implied_growth_change": 0.006411494326426959,
+  "implied_growth_fundamentals_effect": -0.010421356795149217,
+  "narrative_items": 0,
+  "reaction_day": "2020-04-30",
+  "d0_return": 0.0541737686811925,
+  "car_d0": 0.06328447058041059,
+  "scar_d0": 4.4005709398894695,
+  "gap": 0.0655543311575999,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM",
+   "TSLA",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 475,
+  "accession_no": "0001326801-20-000073",
+  "quarter": "FY2020Q2",
+  "public_at": "2020-07-30T23:18:23Z",
+  "consensus_eps": 1.38,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 39,
+  "consensus_eps_as_of": "2020-06-21T02:23:20Z",
+  "consensus_eps_evidence": 761,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2020-06-13T15:17:20Z",
+   "2020-06-21T02:23:20Z"
+  ],
+  "eps_gaap": 1.8,
+  "revenue_gaap": 18687000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.30434782608695676,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": -0.006455064855854953,
+  "implied_growth_change": 0.007641167583922581,
+  "implied_growth_fundamentals_effect": 0.0,
+  "narrative_items": 0,
+  "reaction_day": "2020-07-31",
+  "d0_return": 0.08174839304454284,
+  "car_d0": 0.07342732873606327,
+  "scar_d0": 4.720784858646516,
+  "gap": 0.0909168755830223,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "GOOGL",
+   "PINS",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 476,
+  "accession_no": "0001326801-20-000081",
+  "quarter": "FY2020Q3",
+  "public_at": "2020-10-29T20:07:58Z",
+  "consensus_eps": 1.88,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 17,
+  "consensus_eps_as_of": "2020-10-11T21:56:19Z",
+  "consensus_eps_evidence": 769,
+  "consensus_eps_revision": 0.010752688172043001,
+  "consensus_eps_revision_window": [
+   "2020-08-06T06:51:42Z",
+   "2020-10-11T21:56:19Z"
+  ],
+  "eps_gaap": 2.71,
+  "revenue_gaap": 21470000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.4414893617021278,
+  "gaap_vs_street_gap": null,
+  "guidance": {},
+  "implied_growth_pre": 0.047591317736112804,
+  "implied_growth_change": -0.005081786776650388,
+  "implied_growth_fundamentals_effect": -0.0017536421600252705,
+  "narrative_items": 0,
+  "reaction_day": "2020-10-30",
+  "d0_return": -0.06309867915812206,
+  "car_d0": -0.05359714035242699,
+  "scar_d0": -2.996490805987892,
+  "gap": -0.022540280151445824,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "GOOGL",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 477,
+  "accession_no": "0001326801-21-000011",
+  "quarter": "FY2020Q4",
+  "public_at": "2021-01-27T21:08:08Z",
+  "eps_gaap": 3.88,
+  "revenue_gaap": 28072000000.0,
+  "eps_street_actual": 3.88,
+  "guidance": {},
+  "implied_growth_pre": 0.05278912568677263,
+  "implied_growth_change": -0.003526345599201397,
+  "implied_growth_fundamentals_effect": -0.024544787210491803,
+  "narrative_items": 0,
+  "reaction_day": "2021-01-28",
+  "d0_return": -0.026236548335831,
+  "car_d0": -0.03504944522667684,
+  "scar_d0": -1.7747355342597295,
+  "gap": 0.018519797736671118,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "TSLA",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 478,
+  "accession_no": "0001326801-21-000031",
+  "quarter": "FY2021Q1",
+  "public_at": "2021-04-28T20:09:19Z",
+  "consensus_eps": 2.35,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2021-04-28T11:42:48Z",
+  "consensus_eps_evidence": 779,
+  "eps_gaap": 3.3,
+  "revenue_gaap": 26171000000.0,
+  "eps_street_actual": 3.3,
+  "eps_surprise_street": 0.404255319148936,
+  "eps_surprise_gaap": 0.404255319148936,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.06361200263503497,
+  "implied_growth_change": 0.008512033765750049,
+  "implied_growth_fundamentals_effect": -0.002919228324150147,
+  "narrative_items": 0,
+  "reaction_day": "2021-04-29",
+  "d0_return": 0.07297298344746861,
+  "car_d0": 0.06483343412065548,
+  "scar_d0": 3.3786721958566646,
+  "gap": 0.0749592593818198,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AAPL",
+   "QCOM",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 480,
+  "accession_no": "0001326801-21-000047",
+  "quarter": "FY2021Q2",
+  "public_at": "2021-07-28T20:08:06Z",
+  "consensus_eps": 3.04,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2021-07-28T06:55:20Z",
+  "consensus_eps_evidence": 784,
+  "consensus_eps_revision": 0.0033003300330034513,
+  "consensus_eps_revision_window": [
+   "2021-06-12T05:56:08Z",
+   "2021-07-28T06:55:20Z"
+  ],
+  "eps_gaap": 3.61,
+  "revenue_gaap": 29077000000.0,
+  "eps_street_actual": 3.61,
+  "eps_surprise_street": 0.1875,
+  "eps_surprise_gaap": 0.1875,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.07035265910239963,
+  "implied_growth_change": -0.004501392655561043,
+  "implied_growth_fundamentals_effect": -0.034189509641894045,
+  "narrative_items": 0,
+  "reaction_day": "2021-07-29",
+  "d0_return": -0.040077131118732345,
+  "car_d0": -0.04568274713762342,
+  "scar_d0": -2.6047801198251928,
+  "gap": -0.03289755363120184,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 482,
+  "accession_no": "0001326801-21-000062",
+  "quarter": "FY2021Q3",
+  "public_at": "2021-10-25T20:08:12Z",
+  "consensus_eps": 3.18,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 16,
+  "consensus_eps_as_of": "2021-10-09T06:37:40Z",
+  "consensus_eps_evidence": 792,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2021-09-10T03:56:50Z",
+   "2021-10-09T06:37:40Z"
+  ],
+  "eps_gaap": 3.22,
+  "revenue_gaap": 29010000000.0,
+  "eps_street_actual": 3.22,
+  "eps_surprise_street": 0.012578616352201255,
+  "eps_surprise_gaap": 0.012578616352201255,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.03521891893166906,
+  "implied_growth_change": -0.005452931653509685,
+  "implied_growth_fundamentals_effect": -0.013568754112067483,
+  "narrative_items": 0,
+  "reaction_day": "2021-10-26",
+  "d0_return": -0.039185873580406705,
+  "car_d0": -0.0399598073165519,
+  "scar_d0": -2.461133130017489,
+  "gap": -0.0013082012613325755,
+  "attribution": "low",
+  "confounders_d0": []
+ },
+ {
+  "ticker": "META",
+  "event_id": 485,
+  "accession_no": "0001326801-22-000015",
+  "quarter": "FY2021Q4",
+  "public_at": "2022-02-02T21:08:34Z",
+  "consensus_eps": 3.85,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-02-02T10:28:51Z",
+  "consensus_eps_evidence": 800,
+  "consensus_eps_revision": 0.0,
+  "consensus_eps_revision_window": [
+   "2021-12-18T04:34:49Z",
+   "2022-02-02T10:28:51Z"
+  ],
+  "eps_gaap": 3.67,
+  "revenue_gaap": 33671000000.0,
+  "eps_street_actual": 3.67,
+  "eps_surprise_street": -0.04675324675324677,
+  "eps_surprise_gaap": -0.04675324675324677,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {},
+  "implied_growth_pre": 0.02431458610775994,
+  "implied_growth_change": -0.0377969655945814,
+  "implied_growth_fundamentals_effect": -0.010635363277867849,
+  "narrative_items": 0,
+  "reaction_day": "2022-02-03",
+  "d0_return": -0.2639009457992696,
+  "car_d0": -0.2328652311002691,
+  "scar_d0": -15.5833649848212,
+  "gap": -0.24256967833905763,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 487,
+  "accession_no": "0001326801-22-000054",
+  "quarter": "FY2022Q1",
+  "public_at": "2022-04-27T20:07:54Z",
+  "consensus_eps": 2.56,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-04-27T04:32:27Z",
+  "consensus_eps_evidence": 808,
+  "consensus_eps_revision": -0.01158301158301156,
+  "consensus_eps_revision_window": [
+   "2022-03-12T06:21:16Z",
+   "2022-04-27T04:32:27Z"
+  ],
+  "consensus_revenue": 28280000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1263,
+  "eps_gaap": 2.72,
+  "revenue_gaap": 27908000000.0,
+  "eps_street_actual": 2.72,
+  "eps_surprise_street": 0.0625,
+  "eps_surprise_gaap": 0.0625,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": -0.013154172560113198,
+  "guidance": {
+   "revenue": {
+    "low": 27000000000.0,
+    "high": 29000000000.0,
+    "grade": "A",
+    "as_of": "2022-02-02T21:08:34Z",
+    "evidence": [
+     897,
+     898
+    ],
+    "actual": 27908000000.0,
+    "position": "within",
+    "vs_midpoint": -0.003285714285714336
+   }
+  },
+  "implied_growth_pre": -0.03592209371714511,
+  "implied_growth_change": 0.021721135678216097,
+  "implied_growth_fundamentals_effect": -0.007514197655760557,
+  "narrative_items": 0,
+  "reaction_day": "2022-04-28",
+  "d0_return": 0.17593597780057646,
+  "car_d0": 0.13254180084600967,
+  "scar_d0": 6.453972791820974,
+  "gap": 0.15987425955187562,
+  "attribution": "medium",
+  "confounders_d0": [
+   "PINS",
+   "QCOM",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 491,
+  "accession_no": "0001326801-22-000079",
+  "quarter": "FY2022Q2",
+  "public_at": "2022-07-27T20:07:22Z",
+  "consensus_eps": 2.54,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-07-27T03:08:20Z",
+  "consensus_eps_evidence": 816,
+  "consensus_eps_revision": -0.037878787878787956,
+  "consensus_eps_revision_window": [
+   "2022-05-27T03:37:37Z",
+   "2022-07-27T03:08:20Z"
+  ],
+  "consensus_revenue": 28820000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1265,
+  "eps_gaap": 2.46,
+  "revenue_gaap": 28822000000.0,
+  "eps_street_actual": 2.46,
+  "eps_surprise_street": -0.03149606299212604,
+  "eps_surprise_gaap": -0.03149606299212604,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 6.93962526023828e-05,
+  "guidance": {
+   "revenue": {
+    "low": 28000000000.0,
+    "high": 30000000000.0,
+    "grade": "A",
+    "as_of": "2022-04-27T20:07:54Z",
+    "evidence": [
+     903,
+     904
+    ],
+    "actual": 28822000000.0,
+    "position": "within",
+    "vs_midpoint": -0.006137931034482791
+   }
+  },
+  "implied_growth_pre": -0.046528409615151756,
+  "implied_growth_change": -0.007559704989051119,
+  "implied_growth_fundamentals_effect": 0.012105499033457368,
+  "narrative_items": 0,
+  "reaction_day": "2022-07-28",
+  "d0_return": -0.052246730243454054,
+  "car_d0": -0.07240723802916013,
+  "scar_d0": -2.9909455545305303,
+  "gap": -0.05024179844595744,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 496,
+  "accession_no": "0001326801-22-000105",
+  "quarter": "FY2022Q3",
+  "public_at": "2022-10-26T20:19:09Z",
+  "consensus_eps": 1.9,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 0,
+  "consensus_eps_as_of": "2022-10-26T01:13:39Z",
+  "consensus_eps_evidence": 824,
+  "consensus_eps_revision": -0.015544041450777257,
+  "consensus_eps_revision_window": [
+   "2022-09-09T01:33:03Z",
+   "2022-10-26T01:13:39Z"
+  ],
+  "consensus_revenue": 27440000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1152,
+  "eps_gaap": 1.64,
+  "revenue_gaap": 27714000000.0,
+  "eps_street_actual": 1.64,
+  "eps_surprise_street": -0.13684210526315788,
+  "eps_surprise_gaap": -0.13684210526315788,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.009985422740524719,
+  "guidance": {
+   "revenue": {
+    "low": 26000000000.0,
+    "high": 28500000000.0,
+    "grade": "A",
+    "as_of": "2022-07-27T20:07:22Z",
+    "evidence": [
+     1150,
+     1151
+    ],
+    "actual": 27714000000.0,
+    "position": "within",
+    "vs_midpoint": 0.017027522935779915
+   }
+  },
+  "implied_growth_pre": -0.04216401211518189,
+  "implied_growth_change": -0.03996636027102074,
+  "implied_growth_fundamentals_effect": 0.0406936372608927,
+  "narrative_items": 2,
+  "reaction_day": "2022-10-27",
+  "d0_return": -0.24557081408256154,
+  "car_d0": -0.23436962149035107,
+  "scar_d0": -9.252522131585401,
+  "gap": -0.2452626881137543,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 498,
+  "accession_no": "0001326801-23-000008",
+  "quarter": "FY2022Q4",
+  "public_at": "2023-02-01T21:22:15Z",
+  "consensus_eps": 2.23,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2023-01-30T17:48:05Z",
+  "consensus_eps_evidence": 1268,
+  "consensus_eps_revision": -0.017621145374449365,
+  "consensus_eps_revision_window": [
+   "2022-12-17T03:12:41Z",
+   "2023-01-30T17:48:05Z"
+  ],
+  "consensus_revenue": 31310000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1267,
+  "eps_gaap": 1.76,
+  "revenue_gaap": 32165000000.0,
+  "eps_street_actual": 1.76,
+  "eps_surprise_street": -0.21076233183856496,
+  "eps_surprise_gaap": -0.21076233183856496,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.02730756946662405,
+  "guidance": {
+   "revenue": {
+    "low": 30000000000.0,
+    "high": 32500000000.0,
+    "grade": "A",
+    "as_of": "2022-10-26T20:19:09Z",
+    "evidence": [
+     915,
+     916
+    ],
+    "actual": 32165000000.0,
+    "position": "within",
+    "vs_midpoint": 0.029279999999999973
+   }
+  },
+  "implied_growth_pre": 0.00673864130751245,
+  "implied_growth_change": 0.023939923605317714,
+  "implied_growth_fundamentals_effect": 0.042548138697361404,
+  "narrative_items": 0,
+  "reaction_day": "2023-02-02",
+  "d0_return": 0.2328239961605887,
+  "car_d0": 0.20981404393379718,
+  "scar_d0": 6.775884927733329,
+  "gap": 0.19762284959887877,
+  "attribution": "high",
+  "confounders_d0": [
+   "META"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 504,
+  "accession_no": "0001326801-23-000063",
+  "quarter": "FY2023Q1",
+  "public_at": "2023-04-26T20:18:04Z",
+  "consensus_eps": 1.96,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2023-04-24T13:19:01Z",
+  "consensus_eps_evidence": 1270,
+  "consensus_eps_revision": -0.02487562189054715,
+  "consensus_eps_revision_window": [
+   "2023-03-10T12:48:35Z",
+   "2023-04-24T13:19:01Z"
+  ],
+  "consensus_revenue": 27490000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1269,
+  "eps_gaap": 2.2,
+  "revenue_gaap": 28645000000.0,
+  "eps_street_actual": 2.2,
+  "eps_surprise_street": 0.12244897959183687,
+  "eps_surprise_gaap": 0.12244897959183687,
+  "gaap_vs_street_gap": 0.0,
+  "revenue_surprise": 0.0420152782830121,
+  "guidance": {
+   "revenue": {
+    "low": 26000000000.0,
+    "high": 28500000000.0,
+    "grade": "A",
+    "as_of": "2023-02-01T21:22:15Z",
+    "evidence": [
+     925,
+     926
+    ],
+    "actual": 28645000000.0,
+    "position": "above",
+    "vs_midpoint": 0.05119266055045868
+   }
+  },
+  "implied_growth_pre": 0.08677573104323633,
+  "implied_growth_change": 0.017531762516288518,
+  "implied_growth_fundamentals_effect": 0.005258595488975004,
+  "narrative_items": 0,
+  "reaction_day": "2023-04-27",
+  "d0_return": 0.13925503587418664,
+  "car_d0": 0.10517089722317219,
+  "scar_d0": 3.419317827297543,
+  "gap": 0.14560652522385742,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 507,
+  "accession_no": "0001326801-23-000089",
+  "quarter": "FY2023Q2",
+  "public_at": "2023-07-26T20:06:51Z",
+  "consensus_eps": 2.85,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2023-07-21T14:04:00Z",
+  "consensus_eps_evidence": 1272,
+  "consensus_eps_revision": 0.2076271186440679,
+  "consensus_eps_revision_window": [
+   "2023-03-10T12:48:35Z",
+   "2023-07-21T14:04:00Z"
+  ],
+  "consensus_revenue": 30840000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1271,
+  "eps_gaap": 2.98,
+  "revenue_gaap": 31999000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.04561403508771922,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.03758106355382629,
+  "guidance": {
+   "revenue": {
+    "low": 29500000000.0,
+    "high": 32000000000.0,
+    "grade": "A",
+    "as_of": "2023-04-26T20:18:04Z",
+    "evidence": [
+     931,
+     932
+    ],
+    "actual": 31999000000.0,
+    "position": "within",
+    "vs_midpoint": 0.04061788617886175
+   }
+  },
+  "implied_growth_pre": 0.15132977202912568,
+  "implied_growth_change": 0.0043702928647539885,
+  "implied_growth_fundamentals_effect": -0.040295925876471905,
+  "narrative_items": 0,
+  "reaction_day": "2023-07-27",
+  "d0_return": 0.044009725721011916,
+  "car_d0": 0.05326825450579502,
+  "scar_d0": 1.8632713037035802,
+  "gap": 0.08892382738276172,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 508,
+  "accession_no": "0001326801-23-000100",
+  "quarter": "FY2023Q3",
+  "public_at": "2023-10-25T20:20:51Z",
+  "consensus_eps": 3.57,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 6,
+  "consensus_eps_as_of": "2023-10-19T15:58:00Z",
+  "consensus_eps_evidence": 1274,
+  "consensus_eps_revision": 0.19798657718120793,
+  "consensus_eps_revision_window": [
+   "2023-07-05T03:37:42Z",
+   "2023-10-19T15:58:00Z"
+  ],
+  "consensus_revenue": 33430000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1273,
+  "eps_gaap": 4.39,
+  "revenue_gaap": 34146000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.22969187675070035,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.02141788812443912,
+  "guidance": {
+   "revenue": {
+    "low": 32000000000.0,
+    "high": 34500000000.0,
+    "grade": "A",
+    "as_of": "2023-07-26T20:06:51Z",
+    "evidence": [
+     937,
+     938
+    ],
+    "actual": 34146000000.0,
+    "position": "within",
+    "vs_midpoint": 0.02694736842105261
+   }
+  },
+  "implied_growth_pre": 0.13323349058558043,
+  "implied_growth_change": -0.0024005336124872656,
+  "implied_growth_fundamentals_effect": -0.05856804001742644,
+  "narrative_items": 0,
+  "reaction_day": "2023-10-26",
+  "d0_return": -0.03732511842334374,
+  "car_d0": -0.019330949949491947,
+  "scar_d0": -0.7060131884995817,
+  "gap": -0.015123689773172688,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 510,
+  "accession_no": "0001326801-24-000010",
+  "quarter": "FY2023Q4",
+  "public_at": "2024-02-01T21:10:29Z",
+  "consensus_eps": 4.83,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2024-01-31T16:58:00Z",
+  "consensus_eps_evidence": 1276,
+  "consensus_eps_revision": -0.0020661157024792765,
+  "consensus_eps_revision_window": [
+   "2024-01-30T16:09:00Z",
+   "2024-01-31T16:58:00Z"
+  ],
+  "consensus_revenue": 38990000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1275,
+  "eps_gaap": 5.33,
+  "revenue_gaap": 40111000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.10351966873706009,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.028750961785073192,
+  "guidance": {
+   "revenue": {
+    "low": 36500000000.0,
+    "high": 40000000000.0,
+    "grade": "A",
+    "as_of": "2023-10-25T20:20:51Z",
+    "evidence": [
+     1144,
+     1145
+    ],
+    "actual": 40111000000.0,
+    "position": "above",
+    "vs_midpoint": 0.04865359477124187
+   }
+  },
+  "implied_growth_pre": 0.09252212430582063,
+  "implied_growth_change": 0.021221357315871492,
+  "implied_growth_fundamentals_effect": -0.020709108958910427,
+  "narrative_items": 2,
+  "reaction_day": "2024-02-02",
+  "d0_return": 0.20317643169131228,
+  "car_d0": 0.1810626459708226,
+  "scar_d0": 8.957139804245097,
+  "gap": 0.1641927339901954,
+  "attribution": "high",
+  "confounders_d0": [
+   "AAPL",
+   "AMZN",
+   "employment_situation_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 512,
+  "accession_no": "0001326801-24-000044",
+  "quarter": "FY2024Q1",
+  "public_at": "2024-04-24T20:07:26Z",
+  "consensus_eps": 4.32,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2024-04-19T13:58:00Z",
+  "consensus_eps_evidence": 1278,
+  "consensus_revenue": 36220000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1277,
+  "eps_gaap": 4.71,
+  "revenue_gaap": 36455000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.09027777777777768,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.006488128106018731,
+  "guidance": {
+   "revenue": {
+    "low": 34500000000.0,
+    "high": 37000000000.0,
+    "grade": "A",
+    "as_of": "2024-02-01T21:10:29Z",
+    "evidence": [
+     951,
+     952
+    ],
+    "actual": 36455000000.0,
+    "position": "within",
+    "vs_midpoint": 0.019720279720279787
+   }
+  },
+  "implied_growth_pre": 0.11546282790828488,
+  "implied_growth_change": -0.013960075859068999,
+  "implied_growth_fundamentals_effect": -0.016398963381306864,
+  "narrative_items": 0,
+  "reaction_day": "2024-04-25",
+  "d0_return": -0.1056129586974417,
+  "car_d0": -0.10074016048683121,
+  "scar_d0": -5.328088427121586,
+  "gap": -0.1460993031479546,
+  "attribution": "medium",
+  "confounders_d0": [
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 514,
+  "accession_no": "0001326801-24-000065",
+  "quarter": "FY2024Q2",
+  "public_at": "2024-07-31T20:11:20Z",
+  "eps_gaap": 5.16,
+  "revenue_gaap": 39071000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "revenue": {
+    "low": 36500000000.0,
+    "high": 39000000000.0,
+    "grade": "A",
+    "as_of": "2024-04-24T20:07:26Z",
+    "evidence": [
+     957,
+     958
+    ],
+    "actual": 39071000000.0,
+    "position": "above",
+    "vs_midpoint": 0.034993377483443666
+   }
+  },
+  "implied_growth_pre": 0.08352841607171835,
+  "implied_growth_change": 0.00477995931262809,
+  "implied_growth_fundamentals_effect": -0.0008087332917878776,
+  "narrative_items": 0,
+  "reaction_day": "2024-08-01",
+  "d0_return": 0.04824885603264795,
+  "car_d0": 0.07377351009555115,
+  "scar_d0": 3.8067258298558437,
+  "gap": 0.09723483085183715,
+  "attribution": "medium",
+  "confounders_d0": [
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 517,
+  "accession_no": "0001326801-24-000077",
+  "quarter": "FY2024Q3",
+  "public_at": "2024-10-30T20:08:12Z",
+  "consensus_eps": 5.17,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 5,
+  "consensus_eps_as_of": "2024-10-25T16:29:00Z",
+  "consensus_eps_evidence": 1280,
+  "consensus_revenue": 40160000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1279,
+  "eps_gaap": 6.03,
+  "revenue_gaap": 40589000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.16634429400386863,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.010682270916334557,
+  "guidance": {
+   "revenue": {
+    "low": 38500000000.0,
+    "high": 41000000000.0,
+    "grade": "A",
+    "as_of": "2024-07-31T20:11:20Z",
+    "evidence": [
+     963,
+     964
+    ],
+    "actual": 40589000000.0,
+    "position": "within",
+    "vs_midpoint": 0.0211069182389938
+   }
+  },
+  "implied_growth_pre": 0.11472809768845738,
+  "implied_growth_change": -0.005278168090979474,
+  "implied_growth_fundamentals_effect": -0.007151547586950802,
+  "narrative_items": 0,
+  "reaction_day": "2024-10-31",
+  "d0_return": -0.04092593984911996,
+  "car_d0": -0.011363844234894293,
+  "scar_d0": -0.5809773990870839,
+  "gap": -0.011490347977748838,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 519,
+  "accession_no": "0001326801-25-000014",
+  "quarter": "FY2024Q4",
+  "public_at": "2025-01-29T21:47:14Z",
+  "eps_gaap": 8.02,
+  "revenue_gaap": 48385000000.0,
+  "eps_street_actual": 8.02,
+  "guidance": {
+   "revenue": {
+    "low": 45000000000.0,
+    "high": 48000000000.0,
+    "grade": "A",
+    "as_of": "2024-10-30T20:08:12Z",
+    "evidence": [
+     969,
+     970
+    ],
+    "actual": 48385000000.0,
+    "position": "above",
+    "vs_midpoint": 0.04053763440860214
+   }
+  },
+  "implied_growth_pre": 0.13163358699566496,
+  "implied_growth_change": 0.0020540782483422504,
+  "implied_growth_fundamentals_effect": -0.004233772566912597,
+  "narrative_items": 0,
+  "reaction_day": "2025-01-30",
+  "d0_return": 0.015536090581301565,
+  "car_d0": 0.006639866593577206,
+  "scar_d0": 0.3347398735230044,
+  "gap": 0.03005220680767251,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "TSLA",
+   "gdp_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 522,
+  "accession_no": "0001326801-25-000050",
+  "quarter": "FY2025Q1",
+  "public_at": "2025-04-30T20:16:00Z",
+  "consensus_eps": 5.24,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 47,
+  "consensus_eps_as_of": "2025-03-14T00:03:43Z",
+  "consensus_eps_evidence": 856,
+  "eps_gaap": 6.43,
+  "revenue_gaap": 42314000000.0,
+  "eps_street_actual": 6.43,
+  "eps_surprise_street": 0.22709923664122122,
+  "eps_surprise_gaap": 0.22709923664122122,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "revenue": {
+    "low": 39500000000.0,
+    "high": 41800000000.0,
+    "grade": "A",
+    "as_of": "2025-01-29T21:47:14Z",
+    "evidence": [
+     975,
+     976
+    ],
+    "actual": 42314000000.0,
+    "position": "above",
+    "vs_midpoint": 0.04093480934809346
+   }
+  },
+  "implied_growth_pre": 0.0914085564661199,
+  "implied_growth_change": 0.004972391028166712,
+  "implied_growth_fundamentals_effect": 0.003137644482951174,
+  "narrative_items": 0,
+  "reaction_day": "2025-05-01",
+  "d0_return": 0.042276907054018764,
+  "car_d0": 0.03288216820370211,
+  "scar_d0": 1.9819039412051953,
+  "gap": 0.0784699764842327,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 524,
+  "accession_no": "0001628280-25-036719",
+  "quarter": "FY2025Q2",
+  "public_at": "2025-07-30T20:13:01Z",
+  "consensus_eps": 5.88,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 1,
+  "consensus_eps_as_of": "2025-07-29T01:32:19Z",
+  "consensus_eps_evidence": 861,
+  "consensus_eps_revision": 0.015544041450777257,
+  "consensus_eps_revision_window": [
+   "2025-05-28T03:08:38Z",
+   "2025-07-29T01:32:19Z"
+  ],
+  "consensus_revenue": 44840000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1281,
+  "eps_gaap": 7.14,
+  "revenue_gaap": 47516000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.2142857142857142,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.059678858162355075,
+  "guidance": {
+   "revenue": {
+    "low": 42500000000.0,
+    "high": 45500000000.0,
+    "grade": "A",
+    "as_of": "2025-04-30T20:16:00Z",
+    "evidence": [
+     981,
+     982
+    ],
+    "actual": 47516000000.0,
+    "position": "above",
+    "vs_midpoint": 0.07990909090909093
+   }
+  },
+  "implied_growth_pre": 0.12923677202392636,
+  "implied_growth_change": 0.015115744995266578,
+  "implied_growth_fundamentals_effect": 0.004615702064080018,
+  "narrative_items": 0,
+  "reaction_day": "2025-07-31",
+  "d0_return": 0.11252711841922625,
+  "car_d0": 0.11664653402678939,
+  "scar_d0": 7.870821404083202,
+  "gap": 0.1150587415402955,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 525,
+  "accession_no": "0001628280-25-047114",
+  "quarter": "FY2025Q3",
+  "public_at": "2025-10-29T20:08:34Z",
+  "consensus_eps": 5.99,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 90,
+  "consensus_eps_as_of": "2025-07-31T04:02:30Z",
+  "consensus_eps_evidence": 867,
+  "eps_gaap": 1.05,
+  "revenue_gaap": 51242000000.0,
+  "eps_street_actual": 1.05,
+  "eps_surprise_street": -0.8247078464106845,
+  "eps_surprise_gaap": -0.8247078464106845,
+  "gaap_vs_street_gap": 0.0,
+  "guidance": {
+   "revenue": {
+    "low": 47500000000.0,
+    "high": 50500000000.0,
+    "grade": "A",
+    "as_of": "2025-07-30T20:13:01Z",
+    "evidence": [
+     987,
+     988
+    ],
+    "actual": 51242000000.0,
+    "position": "above",
+    "vs_midpoint": 0.04575510204081623
+   }
+  },
+  "implied_growth_pre": 0.1355265258068893,
+  "implied_growth_change": -0.013577676998371313,
+  "implied_growth_fundamentals_effect": 0.014794384158081986,
+  "narrative_items": 0,
+  "reaction_day": "2025-10-30",
+  "d0_return": -0.1133476314661016,
+  "car_d0": -0.09847897174473395,
+  "scar_d0": -6.201037928181265,
+  "gap": -0.10978216554106701,
+  "attribution": "medium",
+  "confounders_d0": [
+   "GOOGL",
+   "MSFT"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 530,
+  "accession_no": "0001628280-26-003832",
+  "quarter": "FY2025Q4",
+  "public_at": "2026-01-28T21:04:20Z",
+  "eps_gaap": 8.88,
+  "revenue_gaap": 59893000000.0,
+  "eps_street_actual": 8.88,
+  "guidance": {
+   "revenue": {
+    "low": 56000000000.0,
+    "high": 59000000000.0,
+    "grade": "A",
+    "as_of": "2025-10-29T20:08:34Z",
+    "evidence": [
+     991,
+     992
+    ],
+    "actual": 59893000000.0,
+    "position": "above",
+    "vs_midpoint": 0.04161739130434783
+   }
+  },
+  "implied_growth_pre": 0.1411513005183892,
+  "implied_growth_change": 0.013627008721050604,
+  "implied_growth_fundamentals_effect": -0.0036014017820868993,
+  "narrative_items": 0,
+  "reaction_day": "2026-01-29",
+  "d0_return": 0.10404800012266713,
+  "car_d0": 0.1074449784327464,
+  "scar_d0": 6.490420065013525,
+  "gap": 0.10273206557731362,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "TSLA"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 532,
+  "accession_no": "0001628280-26-028364",
+  "quarter": "FY2026Q1",
+  "public_at": "2026-04-29T20:05:41Z",
+  "consensus_eps": 6.62,
+  "consensus_eps_provider": "FactSet via MarketWatch (archived)",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 78,
+  "consensus_eps_as_of": "2026-02-10T05:44:12Z",
+  "consensus_eps_evidence": 874,
+  "eps_gaap": 10.44,
+  "revenue_gaap": 56311000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": 0.5770392749244713,
+  "gaap_vs_street_gap": null,
+  "guidance": {
+   "revenue": {
+    "low": 53500000000.0,
+    "high": 56500000000.0,
+    "grade": "A",
+    "as_of": "2026-01-28T21:04:20Z",
+    "evidence": [
+     995,
+     996
+    ],
+    "actual": 56311000000.0,
+    "position": "within",
+    "vs_midpoint": 0.023836363636363656
+   }
+  },
+  "implied_growth_pre": 0.14056108450411509,
+  "implied_growth_change": -0.010428296104417756,
+  "implied_growth_fundamentals_effect": -0.006547007881740008,
+  "narrative_items": 0,
+  "reaction_day": "2026-04-30",
+  "d0_return": -0.0855003921421249,
+  "car_d0": -0.10121856769897324,
+  "scar_d0": -5.637790804683483,
+  "gap": -0.07442609420788115,
+  "attribution": "medium",
+  "confounders_d0": [
+   "AMZN",
+   "GOOGL",
+   "MSFT",
+   "QCOM",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 535,
+  "accession_no": "0001628280-26-050596",
+  "quarter": "FY2026Q2",
+  "public_at": "2026-07-29T20:03:23Z",
+  "eps_gaap": 6.18,
+  "revenue_gaap": 60801000000.0,
+  "eps_street_actual": null,
+  "guidance": {
+   "revenue": {
+    "low": 58000000000.0,
+    "high": 61000000000.0,
+    "grade": "A",
+    "as_of": "2026-04-29T20:05:41Z",
+    "evidence": [
+     1001,
+     1002
+    ],
+    "actual": 60801000000.0,
+    "position": "within",
+    "vs_midpoint": 0.021865546218487353
+   }
+  },
+  "implied_growth_pre": 0.12216876438366653,
+  "implied_growth_change": -0.009679720013020754,
+  "implied_growth_fundamentals_effect": 0.021925089453188606,
+  "narrative_items": 0,
+  "reaction_day": "2026-07-30",
+  "d0_return": -0.07954091839250976,
+  "car_d0": -0.10326207432391304,
+  "scar_d0": -4.8289235302145235,
+  "gap": -0.10179127207978955,
+  "attribution": "medium",
+  "confounders_d0": [
+   "MSFT",
+   "QCOM",
+   "gdp_release",
+   "pce_release"
+  ]
+ },
+ {
+  "ticker": "META",
+  "event_id": 536,
+  "accession_no": "0001628280-26-066700",
+  "quarter": "FY2026Q3",
+  "public_at": "2026-10-21T20:03:35Z",
+  "consensus_eps": 6.54,
+  "consensus_eps_provider": "Zacks",
+  "consensus_eps_grade": "B",
+  "consensus_eps_days_before": 2,
+  "consensus_eps_as_of": "2026-10-19T08:37:00Z",
+  "consensus_eps_evidence": 1284,
+  "consensus_revenue": 63240000000.0,
+  "consensus_revenue_provider": "Zacks",
+  "consensus_revenue_evidence": 1283,
+  "eps_gaap": 3.83,
+  "revenue_gaap": 64601000000.0,
+  "eps_street_actual": null,
+  "eps_surprise_gaap": -0.4143730886850153,
+  "gaap_vs_street_gap": null,
+  "revenue_surprise": 0.02152118912080958,
+  "guidance": {
+   "revenue": {
+    "low": 61000000000.0,
+    "high": 64000000000.0,
+    "grade": "A",
+    "as_of": "2026-07-29T20:03:23Z",
+    "evidence": [
+     1007,
+     1008
+    ],
+    "actual": 64601000000.0,
+    "position": "above",
+    "vs_midpoint": 0.03361600000000009
+   }
+  },
+  "implied_growth_pre": 0.1796604501746374,
+  "implied_growth_change": -0.009613086089469647,
+  "implied_growth_fundamentals_effect": 0.0493402477800311,
+  "narrative_items": 0,
+  "reaction_day": "2026-10-22",
+  "d0_return": -0.06977583808708443,
+  "car_d0": -0.051987713085243095,
+  "scar_d0": -2.200263637342123,
+  "gap": -0.0303504463707569,
+  "attribution": "medium",
+  "confounders_d0": [
+   "TSLA"
+  ]
+ }
+]

@@ -1,0 +1,552 @@
+{
+ "leakage_violations": [],
+ "c_or_d_with_available_at": 0,
+ "inferred_label_checks": {
+  "mismatch (street vs GAAP or label)": 35,
+  "pass": 51,
+  "unverifiable": 10
+ },
+ "split_rebased_observations": [
+  {
+   "target_period": "FY2022Q2",
+   "stat": "mean",
+   "value": 1.2985,
+   "adjustments": "split 20:1 ex 2022-07-18; divided by 20"
+  }
+ ],
+ "guidance_revision_consistency": [
+  {
+   "target": "FY2020",
+   "metric": "total_expenses",
+   "as_of": "2020-10-29T20:07:58Z",
+   "stated_prior_low": 52000000000.0,
+   "previous_published_low": 52000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2021",
+   "metric": "total_expenses",
+   "as_of": "2021-04-28T20:09:19Z",
+   "stated_prior_low": 68000000000.0,
+   "previous_published_low": 68000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2021",
+   "metric": "total_expenses",
+   "as_of": "2021-10-25T20:08:12Z",
+   "stated_prior_low": 70000000000.0,
+   "previous_published_low": 70000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "total_expenses",
+   "as_of": "2022-02-02T21:08:34Z",
+   "stated_prior_low": 91000000000.0,
+   "previous_published_low": 91000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "total_expenses",
+   "as_of": "2022-04-27T20:07:54Z",
+   "stated_prior_low": 90000000000.0,
+   "previous_published_low": 90000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "total_expenses",
+   "as_of": "2022-07-27T20:07:22Z",
+   "stated_prior_low": 87000000000.0,
+   "previous_published_low": 87000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "capex",
+   "as_of": "2022-07-27T20:07:22Z",
+   "stated_prior_low": 29000000000.0,
+   "previous_published_low": 29000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "total_expenses",
+   "as_of": "2022-10-26T20:19:09Z",
+   "stated_prior_low": 85000000000.0,
+   "previous_published_low": 85000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2022",
+   "metric": "capex",
+   "as_of": "2022-10-26T20:19:09Z",
+   "stated_prior_low": 30000000000.0,
+   "previous_published_low": 30000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2023",
+   "metric": "capex",
+   "as_of": "2023-02-01T21:22:15Z",
+   "stated_prior_low": 34000000000.0,
+   "previous_published_low": 34000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2023",
+   "metric": "total_expenses",
+   "as_of": "2023-07-26T20:06:51Z",
+   "stated_prior_low": 86000000000.0,
+   "previous_published_low": 86000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2023",
+   "metric": "capex",
+   "as_of": "2023-07-26T20:06:51Z",
+   "stated_prior_low": 30000000000.0,
+   "previous_published_low": 30000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2023",
+   "metric": "capex",
+   "as_of": "2023-10-25T20:20:51Z",
+   "stated_prior_low": 27000000000.0,
+   "previous_published_low": 27000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2024",
+   "metric": "total_expenses",
+   "as_of": "2024-04-24T20:07:26Z",
+   "stated_prior_low": 94000000000.0,
+   "previous_published_low": 94000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2024",
+   "metric": "capex",
+   "as_of": "2024-04-24T20:07:26Z",
+   "stated_prior_low": 30000000000.0,
+   "previous_published_low": 30000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2024",
+   "metric": "capex",
+   "as_of": "2024-07-31T20:11:20Z",
+   "stated_prior_low": 35000000000.0,
+   "previous_published_low": 35000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2024",
+   "metric": "total_expenses",
+   "as_of": "2024-10-30T20:08:12Z",
+   "stated_prior_low": 96000000000.0,
+   "previous_published_low": 96000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2024",
+   "metric": "capex",
+   "as_of": "2024-10-30T20:08:12Z",
+   "stated_prior_low": 37000000000.0,
+   "previous_published_low": 37000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2025",
+   "metric": "total_expenses",
+   "as_of": "2025-04-30T20:16:00Z",
+   "stated_prior_low": 114000000000.0,
+   "previous_published_low": 114000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2025",
+   "metric": "capex",
+   "as_of": "2025-04-30T20:16:00Z",
+   "stated_prior_low": 60000000000.0,
+   "previous_published_low": 60000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2025",
+   "metric": "total_expenses",
+   "as_of": "2025-07-30T20:13:01Z",
+   "stated_prior_low": 113000000000.0,
+   "previous_published_low": 113000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2025",
+   "metric": "total_expenses",
+   "as_of": "2025-10-29T20:08:34Z",
+   "stated_prior_low": 114000000000.0,
+   "previous_published_low": 114000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2026",
+   "metric": "capex",
+   "as_of": "2026-04-29T20:05:41Z",
+   "stated_prior_low": 115000000000.0,
+   "previous_published_low": 115000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2026",
+   "metric": "capex",
+   "as_of": "2026-07-29T20:03:23Z",
+   "stated_prior_low": 125000000000.0,
+   "previous_published_low": 125000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2026",
+   "metric": "capex",
+   "as_of": "2026-10-21T20:03:35Z",
+   "stated_prior_low": 130000000000.0,
+   "previous_published_low": 130000000000.0,
+   "consistent": true
+  },
+  {
+   "target": "FY2020",
+   "metric": "total_expenses",
+   "as_of": "2020-04-29T20:10:26Z",
+   "stated_prior_low": 54000000000.0,
+   "previous_published_low": null,
+   "consistent": false
+  },
+  {
+   "target": "FY2020",
+   "metric": "total_expenses",
+   "as_of": "2020-07-30T23:18:23Z",
+   "stated_prior_low": 52000000000.0,
+   "previous_published_low": 52000000000.0,
+   "consistent": true
+  }
+ ],
+ "guidance_targets_already_ended": [],
+ "cross_provider_eps": [
+  {
+   "quarter": "FY2024Q2",
+   "zacks": 2.76,
+   "factset": 2.76,
+   "rel_diff": 0.0,
+   "days_apart": 35.2,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2022Q3",
+   "zacks": 1.82,
+   "factset": 1.9,
+   "rel_diff": -0.042105263157894646,
+   "days_apart": 4.4,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q3",
+   "zacks": 1.45,
+   "factset": 1.35,
+   "rel_diff": 0.07407407407407396,
+   "days_apart": 118.6,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2025Q1",
+   "zacks": 3.08,
+   "factset": 3.1,
+   "rel_diff": -0.006451612903225823,
+   "days_apart": 28.8,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2022Q3",
+   "zacks": 2.18,
+   "factset": 2.18,
+   "rel_diff": 0.0,
+   "days_apart": 106.9,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2022Q4",
+   "zacks": 2.29,
+   "factset": 2.29,
+   "rel_diff": 0.0,
+   "days_apart": 4.6,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q1",
+   "zacks": 2.3,
+   "factset": 2.31,
+   "rel_diff": -0.0043290043290044045,
+   "days_apart": 4.4,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q2",
+   "zacks": 2.29,
+   "factset": 2.3,
+   "rel_diff": -0.004347826086956386,
+   "days_apart": 1.4,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q3",
+   "zacks": 2.22,
+   "factset": 2.24,
+   "rel_diff": -0.008928571428571397,
+   "days_apart": 61.1,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2023Q4",
+   "zacks": 2.55,
+   "factset": 2.56,
+   "rel_diff": -0.003906250000000111,
+   "days_apart": 25.5,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2024Q1",
+   "zacks": 2.65,
+   "factset": 2.6,
+   "rel_diff": 0.019230769230769162,
+   "days_apart": 115.5,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2024Q2",
+   "zacks": 2.75,
+   "factset": 2.76,
+   "rel_diff": -0.0036231884057970065,
+   "days_apart": 27.1,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2024Q3",
+   "zacks": 2.81,
+   "factset": 2.81,
+   "rel_diff": 0.0,
+   "days_apart": 43.1,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2024Q4",
+   "zacks": 2.9,
+   "factset": 2.93,
+   "rel_diff": -0.010238907849829393,
+   "days_apart": 1.3,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2025Q2",
+   "zacks": 3.13,
+   "factset": 3.24,
+   "rel_diff": -0.03395061728395077,
+   "days_apart": 119.7,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2026Q1",
+   "zacks": 3.65,
+   "factset": 3.56,
+   "rel_diff": 0.02528089887640439,
+   "days_apart": 88.4,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2026Q2",
+   "zacks": 3.88,
+   "factset": 3.91,
+   "rel_diff": -0.007672634271099765,
+   "days_apart": 5.6,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2026Q3",
+   "zacks": 4.07,
+   "factset": 3.97,
+   "rel_diff": 0.02518891687657443,
+   "days_apart": 96.7,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2022Q1",
+   "zacks": 25.63,
+   "factset": 25.74,
+   "rel_diff": -0.004273504273504258,
+   "days_apart": 3.8,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q2",
+   "zacks": 1.3,
+   "factset": 1.27,
+   "rel_diff": 0.023622047244094446,
+   "days_apart": 4.5,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q3",
+   "zacks": 1.25,
+   "factset": 1.27,
+   "rel_diff": -0.015748031496062964,
+   "days_apart": 4.3,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q4",
+   "zacks": 1.17,
+   "factset": 1.18,
+   "rel_diff": -0.008474576271186418,
+   "days_apart": 1.6,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q1",
+   "zacks": 1.06,
+   "factset": 1.08,
+   "rel_diff": -0.01851851851851849,
+   "days_apart": 61.4,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2023Q2",
+   "zacks": 1.32,
+   "factset": 1.33,
+   "rel_diff": -0.007518796992481258,
+   "days_apart": 25.5,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2025Q2",
+   "zacks": 2.13,
+   "factset": 2.17,
+   "rel_diff": -0.018433179723502335,
+   "days_apart": 3.5,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q1",
+   "zacks": 2.54,
+   "factset": 2.56,
+   "rel_diff": -0.0078125,
+   "days_apart": 1.5,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q2",
+   "zacks": 2.51,
+   "factset": 2.54,
+   "rel_diff": -0.011811023622047334,
+   "days_apart": 1.5,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2022Q4",
+   "zacks": 2.23,
+   "factset": 2.24,
+   "rel_diff": -0.0044642857142858094,
+   "days_apart": 9.7,
+   "comparable": true
+  },
+  {
+   "quarter": "FY2023Q1",
+   "zacks": 1.96,
+   "factset": 2.01,
+   "rel_diff": -0.02487562189054715,
+   "days_apart": 45.0,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2023Q2",
+   "zacks": 2.85,
+   "factset": 2.89,
+   "rel_diff": -0.01384083044982698,
+   "days_apart": 16.4,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2023Q3",
+   "zacks": 3.57,
+   "factset": 2.98,
+   "rel_diff": 0.19798657718120793,
+   "days_apart": 106.5,
+   "comparable": false
+  },
+  {
+   "quarter": "FY2025Q2",
+   "zacks": 5.83,
+   "factset": 5.88,
+   "rel_diff": -0.008503401360544172,
+   "days_apart": 3.4,
+   "comparable": true
+  }
+ ],
+ "archive_refetch": [
+  {
+   "capture": "https://web.archive.org/web/20230310124835/https://www.marketwatch.com/investing/stock/meta/analystestimates",
+   "quarter": "FY2023Q2",
+   "stored_value": 2.36,
+   "refetched_value": 2.36,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20250729032921/https://www.marketwatch.com/investing/stock/MSFT/analystestimates",
+   "quarter": "FY2025Q4",
+   "stored_value": 3.38,
+   "refetched_value": 3.38,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20170916110725/http://www.marketwatch.com/investing/stock/FB/analystestimates",
+   "quarter": "FY2017Q3",
+   "stored_value": 1.26,
+   "refetched_value": 1.26,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20180724210048/https://www.marketwatch.com/investing/stock/FB/analystestimates",
+   "quarter": "FY2018Q2",
+   "stored_value": 1.71,
+   "refetched_value": 1.71,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20200422152718/https://www.marketwatch.com/investing/stock/googl/analystestimates",
+   "quarter": "FY2020Q1",
+   "stored_value": 10.71,
+   "refetched_value": 10.71,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20170605110144/http://www.marketwatch.com/investing/stock/MSFT/analystestimates",
+   "quarter": "FY2017Q4",
+   "stored_value": 0.71,
+   "refetched_value": 0.71,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20220202102851/https://www.marketwatch.com/investing/stock/FB/analystestimates",
+   "quarter": "FY2021Q4",
+   "stored_value": 3.85,
+   "refetched_value": 3.85,
+   "bytes_identical": true
+  },
+  {
+   "capture": "https://web.archive.org/web/20181005211524/https://www.marketwatch.com/investing/stock/GOOGL/analystestimates",
+   "quarter": "FY2018Q3",
+   "stored_value": 10.45,
+   "refetched_value": 10.45,
+   "bytes_identical": true
+  }
+ ]
+}

@@ -381,3 +381,40 @@ CREATE TABLE IF NOT EXISTS data_correction (
 );
 CREATE TRIGGER IF NOT EXISTS ro_corr_u BEFORE UPDATE ON data_correction BEGIN SELECT RAISE(ABORT, 'data_correction is append-only'); END;
 CREATE TRIGGER IF NOT EXISTS ro_corr_d BEFORE DELETE ON data_correction BEGIN SELECT RAISE(ABORT, 'data_correction is append-only'); END;
+
+-- ---------------------------------------------------------------- v3: Expectations Engine
+-- One row per expectation datum as it existed at `as_of` (point-in-time). Append-only; revisions are new rows
+-- linked by (company, class, provider, metric, target_period). Classes are kept strictly apart:
+--   reported_result | management_guidance | analyst_consensus | market_implied | narrative
+CREATE TABLE IF NOT EXISTS expectation_obs (
+    eo_id             INTEGER PRIMARY KEY,
+    company_id        INTEGER NOT NULL REFERENCES company(company_id),
+    class             TEXT NOT NULL,
+    provider          TEXT NOT NULL,       -- e.g. FactSet via MarketWatch, Zacks, Meta management, CBOE (VXGOG)
+    metric            TEXT NOT NULL,       -- eps, revenue, total_expenses, capex, azure_growth_cc, implied_move...
+    basis             TEXT,                -- e.g. 'street (may exclude one-offs)', 'GAAP', 'constant currency'
+    target_period     TEXT,                -- fiscal label FY2024Q2 / FY2024, or an event key for market-implied
+    stat              TEXT NOT NULL,       -- point | low | high | mean | n_estimates | text
+    value             REAL,
+    value_text        TEXT,
+    unit              TEXT,
+    as_of             TEXT NOT NULL,       -- when this expectation is evidenced to exist (UTC)
+    as_of_basis       TEXT NOT NULL,       -- wayback_capture_timestamp | sec_acceptance | page_metadata | computed
+    available_at      TEXT,                -- usable point-in-time from here; NULL = not usable PIT
+    provenance_grade  TEXT NOT NULL,       -- A | B | C | D
+    source_doc_id     INTEGER REFERENCES source_document(doc_id),
+    source_url        TEXT,
+    locator           TEXT,                -- quote or page section the value was read from
+    method            TEXT NOT NULL,       -- parser / model name and version
+    adjustments       TEXT,                -- e.g. split rebasing applied, with factor
+    checks_json       TEXT,                -- automated validation results for this datum
+    notes             TEXT,
+    created_at        TEXT NOT NULL,
+    natural_key       TEXT NOT NULL,
+    run_id            INTEGER REFERENCES ingest_run(run_id)
+);
+-- NULL-safe uniqueness (plain UNIQUE treats NULLs as distinct, which silently disabled deduplication in v3.0)
+CREATE UNIQUE INDEX IF NOT EXISTS ux_eo_nk2 ON expectation_obs(natural_key, coalesce(value, -1e308), coalesce(value_text, ''));
+CREATE INDEX IF NOT EXISTS ix_eo_lookup ON expectation_obs(company_id, class, metric, target_period, as_of);
+CREATE TRIGGER IF NOT EXISTS ro_eo_u BEFORE UPDATE ON expectation_obs BEGIN SELECT RAISE(ABORT, 'expectation_obs is append-only'); END;
+CREATE TRIGGER IF NOT EXISTS ro_eo_d BEFORE DELETE ON expectation_obs BEGIN SELECT RAISE(ABORT, 'expectation_obs is append-only'); END;

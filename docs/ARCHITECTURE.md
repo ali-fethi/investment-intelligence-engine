@@ -102,6 +102,14 @@ provenance grades), `casestudy.py` (reports), `ingest/macro_events.py`, `ingest/
 
 See [EVENT_ENGINE.md](EVENT_ENGINE.md).
 
+## Sprint 2 additions
+
+`src/iie/expect/` builds `expectation_obs`, a point-in-time store of expectations. Every value has a
+dated source: an EDGAR acceptance, an Internet Archive capture, a page published and not modified before
+the event, or our own retrieval for forward snapshots. Readers see only grade A/B rows available before an
+event's public time. `expect/link.py` joins expectations, outcomes and the reaction engine per release. See
+[EXPECTATIONS_ENGINE.md](EXPECTATIONS_ENGINE.md).
+
 ## Deliberate non-goals (Sprint 1)
 
 No strategy, no sentiment, no recommendations, no UI. Values are reported as the filer reported them;

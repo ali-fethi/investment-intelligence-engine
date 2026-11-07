@@ -1,4 +1,4 @@
-# Investment Intelligence Engine — data foundation and Event Reaction Engine (v0.2.0)
+# Investment Intelligence Engine — data foundation, Event Reaction Engine, Expectations Engine (v0.3.0)
 
 An auditable, reproducible, point-in-time public-market data foundation for **GOOGL, MSFT, META**.
 Every number keeps its source bytes (sha256), the period it describes, when it became public, and
@@ -17,6 +17,18 @@ bit-for-bit.
 * [QA and provenance report](docs/QA_PROVENANCE_REPORT.md)
 * [Next milestone: Expectations Engine](docs/EXPECTATIONS_ENGINE_PROPOSAL.md)
 * Curated, machine-verified claims: [`registry/expectations.json`](registry/expectations.json), [`registry/case_notes.json`](registry/case_notes.json)
+
+**Sprint 2 (v0.3.0): Expectations Engine**
+* [Expectations Engine](docs/EXPECTATIONS_ENGINE.md): five classes (reported, guidance, consensus, market-implied, narrative), grades, point-in-time rules
+* [Coverage report](docs/EXPECTATIONS_COVERAGE.md) · [Sources investigated](docs/EXPECTATIONS_SOURCES.md) ·
+  [Checked examples](docs/EXPECTATIONS_EXAMPLES.md) · [Market vs fundamentals hypotheses](docs/MARKET_VS_FUNDAMENTALS.md) ·
+  [Audit](docs/EXPECTATIONS_AUDIT.md); generated tables in [`docs/expectations/`](docs/expectations/)
+
+## SEC contact (one-time, local only)
+
+The SEC asks automated tools to identify themselves. Open the file `.env` in this folder (it is never
+committed), fill in the two lines `SEC_CONTACT_NAME=` and `SEC_CONTACT_EMAIL=`, and save. Until then a
+placeholder is used and every EDGAR command prints a reminder.
 
 ## Install
 
@@ -57,6 +69,15 @@ Milestone 2 commands:
 .venv/bin/iie reactions                                                         # all earnings releases since 2016
 ```
 
+Sprint 2 commands:
+
+```bash
+.venv/bin/iie expect consensus guidance          # archived consensus pages (slow: ~8 s per page) + guidance
+.venv/bin/iie ingest expectations                # re-verify curated claims (registry/expectations.json)
+.venv/bin/iie expect registry implied forward    # classes, market-implied models, today's forward consensus
+.venv/bin/iie expect-report --cutoff 2026-11-05  # coverage, linked events, hypotheses, audit
+```
+
 Rebuild the whole database offline from stored evidence (keeps original retrieval timestamps):
 
 ```bash
@@ -66,7 +87,7 @@ mv data/iie.sqlite data/old.sqlite && .venv/bin/iie rebuild --from-db data/old.s
 ## Tests
 
 ```bash
-.venv/bin/pytest                                   # 41 offline unit, integration and adversarial tests (~2 s)
+.venv/bin/pytest                                   # 58 offline unit, integration and adversarial tests (~2 s)
 IIE_NETWORK_TESTS=1 .venv/bin/pytest -m network    # 3 live checks of provider formats and timestamp conventions
 ```
 
@@ -98,6 +119,7 @@ Warnings are documented gaps (see `docs/sample_output/qa_summary.txt`).
 ```
 src/iie/            config, db + schema.sql, evidence (fetch/store/replay), pit, derive, snapshot, qa, search, cli,
                     reaction (event engine), expectations (claim registry), casestudy (reports)
+src/iie/expect/     archive, parsers, consensus, guidance, implied, forward, link, report, store
 src/iie/ingest/     sec, documents, earnings_release, prices, macro, events, macro_events, crosscheck
 registry/           curated claims (expectations.json) and labelled case notes (case_notes.json)
 tests/              conftest (synthetic sources), test_units, test_pipeline, test_reaction, test_network

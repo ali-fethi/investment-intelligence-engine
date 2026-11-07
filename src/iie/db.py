@@ -16,7 +16,7 @@ SCHEMA_PATH = Path(__file__).with_name("schema.sql")
 def connect(path: Path | str | None = None) -> sqlite3.Connection:
     p = Path(path or DB_PATH)
     p.parent.mkdir(parents=True, exist_ok=True)
-    conn = sqlite3.connect(str(p))
+    conn = sqlite3.connect(str(p), timeout=120)
     conn.row_factory = sqlite3.Row
     conn.execute("PRAGMA foreign_keys = ON")
     conn.execute("PRAGMA journal_mode = WAL")

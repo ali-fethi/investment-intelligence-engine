@@ -1,0 +1,20 @@
+{
+ "street_eps_surprise_vs_car": {
+  "n": 43,
+  "spearman": 0.41875566294170946,
+  "sign_agreement": 0.6511627906976745,
+  "binomial_p_two_sided": 0.0659940344557981,
+  "share_positive_surprise": 0.7674418604651163
+ },
+ "googl_implied_vs_realised_move": {
+  "n": 40,
+  "median_implied": 0.05252772995182291,
+  "median_realised_abs": 0.038489381242201026,
+  "share_realised_above_implied": 0.475
+ },
+ "meta_revenue_vs_guidance": {
+  "below": 0,
+  "within": 10,
+  "above": 9
+ }
+}

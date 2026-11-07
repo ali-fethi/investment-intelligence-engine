@@ -1,0 +1,77 @@
+[
+ {
+  "ticker": "GOOGL",
+  "inputs": {
+   "as_of_quarter": "FY2026Q3",
+   "price": 282.57000732421875,
+   "price_date": "2026-11-05",
+   "market_cap": 3494825850585.9375,
+   "fcf_ttm": 19747000000.0,
+   "rf_10y": 0.0484,
+   "shares_from": "FY2026Q3"
+  },
+  "implied_fcf_cagr_10y": {
+   "erp_4pct": 0.3388541040538863,
+   "erp_5pct": 0.36905526303949665,
+   "erp_6pct": 0.3969624860486062
+  },
+  "trailing_3y_fcf_cagr": -0.3663546880667726,
+  "trailing_3y_revenue_cagr": 0.16605923120203192,
+  "capex_to_cfo_ttm": 0.8900201057081275,
+  "questions": [
+   "The price implies ~36.9%/yr FCF growth for 10 years (ERP 5%; +33.9%\u2013+39.7% for ERP 4\u20136%), vs -36.6%/yr trailing 3-year FCF growth: a gap of +73.5 pts.",
+   "Capex absorbs 89% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
+   "Trailing 3-year revenue CAGR is 16.6%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+  ]
+ },
+ {
+  "ticker": "MSFT",
+  "inputs": {
+   "as_of_quarter": "FY2027Q1",
+   "price": 535.9299926757812,
+   "price_date": "2026-11-05",
+   "market_cap": 3990534725463.867,
+   "fcf_ttm": 59957000000.0,
+   "rf_10y": 0.0484,
+   "shares_from": "FY2027Q1"
+  },
+  "implied_fcf_cagr_10y": {
+   "erp_4pct": 0.20399472750663816,
+   "erp_5pct": 0.2304826188725254,
+   "erp_6pct": 0.25494094476419404
+  },
+  "trailing_3y_fcf_cagr": -0.01754033558372925,
+  "trailing_3y_revenue_cagr": 0.16641623563443164,
+  "capex_to_cfo_ttm": 0.6939064111334606,
+  "questions": [
+   "The price implies ~23.0%/yr FCF growth for 10 years (ERP 5%; +20.4%\u2013+25.5% for ERP 4\u20136%), vs -1.8%/yr trailing 3-year FCF growth: a gap of +24.8 pts.",
+   "Capex absorbs 69% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
+   "Trailing 3-year revenue CAGR is 16.6%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+  ]
+ },
+ {
+  "ticker": "META",
+  "inputs": {
+   "as_of_quarter": "FY2026Q3",
+   "price": 605.0800170898438,
+   "price_date": "2026-11-05",
+   "market_cap": 1556870883972.168,
+   "fcf_ttm": 28649000000.0,
+   "rf_10y": 0.0484,
+   "shares_from": "FY2026Q3"
+  },
+  "implied_fcf_cagr_10y": {
+   "erp_4pct": 0.17699387162767566,
+   "erp_5pct": 0.20271308259181542,
+   "erp_6pct": 0.226457843350082
+  },
+  "trailing_3y_fcf_cagr": -0.08961148673188257,
+  "trailing_3y_revenue_cagr": 0.23923204483253002,
+  "capex_to_cfo_ttm": 0.7847347975384523,
+  "questions": [
+   "The price implies ~20.3%/yr FCF growth for 10 years (ERP 5%; +17.7%\u2013+22.6% for ERP 4\u20136%), vs -9.0%/yr trailing 3-year FCF growth: a gap of +29.2 pts.",
+   "Capex absorbs 78% of operating cash flow (TTM). If the market treats part of this capex as growth investment that will convert into future FCF, a price-implied growth above trailing FCF growth is expected; if the capex is maintenance-like, it is not. Which one applies is the hypothesis to examine (capex disclosures, depreciation lives, segment returns).",
+   "Trailing 3-year revenue CAGR is 23.9%; implied FCF growth can exceed revenue growth only through margin expansion or lower capital intensity: the price embeds a view on one of these."
+  ]
+ }
+]

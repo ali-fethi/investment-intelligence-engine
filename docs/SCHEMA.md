@@ -68,6 +68,16 @@ Its hash is recomputed by `iie verify`.
 - `event` rows with `company_id IS NULL` are macro events (FOMC statements, CPI/payrolls/GDP/PCE
   release dates).
 
+## v3 additions (Sprint 2)
+
+- `expectation_obs`: one row per expectation datum as it existed at `as_of`.
+  - `class`: reported_result | management_guidance | analyst_consensus | market_implied | narrative.
+  - Also carries `provider`, `metric`, `basis`, `target_period` (fiscal label), `stat` (low/high/point/mean/
+    n_estimates/text/…), `available_at` (NULL unless grade A/B), `provenance_grade`, `source_doc_id`,
+    `locator` (quote or page section), `method`, `adjustments` (e.g. split rebasing) and `checks_json`.
+  - Append-only, with a NULL-safe unique index on (natural_key, value, value_text).
+  - Revisions are successive rows for the same (company, class, provider, metric, target_period).
+
 ## Canonical metric mapping
 
 `metric_definition` + `metric_concept_map` (from `config.METRICS`): e.g. `revenue` ←

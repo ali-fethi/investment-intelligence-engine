@@ -6,15 +6,45 @@ from dataclasses import dataclass
 from pathlib import Path
 
 ROOT = Path(os.environ.get("IIE_HOME", Path(__file__).resolve().parents[2]))
+
+
+def _load_dotenv(path: Path) -> dict:
+    """Minimal KEY=VALUE reader for the local, git-ignored .env file (no dependency)."""
+    out = {}
+    if path.exists():
+        for line in path.read_text().splitlines():
+            line = line.strip()
+            if line and not line.startswith("#") and "=" in line:
+                k, v = line.split("=", 1)
+                out[k.strip()] = v.strip().strip('"').strip("'")
+    return out
+
+
+LOCAL = _load_dotenv(ROOT / ".env")
 DATA_DIR = Path(os.environ.get("IIE_DATA_DIR", ROOT / "data"))
 DB_PATH = Path(os.environ.get("IIE_DB", DATA_DIR / "iie.sqlite"))
 EVIDENCE_DIR = DATA_DIR / "evidence"
 SNAPSHOT_DIR = DATA_DIR / "snapshots"
 
-# SEC fair-access policy requires a descriptive User-Agent with a contact address.
-SEC_USER_AGENT = os.environ.get(
-    "SEC_USER_AGENT", "InvestmentIntelligenceEngine/0.1 research (set SEC_USER_AGENT) admin@example.org"
-)
+# SEC fair-access policy requires a descriptive User-Agent with a real contact. Set SEC_CONTACT_NAME and
+# SEC_CONTACT_EMAIL in the local .env (git-ignored). Until then a placeholder is used and a warning printed.
+SEC_PLACEHOLDER = "InvestmentIntelligenceEngine/0.3 research (contact not configured) admin@example.org"
+
+
+def sec_user_agent(env=None, local=None) -> tuple[str, bool]:
+    """(user_agent, configured). Precedence: SEC_USER_AGENT env var, then .env contact fields."""
+    import re
+    env = os.environ if env is None else env
+    local = LOCAL if local is None else local
+    if env.get("SEC_USER_AGENT"):
+        return env["SEC_USER_AGENT"], True
+    name, email = local.get("SEC_CONTACT_NAME", "").strip(), local.get("SEC_CONTACT_EMAIL", "").strip()
+    if name and re.fullmatch(r"[^@\s]+@[^@\s]+\.[^@\s]+", email):
+        return f"InvestmentIntelligenceEngine/0.3 {name} {email}", True
+    return SEC_PLACEHOLDER, False
+
+
+SEC_USER_AGENT, SEC_CONTACT_CONFIGURED = sec_user_agent()
 GENERIC_USER_AGENT = "Mozilla/5.0 (research data pipeline; InvestmentIntelligenceEngine/0.1)"
 
 # Per-host minimum seconds between requests (SEC limit is 10 req/s; stay well below).
@@ -27,6 +57,7 @@ RATE_LIMITS = {
     "query1.finance.yahoo.com": 1.0,
     "api.nasdaq.com": 1.0,
     "www.federalreserve.gov": 0.5,
+    "web.archive.org": 1.0,
 }
 
 

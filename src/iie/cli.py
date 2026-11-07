@@ -203,6 +203,63 @@ def cmd_reactions(a):
     print(f"{len(rows)} events -> {out / 'reaction_summary.md'}")
 
 
+def cmd_expect(a):
+    from .expect import consensus, forward, guidance, implied, link
+    conn = connect(a.db)
+    init_db(conn)
+    store = _store(conn)
+    from .config import SEC_CONTACT_CONFIGURED
+    if not SEC_CONTACT_CONFIGURED:
+        print("note: SEC contact not configured (.env); EDGAR requests use a placeholder User-Agent", file=sys.stderr)
+    with ingest_run(conn, "expect:" + ",".join(a.what), {"what": a.what}) as (run_id, stats):
+        for c in companies(conn, a.tickers):
+            if "consensus" in a.what:
+                print(f"[{c['ticker']}] archived consensus (Wayback/MarketWatch)")
+                consensus.ingest(conn, store, c, run_id, stats)
+                conn.commit()
+            if "forward" in a.what:
+                print(f"[{c['ticker']}] forward consensus snapshot")
+                forward.snapshot(conn, store, c, run_id, stats)
+                conn.commit()
+            if "guidance" in a.what:
+                print(f"[{c['ticker']}] management guidance")
+                guidance.ingest(conn, store, c, run_id, stats)
+                conn.commit()
+        if "registry" in a.what:
+            link.import_registry(conn, run_id, stats)
+            conn.commit()
+        if "implied" in a.what:
+            implied.ingest(conn, store, run_id, stats)
+            conn.commit()
+    print(json.dumps({k: v for k, v in stats.items() if not isinstance(v, list)}, indent=1, sort_keys=True))
+
+
+def cmd_expect_report(a):
+    from pathlib import Path
+    from .expect import link, report
+    from .timeutil import utcnow
+    conn = connect(a.db)
+    kt = parse_cutoff(a.knowledge_time) if a.knowledge_time else utcnow()
+    store = _store(conn, online=not a.offline)
+    rows = link.build(conn, kt, store=store)
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    desc = link.describe(rows)
+    hyp = report.hypotheses(conn, parse_cutoff(a.cutoff) if a.cutoff else kt, kt)
+    aud = report.audit(conn, rows, store, refetch=not a.offline)
+    (out / "events.json").write_text(json.dumps(rows, indent=1, default=str))
+    (out / "descriptive.json").write_text(json.dumps(desc, indent=1, default=str))
+    (out / "hypotheses.json").write_text(json.dumps(hyp, indent=1, default=str))
+    (out / "audit.json").write_text(json.dumps(aud, indent=1, default=str))
+    (out / "coverage.md").write_text("# Expectations coverage\n\nKnowledge time " + kt + "\n\n" +
+                                     report.render_coverage(rows) + "\n")
+    (out / "events.md").write_text("# Expectations linked to reactions (all earnings releases since 2016)\n\n"
+                                   + report.render_events(rows) + "\n")
+    print(f"{len(rows)} events -> {out}")
+    print(json.dumps(desc, indent=1, default=str))
+    print("leakage violations:", len(aud["leakage_violations"]), "| C/D usable:", aud["c_or_d_with_available_at"])
+
+
 def cmd_status(a):
     conn = connect(a.db)
     for t in ("source_document", "filing", "observation", "price_bar", "corporate_action", "macro_observation",
@@ -254,6 +311,16 @@ def main(argv=None):
     pr2.add_argument("--out", default="docs/event_engine")
     pr2.add_argument("--knowledge-time")
     pr2.set_defaults(fn=cmd_reactions)
+    pe = sp.add_parser("expect", help="Expectations Engine ingestion")
+    pe.add_argument("what", nargs="+", choices=["consensus", "guidance", "registry", "implied", "forward"])
+    pe.add_argument("--tickers", nargs="*")
+    pe.set_defaults(fn=cmd_expect)
+    per = sp.add_parser("expect-report", help="coverage, linked event table, hypotheses and audit")
+    per.add_argument("--out", default="docs/expectations")
+    per.add_argument("--knowledge-time")
+    per.add_argument("--cutoff", help="cutoff for the market-vs-fundamentals hypotheses (default: knowledge time)")
+    per.add_argument("--offline", action="store_true", help="skip the archive re-fetch audit")
+    per.set_defaults(fn=cmd_expect_report)
     sp.add_parser("status").set_defaults(fn=cmd_status)
     a = p.parse_args(argv)
     a.fn(a)
