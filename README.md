@@ -1,5 +1,26 @@
 # Investment Intelligence Engine — data foundation, Event Reaction Engine, Expectations Engine (v0.3.1)
 
+## In one minute
+
+A research tool I built to answer, with evidence, the question an analyst asks before every earnings event:
+**what was actually known and expected at a given moment, and how did the market react?** Take Microsoft on
+30 January 2024: which results had just been published, what guidance and consensus were public at that
+hour, and what the stock did afterwards, net of the market and of overlapping news.
+
+* **Point-in-time data, no look-ahead.** Every figure carries its source bytes (sha256), the period it
+  describes, when it became public and when it was retrieved, so a snapshot shows only what was knowable
+  at the cutoff, and can be re-verified bit for bit.
+* **Event Reaction Engine.** Abnormal returns around 127 earnings events for GOOGL, MSFT and META, with
+  benchmarks, a market model and checks for overlapping events.
+* **Expectations Engine.** Reported figures, company guidance, consensus, market-implied expectations
+  (reverse DCF) and narrative, each graded for reliability.
+* **Audited.** An independent script recomputes the results from raw source files; corrections are
+  documented rather than hidden.
+
+Python and SQLite. Sources: SEC EDGAR, US Treasury, FRED, and daily prices from Yahoo's unofficial chart
+endpoint (personal research only, see the licensing caveat). Built with AI coding agents under my direction.
+
+
 An auditable, reproducible, point-in-time public-market data foundation for **GOOGL, MSFT, META**.
 Every number keeps its source bytes (sha256), the period it describes, when it became public, and
 when it was retrieved. Snapshots reconstruct what was knowable at a cutoff and can be re-verified
